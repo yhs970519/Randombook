@@ -26,7 +26,7 @@ bookimg[1] = img2;
 bookimg[2] = img3;
 // let i = 0;
 for (let i = 0; i < bookimg.length; i++){
-	image(bookimg[i], mouseX, mouseY, 500, 700);
+	image(bookimg[random(0, 3)], mouseX, mouseY, 500, 700);
 	// i = i + 1;
 	}
 }
