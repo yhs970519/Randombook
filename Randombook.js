@@ -5,12 +5,12 @@
 let img1;
 let img2;
 let img3;
-let img = [img1, img2, img3];
 
 function preload(){
 	img1 = loadImage('book1.png')
 	img2 = loadImage('book2.jpg')
 	img3 = loadImage('book3.jpg')
+	let img = [img1, img2, img3];
 }
 
 function setup() {
