@@ -5,6 +5,7 @@
 let img1;
 let img2;
 let img3;
+let img = [img1, img2, img3];
 
 function preload(){
 	img1 = loadImage('book1.png')
@@ -19,15 +20,12 @@ function setup() {
 }
 
 function draw() {
-// let bookimg = ['img1', 'img2', 'img3'];
-let bookimg = new Array(); //배열선언
-bookimg[0] = img1;
-bookimg[1] = img2;
-bookimg[2] = img3;
+let bookimg = random(img);
+image(bookimg, mouseX, mouseY, 500, 700);
 // let i = 0;
-for (let i = 0; i < bookimg.length; i++){
-	image(bookimg[random(0, 3)], mouseX, mouseY, 500, 700);
-	// i = i + 1;
+// for (let i = 0; i < bookimg.length; i++){
+// 	image(bookimg[random(0, 3)], mouseX, mouseY, 500, 700);
+// 	i = i + 1;
 	}
 }
 
