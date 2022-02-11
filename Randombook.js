@@ -26,7 +26,7 @@ image(bookimg, mouseX, mouseY, 500, 700);
 // for (let i = 0; i < bookimg.length; i++){
 // 	image(bookimg[random(0, 3)], mouseX, mouseY, 500, 700);
 // 	i = i + 1;
-	}
+//     }
 }
 
 function windowResized() {
