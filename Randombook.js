@@ -19,7 +19,11 @@ function setup() {
 }
 
 function draw() {
-let bookimg = ['img1', 'img2', 'img3'];
+// let bookimg = ['img1', 'img2', 'img3'];
+let bookimg = new Array(); //배열선언
+bookimg[0] = img1;
+bookimg[1] = img2;
+bookimg[2] = img3;
 // let i = 0;
 for (let i = 0; i < bookimg.length; i++){
 	image(bookimg[i], mouseX, mouseY, 500, 700);
