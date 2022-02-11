@@ -5,7 +5,7 @@
 let img;
 
 function preload(){
-	img = loadImage('book2.jpg')
+	img = loadImage('book1.png')
 }
 
 function setup() {
