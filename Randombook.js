@@ -16,10 +16,10 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(250);
 	frameRate(25);
-	let bookimg = [img1, img2, img3];
 }
 
 function draw() {
+	let bookimg = [img1, img2, img3];
 	let i = 0;
 	while(i < bookimg.length){
 		image(img[i], mouseX, mouseY, 500, 700);
