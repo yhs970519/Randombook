@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body{
+/*	display: inline;*/
+	box-sizing: border-box;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	background-color: darkorange;
+}
+
+.box{
+	position: absolute;
+	left: 0;
+	top: 0;	
+	width: 100px;
+	height: 200px;
+	background-color: plum;
+}
