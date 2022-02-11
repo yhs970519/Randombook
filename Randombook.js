@@ -5,13 +5,22 @@
 let img1;
 let img2;
 let img3;
+let img4;
+let img5;
+let img6;
+let img7;
 let img = [];
 
 function preload(){
 	img1 = loadImage('book1.png')
 	img2 = loadImage('book2.jpg')
 	img3 = loadImage('book3.jpg')
-	img = [img1, img2, img3];
+	img4 = loadImage('book4.jng')
+	img5 = loadImage('book5.jpg')
+	img6 = loadImage('book6.jpg')
+	img7 = loadImage('book7.jpg')
+	img = [img1, img2, img3, img4, img5, img6, img7];
+
 }
 
 function setup() {
