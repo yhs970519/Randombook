@@ -19,15 +19,13 @@ function setup() {
 }
 
 function draw() {
-
-}
-
 let bookimg = [img1, img2, img3];
 let i = 0;
-while(i < bookimg.length){
+for(i < bookimg.length){
 	image(bookimg[i], mouseX, mouseY, 500, 700);
 	i = i + 1;
 	}
+}
 
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
