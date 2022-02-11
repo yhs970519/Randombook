@@ -18,7 +18,7 @@ function draw() {
 //	noStroke();
 //	fill('powderblue');
 //	rect(mouseX, mouseY, 100, 100);
-	image(img, 0, 0, 500, 700);
+	image(img, mouseX, mouseY, 500, 700);
 }
 
 function windowResized() {
