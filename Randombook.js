@@ -26,12 +26,12 @@ function preload(){
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(250);
-	frameRate(25);
+	frameRate(15);
 }
 
 function draw() {
 let bookimg = random(img);
-image(bookimg, mouseX, mouseY, 500, 700);
+image(bookimg, mouseX - 200, mouseY - 300, 400, 600);
 // let i = 0;
 // for (let i = 0; i < bookimg.length; i++){
 // 	image(bookimg[random(0, 3)], mouseX, mouseY, 500, 700);
