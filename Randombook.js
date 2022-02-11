@@ -5,7 +5,7 @@
 let img;
 
 function preload(){
-	img = loadImage('https://github.com/yhs970519/Randombook/blob/bb30581f7d07e2aa4301b9902947eab8dbef1e1d/book2.jpg')
+	img = loadImage('book2.jpg')
 }
 
 function setup() {
