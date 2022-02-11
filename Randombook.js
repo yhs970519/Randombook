@@ -15,7 +15,7 @@ function preload(){
 	img1 = loadImage('book1.png')
 	img2 = loadImage('book2.jpg')
 	img3 = loadImage('book3.jpg')
-	img4 = loadImage('book4.jng')
+	img4 = loadImage('book4.jpg')
 	img5 = loadImage('book5.jpg')
 	img6 = loadImage('book6.jpg')
 	img7 = loadImage('book7.jpg')
