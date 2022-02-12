@@ -23,8 +23,13 @@ function setup() {
 }
 
 function draw() {
-let bookimg = random(img);
-image(bookimg, mouseX - 200, mouseY - 300, 400, 600);
+
+	let bookimg = random(img);
+	image(bookimg, mouseX - 200, mouseY - 300, 400, 600);
+
+	fill('powderblue');
+	rect(mouseX - 75, mouseY - 75, 150);
+
 }
 
 function windowResized() {
