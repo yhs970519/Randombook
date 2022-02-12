@@ -24,9 +24,9 @@ function preload(){
 	// 	// eval("img.push('img" + i + "');");
 	// 	// eval("img[" + j + "] = img" + i + ";");
 	// }
-	img1 = loadImage('book1.jpg');
-	img2 = loadImage('book2.jpg');
-	img3 = loadImage('book3.jpg');
+	img1 = loadImage('book/book1.jpg');
+	img2 = loadImage('book/book2.jpg');
+	img3 = loadImage('book/book3.jpg');
 	// img4 = loadImage('book4.jpg');
 	// img5 = loadImage('book5.jpg');
 	// img6 = loadImage('book6.jpg');
