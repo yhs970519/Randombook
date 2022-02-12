@@ -7,6 +7,7 @@ for (let i = 1; i < bookN; i++){
 	eval("let img" + i + ";");
 }
 let img = [];
+let bookimg = random(img);
 
 function preload(){
 	for (let i = 1; i < bookN; i++){
@@ -19,20 +20,21 @@ function preload(){
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(250);
-	frameRate(10);
 }
 
 function draw() {
-
-	let bookimg = random(img);
+	frameRate(5);
 	image(bookimg, 50, 50, 200, 300);
-	image(bookimg, windowWidth - 250, 50, 200, 300);
 	image(bookimg, 50, windowHeight - 350, 200, 300);
 	image(bookimg, windowWidth - 250, windowHeight - 350, 200, 300);
 
 	fill('powderblue');
 	rect(mouseX - 75, mouseY - 75, 150);
+}
 
+function draw() {
+	frameRate(10);
+	image(bookimg, windowWidth - 250, 50, 200, 300);
 }
 
 function windowResized() {
