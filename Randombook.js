@@ -25,11 +25,11 @@ function preload(){
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(250);
-	//'bookimg'는 'img' 배열 속 값을 랜덤으로 섞는 변수//
-	let bookimg = random(img);
 }
 
 function draw() {
+	//'bookimg'는 'img' 배열 속 값을 랜덤으로 섞는 변수//
+	let bookimg = random(img);
 	frameRate(5);
 	image(bookimg, 50, 50, 200, 300);
 	image(bookimg, 50, windowHeight - 350, 200, 300);
@@ -40,6 +40,7 @@ function draw() {
 }
 
 function draw() {
+	let bookimg = random(img);
 	frameRate(10);
 	image(bookimg, windowWidth - 250, 50, 200, 300);
 }
