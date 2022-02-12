@@ -7,7 +7,6 @@ for (let i = 1; i < bookN; i++){
 	eval("let img" + i + ";");
 }
 let img = [];
-let bookimg = random(img);
 
 function preload(){
 	for (let i = 1; i < bookN; i++){
@@ -15,6 +14,7 @@ function preload(){
 		eval("img" + i + " = loadImage('book/book" + i + ".jpg');");
 		eval("img[" + j + "] = img" + i + ";");
 	}
+	let bookimg = random(img);
 }
 
 function setup() {
