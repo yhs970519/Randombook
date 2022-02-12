@@ -19,7 +19,7 @@ let img = [];
 
 function preload(){
 	img1 = loadImage('book/book1.jpg');
-	img.push('img1');
+	img = [img1];
 	// for (let i = 1; i < 11; i++){
 	// // 	// let j = i - 1;
 	// 	eval("img" + i + " = loadImage('book/book" + i + ".jpg');");
