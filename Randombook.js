@@ -18,8 +18,8 @@ for (let i = 1; i < 11; i++){
 let img = [];
 
 function preload(){
-	eval("img1 = loadImage('book/book1.jpg');");
-	eval("img.push('img1');");
+	img1 = loadImage('book/book1.jpg');
+	img.push('img1');
 	// for (let i = 1; i < 11; i++){
 	// // 	// let j = i - 1;
 	// 	eval("img" + i + " = loadImage('book/book" + i + ".jpg');");
