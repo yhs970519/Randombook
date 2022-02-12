@@ -22,12 +22,11 @@ function preload(){
 	}
 }
 
-//'bookimg'는 'img' 배열 속 값을 랜덤으로 섞는 변수//
-let bookimg = random(img);
-
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(250);
+	//'bookimg'는 'img' 배열 속 값을 랜덤으로 섞는 변수//
+	let bookimg = random(img);
 }
 
 function draw() {
