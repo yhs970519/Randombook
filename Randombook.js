@@ -15,10 +15,10 @@ let img = [];
 
 function preload(){
 	for (let i = 1; i < 11; i++){
-		eval("img" + i + "=loadImage('book" + i + ".ipg'");
+		eval("img" + i + " = loadImage('book" + i + ".ipg'");
 		eval("img[" + i - 1 + "] = [img" + i + "];");
 	}
-	// img1 = loadImage('book1.png')
+	// img1 = loadImage('book1.jpg')
 	// img2 = loadImage('book2.jpg')
 	// img3 = loadImage('book3.jpg')
 	// img4 = loadImage('book4.jpg')
