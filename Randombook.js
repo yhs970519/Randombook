@@ -2,19 +2,19 @@
 
 //document.write("<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js'></script>");
 
-// for (let i = 1; i < 11; i++){
-// 	eval("let img" + i + ";");
-// }
-let img1;
-let img2;
-let img3;
-let img4;
-let img5;
-let img6;
-let img7;
-let img8;
-let img9;
-let img10;
+for (let i = 1; i < 11; i++){
+	eval("let img" + i + ";");
+}
+// let img1;
+// let img2;
+// let img3;
+// let img4;
+// let img5;
+// let img6;
+// let img7;
+// let img8;
+// let img9;
+// let img10;
 let img = [];
 
 function preload(){
