@@ -27,8 +27,8 @@ function draw() {
 	let bookimg = random(img);
 	image(bookimg, 50, 50, 200, 300);
 	image(bookimg, windowWidth - 250, 50, 200, 300);
-	image(bookimg, 50, widowHeight - 350, 200, 300);
-	image(bookimg, windowWidth - 250, widowHeight - 350, 200, 300);
+	image(bookimg, 50, windowHeight - 350, 200, 300);
+	image(bookimg, windowWidth - 250, windowHeight - 350, 200, 300);
 
 	fill('powderblue');
 	rect(mouseX - 75, mouseY - 75, 150);
