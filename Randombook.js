@@ -20,8 +20,9 @@ let img = [];
 function preload(){
 	for (let i = 1; i < 11; i++){
 		let j = i - 1;
-		eval("img" + i + " = loadImage('book" + i + ".ipg'");
-		eval("img[" + j + "] = [img" + i + "];");
+		eval("img" + i + " = loadImage('book" + i + ".ipg')");
+		eval("img.push('img" + i + "')");
+		// eval("img[" + j + "] = [img" + i + "];");
 	}
 	// img1 = loadImage('book1.jpg')
 	// img2 = loadImage('book2.jpg')
