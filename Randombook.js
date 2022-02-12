@@ -19,21 +19,21 @@ let img = [];
 
 function preload(){
 	for (let i = 1; i < 11; i++){
-		let j = i - 1;
-		eval("img" + i + " = loadImage('book" + i + ".ipg')");
-		eval("img.push('img" + i + "')");
+		// let j = i - 1;
+		eval("img" + i + " = loadImage('book" + i + ".ipg');");
+		eval("img.push('img" + i + "');");
 		// eval("img[" + j + "] = [img" + i + "];");
 	}
-	// img1 = loadImage('book1.jpg')
-	// img2 = loadImage('book2.jpg')
-	// img3 = loadImage('book3.jpg')
-	// img4 = loadImage('book4.jpg')
-	// img5 = loadImage('book5.jpg')
-	// img6 = loadImage('book6.jpg')
-	// img7 = loadImage('book7.jpg')
-	// img8 = loadImage('book8.jpg')
-	// img9 = loadImage('book9.jpg')
-	// img10 = loadImage('book10.jpg')
+	// img1 = loadImage('book1.jpg');
+	// img2 = loadImage('book2.jpg');
+	// img3 = loadImage('book3.jpg');
+	// img4 = loadImage('book4.jpg');
+	// img5 = loadImage('book5.jpg');
+	// img6 = loadImage('book6.jpg');
+	// img7 = loadImage('book7.jpg');
+	// img8 = loadImage('book8.jpg');
+	// img9 = loadImage('book9.jpg');
+	// img10 = loadImage('book10.jpg');
 	// img = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
 }
