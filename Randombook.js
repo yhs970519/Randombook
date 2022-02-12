@@ -1,6 +1,7 @@
 // JavaScript Document
 
 //document.write("<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js'></script>");
+
 for (let i = 1; i < 11; i++){
 	eval("let img" + i + ";");
 }
@@ -11,14 +12,17 @@ for (let i = 1; i < 11; i++){
 // let img5;
 // let img6;
 // let img7;
+// let img8;
+// let img9;
+// let img10;
 let img = [];
 
-for (let i = 1; i < 11; i++){
-	eval("img" + i + " = loadImage('book" + i + ".ipg'");
-	eval("img[" + i - 1 + "] = [img" + i + "];");
-}
-
 function preload(){
+	for (let i = 1; i < 11; i++){
+		let j = i - 1;
+		eval("img" + i + " = loadImage('book" + i + ".ipg'");
+		eval("img[" + j + "] = [img" + i + "];");
+	}
 	// img1 = loadImage('book1.jpg')
 	// img2 = loadImage('book2.jpg')
 	// img3 = loadImage('book3.jpg')
@@ -26,7 +30,10 @@ function preload(){
 	// img5 = loadImage('book5.jpg')
 	// img6 = loadImage('book6.jpg')
 	// img7 = loadImage('book7.jpg')
-	// img = [img1, img2, img3, img4, img5, img6, img7];
+	// img8 = loadImage('book8.jpg')
+	// img9 = loadImage('book9.jpg')
+	// img10 = loadImage('book10.jpg')
+	// img = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
 }
 
