@@ -17,24 +17,25 @@ for (let i = 1; i < 11; i++){
 // let img10;
 let img = [];
 
+for (let i = 1; i < 11; i++){
+	// let j = i - 1;
+	eval("img" + i + " = loadImage('book/book" + i + ".ipg');");
+	eval("img.push('img" + i + "');");
+	// eval("img[" + j + "] = img" + i + ";");
+}
+
 function preload(){
 
-	img1 = loadImage('book/book1.jpg');
-	img2 = loadImage('book/book2.jpg');
-	img3 = loadImage('book/book3.jpg');
-	img4 = loadImage('book/book4.jpg');
-	img5 = loadImage('book/book5.jpg');
-	img6 = loadImage('book/book6.jpg');
-	img7 = loadImage('book/book7.jpg');
-	img8 = loadImage('book/book8.jpg');
-	img9 = loadImage('book/book9.jpg');
-	img10 = loadImage('book/book10.jpg');
-	for (let i = 1; i < 11; i++){
-		// let j = i - 1;
-		// eval("img" + i + " = loadImage('book/book" + i + ".ipg');");
-		eval("img.push('img" + i + "');");
-		// eval("img[" + j + "] = img" + i + ";");
-	}
+	// img1 = loadImage('book/book1.jpg');
+	// img2 = loadImage('book/book2.jpg');
+	// img3 = loadImage('book/book3.jpg');
+	// img4 = loadImage('book/book4.jpg');
+	// img5 = loadImage('book/book5.jpg');
+	// img6 = loadImage('book/book6.jpg');
+	// img7 = loadImage('book/book7.jpg');
+	// img8 = loadImage('book/book8.jpg');
+	// img9 = loadImage('book/book9.jpg');
+	// img10 = loadImage('book/book10.jpg');
 	// img = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 }
 
