@@ -18,15 +18,12 @@ for (let i = 1; i < 11; i++){
 let img = [];
 
 function preload(){
-	let i = 1;
-	eval("img" + i + " = loadImage('book/book" + i + ".ipg');");
-	eval("img.push('img" + i + "');");
-	// for (let i = 1; i < 11; i++){
+	for (let i = 1; i < 11; i++){
 	// 	// let j = i - 1;
-	// 	eval("img" + i + " = loadImage('book/book" + i + ".ipg');");
-	// 	eval("img.push('img" + i + "');");
+		eval("img" + i + " = loadImage('book/book" + i + ".jpg');");
+		eval("img.push('img" + i + "');");
 	// 	// eval("img[" + j + "] = img" + i + ";");
-	// }
+	}
 	// img1 = loadImage('book/book1.jpg');
 	// img2 = loadImage('book/book2.jpg');
 	// img3 = loadImage('book/book3.jpg');
