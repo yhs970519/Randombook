@@ -3,7 +3,7 @@
 //document.write("<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js'></script>");
 
 //'img+숫자' 변수 생성//
-let bookN = 11;
+let bookN = 10;
 for (let i = 1; i < bookN; i++) {
 	eval("let img" + i + ";");
 }
@@ -46,6 +46,7 @@ function draw() {
 		// img.splice(b, 1);
 	}
 	// img.splice(0, 0, 'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10');
+	image(img[10], 100, 100, 200, 300);
 }
 
 function windowResized() {
