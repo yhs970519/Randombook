@@ -42,14 +42,16 @@ function draw() {
 	let b = Math.floor(random(a));
 	let c = Math.floor(random(a));
 	for(let i = 1; i < 65; i++) {
-		if(i % 60 === 0) {
-			image(img[b], mouseX, mouseY, 200, 300);
-			image(img[c], 50, 50, 200, 300);
-		}else {
+		if(i % 60 !== 0) {
 			continue;
 			image(img[b], mouseX, mouseY, 200, 300);
 			image(img[c], 50, 50, 200, 300);
 		}
+		// else {
+		// 	continue;
+		// 	image(img[b], mouseX, mouseY, 200, 300);
+		// 	image(img[c], 50, 50, 200, 300);
+		// }
 	// let c = img.length - 0.001;
 	// for (let a = c; a > 5; a--) {
 	// 	let b = Math.floor(random(a));
