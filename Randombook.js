@@ -41,7 +41,7 @@ function setup()  {
 
 function draw() {
 	let c = img.length - 0.001;
-	for (let a = c; a > 0; a--) {
+	for (let a = c; a > 5; a--) {
 		let b = Math.floor(random(a));
 		if (a < 0) {
 			a = c;
