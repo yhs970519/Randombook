@@ -40,8 +40,9 @@ function setup()  {
 // }
 
 function draw() {
-	let bg1 = random(0, 11);
-	image(img[0], 50, 50, 200, 300);
+	let x = random(0, 11);
+	let y = Math.floor(x);
+	image(img[y], 50, 50, 200, 300);
 }
 
 function windowResized() {
