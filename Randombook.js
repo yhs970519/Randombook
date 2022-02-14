@@ -40,10 +40,10 @@ function setup()  {
 // }
 
 function draw() {
-	for (let i = img.length - 0.001; i > 0; i--) {
-		let j = Math.floor(random(0, i));
-		image(img[j], 50, 50, 200, 300);
-		img.splice(j, 1);
+	for (let a = img.length - 0.001; a > 0; a--) {
+		let b = Math.floor(random(0, a));
+		image(img[b], 50, 50, 200, 300);
+		img.splice(b, 1);
 	}
 }
 
