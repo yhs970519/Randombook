@@ -40,10 +40,11 @@ function setup()  {
 // }
 
 function draw() {
-	frameRate(5);
-	let x = random(0, 10);
-	let y = Math.floor(x);
-	image(img[y], 50, 50, 200, 300);
+	for (let i = 1; i < 100; i++) {
+		let x = random(0, 10);
+		let y = Math.floor(x);
+		image(img[10], 50, 50, 200, 300);
+	}
 }
 
 function windowResized() {
