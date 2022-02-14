@@ -25,7 +25,6 @@ function preload(){
 function setup()  {
 	createCanvas(windowWidth, windowHeight);
 	background(0, 0, 0, 20);
-	image(img[9], 100, 100, 200, 300);
 }
 
 // function draw() {
@@ -47,6 +46,7 @@ function draw() {
 		// img.splice(b, 1);
 	}
 	// img.splice(0, 0, 'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10');
+    image(img[9], 100, 100, 200, 300);
 }
 
 function windowResized() {
