@@ -3,7 +3,7 @@
 //document.write("<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js'></script>");
 
 //'img+숫자' 변수 생성//
-let bookN = 10;
+let bookN = 11;
 for (let i = 1; i < bookN; i++) {
 	eval("let img" + i + ";");
 }
@@ -40,7 +40,7 @@ function setup()  {
 // }
 
 function draw() {
-	for (let a = img.length - 0.001; a > 5; a--) {
+	for (let a = img.length - 0.001; a > 0; a--) {
 		let b = Math.floor(random(a));
 		image(img[b], 50, 50, 200, 300);
 		// img.splice(b, 1);
