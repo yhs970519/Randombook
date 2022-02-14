@@ -45,10 +45,10 @@ function draw() {
 		let b = Math.floor(random(a));
 		if (a < 0) {
 			a = c;
-			img.splice(0, 0, 'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10');
+			// img.splice(0, 0, 'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10');
 		}else {
 			image(img[b], mouseX, mouseY, 200, 300);
-			img.splice(b, 1);
+			// img.splice(b, 1);
 		}
 	}
 	image(img[9], 100, 100, 200, 300);
