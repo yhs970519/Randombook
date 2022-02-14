@@ -41,7 +41,7 @@ function setup()  {
 
 function draw() {
 	let bg1 = random(0, 11);
-	image(img[bg1], 50, 50, 200, 300);
+	image(img[0], 50, 50, 200, 300);
 }
 
 function windowResized() {
