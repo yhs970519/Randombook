@@ -47,7 +47,7 @@ function draw() {
 	for(let i = 1; i < 600; i++) {
 		if(i%60 === 0) {
 			image(img[b], mouseX, mouseY, 200, 300);
-		}if(i%30 === 0) {
+		}else if(i%30 === 0) {
 			image(img[c], 50, 50, 200, 300);
 		}else {
 			continue;
