@@ -44,11 +44,11 @@ function draw() {
 	let b = Math.floor(random(a));
 	let c = Math.floor(random(a));
 	for(let i = 1; i < 6000; i++) {
-		if(i%60 !== 0) {
-			continue;
+		if(i%60 === 0) {
 			image(img[b], mouseX, mouseY, 200, 300);
 			image(img[c], 50, 50, 200, 300);
 		}else {
+			continue;
 			image(img[b], mouseX, mouseY, 200, 300);
 			image(img[c], 50, 50, 200, 300);
 		}
