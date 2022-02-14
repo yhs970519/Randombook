@@ -48,6 +48,10 @@ function draw() {
 			continue;
 			image(img[b], mouseX, mouseY, 200, 300);
 			image(img[c], 50, 50, 200, 300);
+		}else {
+			image(img[b], mouseX, mouseY, 200, 300);
+			image(img[c], 50, 50, 200, 300);
+		}
 	// let c = img.length - 0.001;
 	// for (let a = c; a > 5; a--) {
 	// 	let b = Math.floor(random(a));
@@ -59,7 +63,6 @@ function draw() {
 	// 		// img.splice(b, 1);
 	// 	}
 	// }
-		}
 	}
 	image(img[9], 300, 50, 200, 300);
 }
