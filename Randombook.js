@@ -43,8 +43,11 @@ function draw() {
 	let a = img.length - 0.001;
 	let b = Math.floor(random(a));
 	let c = Math.floor(random(a));
-	image(img[b], mouseX, mouseY, 200, 300);
-	image(img[c], 50, 50, 200, 300);
+	for(let i = 1; i < 6000; i++) {
+		if(i%60 !== 0) {
+			continue;
+			image(img[b], mouseX, mouseY, 200, 300);
+			image(img[c], 50, 50, 200, 300);
 	// let c = img.length - 0.001;
 	// for (let a = c; a > 5; a--) {
 	// 	let b = Math.floor(random(a));
@@ -56,7 +59,9 @@ function draw() {
 	// 		// img.splice(b, 1);
 	// 	}
 	// }
-	image(img[9], 100, 100, 200, 300);
+		}
+	}
+	image(img[9], 300, 50, 200, 300);
 }
 
 function windowResized() {
