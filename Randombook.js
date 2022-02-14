@@ -43,9 +43,11 @@ function draw() {
 	let a = img.length - 0.001;
 	let b = Math.floor(random(a));
 	let c = Math.floor(random(a));
-	for(let i = 1; i < 6000; i++) {
-		if(i%30 === 0) {
+	let i = 1;
+	for(let i = 1; i < 600; i++) {
+		if(i%60 === 0) {
 			image(img[b], mouseX, mouseY, 200, 300);
+		}if(i%30 === 0) {
 			image(img[c], 50, 50, 200, 300);
 		}else {
 			continue;
