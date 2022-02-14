@@ -42,12 +42,8 @@ function setup()  {
 function draw() {
 	let c = img.length - 0.001;
 	for (let a = c; a < 10; a--) {
-		if (frameCount % 60 === 0) {
 		let b = Math.floor(random(a));
 		image(img[b], 50, 50, 200, 300);
-		}else{
-		image(img[9], 100, 100, 200, 300);
-		}
 		// if (a < 0) {
 		// 	a = c;
 		// 	img.splice(0, 0, 'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10');
@@ -55,6 +51,7 @@ function draw() {
 		// 	img.splice(b, 1);
 		// }
 	}
+	image(img[9], 100, 100, 200, 300);
 }
 
 function windowResized() {
