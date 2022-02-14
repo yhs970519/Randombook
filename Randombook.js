@@ -40,10 +40,11 @@ function setup()  {
 // }
 
 function draw() {
-	for (let i = 1; i < 100; i++) {
-		let x = random(0, 10);
-		let y = Math.floor(x);
-		image(img[10], 50, 50, 200, 300);
+	for (let x = 9.9; x > 1; x--) {
+		let y = random(0, x);
+		let z = Math.floor(y);
+		image(img[z], 50, 50, 200, 300);
+		img.splice(z, 1);
 	}
 }
 
