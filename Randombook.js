@@ -43,7 +43,11 @@ function draw() {
 	for (let a = img.length - 0.001; a > 0; a--) {
 		let b = Math.floor(random(0, a));
 		image(img[b], 50, 50, 200, 300);
-		img.splice(b, 1);
+		if (a > 0) {
+			img.splice(0, 0, 'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10');
+		}else{
+			img.splice(b, 1);
+		}
 	}
 }
 
