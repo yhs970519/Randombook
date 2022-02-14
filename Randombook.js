@@ -40,11 +40,10 @@ function setup()  {
 // }
 
 function draw() {
-	let i = 1;
 	let a = img.length - 0.001;
 	let b = Math.floor(random(a));
-	if(i%60 == 0) {
-		image(img[b], mouseX, mouseY, 200, 300);
+	image(img[b], mouseX, mouseY, 200, 300);
+	image(img[b], 50, 50, 200, 300);
 	// let c = img.length - 0.001;
 	// for (let a = c; a > 5; a--) {
 	// 	let b = Math.floor(random(a));
@@ -56,10 +55,7 @@ function draw() {
 	// 		// img.splice(b, 1);
 	// 	}
 	// }
-	}else {
-		image(img[9], 100, 100, 200, 300);
-	}
-	i = i + 1;
+	image(img[9], 100, 100, 200, 300);
 }
 
 function windowResized() {
