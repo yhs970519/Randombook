@@ -40,6 +40,7 @@ function setup()  {
 // }
 
 function draw() {
+	frameRate(10);
 	let x = random(0, 11);
 	let y = Math.floor(x);
 	image(img[y], 50, 50, 200, 300);
