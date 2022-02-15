@@ -58,11 +58,11 @@ setInterval(randombook1, 1500);
 function randombook2() {
 	let b = Math.floor(Math.random() * B2img.length);
 	if(B2img.length > 0) {
-		image(B2img[b], 50, 50, 200, 300);
+		image(B2img[b], 75, 75, 150, 250);
 		B2img.splice(b, 1);
 	}else if(B2img.length <= 0) {
 		B2img.splice(0, 0, B2img1, B2img2, B2img3, B2img4, B2img5, B2img6, B2img7, B2img8, B2img9, B2img10);
-		image(B2img[b], 50, 50, 200, 300);
+		image(B2img[b], 75, 75, 150, 250);
 	}
 }
 
@@ -71,11 +71,11 @@ setInterval(randombook2, 500);
 function randombook3() {
 	let c = Math.floor(Math.random() * B3img.length);
 	if(B3img.length > 0) {
-		image(B3img[c], 50, 50, 200, 300);
+		image(B3img[c], 300, 50, 200, 300);
 		B3img.splice(c, 1);
 	}else if(B3img.length <= 0) {
 		B3img.splice(0, 0, B3img1, B3img2, B3img3, B3img4, B3img5, B3img6, B3img7, B3img8, B3img9, B3img10);
-		image(B3img[c], 50, 50, 200, 300);
+		image(B3img[c], 300, 50, 200, 300);
 	}
 }
 
