@@ -16,9 +16,9 @@ let B3img = [];
 for (let i = 1; i < bookN; i++) {
 	//'Bnimg+数字'に 順番にイメージリンクを当てる。//
 	let j = i - 1;
-	eval("B1img" + i + " = book1/book" + i + ".jpg;");
-	eval("B2img" + i + " = book2/book" + i + ".png;");
-	eval("B3img" + i + " = book3/book" + i + ".png;");
+	eval("B1img" + i + " = 'book1/book" + i + ".jpg';");
+	eval("B2img" + i + " = 'book2/book" + i + ".png';");
+	eval("B3img" + i + " = 'book3/book" + i + ".png';");
 	// 'Bnimg'配列に 'img+数字' 変数を当てる。//
 	eval("B1img[" + j + "] = B1img" + i + ";");
 	eval("B2img[" + j + "] = B2img" + i + ";");
