@@ -55,14 +55,14 @@ function setup()  {
 
 function randombook1() {
 	let a = Math.floor(Math.random() * img.length);
-	image(img[a], mouseX, mouseY, 200, 300);
+	image(img[a], 50, 50, 200, 300);
 }
 
 setInterval(randombook1, 500);
 
 function randombook2() {
 	let b = Math.floor(Math.random() * img.length);
-	image(img[b], 50, 50, 200, 300);
+	image(img[b], 75, 75, 150, 250);
 }
 
 setInterval(randombook2, 1000);
