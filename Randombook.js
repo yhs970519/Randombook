@@ -49,19 +49,19 @@ function randombook1() {
 
 setInterval(randombook1, 1500);
 
-function randombook2() {
-	let b = Math.floor(Math.random() * img.length);
-	image(img[b], 75, 75, 150, 250);
-}
+// function randombook2() {
+// 	let b = Math.floor(Math.random() * img.length);
+// 	image(img[b], 75, 75, 150, 250);
+// }
 
-setInterval(randombook2, 500);
+// setInterval(randombook2, 500);
 
-function randombook3() {
-	let c = Math.floor(Math.random() * img.length);
-	image(img[c], 300, 50, 200, 300);
-}
+// function randombook3() {
+// 	let c = Math.floor(Math.random() * img.length);
+// 	image(img[c], 300, 50, 200, 300);
+// }
 
-setInterval(randombook3, 1000);
+// setInterval(randombook3, 1000);
 
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
