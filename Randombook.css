@@ -14,7 +14,7 @@ html, body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: fixed;
+	position: relative;
 	width: 50px;
 	height: 50px;
 	background-color: plum;
@@ -38,4 +38,25 @@ html, body{
 .box4{
 	right: 0;
 	bottom: 0;	
+}
+
+[class*="BOOK"]{
+	position: relative;
+	width: 200px;
+	height: 300px;
+}
+
+#BOOK1{
+	left: 0;
+	top: 0;	
+}
+
+#BOOK2{
+	right: 0;
+	top: 0;	
+}
+
+#BOOK3{
+	left: 0;
+	bottom: 0;
 }
