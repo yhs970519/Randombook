@@ -53,15 +53,25 @@ function setup()  {
 // }
 
 function randombook1() {
-	let a = Math.floor(Math.random() * 10);
-	let b = Math.floor(Math.random() * img.length);
-	let c = Math.floor(Math.random() * img.length);
+	let a = Math.floor(Math.random() * img.length);
 	image(img[a], mouseX, mouseY, 200, 300);
+}
+
+setInterval(randombook1, 500);
+
+function randombook2() {
+	let b = Math.floor(Math.random() * img.length);
 	image(img[b], 50, 50, 200, 300);
+}
+
+setInterval(randombook2, 1000);
+
+function randombook3() {
+	let c = Math.floor(Math.random() * img.length);
 	image(img[c], 300, 50, 200, 300);
 }
 
-setInterval(randombook1, 1000);
+setInterval(randombook3, 1500);
 
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
