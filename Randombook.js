@@ -20,9 +20,9 @@ for (let i = 1; i < bookN; i++) {
 	// eval("B2img" + i + " = book2/book" + i + ".png;");
 	// eval("B3img" + i + " = book3/book" + i + ".png;");
 	// 'Bnimg'配列に 'img+数字' 変数を当てる。//
-	eval("B1img[" + j + "] = 'book1/book" + i + ".jpg';");
-	eval("B2img[" + j + "] = 'book2/book" + i + ".png';");
-	eval("B3img[" + j + "] = 'book3/book" + i + ".png';");
+	eval('B1img[' + j + '] = "book1/book' + i + '.jpg";');
+	eval('B2img[' + j + '] = "book2/book' + i + '.png";');
+	eval('B3img[' + j + '] = "book3/book' + i + '.png";');
 }
 
 function randombook0()  {
