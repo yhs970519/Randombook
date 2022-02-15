@@ -47,29 +47,39 @@ function randombook1() {
 	if(B1img.length > 0) {
 		image(B1img[a], 50, 50, 200, 300);
 		B1img.splice(a, 1);
-		console.log(B1img.length);
 	}else if(B1img.length <= 0) {
 		B1img.splice(0, 0, B1img1, B1img2, B1img3, B1img4, B1img5, B1img6, B1img7, B1img8, B1img9, B1img10);
 		image(B1img[a], 50, 50, 200, 300);
-		console.log(B1img.length);
 	}
 }
 
 setInterval(randombook1, 1500);
 
-// function randombook2() {
-// 	let b = Math.floor(Math.random() * img.length);
-// 	image(img[b], 75, 75, 150, 250);
-// }
+function randombook2() {
+	let b = Math.floor(Math.random() * B2img.length);
+	if(B2img.length > 0) {
+		image(B2img[b], 50, 50, 200, 300);
+		B2img.splice(b, 1);
+	}else if(B2img.length <= 0) {
+		B2img.splice(0, 0, B2img1, B2img2, B2img3, B2img4, B2img5, B2img6, B2img7, B2img8, B2img9, B2img10);
+		image(B2img[b], 50, 50, 200, 300);
+	}
+}
 
-// setInterval(randombook2, 500);
+setInterval(randombook2, 500);
 
-// function randombook3() {
-// 	let c = Math.floor(Math.random() * img.length);
-// 	image(img[c], 300, 50, 200, 300);
-// }
+function randombook3() {
+	let c = Math.floor(Math.random() * B3img.length);
+	if(B3img.length > 0) {
+		image(B3img[c], 50, 50, 200, 300);
+		B3img.splice(c, 1);
+	}else if(B3img.length <= 0) {
+		B3img.splice(0, 0, B3img1, B3img2, B3img3, B3img4, B3img5, B3img6, B3img7, B3img8, B3img9, B3img10);
+		image(B3img[c], 50, 50, 200, 300);
+	}
+}
 
-// setInterval(randombook3, 1000);
+setInterval(randombook3, 1000);
 
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
