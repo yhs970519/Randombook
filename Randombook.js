@@ -40,7 +40,16 @@ function randombook1() {
 	if(img.length > 0) {
 		img.splice(a, 1);
 	}else if(img.length < 1) {
-		img.splice(0, 0, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10);
+		img[0] = img1;
+		img[1] = img2;
+		img[2] = img3;
+		img[3] = img4;
+		img[4] = img5;
+		img[5] = img6;
+		img[6] = img7;
+		img[7] = img8;
+		img[8] = img9;
+		img[9] = img10;
 	}
 }
 
