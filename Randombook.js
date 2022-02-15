@@ -22,6 +22,12 @@ function preload(){
 function setup()  {
 	createCanvas(windowWidth, windowHeight);
 	background(0, 0, 0, 20);
+	let a = Math.floor(Math.random() * img.length);
+	let b = Math.floor(Math.random() * img.length);
+	let c = Math.floor(Math.random() * img.length);
+	image(img[a], 50, 50, 200, 300);
+	image(img[b], 75, 75, 150, 250);
+	image(img[c], 300, 50, 200, 300);
 }
 
 // function draw() {
