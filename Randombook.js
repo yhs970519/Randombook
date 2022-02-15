@@ -52,15 +52,13 @@ function setup()  {
 // 	image(img[9], 300, 50, 200, 300);
 // }
 
-let a = img.length - 0.001;
-let b = Math.floor(Math.random() * 10);
-let c = Math.floor(Math.random() * img.length);
-let d = Math.floor(Math.random() * img.length - 0.001);
-
 function randombook1() {
-	image(img[b], mouseX, mouseY, 200, 300);
-	image(img[c], 50, 50, 200, 300);
-	image(img[d], 300, 50, 200, 300);
+	let a = Math.floor(Math.random() * 10);
+	let b = Math.floor(Math.random() * img.length);
+	let c = Math.floor(Math.random() * img.length);
+	image(img[a], mouseX, mouseY, 200, 300);
+	image(img[b], 50, 50, 200, 300);
+	image(img[c], 300, 50, 200, 300);
 }
 
 setInterval(randombook1, 1000);
