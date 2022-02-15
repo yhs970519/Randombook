@@ -53,9 +53,9 @@ function setup()  {
 // }
 
 let a = img.length - 0.001;
-let b = Math.floor(Math.random() * img.length);
+let b = Math.floor(Math.random() * 10);
 let c = Math.floor(Math.random() * img.length);
-let d = Math.floor(Math.random() * img.length);
+let d = Math.floor(Math.random() * img.length - 0.001);
 
 function randombook1() {
 	image(img[b], mouseX, mouseY, 200, 300);
