@@ -36,13 +36,13 @@ function draw() {
 
 function randombook1() {
 	let a = Math.floor(Math.random() * img.length);
-	image(img[a], 50, 50, 200, 300);
 	if(img.length > 0) {
-		// img.splice(a, 1);
-		img.splice(0, 0, img1);
+		image(img[a], 50, 50, 200, 300);
+		img.splice(a, 1);
 		console.log(img.length);
 	}else if(img.length <= 0) {
 		img.splice(0, 0, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10);
+		image(img[a], 50, 50, 200, 300);
 		console.log(img.length);
 	}
 }
