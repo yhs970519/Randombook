@@ -39,7 +39,8 @@ function setup()  {
 }
 
 function draw() {
-
+	fill(black);
+	rect(50, 50, 100);
 }
 
 function randombook1() {
