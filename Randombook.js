@@ -52,24 +52,18 @@ function setup()  {
 // 	image(img[9], 300, 50, 200, 300);
 // }
 
-function randombook() {
-	let a = img.length - 0.001;
-	let b = Math.floor(random(a));
-	let c = Math.floor(random(a));
-	for(let i = 1; i < 121; i++) {
-		if(i % 60 === 0) {
-			image(img[b], mouseX, mouseY, 200, 300);
-			image(img[c], 50, 50, 200, 300);
-		}else {
-			continue;
-			image(img[b], mouseX, mouseY, 200, 300);
-			image(img[c], 50, 50, 200, 300);
-		}
-	}
-	image(img[9], 300, 50, 200, 300);
+let a = img.length - 0.001;
+let b = Math.floor(Math.random() * a);
+let c = Math.floor(Math.random() * a);
+let d = Math.floor(Math.random() * a);
+
+function randombook1() {
+	image(img[b], mouseX, mouseY, 200, 300);
+	image(img[c], 50, 50, 200, 300);
+	image(img[d], 300, 50, 200, 300);
 }
 
-setInterval(randombook, 1000);
+setInterval(randombook1, 1000);
 
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
