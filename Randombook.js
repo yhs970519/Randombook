@@ -13,23 +13,19 @@ let B1img = [];
 let B2img = [];
 let B3img = [];
 
-function preload(){
-	for (let i = 1; i < bookN; i++) {
-		//'Bnimg+数字'に 順番にイメージリンクを当てる。//
-		let j = i - 1;
-		eval("B1img" + i + " = loadImage('book1/book" + i + ".jpg');");
-		eval("B2img" + i + " = loadImage('book2/book" + i + ".png');");
-		eval("B3img" + i + " = loadImage('book3/book" + i + ".png');");
-		// 'Bnimg'配列に 'img+数字' 変数を当てる。//
-		eval("B1img[" + j + "] = B1img" + i + ";");
-		eval("B2img[" + j + "] = B2img" + i + ";");
-		eval("B3img[" + j + "] = B3img" + i + ";");
-	}
+for (let i = 1; i < bookN; i++) {
+	//'Bnimg+数字'に 順番にイメージリンクを当てる。//
+	let j = i - 1;
+	eval("B1img" + i + " = loadImage('book1/book" + i + ".jpg');");
+	eval("B2img" + i + " = loadImage('book2/book" + i + ".png');");
+	eval("B3img" + i + " = loadImage('book3/book" + i + ".png');");
+	// 'Bnimg'配列に 'img+数字' 変数を当てる。//
+	eval("B1img[" + j + "] = B1img" + i + ";");
+	eval("B2img[" + j + "] = B2img" + i + ";");
+	eval("B3img[" + j + "] = B3img" + i + ";");
 }
 
-function setup()  {
-	createCanvas(windowWidth, windowHeight);
-	background(0, 0, 0, 20);
+function randombook0()  {
 	let a = Math.floor(Math.random() * B1img.length);
 	let b = Math.floor(Math.random() * B2img.length);
 	let c = Math.floor(Math.random() * B3img.length);
@@ -39,9 +35,6 @@ function setup()  {
 	// image(B1img[a], 50, 50, 200, 300);
 	// image(B2img[b], 75, 75, 150, 250);
 	// image(B3img[c], 300, 50, 200, 300);
-}
-
-function draw() {
 }
 
 function randombook1() {
@@ -82,17 +75,3 @@ function randombook3() {
 }
 
 setInterval(randombook3, 1000);
-
-function windowResized() {
-	resizeCanvas(windowWidth, windowHeight);
-	background(0, 0, 0, 20);
-	let a = Math.floor(Math.random() * B1img.length);
-	let b = Math.floor(Math.random() * B2img.length);
-	let c = Math.floor(Math.random() * B3img.length);
-	document.getElementById("BOOK1").src = B1img[a];
-	document.getElementById("BOOK2").src = B2img[b];
-	document.getElementById("BOOK3").src = B3img[c];
-	// image(B1img[a], 50, 50, 200, 300);
-	// image(B2img[b], 75, 75, 150, 250);
-	// image(B3img[c], 300, 50, 200, 300);
-}
