@@ -22,7 +22,6 @@ function preload(){
 function setup()  {
 	createCanvas(windowWidth, windowHeight);
 	background(0, 0, 0, 20);
-	imageMode(CORNER);
 }
 
 // function draw() {
@@ -58,21 +57,21 @@ function randombook1() {
 	image(img[a], 50, 50, 200, 300);
 }
 
-setInterval(randombook1, 500);
+setInterval(randombook1, 1500);
 
 function randombook2() {
 	let b = Math.floor(Math.random() * img.length);
 	image(img[b], 75, 75, 150, 250);
 }
 
-setInterval(randombook2, 1000);
+setInterval(randombook2, 500);
 
 function randombook3() {
 	let c = Math.floor(Math.random() * img.length);
 	image(img[c], 300, 50, 200, 300);
 }
 
-setInterval(randombook3, 1500);
+setInterval(randombook3, 1000);
 
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
