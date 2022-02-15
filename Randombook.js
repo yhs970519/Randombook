@@ -39,7 +39,7 @@ function setup()  {
 }
 
 function draw() {
-	fill(black);
+	fill(0);
 	rect(50, 50, 100);
 }
 
