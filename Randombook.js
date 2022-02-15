@@ -22,6 +22,7 @@ function preload(){
 function setup()  {
 	createCanvas(windowWidth, windowHeight);
 	background(0, 0, 0, 20);
+	imageMode(CORNER);
 }
 
 // function draw() {
