@@ -37,7 +37,7 @@ function draw() {
 function randombook1() {
 	let a = Math.floor(Math.random() * img.length);
 	image(img[a], 50, 50, 200, 300);
-	if(img.length < 1) {
+	if(img.length > 0) {
 		img.splice(a, 1);
 	}else {
 		img.splice(0, 0, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10);
