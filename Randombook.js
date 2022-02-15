@@ -10,7 +10,6 @@ for (let i = 1; i < bookN; i++) {
 let img = [];
 
 function preload(){
-	
 	for (let i = 1; i < bookN; i++) {
 		//'img+数字'に 順番にイメージリンクを当てる。//
 		let j = i - 1;
@@ -25,7 +24,35 @@ function setup()  {
 	background(0, 0, 0, 20);
 }
 
-function draw() {
+// function draw() {
+// 	let a = img.length - 0.001;
+// 	let b = Math.floor(random(a));
+// 	let c = Math.floor(random(a));
+// 	for(let i = 1; i < 121; i++) {
+// 		if(i % 60 === 0) {
+// 			image(img[b], mouseX, mouseY, 200, 300);
+// 			image(img[c], 50, 50, 200, 300);
+// 		}else {
+// 			continue;
+// 			image(img[b], mouseX, mouseY, 200, 300);
+// 			image(img[c], 50, 50, 200, 300);
+// 		}
+// 	// let c = img.length - 0.001;
+// 	// for (let a = c; a > 5; a--) {
+// 	// 	let b = Math.floor(random(a));
+// 	// 	if (a < 0) {
+// 	// 		a = c;
+// 	// 		// img.splice(0, 0, 'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10');
+// 	// 	}else {
+// 	// 		image(img[b], mouseX, mouseY, 200, 300);
+// 	// 		// img.splice(b, 1);
+// 	// 	}
+// 	// }
+// 	}
+// 	image(img[9], 300, 50, 200, 300);
+// }
+
+function randombook() {
 	let a = img.length - 0.001;
 	let b = Math.floor(random(a));
 	let c = Math.floor(random(a));
@@ -38,20 +65,11 @@ function draw() {
 			image(img[b], mouseX, mouseY, 200, 300);
 			image(img[c], 50, 50, 200, 300);
 		}
-	// let c = img.length - 0.001;
-	// for (let a = c; a > 5; a--) {
-	// 	let b = Math.floor(random(a));
-	// 	if (a < 0) {
-	// 		a = c;
-	// 		// img.splice(0, 0, 'img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8', 'img9', 'img10');
-	// 	}else {
-	// 		image(img[b], mouseX, mouseY, 200, 300);
-	// 		// img.splice(b, 1);
-	// 	}
-	// }
 	}
 	image(img[9], 300, 50, 200, 300);
 }
+
+setInterval(randombook, 1000);
 
 function windowResized() {
 	resizeCanvas(windowWidth, windowHeight);
