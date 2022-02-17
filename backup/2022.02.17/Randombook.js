@@ -2,7 +2,7 @@
 
 window.onload = function() {
 	//new image tags
-	let imgN = 106; //+1
+	let imgN = 33; //+1
 	for (let i = 1; i < imgN; i++) {
 		let a = Math.ceil(Math.random() * 2) + 1;
 		let b = Math.ceil(Math.random() * 10);
@@ -23,8 +23,8 @@ window.onload = function() {
 	let main_img = document.querySelector(".main_img");
 
 	document.addEventListener("mousemove", (e) => {
-		let mouseX = -e.clientX * 33.33333 / window.innerWidth;
-		let mouseY = -e.clientY * 33.33333 / window.innerHeight;
+		let mouseX = - e.clientX * 33.33333 / window.innerWidth;
+		let mouseY = - e.clientY * 33.33333 / window.innerHeight;
 		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
 	});
 }
