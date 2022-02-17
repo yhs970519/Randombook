@@ -13,6 +13,7 @@ html, body{
 
 body{
 	background-color: ghostwhite;
+	overflow:hidden;
 }
 
 .container{
@@ -29,18 +30,26 @@ a{
 	text-decoration: none;
 }
 
+header a{
+	display: inline-block;
+	color: black;
+	transition: color 0.4s;
+}
+
+header a:hover{
+	color: seagreen;
+}
+
 .text1{
 	font-size: 30px;
 	margin-left: 20px;
 	margin-bottom: -10px;
-	color: black;
 }
 
 .text2{
 	font-size: 20px;
 	margin-left: 20px;
 	margin-top: 0;
-	color: black;
 }
 
 footer{
@@ -91,7 +100,7 @@ footer div{
 	padding: 0;
 	font-size: 15px;
 	filter: blur(10px);
-	transition: filter 0.2s;
+	transition: filter 0.4s;
 }
 
 .content nav ul a, .content aside ul a{
@@ -112,6 +121,7 @@ footer div{
 	filter: blur(0px);
 }
 
+/* important point */
 main{
 	z-index: 1;
 	position: relative;
