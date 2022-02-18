@@ -2,7 +2,7 @@
 
 window.onload = function() {
 	// new image tags
-	let imgN = 51; //+1
+	let imgN = 21; //+1
 	for (let i = 1; i < imgN; i++) {
 		let a = Math.ceil(Math.random() * 2) + 1;
 		let b = Math.ceil(Math.random() * 10);
@@ -16,7 +16,7 @@ window.onload = function() {
 		bookImg.setAttributeNode(srcNode);
 		bookImg.setAttributeNode(altNode);
 		bookImg.setAttributeNode(classNode);
-		document.querySelector(".main_img a").appendChild(bookImg);
+		document.querySelector(".main_img").appendChild(bookImg);
 	}
 
 	for (let i = 1; i < imgN; i++) {
@@ -33,7 +33,7 @@ window.onload = function() {
 		bookImg.setAttributeNode(srcNode);
 		bookImg.setAttributeNode(altNode);
 		bookImg.setAttributeNode(classNode);
-		document.querySelector(".main_img" + number + " a").appendChild(bookImg);
+		document.querySelector(".main_img" + number + "").appendChild(bookImg);
 	}
 
 	for (let i = 1; i < imgN; i++) {
@@ -50,7 +50,7 @@ window.onload = function() {
 		bookImg.setAttributeNode(srcNode);
 		bookImg.setAttributeNode(altNode);
 		bookImg.setAttributeNode(classNode);
-		document.querySelector(".main_img" + number + " a").appendChild(bookImg);
+		document.querySelector(".main_img" + number + "").appendChild(bookImg);
 	}
 
 	for (let i = 1; i < imgN; i++) {
@@ -67,7 +67,7 @@ window.onload = function() {
 		bookImg.setAttributeNode(srcNode);
 		bookImg.setAttributeNode(altNode);
 		bookImg.setAttributeNode(classNode);
-		document.querySelector(".main_img" + number + " a").appendChild(bookImg);
+		document.querySelector(".main_img" + number + "").appendChild(bookImg);
 	}
 
 	for (let i = 1; i < imgN; i++) {
@@ -84,7 +84,7 @@ window.onload = function() {
 		bookImg.setAttributeNode(srcNode);
 		bookImg.setAttributeNode(altNode);
 		bookImg.setAttributeNode(classNode);
-		document.querySelector(".main_img" + number + " a").appendChild(bookImg);
+		document.querySelector(".main_img" + number + "").appendChild(bookImg);
 	}
 
 	for (let i = 1; i < imgN; i++) {
@@ -101,7 +101,7 @@ window.onload = function() {
 		bookImg.setAttributeNode(srcNode);
 		bookImg.setAttributeNode(altNode);
 		bookImg.setAttributeNode(classNode);
-		document.querySelector(".main_img" + number + " a").appendChild(bookImg);
+		document.querySelector(".main_img" + number + "").appendChild(bookImg);
 	}
 
 	for (let i = 1; i < imgN; i++) {
@@ -118,7 +118,7 @@ window.onload = function() {
 		bookImg.setAttributeNode(srcNode);
 		bookImg.setAttributeNode(altNode);
 		bookImg.setAttributeNode(classNode);
-		document.querySelector(".main_img" + number + " a").appendChild(bookImg);
+		document.querySelector(".main_img" + number + "").appendChild(bookImg);
 	}
 
 	for (let i = 1; i < imgN; i++) {
@@ -135,7 +135,7 @@ window.onload = function() {
 		bookImg.setAttributeNode(srcNode);
 		bookImg.setAttributeNode(altNode);
 		bookImg.setAttributeNode(classNode);
-		document.querySelector(".main_img" + number + " a").appendChild(bookImg);
+		document.querySelector(".main_img" + number + "").appendChild(bookImg);
 	}
 
 	// tranlate images in pc
@@ -144,34 +144,43 @@ window.onload = function() {
 	let mouseY;
 
 	document.addEventListener("mousemove", (e) => {
-		mouseX = -e.clientX * 5 / window.innerWidth;
-		mouseY = -e.clientY * 10 / window.innerHeight;
+		mouseX = -e.clientX * 25 / window.innerWidth;
+		mouseY = -e.clientY * 25 / window.innerHeight;
 		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
 		// console.log(mouseX);
 		// console.log(mouseY);
+
+		// let mX = e.clientX;
+		// let mY = e.clientY;
+		// let x = mX / window.innerWidth;
+		// let y = mY / window.innerHeight;
+		// document.querySelector(".frame_top").style.opacity = x;
+		// document.querySelector(".frame_left").style.opacity = y;
+		// document.querySelector(".frame_right").style.opacity = x;
+		// document.querySelector(".frame_bottom").style.opacity = y;
 	});
 
 	// translate images in mobile
 	document.addEventListener("touchstart", (e) => {
-		mouseX = -e.touches[0].clientX * 2.5 / window.innerWidth;
-		mouseY = -e.touches[0].clientY * 10 / window.innerHeight;
+		mouseX = -e.touches[0].clientX * 33.33333 / window.innerWidth;
+		mouseY = -e.touches[0].clientY * 33.33333 / window.innerHeight;
 		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
 	});
     document.addEventListener("touchmove", (e) => {
-		mouseX = -e.changedTouches[0].clientX * 2.5 / window.innerWidth;
-		mouseY = -e.changedTouches[0].clientY * 10 / window.innerHeight;
+		mouseX = -e.changedTouches[0].clientX * 33.33333 / window.innerWidth;
+		mouseY = -e.changedTouches[0].clientY * 33.33333 / window.innerHeight;
 		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
 		// console.log(mouseX);
 		// console.log(mouseY);
 	});
     document.addEventListener("touchend", (e) => {
-		mouseX = -e.changedTouches[0].clientX * 2.5 / window.innerWidth;
-		mouseY = -e.changedTouches[0].clientY * 10 / window.innerHeight;
+		mouseX = -e.changedTouches[0].clientX * 33.33333 / window.innerWidth;
+		mouseY = -e.changedTouches[0].clientY * 33.33333 / window.innerHeight;
 		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
 	});
 }
 
-// random book images
+//book images
 let arrayN = 11; //+1
 for (let i = 1; i < arrayN; i++) {
 	eval("B" + i + "img = [];");

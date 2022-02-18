@@ -22,7 +22,6 @@ body{
 }
 
 header{
-	position: absolute;
 	z-index: 4;
 	/* border-bottom: 1px solid black; */
 }
@@ -34,8 +33,7 @@ a{
 header a{
 	display: inline-block;
 	color: black;
-	transition: color 0.2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	transition: color 0.4s;
 }
 
 header a:hover{
@@ -102,15 +100,14 @@ footer div{
 	padding: 0;
 	font-size: 15px;
 	filter: blur(10px);
-	transition: filter 0.2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	transition: filter 0.4s;
 }
 
 .content nav ul a, .content aside ul a{
 	display: inline-block;
 	color: ghostwhite;
 	/* background-color: rgb(112, 128, 144, 0.7); */
-	background-color: rgba(47, 79, 79, 0.7);
+	background-color: rgba(0, 0, 0, 0.6);
 	border-radius: 7.5px;
 	padding: 7.5px;
 	margin-bottom: 30px;
@@ -137,11 +134,11 @@ main{
 	position: fixed;
 	left: 0;
 	top: 0;
-    width: 7270px;
+    width: 2900px;
     /* height: 500px; */
 	display: flex;
 	flex-direction: column;
-	flex-basis: 7270px;
+	flex-basis: 2900px;
 	flex-shrink: 0;
 	justify-content: center;
 	align-content: center;
@@ -151,134 +148,58 @@ main{
 	/* flex-wrap: wrap; */
 }
 
+[class*="main_img"]{
+	
+	
+	/* display:flex; */
+	/* flex-wrap: wrap; */
+	
+	/* margin: -100px; */
+	/* transform: translate(-16.7%, -16.7%); */
+}
+
 main img{
 	margin: 10px;
 	width: 125px;
 	height: 200px;
 }
 
-[class*="main_img"]{
-	position: relative;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-}
-
-.main_img, .main_img3, .main_img5, .main_img7{
-	animation-name: slideinRight;
-}
-
-.main_img{
-	animation-duration: 80s;
-}
-
-.main_img:hover{
-	animation-play-state: paused;
-}
-
-.main_img3{
-	animation-duration: 70s;
-}
-
-.main_img3:hover{
-	animation-play-state: paused;
-}
-
-.main_img5{
-	animation-duration: 85s;
-}
-
-.main_img5:hover{
-	animation-play-state: paused;
-}
-
-.main_img7{
-	animation-duration: 90s;
-}
-
-.main_img7:hover{
-	animation-play-state: paused;
-}
-
-@keyframes slideinRight {
-	0% { left: -65%; }
-	100% { left: 0%; }
-}
-
-.main_img2, .main_img4, .main_img6, .main_img8{
-	animation-name: slideinLeft;
-}
-
-.main_img2{
-	animation-duration: 95s;
-}
-
-.main_img2:hover{
-	animation-play-state: paused;
-}
-
-.main_img4{
-	animation-duration: 92.5s;
-}
-
-.main_img4:hover{
-	animation-play-state: paused;
-}
-
-.main_img6{
-	animation-duration: 100s;
-}
-
-.main_img6:hover{
-	animation-play-state: paused;
-}
-
-.main_img8{
-	animation-duration: 82.5s;
-}
-
-.main_img8:hover{
-	animation-play-state: paused;
-}
-
-@keyframes slideinLeft {
-	0% { left: 0%; }
-	100% { left: -65%; }
-}
-
-[class*="frame"]{
+/* [class*="frame"]{
 	z-index: 2;
-	position: absolute;
 }
 
 .frame_top{
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 10%;
-	background: linear-gradient(to bottom, rgba(248, 248, 255, 0.5), rgba(248, 248, 255, 0));
-}
-
-.frame_bottom{
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 10%;
-	background: linear-gradient(to top, rgba(248, 248, 255, 0.5), rgba(248, 248, 255, 0));
+	height: 20%;
+	background: linear-gradient(to bottom, rgba(248, 248, 255) 10%, rgba(248, 248, 255, 0));
 }
 
 .frame_left{
+	position: absolute;
 	top: 0;
 	left: 0;
-	width: 10%;
+	width: 20%;
 	height: 100%;
-	background: linear-gradient(to right, rgba(248, 248, 255, 0.5), rgba(248, 248, 255, 0));
+	background: linear-gradient(to right, rgba(248, 248, 255) 10%, rgba(248, 248, 255, 0));
 }
 
 .frame_right{
+	position: absolute;
 	top: 0;
 	right: 0;
-	width: 10%;
+	width: 20%;
 	height: 100%;
-	background: linear-gradient(to left, rgba(248, 248, 255, 0.5), rgba(248, 248, 255, 0));
+	background: linear-gradient(to left, rgba(248, 248, 255) 10%, rgba(248, 248, 255, 0));
 }
+
+.frame_bottom{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	background: linear-gradient(to top, rgba(248, 248, 255) 10%, rgba(248, 248, 255, 0));
+} */
