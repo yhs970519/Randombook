@@ -131,6 +131,7 @@ main{
 }
 
 .main_img{
+	margin: -80px;
 	position: fixed;
     width: 150%;
     height: 150%;
@@ -144,7 +145,7 @@ main{
 }
 
 main img{
-	margin: 20px;
+	margin: 10px;
 	width: 125px;
 	height: 200px;
 }
