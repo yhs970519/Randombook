@@ -1,7 +1,7 @@
 // JavaScript Document
 
 window.onload = function() {
-	//new image tags
+	// new image tags
 	let imgN = 106; //+1
 	for (let i = 1; i < imgN; i++) {
 		let a = Math.ceil(Math.random() * 2) + 1;
@@ -19,12 +19,29 @@ window.onload = function() {
 		document.querySelector(".main_img").appendChild(bookImg);
 	}
 
-	//tranlate images
+	// tranlate images in pc
 	let main_img = document.querySelector(".main_img");
 
 	document.addEventListener("mousemove", (e) => {
 		let mouseX = -e.clientX * 33.33333 / window.innerWidth;
 		let mouseY = -e.clientY * 33.33333 / window.innerHeight;
+		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+	});
+
+	// translate images in mobile
+	document.addEventListener("touchstart", (e) => {
+		let mouseX = -e.touches[0].clientX * 33.33333 / window.innerWidth;
+		let mouseY = -e.touches[0].clientY * 33.33333 / window.innerHeight;
+		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+	});
+    document.addEventListener("touchmove", (e) => {
+		let mouseX = -e.changedTouches[0].clientX * 33.33333 / window.innerWidth;
+		let mouseY = -e.changedTouches[0].clientY * 33.33333 / window.innerHeight;
+		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+	});
+    document.addEventListener("touchend", (e) => {
+		let mouseX = -e.changedTouches[0].clientX * 33.33333 / window.innerWidth;
+		let mouseY = -e.changedTouches[0].clientY * 33.33333 / window.innerHeight;
 		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
 	});
 }
