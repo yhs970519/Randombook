@@ -313,7 +313,7 @@ main img{
 	font-size: 2rem;
 	text-align: center;
 	animation-name: wave;
-	animation-duration: 10s;
+	animation-duration: 20s;
 	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 	animation-fill-mode: forwards;
 	/* animation-name: changeColor2;
@@ -331,15 +331,16 @@ main img{
 
 @keyframes wave{
 	0% { opacity: 1;}
-	20% { opacity: 1;}
+	10% { opacity: 1;}
 	30% { opacity: 0;}
-	40% { opacity: 1;}
-	50% { opacity: 0;}
-	60% { opacity: 1;}
-	70% { opacity: 0;}
-	80% { opacity: 1;}
-	90% { opacity: 0;}
-	100% { opacity: 1;}
+	30% { opacity: 1;}
+	40% { opacity: 0;}
+	50% { opacity: 1;}
+	60% { opacity: 0;}
+	70% { opacity: 1;}
+	80% { opacity: 0;}
+	90% { opacity: 1;}
+	100% { opacity: 0;}
 }
 
 .loadText1{
