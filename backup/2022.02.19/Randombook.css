@@ -1,0 +1,284 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body{
+	box-sizing: border-box;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	background-color: ghostwhite;
+	overflow:hidden;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+}
+
+header{
+	position: absolute;
+	z-index: 4;
+}
+
+a{
+	text-decoration: none;
+}
+
+header a{
+	display: inline-block;
+	color: black;
+	transition: color 0.2s;
+	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+header a:hover{
+	color: seagreen;
+}
+
+.text1{
+	font-size: 30px;
+	margin-left: 20px;
+	margin-bottom: -10px;
+}
+
+.text2{
+	font-size: 20px;
+	margin-left: 20px;
+	margin-top: 0;
+}
+
+footer{
+	z-index: 0;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+}
+
+footer div{
+	font-size: 10px;
+}
+
+.content{
+	display: flex;
+}
+
+.content nav, .content aside{
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	flex-basis: 150px;
+	flex-shrink: 0;
+	padding-top: 40px;
+	align-items: center;
+}
+
+.content nav{
+	position: absolute;
+	top: 40%;
+	left: 20px;
+	transform: translateY(-50%);
+}
+
+.content aside{
+	position: absolute;
+	top: 40%;
+	right: 20px;
+	text-align: right;
+	transform: translateY(-50%);
+}
+
+.content nav ul, .content aside ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	filter: blur(10px);
+	transition: filter 0.2s;
+	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+.content nav ul li, .content aside ul li{
+	margin-bottom: 30px;
+}
+
+.content nav ul a, .content aside ul a{
+	display: inline-block;
+	color: ghostwhite;
+	background-color: rgba(47, 79, 79, 0.7);
+	border-radius: 7.5px;
+	padding: 7.5px;
+}
+
+.content nav ul:hover{
+	filter: blur(0px);
+}
+
+.content aside ul:hover{
+	filter: blur(0px);
+}
+
+/* important point */
+main{
+	z-index: 1;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.mainImg{
+	position: fixed;
+	left: 0;
+	top: 0;
+    width: 7270px;
+    /* height: 500px; */
+	display: flex;
+	flex-direction: column;
+	flex-basis: 7270px;
+	flex-shrink: 0;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin-left: -90px;
+	margin-top: -110px;
+	/* flex-wrap: wrap; */
+}
+
+main img{
+	margin: 10px;
+	width: 125px;
+	height: 200px;
+}
+
+[class*="main_img"]{
+	position: relative;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+.main_img1, .main_img3, .main_img5, .main_img7{
+	animation-name: slideinRight;
+}
+
+.main_img1{
+	animation-duration: 80s;
+}
+
+.main_img1:hover{
+	animation-play-state: paused;
+}
+
+.main_img3{
+	animation-duration: 77.5s;
+}
+
+.main_img3:hover{
+	animation-play-state: paused;
+}
+
+.main_img5{
+	animation-duration: 85s;
+}
+
+.main_img5:hover{
+	animation-play-state: paused;
+}
+
+.main_img7{
+	animation-duration: 90s;
+}
+
+.main_img7:hover{
+	animation-play-state: paused;
+}
+
+@keyframes slideinRight {
+	0% { left: -65%; }
+	100% { left: 0%; }
+}
+
+.main_img2, .main_img4, .main_img6, .main_img8{
+	animation-name: slideinLeft;
+}
+
+.main_img2{
+	animation-duration: 95s;
+}
+
+.main_img2:hover{
+	animation-play-state: paused;
+}
+
+.main_img4{
+	animation-duration: 92.5s;
+}
+
+.main_img4:hover{
+	animation-play-state: paused;
+}
+
+.main_img6{
+	animation-duration: 100s;
+}
+
+.main_img6:hover{
+	animation-play-state: paused;
+}
+
+.main_img8{
+	animation-duration: 82.5s;
+}
+
+.main_img8:hover{
+	animation-play-state: paused;
+}
+
+@keyframes slideinLeft {
+	0% { left: 0%; }
+	100% { left: -65%; }
+}
+
+[class*="frame"]{
+	z-index: 2;
+	position: absolute;
+}
+
+.frame_top{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5%;
+	background: linear-gradient(to bottom, rgba(248, 248, 255, 0.5), rgba(248, 248, 255, 0));
+}
+
+.frame_bottom{
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5%;
+	background: linear-gradient(to top, rgba(248, 248, 255, 0.5), rgba(248, 248, 255, 0));
+}
+
+.frame_left{
+	top: 0;
+	left: 0;
+	width: 5%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(248, 248, 255, 0.5), rgba(248, 248, 255, 0));
+}
+
+.frame_right{
+	top: 0;
+	right: 0;
+	width: 5%;
+	height: 100%;
+	background: linear-gradient(to left, rgba(248, 248, 255, 0.5), rgba(248, 248, 255, 0));
+}
