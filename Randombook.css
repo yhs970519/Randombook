@@ -282,3 +282,119 @@ main img{
 	height: 100%;
 	background: linear-gradient(to left, rgba(248, 248, 255, 0.5), rgba(248, 248, 255, 0));
 }
+
+.START{
+	z-index: 10;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.startScreen{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+}
+
+/* @keyframes changeColor1{
+	0% { background-color: black; }
+	20% { background-color: black; }
+	40% { background-color: ghostwhite; }
+	100% { background-color: ghostwhite; }
+} */
+
+.startText{
+	position: fixed;
+	color: ghostwhite;
+	font-size: 2rem;
+	text-align: center;
+	animation-name: wave;
+	animation-duration: 10s;
+	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	animation-fill-mode: forwards;
+	/* animation-name: changeColor2;
+	animation-duration: 10s;
+	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	animation-fill-mode: forwards; */
+}
+
+/* @keyframes changeColor2{
+	0% { color: ghostwhite; }
+	20% { color: ghostwhite; }
+	40% { color: black; }
+	100% { color: black; }
+} */
+
+@keyframes wave{
+	0% { opacity: 1;}
+	20% { opacity: 1;}
+	30% { opacity: 0;}
+	40% { opacity: 1;}
+	50% { opacity: 0;}
+	60% { opacity: 1;}
+	70% { opacity: 0;}
+	80% { opacity: 1;}
+	90% { opacity: 0;}
+	100% { opacity: 1;}
+}
+
+.loadText1{
+	font-size: 4rem;
+	font-weight: bold;
+	animation-name: moving1;
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	animation-fill-mode: forwards;
+}
+
+@keyframes moving1{
+	0% { opacity: 0; }
+	50% { transform: translateY(0); }
+	100% { opacity: 1; }
+	100% { transform: translateY(-40px); }
+
+}
+
+.loadText2{
+	animation-name: moving2;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	animation-fill-mode: forwards;
+}
+
+@keyframes moving2{
+	0% { opacity: 0; }
+	50% { opacity: 0; }
+	75% { transform: translateY(0); }
+	100% { opacity: 1; }
+	100% { transform: translateY(-40px); }
+
+}
+
+.loadText3{
+	animation-name: moving3;
+	animation-duration: 2s;
+	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	animation-fill-mode: forwards;
+}
+
+@keyframes moving3{
+	0% { opacity: 0; }
+	50% { opacity: 0; }
+	62.5% { transform: translateY(0); }
+	75% { opacity: 1; }
+	75% { transform: translateY(-40px); }
+	100% { opacity: 1; }
+	100% { transform: translateY(-40px); }
+
+}
+
+/* .loadText4{
+	margin: 1rem;
+	font-size: 1.75rem;
+	color: slategrey;
+} */

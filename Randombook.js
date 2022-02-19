@@ -166,36 +166,40 @@ window.addEventListener('DOMContentLoaded', function(){
 	}
 
 	let imgN = 51; //+1
-	let rN1 = Math.ceil(Math.random() * 1400) + 500;
-	let rN2 = Math.ceil(Math.random() * 1400) + 500;
-	let rN3 = Math.ceil(Math.random() * 1400) + 500;
-	let rN4 = Math.ceil(Math.random() * 1400) + 500;
-	let rN5 = Math.ceil(Math.random() * 1400) + 500;
-	let rN6 = Math.ceil(Math.random() * 1400) + 500;
-	let rN7 = Math.ceil(Math.random() * 1400) + 500;
-	let rN8 = Math.ceil(Math.random() * 1400) + 500;
+
+	let a = Math.ceil(Math.random() * 15);
+	let b = Math.ceil(Math.random() * 15);
+	let c = Math.ceil(Math.random() * 15);
+	let d = Math.ceil(Math.random() * 15);
+	let e = Math.ceil(Math.random() * 15);
+	let f = Math.ceil(Math.random() * 15);
+	let g = Math.ceil(Math.random() * 15);
+	let h = Math.ceil(Math.random() * 15);
 	
 	for(let i = 1; i < imgN; i++) {
-		let a = Math.ceil(Math.random() * 15);
-		let b = Math.ceil(Math.random() * 15);
-		let c = Math.ceil(Math.random() * 15);
-		let d = Math.ceil(Math.random() * 15);
-		let e = Math.ceil(Math.random() * 15);
-		let f = Math.ceil(Math.random() * 15);
-		let g = Math.ceil(Math.random() * 15);
-		let h = Math.ceil(Math.random() * 15);
-		
-		eval("setInterval(function() { randombook(1, " + i + ", B" + a + "img, bA" + a + "); }, " + rN1 + ");");
-		eval("setInterval(function() { randombook(2, " + i + ", B" + b + "img, bA" + b + "); }, " + rN2 + ");");
-		eval("setInterval(function() { randombook(3, " + i + ", B" + c + "img, bA" + c + "); }, " + rN3 + ");");
-		eval("setInterval(function() { randombook(4, " + i + ", B" + d + "img, bA" + d + "); }, " + rN4 + ");");
-		eval("setInterval(function() { randombook(5, " + i + ", B" + e + "img, bA" + e + "); }, " + rN5 + ");");
-		eval("setInterval(function() { randombook(6, " + i + ", B" + f + "img, bA" + f + "); }, " + rN6 + ");");
-		eval("setInterval(function() { randombook(7, " + i + ", B" + g + "img, bA" + g + "); }, " + rN7 + ");");
-		eval("setInterval(function() { randombook(8, " + i + ", B" + h + "img, bA" + h + "); }, " + rN8 + ");");
+		window["arN" + i] = Math.ceil(Math.random() * 1400) + 500;
+		window["brN" + i] = Math.ceil(Math.random() * 1400) + 500;
+		window["crN" + i] = Math.ceil(Math.random() * 1400) + 500;
+		window["drN" + i] = Math.ceil(Math.random() * 1400) + 500;
+		window["erN" + i] = Math.ceil(Math.random() * 1400) + 500;
+		window["frN" + i] = Math.ceil(Math.random() * 1400) + 500;
+		window["grN" + i] = Math.ceil(Math.random() * 1400) + 500;
+		window["hrN" + i] = Math.ceil(Math.random() * 1400) + 500;
+		eval("setInterval(function() { randombook(1, " + i + ", B" + a + "img, bA" + a + "); }, arN" + i + ");");
+		eval("setInterval(function() { randombook(2, " + i + ", B" + b + "img, bA" + b + "); }, brN" + i + ");");
+		eval("setInterval(function() { randombook(3, " + i + ", B" + c + "img, bA" + c + "); }, crN" + i + ");");
+		eval("setInterval(function() { randombook(4, " + i + ", B" + d + "img, bA" + d + "); }, drN" + i + ");");
+		eval("setInterval(function() { randombook(5, " + i + ", B" + e + "img, bA" + e + "); }, erN" + i + ");");
+		eval("setInterval(function() { randombook(6, " + i + ", B" + f + "img, bA" + f + "); }, frN" + i + ");");
+		eval("setInterval(function() { randombook(7, " + i + ", B" + g + "img, bA" + g + "); }, grN" + i + ");");
+		eval("setInterval(function() { randombook(8, " + i + ", B" + h + "img, bA" + h + "); }, hrN" + i + ");");
 	}
 
 	// setInterval(function() { randombook(2, 5, B1img, bA1); }, 200);
 	// setInterval(function() { randombook(2, 6, B7img, bA7); }, 300);
 	// setInterval(function() { randombook(2, 7, B15img, bA15); }, 500);
 })
+
+window.onload = function() {
+	$(".START").fadeOut( 1000 );
+}
