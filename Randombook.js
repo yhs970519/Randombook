@@ -201,5 +201,5 @@ window.addEventListener('DOMContentLoaded', function(){
 })
 
 window.onload = function() {
-	$(".START").fadeOut( 2000 );
+	$(".START").delay(2000).fadeOut( 1000 );
 }
