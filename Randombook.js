@@ -1,7 +1,7 @@
 // JavaScript Document
 
 window.addEventListener('DOMContentLoaded', function(){
-	// new image tags
+	// new image tags//////////////////////////////////////////////////
 	function imgTag(imgTagGroup) {
 
 		let imgN = 56; //+1
@@ -10,44 +10,34 @@ window.addEventListener('DOMContentLoaded', function(){
 			let bookLink = document.createElement("a");
 			let hrefNode = document.createAttribute("href");
 			let classNode = document.createAttribute("class");
-
 			eval("hrefNode.value = '';");
 			eval("classNode.value = 'bookLink" + i + "_" + imgTagGroup + "';");
-
 			bookLink.setAttributeNode(hrefNode);
 			bookLink.setAttributeNode(classNode);
-
 			document.querySelector(".main_img" + imgTagGroup + "").appendChild(bookLink);
 		}
 
 		for (let i = 1; i < imgN; i++) {
 			let bookFrame = document.createElement("div");
 			let classNode = document.createAttribute("class");
-
 			eval("classNode.value = 'bookFrame" + i + "_" + imgTagGroup + "';");
-
 			bookFrame.setAttributeNode(classNode);
-
 			document.querySelector(".bookLink" + i + "_" + imgTagGroup + "").appendChild(bookFrame);
 		}
 
 		for (let i = 1; i < imgN; i++) {
 			let a = Math.ceil(Math.random() * 3);
 			let b = Math.ceil(Math.random() * 10);
-
 			let bookImg = document.createElement("img");
 			let srcNode = document.createAttribute("src");
 			let altNode = document.createAttribute("alt");
 			let classNode = document.createAttribute("class");
-
 			eval("srcNode.value = 'book" + a + "/book" + b + ".png';");
 			eval("altNode.value = 'randombookimage" + i + "_" + imgTagGroup + "';");
 			eval("classNode.value = 'book" + i + "_" + imgTagGroup + "';");
-
 			bookImg.setAttributeNode(srcNode);
 			bookImg.setAttributeNode(altNode);
 			bookImg.setAttributeNode(classNode);
-
 			document.querySelector(".bookFrame" + i + "_" + imgTagGroup + "").appendChild(bookImg);
 		}
 
@@ -55,44 +45,32 @@ window.addEventListener('DOMContentLoaded', function(){
 		for (let i = 1; i < imgN; i++) {
 			let smallFrame1 = document.createElement("div");
 			let classNode = document.createAttribute("class");
-
 			eval("classNode.value = 'smallFrame1_" + i + "_" + imgTagGroup + "';");
-
 			smallFrame1.setAttributeNode(classNode);
-
 			document.querySelector(".bookFrame" + i + "_" + imgTagGroup + "").appendChild(smallFrame1);
 		}
 
 		for (let i = 1; i < imgN; i++) {
 			let smallFrame2 = document.createElement("div");
 			let classNode = document.createAttribute("class");
-
 			eval("classNode.value = 'smallFrame2_" + i + "_" + imgTagGroup + "';");
-
 			smallFrame2.setAttributeNode(classNode);
-
 			document.querySelector(".bookFrame" + i + "_" + imgTagGroup + "").appendChild(smallFrame2);
 		}
 		
 		for (let i = 1; i < imgN; i++) {
 			let smallFrame3 = document.createElement("div");
 			let classNode = document.createAttribute("class");
-
 			eval("classNode.value = 'smallFrame3_" + i + "_" + imgTagGroup + "';");
-
 			smallFrame3.setAttributeNode(classNode);
-
 			document.querySelector(".bookFrame" + i + "_" + imgTagGroup + "").appendChild(smallFrame3);
 		}
 
 		for (let i = 1; i < imgN; i++) {
 			let smallFrame4 = document.createElement("div");
 			let classNode = document.createAttribute("class");
-
 			eval("classNode.value = 'smallFrame4_" + i + "_" + imgTagGroup + "';");
-
 			smallFrame4.setAttributeNode(classNode);
-
 			document.querySelector(".bookFrame" + i + "_" + imgTagGroup + "").appendChild(smallFrame4);
 		}
 
@@ -100,80 +78,64 @@ window.addEventListener('DOMContentLoaded', function(){
 		for (let i = 1; i < imgN; i++) {
 			let a = Math.ceil(Math.random() * 3);
 			let b = Math.ceil(Math.random() * 10);
-
 			let sbookImg = document.createElement("img");
 			let srcNode = document.createAttribute("src");
 			let altNode = document.createAttribute("alt");
 			let classNode = document.createAttribute("class");
-
 			eval("srcNode.value = 'book" + a + "/book" + b + ".png';");
 			eval("altNode.value = 'smallrandombookimage1_" + i + "_" + imgTagGroup + "';");
 			eval("classNode.value = 'sbook1_" + i + "_" + imgTagGroup + "';");
-
 			sbookImg.setAttributeNode(srcNode);
 			sbookImg.setAttributeNode(altNode);
 			sbookImg.setAttributeNode(classNode);
-
 			document.querySelector(".smallFrame1_" + i + "_" + imgTagGroup + "").appendChild(sbookImg);
 		}
 
 		for (let i = 1; i < imgN; i++) {
 			let a = Math.ceil(Math.random() * 3);
 			let b = Math.ceil(Math.random() * 10);
-
 			let sbookImg = document.createElement("img");
 			let srcNode = document.createAttribute("src");
 			let altNode = document.createAttribute("alt");
 			let classNode = document.createAttribute("class");
-
 			eval("srcNode.value = 'book" + a + "/book" + b + ".png';");
 			eval("altNode.value = 'smallrandombookimage2_" + i + "_" + imgTagGroup + "';");
 			eval("classNode.value = 'sbook2_" + i + "_" + imgTagGroup + "';");
-
 			sbookImg.setAttributeNode(srcNode);
 			sbookImg.setAttributeNode(altNode);
 			sbookImg.setAttributeNode(classNode);
-
 			document.querySelector(".smallFrame2_" + i + "_" + imgTagGroup + "").appendChild(sbookImg);
 		}
 
 		for (let i = 1; i < imgN; i++) {
 			let a = Math.ceil(Math.random() * 3);
 			let b = Math.ceil(Math.random() * 10);
-
 			let sbookImg = document.createElement("img");
 			let srcNode = document.createAttribute("src");
 			let altNode = document.createAttribute("alt");
 			let classNode = document.createAttribute("class");
-
 			eval("srcNode.value = 'book" + a + "/book" + b + ".png';");
 			eval("altNode.value = 'smallrandombookimage3_" + i + "_" + imgTagGroup + "';");
 			eval("classNode.value = 'sbook3_" + i + "_" + imgTagGroup + "';");
-
 			sbookImg.setAttributeNode(srcNode);
 			sbookImg.setAttributeNode(altNode);
 			sbookImg.setAttributeNode(classNode);
-
 			document.querySelector(".smallFrame3_" + i + "_" + imgTagGroup + "").appendChild(sbookImg);
 		}
 
 		for (let i = 1; i < imgN; i++) {
 			let a = Math.ceil(Math.random() * 3);
 			let b = Math.ceil(Math.random() * 10);
-
 			let sbookImg = document.createElement("img");
 			let srcNode = document.createAttribute("src");
 			let altNode = document.createAttribute("alt");
 			let classNode = document.createAttribute("class");
-
 			eval("srcNode.value = 'book" + a + "/book" + b + ".png';");
 			eval("altNode.value = 'smallrandombookimage4_" + i + "_" + imgTagGroup + "';");
 			eval("classNode.value = 'sbook4_" + i + "_" + imgTagGroup + "';");
-
 			sbookImg.setAttributeNode(srcNode);
 			sbookImg.setAttributeNode(altNode);
 			sbookImg.setAttributeNode(classNode);
-
 			document.querySelector(".smallFrame4_" + i + "_" + imgTagGroup + "").appendChild(sbookImg);
 		}
 	}
@@ -187,134 +149,129 @@ window.addEventListener('DOMContentLoaded', function(){
 	imgTag(7);
 	imgTag(8);
 
-	// image frames
-	function bookFrame1(rowNumber, columnNumber) {
+	// image frames//////////////////////////////////////////////////
+	function bookFrame(rowNumber, columnNumber, 
+		f1w, f1h, f1tX, f1tY, 
+		f2w, f2h, f2tX, f2tY, 
+		f3w, f3h, f3tX, f3tY, 
+		f4w, f4h, f4tX, f4tY) {
 		let frame1 = document.querySelector(".smallFrame1_" + rowNumber + "_" + columnNumber + "");
 		let frameImg1 = document.querySelector(".smallFrame1_" + rowNumber + "_" + columnNumber + " img");
-		frame1.style.width = '100px';
-		frame1.style.height = '160px';
-		frame1.style.transform = 'translate(10px, 10px)';
-		frameImg1.style.marginTop = '-10px';
-		frameImg1.style.marginLeft = '-10px';
+		frame1.style.width = f1w + 'px';
+		frame1.style.height = f1h + 'px';
+		frame1.style.transform = 'translate(' + f1tX + 'px, ' + f1tY + 'px)';
+		frameImg1.style.marginLeft = '-' + f1tX + 'px';
+		frameImg1.style.marginTop = '-' + f1tY + 'px';
 		let frame2 = document.querySelector(".smallFrame2_" + rowNumber + "_" + columnNumber + "");
 		let frameImg2 = document.querySelector(".smallFrame2_" + rowNumber + "_" + columnNumber + " img");
-		frame2.style.width = '80px';
-		frame2.style.height = '140px';
-		frame2.style.transform = 'translate(20px, 20px)';
-		frameImg2.style.marginTop = '-20px';
-		frameImg2.style.marginLeft = '-20px';
+		frame2.style.width = f2w + 'px';
+		frame2.style.height = f2h + 'px';
+		frame2.style.transform = 'translate(' + f2tX + 'px, ' + f2tY + 'px)';
+		frameImg2.style.marginLeft = '-' + f2tX + 'px';
+		frameImg2.style.marginTop = '-' + f2tY + 'px';
 		let frame3 = document.querySelector(".smallFrame3_" + rowNumber + "_" + columnNumber + "");
 		let frameImg3 = document.querySelector(".smallFrame3_" + rowNumber + "_" + columnNumber + " img");
-		frame3.style.width = '60px';
-		frame3.style.height = '120px';
-		frame3.style.transform = 'translate(30px, 30px)';
-		frameImg3.style.marginTop = '-30px';
-		frameImg3.style.marginLeft = '-30px';
+		frame3.style.width = f3w + 'px';
+		frame3.style.height = f3h + 'px';
+		frame3.style.transform = 'translate(' + f3tX + 'px, ' + f3tY + 'px)';
+		frameImg3.style.marginLeft = '-' + f3tX + 'px';
+		frameImg3.style.marginTop = '-' + f3tY + 'px';
 		let frame4 = document.querySelector(".smallFrame4_" + rowNumber + "_" + columnNumber + "");
 		let frameImg4 = document.querySelector(".smallFrame4_" + rowNumber + "_" + columnNumber + " img");
-		frame4.style.width = '40px';
-		frame4.style.height = '100px';
-		frame4.style.transform = 'translate(40px, 40px)';
-		frameImg4.style.marginTop = '-40px';
-		frameImg4.style.marginLeft = '-40px';
+		frame4.style.width = f4w + 'px';
+		frame4.style.height = f4h + 'px';
+		frame4.style.transform = 'translate(' + f4tX + 'px, ' + f4tY + 'px)';
+		frameImg4.style.marginLeft = '-' + f4tX + 'px';
+		frameImg4.style.marginTop = '-' + f4tY + 'px';
 	}
 
-	function bookFrame2(rowNumber, columnNumber) {
-		let frame1 = document.querySelector(".smallFrame1_" + rowNumber + "_" + columnNumber + "");
-		frame1.style.width = '120px';
-		frame1.style.height = '36px';
-		let frame2 = document.querySelector(".smallFrame2_" + rowNumber + "_" + columnNumber + "");
-		let frameImg2 = document.querySelector(".smallFrame2_" + rowNumber + "_" + columnNumber + " img");
-		frame2.style.width = '120px';
-		frame2.style.height = '36px';
-		frame2.style.transform = 'translateY(36px)';
-		frameImg2.style.marginTop = '-36px';
-		let frame3 = document.querySelector(".smallFrame3_" + rowNumber + "_" + columnNumber + "");
-		let frameImg3 = document.querySelector(".smallFrame3_" + rowNumber + "_" + columnNumber + " img");
-		frame3.style.width = '120px';
-		frame3.style.height = '36px';
-		frame3.style.transform = 'translateY(72px)';
-		frameImg3.style.marginTop = '-72px';
-		let frame4 = document.querySelector(".smallFrame4_" + rowNumber + "_" + columnNumber + "");
-		let frameImg4 = document.querySelector(".smallFrame4_" + rowNumber + "_" + columnNumber + " img");
-		frame4.style.width = '120px';
-		frame4.style.height = '36px';
-		frame4.style.transform = 'translateY(108px)';
-		frameImg4.style.marginTop = '-108px';
-	}
-
-	function bookFrame3(rowNumber, columnNumber) {
-		let frame1 = document.querySelector(".smallFrame1_" + rowNumber + "_" + columnNumber + "");
-		frame1.style.width = '24px';
-		frame1.style.height = '180px';
-		let frame2 = document.querySelector(".smallFrame2_" + rowNumber + "_" + columnNumber + "");
-		let frameImg2 = document.querySelector(".smallFrame2_" + rowNumber + "_" + columnNumber + " img");
-		frame2.style.width = '24px';
-		frame2.style.height = '180px';
-		frame2.style.transform = 'translateX(24px)';
-		frameImg2.style.marginLeft = '-24px';
-		let frame3 = document.querySelector(".smallFrame3_" + rowNumber + "_" + columnNumber + "");
-		let frameImg3 = document.querySelector(".smallFrame3_" + rowNumber + "_" + columnNumber + " img");
-		frame3.style.width = '24px';
-		frame3.style.height = '180px';
-		frame3.style.transform = 'translateX(48px)';
-		frameImg3.style.marginLeft = '-48px';
-		let frame4 = document.querySelector(".smallFrame4_" + rowNumber + "_" + columnNumber + "");
-		let frameImg4 = document.querySelector(".smallFrame4_" + rowNumber + "_" + columnNumber + " img");
-		frame4.style.width = '24px';
-		frame4.style.height = '180px';
-		frame4.style.transform = 'translateX(72px)';
-		frameImg4.style.marginLeft = '-72px';
-	}
-
-	function bookFrame4(rowNumber, columnNumber) {
-		let frame1 = document.querySelector(".smallFrame1_" + rowNumber + "_" + columnNumber + "");
-		frame1.style.width = '60px';
-		frame1.style.height = '90px';
-		let frame2 = document.querySelector(".smallFrame2_" + rowNumber + "_" + columnNumber + "");
-		let frameImg2 = document.querySelector(".smallFrame2_" + rowNumber + "_" + columnNumber + " img");
-		frame2.style.width = '60px';
-		frame2.style.height = '45px';
-		frame2.style.transform = 'translate(60px, 45px)';
-		frameImg2.style.marginTop = '-45px';
-		frameImg2.style.marginLeft = '-60px';
-		let frame3 = document.querySelector(".smallFrame3_" + rowNumber + "_" + columnNumber + "");
-		let frameImg3 = document.querySelector(".smallFrame3_" + rowNumber + "_" + columnNumber + " img");
-		frame3.style.width = '30px';
-		frame3.style.height = '45px';
-		frame3.style.transform = 'translateX(60px)';
-		frameImg3.style.marginLeft = '-60px';
-		let frame4 = document.querySelector(".smallFrame4_" + rowNumber + "_" + columnNumber + "");
-		let frameImg4 = document.querySelector(".smallFrame4_" + rowNumber + "_" + columnNumber + " img");
-		frame4.style.width = '30px';
-		frame4.style.height = '45px';
-		frame4.style.transform = 'translateX(90px)';
-		frameImg4.style.marginLeft = '-90px';
-	}
+	let numberArray = [];
+	// 1
+	numberArray[0] = '100, 160, 10, 10, 80, 140, 20, 20, 60, 120, 30, 30, 40, 100, 40, 40';
+	// 2
+	numberArray[1] = '120, 36, 0, 0, 120, 36, 0, 36, 120, 36, 0, 72, 120, 36, 0, 108';
+	numberArray[2] = '80, 45, 0, 0, 80, 45, 0, 45, 80, 45, 0, 90, 80, 45, 0, 135';
+	numberArray[3] = '80, 45, 40, 0, 80, 45, 40, 45, 80, 45, 40, 90, 80, 45, 40, 135';
+	// 3
+	numberArray[4] = '24, 180, 0, 0, 24, 180, 24, 0, 24, 180, 48, 0, 24, 180, 72, 0';
+	numberArray[5] = '30, 145, 0, 0, 30, 145, 30, 0, 30, 145, 60, 0, 30, 145, 90, 0';
+	numberArray[6] = '30, 145, 0, 35, 30, 145, 30, 35, 30, 145, 60, 35, 30, 145, 90, 35';
+	// 4
+	numberArray[7] = '60, 90, 0, 0, 60, 45, 60, 45, 30, 45, 60, 0, 30, 45, 90, 0';
+	numberArray[8] = '60, 90, 0, 90, 60, 45, 60, 90, 30, 45, 60, 135, 30, 45, 90, 135';
+	numberArray[9] = '60, 90, 60, 90, 60, 45, 0, 90, 30, 45, 0, 135, 30, 45, 30, 135';
+	numberArray[10] = '60, 90, 60, 0, 60, 45, 0, 45, 30, 45, 0, 0, 30, 45, 30, 0';
+	// 5
+	numberArray[11] = '60, 90, 60, 90, 30, 90, 60, 0, 30, 45, 90, 45, 30, 45, 90, 0';
+	numberArray[12] = '60, 90, 60, 0, 30, 90, 60, 90, 30, 45, 90, 90, 30, 45, 90, 135';
+	numberArray[13] = '60, 90, 0, 0, 30, 90, 30, 90, 30, 45, 0, 90, 30, 45, 0, 135';
+	numberArray[14] = '60, 90, 0, 90, 30, 90, 30, 0, 30, 45, 0, 0, 30, 45, 0, 45';
+	// 6
+	numberArray[15] = '60, 60, 0, 0, 60, 60, 60, 0, 60, 60, 0, 60, 60, 60, 60, 60';
+	numberArray[16] = '60, 60, 0, 60, 60, 60, 60, 60, 60, 60, 0, 120, 60, 60, 60, 120';
+	numberArray[17] = '60, 60, 0, 0, 60, 60, 60, 0, 60, 60, 0, 120, 60, 60, 60, 120';
+	// 7
+	numberArray[18] = '40, 90, 40, 0, 40, 90, 80, 0, 40, 90, 40, 90, 40, 90, 80, 90';
+	numberArray[19] = '40, 90, 0, 0, 40, 90, 40, 0, 40, 90, 0, 90, 40, 90, 40, 90';
+	numberArray[20] = '40, 90, 0, 0, 40, 90, 80, 0, 40, 90, 0, 90, 40, 90, 80, 90';
+	// 8
+	numberArray[21] = '120, 45, 0, 90, 30, 90, 0, 0, 30, 90, 30, 0, 60, 90, 60, 0';
+	numberArray[22] = '120, 45, 0, 45, 30, 90, 60, 90, 30, 90, 90, 90, 60, 90, 0, 90';
+	// 9
+	numberArray[23] = '30, 180, 30, 0, 60, 45, 60, 135, 60, 45, 60, 90, 60, 90, 60, 0';
+	numberArray[24] = '30, 180, 60, 0, 60, 45, 0, 0, 60, 45, 0, 45, 60, 90, 0, 90';
+	// 10
+	numberArray[25] = '120, 45, 0, 90, 60, 45, 60, 0, 60, 45, 60, 45, 60, 90, 0, 0';
+	numberArray[26] = '120, 45, 0, 45, 60, 45, 0, 90, 60, 45, 0, 135, 60, 90, 60, 90';
+	// 11
+	numberArray[27] = '30, 180, 60, 0, 30, 90, 0, 90, 30, 90, 30, 90, 60, 90, 0, 0';
+	numberArray[28] = '30, 180, 30, 0, 30, 90, 60, 0, 30, 90, 90, 0, 60, 90, 60, 90';
+	// 12
+	numberArray[29] = '120, 45, 0, 0, 60, 90, 0, 45, 30, 90, 60, 45, 30, 90, 90, 45';
+	numberArray[30] = '120, 45, 0, 0, 60, 90, 60, 45, 30, 90, 0, 45, 30, 90, 30, 45';
+	// 13
+	numberArray[31] = '120, 45, 0, 0, 60, 90, 0, 45, 60, 45, 60, 45, 60, 45, 60, 90';
+	numberArray[32] = '120, 45, 0, 0, 60, 90, 60, 45, 60, 45, 0, 45, 60, 45, 0, 90';
+	// 14
+	numberArray[33] = '90, 37.5, 15, 15, 90, 37.5, 15, 52.5, 90, 37.5, 15, 90, 90, 37.5, 15, 127.5';
+	// 15
+	numberArray[34] = '22.5, 150, 15, 15, 22.5, 150, 37.5, 15, 22.5, 150, 60, 15, 22.5, 150, 82.5, 15';
+	// 16
+	numberArray[35] = '90, 37.5, 15, 15, 90, 37.5, 15, 52.5, 45, 75, 15, 90, 45, 75, 60, 90';
+	numberArray[36] = '90, 37.5, 15, 127.5, 90, 37.5, 15, 90, 45, 75, 15, 15, 45, 75, 60, 15';
+	numberArray[37] = '90, 37.5, 15, 15, 90, 37.5, 15, 127.5, 45, 75, 15, 52.5, 45, 75, 60, 52.5';
+	// 17
+	numberArray[38] = '22.5, 150, 15, 15, 22.5, 150, 37.5, 15, 45, 75, 60, 15, 45, 75, 60, 90';
+	numberArray[39] = '22.5, 150, 60, 15, 22.5, 150, 82.5, 15, 45, 75, 15, 15, 45, 75, 15, 90';
+	numberArray[40] = '22.5, 150, 15, 15, 22.5, 150, 82.5, 15, 45, 75, 37.5, 15, 45, 75, 37.5, 90';
+	// 18
+	numberArray[41] = '120, 90, 0, 0, 43, 146, 17, 17, 43, 146, 60, 17, 52, 112, 34, 34';
+	numberArray[42] = '60, 180, 0, 0, 86, 73, 17, 17, 86, 73, 17, 90, 52, 112, 34, 34';
+	// 19
+	numberArray[43] = '45, 75, 15, 15, 45, 75, 60, 15, 45, 75, 15, 90, 45, 75, 60, 90';
+	numberArray[44] = '60, 90, 0, 0, 60, 90, 60, 0, 60, 90, 0, 90, 70, 130, 25, 25';
 
 	for (let i = 1; i < 56; i++) {
-		bookFrame3(i, 1);
-		bookFrame4(i, 2);
-		bookFrame1(i, 3);
-		bookFrame2(i, 4);
-		bookFrame3(i, 5);
-		bookFrame4(i, 6);
-		bookFrame1(i, 7);
-		bookFrame2(i, 8);
+		let rn1 = Math.floor(Math.random() * numberArray.length);
+		let rn2 = Math.floor(Math.random() * numberArray.length);
+		let rn3 = Math.floor(Math.random() * numberArray.length);
+		let rn4 = Math.floor(Math.random() * numberArray.length);
+		let rn5 = Math.floor(Math.random() * numberArray.length);
+		let rn6 = Math.floor(Math.random() * numberArray.length);
+		let rn7 = Math.floor(Math.random() * numberArray.length);
+		let rn8 = Math.floor(Math.random() * numberArray.length);
+		eval("bookFrame(" + i + ", 1, " + numberArray[rn1] + ");");
+		eval("bookFrame(" + i + ", 2, " + numberArray[rn2] + ");");
+		eval("bookFrame(" + i + ", 3, " + numberArray[rn3] + ");");
+		eval("bookFrame(" + i + ", 4, " + numberArray[rn4] + ");");
+		eval("bookFrame(" + i + ", 5, " + numberArray[rn5] + ");");
+		eval("bookFrame(" + i + ", 6, " + numberArray[rn6] + ");");
+		eval("bookFrame(" + i + ", 7, " + numberArray[rn7] + ");");
+		eval("bookFrame(" + i + ", 8, " + numberArray[rn8] + ");");
+		// randomArray.splice(rn, 1);
 	}
 
-	// for (let i = 1; i < 9; i++) {
-	// 	bookFrame1(1, i);
-	// 	bookFrame2(2, i);
-	// 	bookFrame3(3, i);
-	// 	bookFrame1(4, i);
-	// 	bookFrame2(5, i);
-	// 	bookFrame3(6, i);
-	// 	bookFrame1(7, i);
-	// 	bookFrame2(8, i);
-	// }
-
-	// tranlate images in pc
+	// tranlate images in pc//////////////////////////////////////////////////
 	let main_img = document.querySelector(".mainImg");
 	let mouseX;
 	let mouseY;
@@ -346,7 +303,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
 	});
 
-	// book images array
+	// book images array//////////////////////////////////////////////////
 	let arrayN = 31; //+1
 
 	for (let i = 1; i < arrayN; i++) {
@@ -416,7 +373,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	let bA14 = 'bookArray3(14, 3, 1);';
 	let bA15 = 'bookArray3(15, 3, 2);';
 
-	// random book images
+	// random book images//////////////////////////////////////////////////
 	function randombook(imgTagGroup, bookImageGroup, bookArray, arrayNumber) {
 		let booklink = document.querySelector(".book" + bookImageGroup + "_" + imgTagGroup + "");
 		let randomimg = Math.floor(Math.random() * bookArray.length);
@@ -542,12 +499,9 @@ window.addEventListener('DOMContentLoaded', function(){
 		eval("setInterval(function() { randomframe4(7, " + i + ", B" + a + "img, bA" + a + "); }, arN" + i + ");");
 		eval("setInterval(function() { randomframe4(8, " + i + ", B" + b + "img, bA" + b + "); }, drN" + i + ");");
 	}
-
-	// setInterval(function() { randombook(2, 5, B1img, bA1); }, 200);
-	// setInterval(function() { randombook(2, 6, B7img, bA7); }, 300);
-	// setInterval(function() { randombook(2, 7, B15img, bA15); }, 500);
 })
 
+// loading//////////////////////////////////////////////////
 window.onload = function() {
 	$(".START").delay(2000).fadeOut( 1000 );
 }
