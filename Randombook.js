@@ -292,7 +292,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	if( is_mobile ) {
 		// translate images in mobile
 		$(".mainImg").draggable({
-			containment: "body"
+			containment: ".mobilescreen"
 		});
 		// document.addEventListener("touchstart", (e) => {
 		// 	mouseX = -e.touches[0].clientX * 2.5 / window.innerWidth;

@@ -13,7 +13,7 @@ html, body{
 body{
 	background-color: ghostwhite;
 	overflow:hidden;
-	margin-top: -20px;
+	height: 100vh;
 }
 
 .container{
@@ -285,6 +285,15 @@ main{
 	margin-top: -110px;
 	/* flex-wrap: wrap; */
 	/* filter: drop-shadow(-2.5px 5px 5px rgba(0, 0, 0, 0.3)); */
+}
+
+.mobilescreen{
+	z-index: -2;
+	width: 8220px;
+	height: 2600px;
+	margin-left: -90px;
+	margin-top: -110px;
+	display: hidden;
 }
 
 [class*=bookFrame]{
