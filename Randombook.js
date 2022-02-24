@@ -290,11 +290,9 @@ window.addEventListener('DOMContentLoaded', function(){
 	let mouseY;
 
 	if( is_mobile ) {
-		main_img.style.transform = 'translate(-350px, -250px)';
-	}
-	
-	if( is_mobile ) {
 		// translate images in mobile
+		main_img.style.marginLeft = '-440px';
+		main_img.style.marginTop = '-360px';
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
 		});
