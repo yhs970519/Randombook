@@ -271,37 +271,77 @@ window.addEventListener('DOMContentLoaded', function(){
 		// randomArray.splice(rn, 1);
 	}
 
-	// tranlate images in pc//////////////////////////////////////////////////
+	function isMobile() {
+		let user = navigator.userAgent;
+		let is_mobile = false;
+		if( user.indexOf("iPhone") > -1 
+		|| user.indexOf("Android") > -1 
+		|| user.indexOf("iPad") > -1 
+		|| user.indexOf("iPod") > -1 ) 
+		{
+			is_mobile = true; 
+		}
+		 return is_mobile; 
+	}
+
+	var is_mobile = isMobile();
 	let main_img = document.querySelector(".mainImg");
 	let mouseX;
 	let mouseY;
 
-	document.addEventListener("mousemove", (e) => {
-		mouseX = -e.clientX * 5 / window.innerWidth;
-		mouseY = -e.clientY * 10 / window.innerHeight;
-		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
-		// console.log(mouseX);
-		// console.log(mouseY);
-	});
+	if( is_mobile ) {
+		// translate images in mobile
+		document.addEventListener("touchstart", (e) => {
+			mouseX = -e.touches[0].clientX * 2.5 / window.innerWidth;
+			mouseY = -e.touches[0].clientY * 10 / window.innerHeight;
+			main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+		});
+		document.addEventListener("touchmove", (e) => {
+			mouseX = -e.changedTouches[0].clientX * 2.5 / window.innerWidth;
+			mouseY = -e.changedTouches[0].clientY * 10 / window.innerHeight;
+			main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+			// console.log(mouseX);
+			// console.log(mouseY);
+		});
+		document.addEventListener("touchend", (e) => {
+			mouseX = -e.changedTouches[0].clientX * 2.5 / window.innerWidth;
+			mouseY = -e.changedTouches[0].clientY * 10 / window.innerHeight;
+			main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+		});
+	} else {
+		// tranlate images in pc
+		document.addEventListener("mousemove", (e) => {
+			mouseX = -e.clientX * 5 / window.innerWidth;
+			mouseY = -e.clientY * 10 / window.innerHeight;
+			main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+			// console.log(mouseX);
+			// console.log(mouseY);
+		});
+	}
 
-	// translate images in mobile
-	document.addEventListener("touchstart", (e) => {
-		mouseX = -e.touches[0].clientX * 2.5 / window.innerWidth;
-		mouseY = -e.touches[0].clientY * 10 / window.innerHeight;
-		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
-	});
-    document.addEventListener("touchmove", (e) => {
-		mouseX = -e.changedTouches[0].clientX * 2.5 / window.innerWidth;
-		mouseY = -e.changedTouches[0].clientY * 10 / window.innerHeight;
-		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
-		// console.log(mouseX);
-		// console.log(mouseY);
-	});
-    document.addEventListener("touchend", (e) => {
-		mouseX = -e.changedTouches[0].clientX * 2.5 / window.innerWidth;
-		mouseY = -e.changedTouches[0].clientY * 10 / window.innerHeight;
-		main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
-	});
+	// function touchHandler(event) {
+	// 	var touch = event.changedTouches[0];
+	
+	// 	var simulatedEvent = document.createEvent("MouseEvent");
+	// 		simulatedEvent.initMouseEvent({
+	// 		touchstart: "mousedown",
+	// 		touchmove: "mousemove",
+	// 		touchend: "mouseup"
+	// 	}[event.type], true, true, window, 1,
+	// 		touch.screenX, touch.screenY,
+	// 		touch.clientX, touch.clientY, false,
+	// 		false, false, false, 0, null);
+	
+	// 	touch.target.dispatchEvent(simulatedEvent);
+	// 	event.preventDefault();
+	// }
+	
+	// function init() {
+	// 	document.addEventListener("touchstart", touchHandler, true);
+	// 	document.addEventListener("touchmove", touchHandler, true);
+	// 	document.addEventListener("touchend", touchHandler, true);
+	// 	document.addEventListener("touchcancel", touchHandler, true);
+	// }
 
 	// book images array//////////////////////////////////////////////////
 	let arrayN = 31; //+1
