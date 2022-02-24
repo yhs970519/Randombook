@@ -66,6 +66,7 @@ header a:hover{
 .category, .category2{
 	position: absolute;
 	left: 20px;
+	color: black;
 	background-color: rgba(248, 248, 255, 0.5);
 	font-weight: 700;
 	font-size: 15px;
@@ -106,6 +107,7 @@ header a:hover{
 	font-weight: 700;
 	font-size: 15px;
 	text-align: center;
+	color: black;
 	background-color: rgba(248, 248, 255, 0.5);
 	border: none;
 	padding: 8px;
