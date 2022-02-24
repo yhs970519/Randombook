@@ -76,6 +76,7 @@ header a:hover{
 	padding-right: 16px;
 	padding-left: 16px;
 	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
 	cursor: pointer;
 	transition: all 0.2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
@@ -114,6 +115,7 @@ header a:hover{
 	padding-right: 16px;
 	padding-left: 16px;
 	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
 	cursor: pointer;
 	transition: all 0.2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
