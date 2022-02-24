@@ -670,6 +670,8 @@ window.addEventListener('DOMContentLoaded', function(){
 			basket.style.opacity = '0';
 		  }
 	  }
+
+	  $(".text1").draggable();
 })
 
 // loading//////////////////////////////////////////////////
