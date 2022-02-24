@@ -499,6 +499,136 @@ window.addEventListener('DOMContentLoaded', function(){
 		eval("setInterval(function() { randomframe4(7, " + i + ", B" + a + "img, bA" + a + "); }, arN" + i + ");");
 		eval("setInterval(function() { randomframe4(8, " + i + ", B" + b + "img, bA" + b + "); }, drN" + i + ");");
 	}
+
+	// button transition
+	let category = document.querySelector(".category");
+	let mypage = document.querySelector(".mypage");
+	let basket = document.querySelector(".basket");
+	let category2 = document.querySelector(".category2");
+	let mypage2 = document.querySelector(".mypage2");
+	let basket2 = document.querySelector(".basket2");
+	let nav = document.querySelector("nav");
+	let aside = document.querySelector("aside");
+	let nav_ul = document.querySelector(".nav");
+	let aside_ul = document.querySelector(".aside");
+
+	nav.style.transform = 'translateX(-100%)';
+	aside.style.transform = 'translateX(100%)';
+
+	category.onclick = categoryClick;
+	mypage.onclick = mypageClick;
+	category2.onclick = categoryClick2;
+	mypage2.onclick = mypageClick2;
+	
+	function categoryClick() {
+		if (nav.style.transform == 'translateX(-100%)') {
+			nav.style.transform = 'translateX(0)';
+			nav_ul.style.transform = 'translateX(0)';
+			nav_ul.style.opacity = '1';
+			category.style.backgroundColor = 'rgba(178, 34, 34, 0.4)';
+		}else{
+			nav.style.transform = 'translateX(-100%)';
+			nav_ul.style.transform = 'translateX(-80px)';
+			nav_ul.style.opacity = '0';
+			category.style.backgroundColor = 'rgba(248, 248, 255, 0.4)';
+		}
+	}
+
+	function categoryClick2() {
+		if (nav.style.transform == 'translateX(-100%)') {
+			nav.style.transform = 'translateX(0)';
+			nav_ul.style.transform = 'translateX(0)';
+			nav_ul.style.opacity = '1';
+			category2.style.backgroundColor = 'rgba(178, 34, 34, 0.4)';
+		}else{
+			nav.style.transform = 'translateX(-100%)';
+			nav_ul.style.transform = 'translateX(-80px)';
+			nav_ul.style.opacity = '0';
+			category2.style.backgroundColor = 'rgba(248, 248, 255, 0.4)';
+		}
+	}
+
+	function mypageClick() {
+		if (aside.style.transform == 'translateX(100%)') {
+			aside.style.transform = 'translateX(0)';
+			aside_ul.style.transform = 'translateX(0)';
+			aside_ul.style.opacity = '1';
+			mypage.style.backgroundColor = 'rgba(178, 34, 34, 0.4)';
+		}else{
+			aside.style.transform = 'translateX(100%)';
+			aside_ul.style.transform = 'translateX(80px)';
+			aside_ul.style.opacity = '0';
+			mypage.style.backgroundColor = 'rgba(248, 248, 255, 0.4)';
+		}
+	}
+
+	function mypageClick2() {
+		if (aside.style.transform == 'translateX(100%)') {
+			aside.style.transform = 'translateX(0)';
+			aside_ul.style.transform = 'translateX(0)';
+			aside_ul.style.opacity = '1';
+			mypage2.style.backgroundColor = 'rgba(178, 34, 34, 0.4)';
+		}else{
+			aside.style.transform = 'translateX(100%)';
+			aside_ul.style.transform = 'translateX(80px)';
+			aside_ul.style.opacity = '0';
+			mypage2.style.backgroundColor = 'rgba(248, 248, 255, 0.4)';
+		}
+	}
+
+	if (window.matchMedia("(min-width: 700px)").matches == true) {
+		category.style.zIndex = '4';
+		mypage.style.zIndex = '4';
+		basket.style.zIndex = '4';
+		category2.style.zIndex = '-1';
+		mypage2.style.zIndex = '-1';
+		basket2.style.zIndex = '-1';
+		category2.style.opacity = '0';
+		mypage2.style.opacity = '0';
+		basket2.style.opacity = '0';
+	  } else {
+		category.style.zIndex = '-1';
+		mypage.style.zIndex = '-1';
+		basket.style.zIndex = '-1';
+		category.style.opacity = '0';
+		mypage.style.opacity = '0';
+		basket.style.opacity = '0';
+		category2.style.zIndex = '4';
+		mypage2.style.zIndex = '4';
+		basket2.style.zIndex = '4';
+	  }
+
+	  window.addEventListener("resize", resizeicon);
+
+	  function resizeicon() {
+		  if(window.matchMedia("(min-width: 700px)").matches == true){
+			category.style.zIndex = '4';
+			mypage.style.zIndex = '4';
+			basket.style.zIndex = '4';
+			category2.style.zIndex = '-1';
+			mypage2.style.zIndex = '-1';
+			basket2.style.zIndex = '-1';
+			category.style.opacity = '1';
+			mypage.style.opacity = '1';
+			basket.style.opacity = '1';
+			category2.style.opacity = '0';
+			mypage2.style.opacity = '0';
+			basket2.style.opacity = '0';
+		} else {
+			category.style.zIndex = '-1';
+			mypage.style.zIndex = '-1';
+			basket.style.zIndex = '-1';
+			category2.style.zIndex = '4';
+			mypage2.style.zIndex = '4';
+			basket2.style.zIndex = '4';
+			category2.style.opacity = '1';
+			mypage2.style.opacity = '1';
+			basket2.style.opacity = '1';
+			category.style.opacity = '0';
+			mypage.style.opacity = '0';
+			basket.style.opacity = '0';
+		  }
+	  }
 })
 
 // loading//////////////////////////////////////////////////
