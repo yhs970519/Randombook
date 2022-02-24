@@ -13,7 +13,7 @@ html, body{
 body{
 	background-color: ghostwhite;
 	overflow:hidden;
-	height: 100vh;
+	/* height: 100vh; */
 }
 
 .container{
@@ -289,11 +289,11 @@ main{
 
 .mobilescreen{
 	z-index: -10;
-	width: 8220px;
-	height: 2600px;
+	width: 8420px;
+	height: 2300px;
 	margin-left: -90px;
 	margin-top: -110px;
-	transform: translate(-500px, -1000px);
+	transform: translate(-200px, -700px);
 	display: hidden;
 }
 
