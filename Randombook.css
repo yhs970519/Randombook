@@ -26,6 +26,7 @@ body{
 header{
 	z-index: 5;
 	position: absolute;
+	top: 0;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
