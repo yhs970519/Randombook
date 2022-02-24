@@ -290,10 +290,10 @@ main{
 .mobilescreen{
 	z-index: -10;
 	width: 8420px;
-	height: 2300px;
+	height: 2100px;
 	margin-left: -90px;
 	margin-top: -110px;
-	transform: translate(-700px, -700px);
+	transform: translate(-700px, -500px);
 	display: hidden;
 }
 
