@@ -291,7 +291,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	if( is_mobile ) {
 		// translate images in mobile
-		// main_img.style.transform = 'translate(-250px, -500px)';
+		main_img.style.transform = 'translate(-350px, -250px)';
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
 		});
