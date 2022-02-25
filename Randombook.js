@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	// new image tags//////////////////////////////////////////////////
 	function imgTag(imgTagGroup) {
 
-		let imgN = 56; //+1
+		let imgN = 51; //+1
 
 		for (let i = 1; i < imgN; i++) {
 			let bookLink = document.createElement("a");
@@ -251,7 +251,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	numberArray[43] = '45, 75, 15, 15, 45, 75, 60, 15, 45, 75, 15, 90, 45, 75, 60, 90';
 	numberArray[44] = '60, 90, 0, 0, 60, 90, 60, 0, 60, 90, 0, 90, 70, 130, 25, 25';
 
-	for (let i = 1; i < 56; i++) {
+	for (let i = 1; i < 51; i++) {
 		let rn1 = Math.floor(Math.random() * numberArray.length);
 		let rn2 = Math.floor(Math.random() * numberArray.length);
 		let rn3 = Math.floor(Math.random() * numberArray.length);
@@ -464,7 +464,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 
-	let imgN = 56; //+1
+	let imgN = 51; //+1
 
 	let a = Math.ceil(Math.random() * 15);
 	let b = Math.ceil(Math.random() * 15);

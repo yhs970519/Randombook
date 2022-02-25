@@ -54,7 +54,7 @@ header a:hover{
 	font-family: 'Taviraj', serif;
 	font-weight: 900;
 	font-size: 40px;
-	margin-top: 20px;
+	margin-top: 15px;
 	margin-bottom: -20px;
 }
 
@@ -63,6 +63,14 @@ header a:hover{
 	font-weight: 700;
 	font-size: 20px;
 	margin-top: 0;
+	margin-bottom: -15px;
+}
+
+.text3{
+	font-family: 'Taviraj', serif;
+	font-weight: 700;
+	font-size: 20px;
+	margin: 0;
 }
 
 .category, .category2{
@@ -87,12 +95,12 @@ header a:hover{
 
 .category{
 	font-family: 'Taviraj', serif;
-	top: 31px;
+	top: 50px;
 	z-index: 4;
 }
 
 .category2{
-	top: 90px;
+	top: 77.5px;
 	z-index: -1;
 	font-family: "fontello";
 }
@@ -146,12 +154,12 @@ header a:hover{
 }
 
 .mypage, .basket{
-	top: 31px;
+	top: 50px;
 	z-index: 4;
 }
 
 .mypage2, .basket2{
-	top: 90px;
+	top: 78.5px;
 	z-index: -1;
 }
 
@@ -273,11 +281,11 @@ main{
 	position: fixed;
 	left: 0;
 	top: 0;
-    width: 7720px;
+    width: 7120px;
     /* height: 500px; */
 	display: flex;
 	flex-direction: column;
-	flex-basis: 7720px;
+	flex-basis: 7120px;
 	flex-shrink: 0;
 	justify-content: center;
 	align-content: center;
@@ -290,7 +298,7 @@ main{
 
 .mobilescreen{
 	z-index: -10;
-	width: 8070px;
+	width: 7470px;
 	height: 1850px;
 	margin-left: -90px;
 	margin-top: -110px;
@@ -360,7 +368,7 @@ main img{
 }
 
 @keyframes slideinRight {
-	0% { left: -65%; }
+	0% { left: -60%; }
 	100% { left: 0%; }
 }
 
@@ -402,7 +410,7 @@ main img{
 
 @keyframes slideinLeft {
 	0% { left: 0%; }
-	100% { left: -65%; }
+	100% { left: -60%; }
 }
 
 [class*="frame"]{
