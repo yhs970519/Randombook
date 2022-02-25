@@ -286,6 +286,10 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	var is_mobile = isMobile();
 	let main_img = document.querySelector(".mainImg");
+	let frameT = document.querySelector(".frame_top");
+	let frameB = document.querySelector(".frame_bottom");
+	let frameL = document.querySelector(".frame_left");
+	let frameR = document.querySelector(".frame_right");
 	let mouseX;
 	let mouseY;
 
@@ -293,6 +297,11 @@ window.addEventListener('DOMContentLoaded', function(){
 		// translate images in mobile
 		main_img.style.marginLeft = '-440px';
 		main_img.style.marginTop = '-360px';
+		frameT.style.display = 'none';
+		frameB.style.display = 'none';
+		frameL.style.display = 'none';
+		frameR.style.display = 'none';
+
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
 		});
