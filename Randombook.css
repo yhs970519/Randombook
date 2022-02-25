@@ -290,8 +290,8 @@ main{
 
 .mobilescreen{
 	z-index: -10;
-	width: 8420px;
-	height: 2100px;
+	width: 8070px;
+	height: 1850px;
 	margin-left: -90px;
 	margin-top: -110px;
 	transform: translate(-350px, -250px);
