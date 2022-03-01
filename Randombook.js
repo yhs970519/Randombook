@@ -660,7 +660,8 @@ window.addEventListener('DOMContentLoaded', function(){
 		  }
 	  }
 
-	  $(".text1").draggable();
+	$(".text1").draggable();
+	// $("main a").draggable({ revert: true });
 })
 
 // loading//////////////////////////////////////////////////
