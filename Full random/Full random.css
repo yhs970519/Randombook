@@ -27,3 +27,10 @@ html, body{
     border-radius: 50%;
     background-color: ghostwhite;
 }
+
+[class*=text]{
+    position: relative;
+    top: -20px;
+    font-size: 30px;
+    font-weight: bold;
+}
