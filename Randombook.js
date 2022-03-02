@@ -580,6 +580,8 @@ window.addEventListener('DOMContentLoaded', function(){
 	let aside = document.querySelector("aside");
 	let nav_ul = document.querySelector(".nav");
 	let aside_ul = document.querySelector(".aside");
+	let textSpace1 = document.getElementsByClassName("CT");
+	let textSpace2 = document.getElementsByClassName("ct");
 
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
@@ -655,6 +657,30 @@ window.addEventListener('DOMContentLoaded', function(){
 		category2.style.opacity = '0';
 		mypage2.style.opacity = '0';
 		basket2.style.opacity = '0';
+		textSpace1[0].style.marginBottom = '25px';
+		textSpace1[1].style.marginBottom = '25px';
+		textSpace1[2].style.marginBottom = '25px';
+		textSpace1[3].style.marginBottom = '25px';
+		textSpace1[4].style.marginBottom = '25px';
+		textSpace1[5].style.marginBottom = '25px';
+		textSpace1[6].style.marginBottom = '25px';
+		textSpace1[7].style.marginBottom = '25px';
+		textSpace1[8].style.marginBottom = '25px';
+		textSpace1[9].style.marginBottom = '25px';
+		textSpace1[10].style.marginBottom = '25px';
+		textSpace1[11].style.marginBottom = '25px';
+		textSpace1[12].style.marginBottom = '25px';
+		textSpace1[13].style.marginBottom = '25px';
+		textSpace2[0].style.marginTop = '20px';
+		textSpace2[1].style.marginTop = '20px';
+		textSpace2[2].style.marginTop = '20px';
+		textSpace2[3].style.marginTop = '20px';
+		textSpace2[4].style.marginTop = '20px';
+		textSpace2[5].style.marginTop = '20px';
+		textSpace2[6].style.marginTop = '20px';
+		textSpace2[7].style.marginTop = '20px';
+		textSpace2[8].style.marginTop = '20px';
+		textSpace2[9].style.marginTop = '20px';
 	  } else {
 		category.style.zIndex = '-1';
 		mypage.style.zIndex = '-1';
@@ -665,6 +691,30 @@ window.addEventListener('DOMContentLoaded', function(){
 		category2.style.zIndex = '4';
 		mypage2.style.zIndex = '4';
 		basket2.style.zIndex = '4';
+		textSpace1[0].style.marginBottom = '20px';
+		textSpace1[1].style.marginBottom = '20px';
+		textSpace1[2].style.marginBottom = '20px';
+		textSpace1[3].style.marginBottom = '20px';
+		textSpace1[4].style.marginBottom = '20px';
+		textSpace1[5].style.marginBottom = '20px';
+		textSpace1[6].style.marginBottom = '20px';
+		textSpace1[7].style.marginBottom = '20px';
+		textSpace1[8].style.marginBottom = '20px';
+		textSpace1[9].style.marginBottom = '20px';
+		textSpace1[10].style.marginBottom = '20px';
+		textSpace1[11].style.marginBottom = '20px';
+		textSpace1[12].style.marginBottom = '20px';
+		textSpace1[13].style.marginBottom = '20px';
+		textSpace2[0].style.marginTop = '15px';
+		textSpace2[1].style.marginTop = '15px';
+		textSpace2[2].style.marginTop = '15px';
+		textSpace2[3].style.marginTop = '15px';
+		textSpace2[4].style.marginTop = '15px';
+		textSpace2[5].style.marginTop = '15px';
+		textSpace2[6].style.marginTop = '15px';
+		textSpace2[7].style.marginTop = '15px';
+		textSpace2[8].style.marginTop = '15px';
+		textSpace2[9].style.marginTop = '15px';
 	  }
 
 	  window.addEventListener("resize", resizeicon);
@@ -683,6 +733,30 @@ window.addEventListener('DOMContentLoaded', function(){
 			category2.style.opacity = '0';
 			mypage2.style.opacity = '0';
 			basket2.style.opacity = '0';
+			textSpace1[0].style.marginBottom = '25px';
+			textSpace1[1].style.marginBottom = '25px';
+			textSpace1[2].style.marginBottom = '25px';
+			textSpace1[3].style.marginBottom = '25px';
+			textSpace1[4].style.marginBottom = '25px';
+			textSpace1[5].style.marginBottom = '25px';
+			textSpace1[6].style.marginBottom = '25px';
+			textSpace1[7].style.marginBottom = '25px';
+			textSpace1[8].style.marginBottom = '25px';
+			textSpace1[9].style.marginBottom = '25px';
+			textSpace1[10].style.marginBottom = '25px';
+			textSpace1[11].style.marginBottom = '25px';
+			textSpace1[12].style.marginBottom = '25px';
+			textSpace1[13].style.marginBottom = '25px';
+			textSpace2[0].style.marginTop = '20px';
+			textSpace2[1].style.marginTop = '20px';
+			textSpace2[2].style.marginTop = '20px';
+			textSpace2[3].style.marginTop = '20px';
+			textSpace2[4].style.marginTop = '20px';
+			textSpace2[5].style.marginTop = '20px';
+			textSpace2[6].style.marginTop = '20px';
+			textSpace2[7].style.marginTop = '20px';
+			textSpace2[8].style.marginTop = '20px';
+			textSpace2[9].style.marginTop = '20px';
 		} else {
 			category.style.zIndex = '-1';
 			mypage.style.zIndex = '-1';
@@ -696,10 +770,34 @@ window.addEventListener('DOMContentLoaded', function(){
 			category.style.opacity = '0';
 			mypage.style.opacity = '0';
 			basket.style.opacity = '0';
+			textSpace1[0].style.marginBottom = '20px';
+			textSpace1[1].style.marginBottom = '20px';
+			textSpace1[2].style.marginBottom = '20px';
+			textSpace1[3].style.marginBottom = '20px';
+			textSpace1[4].style.marginBottom = '20px';
+			textSpace1[5].style.marginBottom = '20px';
+			textSpace1[6].style.marginBottom = '20px';
+			textSpace1[7].style.marginBottom = '20px';
+			textSpace1[8].style.marginBottom = '20px';
+			textSpace1[9].style.marginBottom = '20px';
+			textSpace1[10].style.marginBottom = '20px';
+			textSpace1[11].style.marginBottom = '20px';
+			textSpace1[12].style.marginBottom = '20px';
+			textSpace1[13].style.marginBottom = '20px';
+			textSpace2[0].style.marginTop = '15px';
+			textSpace2[1].style.marginTop = '15px';
+			textSpace2[2].style.marginTop = '15px';
+			textSpace2[3].style.marginTop = '15px';
+			textSpace2[4].style.marginTop = '15px';
+			textSpace2[5].style.marginTop = '15px';
+			textSpace2[6].style.marginTop = '15px';
+			textSpace2[7].style.marginTop = '15px';
+			textSpace2[8].style.marginTop = '15px';
+			textSpace2[9].style.marginTop = '15px';
 		  }
 	  }
 
-	$(".text1").draggable();
+	$(".ract").draggable();
 	// $("main a").draggable({ revert: true });
 })
 

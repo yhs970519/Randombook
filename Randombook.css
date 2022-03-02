@@ -249,7 +249,7 @@ footer div{
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
-nav .nav>li, aside .aside>li{
+.CT{
 	margin-bottom: 25px;
 }
 
@@ -257,7 +257,7 @@ nav .nav>li, aside .aside>li{
 	color: black;
 }
 
-[class*="list_nav"] li{
+[class*="list_nav"] .ct{
 	margin-left: 10px;
 }
 
@@ -272,7 +272,7 @@ nav .nav>li, aside .aside>li{
 	top: -2px;
 }
 
-[class*="list"] li{
+.ct{
 	margin-top: 20px;
 	font-weight: lighter;
 	font-style: italic;
