@@ -344,9 +344,6 @@ window.addEventListener('DOMContentLoaded', function(){
 			containment: ".mobilescreen"
 		});
 
-		let header = documnet.querySelector("header")
-		header.style.transform = 'scale(50%)';
-
 		// document.addEventListener("touchstart", (e) => {
 		// 	mouseX = -e.touches[0].clientX * 2.5 / window.innerWidth;
 		// 	mouseY = -e.touches[0].clientY * 10 / window.innerHeight;
