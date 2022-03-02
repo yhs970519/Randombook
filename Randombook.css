@@ -104,7 +104,7 @@ header a:hover{
 .category{
 	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 	left: 20px;
-	top: 78px;
+	top: 82px;
 	z-index: 4;
 }
 
@@ -164,7 +164,7 @@ header a:hover{
 }
 
 .mypage, .basket{
-	top: 78px;
+	top: 82px;
 	z-index: 4;
 }
 
