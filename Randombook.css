@@ -85,7 +85,6 @@ header a:hover{
 
 .category, .category2{
 	position: absolute;
-	left: 20px;
 	color: black;
 	background-color: rgba(248, 248, 255, 0.5);
 	font-size: 15px;
@@ -104,12 +103,14 @@ header a:hover{
 
 .category{
 	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+	left: 20px;
 	top: 74px;
 	z-index: 4;
 }
 
 .category2{
-	top: 130px;
+	left: 10px;
+	top: 64px;
 	z-index: -1;
 	font-family: "fontello";
 }
@@ -146,9 +147,9 @@ header a:hover{
 }
 
 .mypage2{
-	right: 20px;
+	right: 10px;
+	top: 64px;
 	font-family: "fontello";
-	
 }
 
 .basket{
@@ -157,7 +158,8 @@ header a:hover{
 }
 
 .basket2{
-	right: 70px;
+	right: 10px;
+	top: 28px;
 	font-family: "fontello";
 }
 
@@ -167,7 +169,6 @@ header a:hover{
 }
 
 .mypage2, .basket2{
-	top: 130px;
 	z-index: -1;
 }
 
