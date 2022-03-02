@@ -250,7 +250,7 @@ footer div{
 }
 
 nav .nav>li, aside .aside>li{
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 
 [class*="list"] a, .aside a{
@@ -273,7 +273,7 @@ nav .nav>li, aside .aside>li{
 }
 
 [class*="list"] li{
-	margin-top: 6.5px;
+	margin-top: 20px;
 	font-weight: lighter;
 	font-style: italic;
 }
