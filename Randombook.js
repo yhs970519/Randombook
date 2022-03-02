@@ -345,7 +345,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		});
 
 		let header = documnet.querySelector("header")
-		header.style.transform = 'scale(75%)';
+		header.style.transform = 'scale(50%)';
 
 		// document.addEventListener("touchstart", (e) => {
 		// 	mouseX = -e.touches[0].clientX * 2.5 / window.innerWidth;
