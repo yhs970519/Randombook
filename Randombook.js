@@ -344,14 +344,6 @@ window.addEventListener('DOMContentLoaded', function(){
 			containment: ".mobilescreen"
 		});
 
-		let header = documnet.querySelector("header")
-		let category2 = documnet.querySelector(".category2")
-		let mypage2 = documnet.querySelector(".mypage2")
-		let basket2 = documnet.querySelector(".basket2")
-		header.style.top = 20 + 'px';
-		category2.style.top = 130 + 'px';
-		mypage2.style.top = 130 + 'px';
-		basket2.style.top = 130 + 'px';
 		// document.addEventListener("touchstart", (e) => {
 		// 	mouseX = -e.touches[0].clientX * 2.5 / window.innerWidth;
 		// 	mouseY = -e.touches[0].clientY * 10 / window.innerHeight;
