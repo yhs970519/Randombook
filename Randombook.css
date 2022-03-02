@@ -24,8 +24,8 @@ body{
 header{
 	z-index: 5;
 	position: absolute;
-	top: 20px;
-	transform: scale(80%);
+	top: 5px;
+	transform: scale(75%);
 }
 
 a{
@@ -104,12 +104,12 @@ header a:hover{
 
 .category{
 	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
-	top: 50px;
+	top: 59px;
 	z-index: 4;
 }
 
 .category2{
-	top: 77px;
+	top: 100px;
 	z-index: -1;
 	font-family: "fontello";
 }
@@ -162,12 +162,12 @@ header a:hover{
 }
 
 .mypage, .basket{
-	top: 50px;
+	top: 59px;
 	z-index: 4;
 }
 
 .mypage2, .basket2{
-	top: 77px;
+	top: 100px;
 	z-index: -1;
 }
 

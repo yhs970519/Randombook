@@ -319,7 +319,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		{
 			is_mobile = true; 
 		}
-		 return is_mobile; 
+		return is_mobile; 
 	}
 
 	var is_mobile = isMobile();
