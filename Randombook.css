@@ -104,13 +104,13 @@ header a:hover{
 .category{
 	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 	left: 20px;
-	top: 82px;
+	top: 74px;
 	z-index: 4;
 }
 
 .category2{
 	left: 10px;
-	top: 80px;
+	top: 84px;
 	z-index: -1;
 	font-family: "fontello";
 }
@@ -148,7 +148,7 @@ header a:hover{
 
 .mypage2{
 	right: 10px;
-	top: 80px;
+	top: 84px;
 	font-family: "fontello";
 }
 
@@ -164,7 +164,7 @@ header a:hover{
 }
 
 .mypage, .basket{
-	top: 82px;
+	top: 74px;
 	z-index: 4;
 }
 
