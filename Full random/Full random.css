@@ -10,27 +10,37 @@ html, body{
 	height: 100%;
 }
 
-.ract{
+header{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100px;
-    height: 50px;
-    background-color: dodgerblue;
+    display: flex;
+    flex-direction: row;
 }
 
 .circle1, .circle2{
     position: relative;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: ghostwhite;
 }
 
-[class*=text]{
+.circle3, .circle4{
     position: relative;
-    top: -20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.TEXT{
+    height: 100px;
+    margin-left: 10px;
+}
+
+[class*=text]{
     font-size: 30px;
-    font-weight: bold;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    margin-top: -5px;
 }

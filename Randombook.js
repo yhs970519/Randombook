@@ -271,6 +271,44 @@ window.addEventListener('DOMContentLoaded', function(){
 		// randomArray.splice(rn, 1);
 	}
 
+	// DadA logo//////////////////////////////////////////////////
+	let ract = document.querySelector(".ract");
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    ract.style.width = Math.sqrt(2) * 100 + 'px';
+    ract.style.height = 100 + 'px';
+    ract.style.backgroundColor = 'rgba(' + red + ', ' + green + ', ' + blue + ')';
+
+    let circle1 = document.querySelector(".circle1");
+    let circle2 = document.querySelector(".circle2");
+    let topRandom = Math.ceil(Math.random() * 85);
+    let leftRandom = Math.ceil(Math.random() * Math.sqrt(2) * 65);
+    circle1.style.top = topRandom + 'px';
+    circle1.style.left = leftRandom + 'px';
+    circle2.style.top = topRandom - 15 + 'px';
+    circle2.style.left = leftRandom + 20 + 'px';
+
+    let circle3 = document.querySelector(".circle3");
+    let circle4 = document.querySelector(".circle4");
+    circle3.style.backgroundColor = 'rgba(' + red + ', ' + green + ', ' + blue + ')';
+    circle4.style.backgroundColor = 'rgba(' + red + ', ' + green + ', ' + blue + ')';
+
+	let eye1 = circle1.getBoundingClientRect();
+	let eye2 = circle2.getBoundingClientRect();
+	let bar1 = document.querySelector(".bar1");
+	let bar2 = document.querySelector(".bar2");
+	let rotateEyes = function(mouseX, mouseY) {
+		let eyeAngle1 = Math.atan2(mouseY - eye1.y + eye1.height * 0.5, mouseX - eye1.x + eye1.width * 0.5);
+		let eyeAngle2 = Math.atan2(mouseY - eye2.y + eye2.height * 0.5, mouseX - eye2.x + eye2.width * 0.5);
+		bar1.style.transform = 'rotate(' + 180 * eyeAngle1 / Math.PI + 'deg)';
+		bar2.style.transform = 'rotate(' + 180 * eyeAngle2 / Math.PI + 'deg)';
+	}
+    document.addEventListener("mousemove", function (e) {
+		rotateEyes(e.pageX, e.pageY)
+    });
+
+	// screen move//////////////////////////////////////////////////
 	function isMobile() {
 		let user = navigator.userAgent;
 		let is_mobile = false;

@@ -13,24 +13,19 @@ html, body{
 body{
 	background-color: ghostwhite;
 	overflow:hidden;
-	/* height: 100vh; */
 }
 
 .container{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* justify-content: center; */
 }
 
 header{
 	z-index: 5;
 	position: absolute;
-	top: 0;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	
+	top: 20px;
+	transform: scale(80%);
 }
 
 a{
@@ -38,39 +33,54 @@ a{
 }
 
 header a{
-	display: inline-block;
-	color: black;
+	display: flex;
+	flex-direction: row;
 	transition: color 0.2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-	filter: blur(1px);
-	/* opacity: 0.75; */
 }
 
 header a:hover{
 	color: seagreen;
 }
 
-.text1{
-	font-family: 'Taviraj', serif;
-	font-weight: 900;
-	font-size: 40px;
-	margin-top: 15px;
-	margin-bottom: -20px;
+.circle1, .circle2{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: ghostwhite;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* overflow: hidden; */
 }
 
-.text2{
-	font-family: 'Taviraj', serif;
-	font-weight: 700;
-	font-size: 20px;
-	margin-top: 0;
-	margin-bottom: -15px;
+.bar1, .bar2{
+	position: relative;
+	/* top: 2.5px; */
+	width: 16px;
+	height: 10px;
 }
 
-.text3{
-	font-family: 'Taviraj', serif;
-	font-weight: 700;
-	font-size: 20px;
-	margin: 0;
+.circle3, .circle4{
+    position: relative;
+	left: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.TEXT{
+    height: 100px;
+    margin-left: 10px;
+	color: black;
+}
+
+[class*=text]{
+    font-size: 30px;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    margin-top: -5px;
 }
 
 .category, .category2{
@@ -78,7 +88,6 @@ header a:hover{
 	left: 20px;
 	color: black;
 	background-color: rgba(248, 248, 255, 0.5);
-	font-weight: 700;
 	font-size: 15px;
 	text-align: center;
 	border: none;
@@ -94,7 +103,7 @@ header a:hover{
 }
 
 .category{
-	font-family: 'Taviraj', serif;
+	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 	top: 50px;
 	z-index: 4;
 }
@@ -115,7 +124,6 @@ header a:hover{
 
 .mypage, .basket, .mypage2, .basket2{
 	position: absolute;
-	font-weight: 700;
 	font-size: 15px;
 	text-align: center;
 	color: black;
@@ -134,7 +142,7 @@ header a:hover{
 
 .mypage{
 	right: 20px;
-	font-family: 'Taviraj', serif;
+	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 }
 
 .mypage2{
@@ -145,7 +153,7 @@ header a:hover{
 
 .basket{
 	right: 125px;
-	font-family: 'Taviraj', serif;
+	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 }
 
 .basket2{
@@ -218,8 +226,7 @@ footer div{
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	font-family: 'Taviraj', serif;
-	font-weight: 600;
+	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 	font-size: 13.5px;
 	position: relative;
 	top: 20%;
@@ -264,7 +271,7 @@ nav .nav>li, aside .aside>li{
 
 [class*="list"] li{
 	margin-top: 6.5px;
-	font-weight: 400;
+	font-weight: lighter;
 	font-style: italic;
 }
 
@@ -282,7 +289,6 @@ main{
 	left: 0;
 	top: 0;
     width: 7120px;
-    /* height: 500px; */
 	display: flex;
 	flex-direction: column;
 	flex-basis: 7120px;
@@ -291,8 +297,6 @@ main{
 	align-content: center;
 	align-items: center;
 	margin-left: -90px;
-	margin-top: -110px;
-	/* flex-wrap: wrap; */
 	/* filter: drop-shadow(-2.5px 5px 5px rgba(0, 0, 0, 0.3)); */
 }
 
@@ -503,14 +507,12 @@ main img{
 }
 
 [class*=loadText]{
-	font-family: 'Taviraj', serif;
-	font-weight: 900;
+	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 }
 
 .loadText1{
-	margin-bottom: -25px;
+	margin-bottom: -5px;
 	font-size: 4rem;
-	font-weight: bold;
 	animation-name: moving1;
 	animation-duration: 0.5s;
 	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
@@ -526,7 +528,7 @@ main img{
 }
 
 .loadText2{
-	margin-bottom: -20px;
+	margin-bottom: -5px;
 	animation-name: moving2;
 	animation-duration: 1s;
 	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
