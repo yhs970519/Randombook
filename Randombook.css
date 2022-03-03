@@ -31,20 +31,6 @@ a{
 	text-decoration: none;
 }
 
-@media (max-width: 700px){
-	/* .logo{
-		transform: scale(65%);
-	} */
-
-	/* .CT{
-		margin-bottom: 20px;
-	}
-
-	.ct{
-		margin-top: 15px;
-	} */
-}
-
 .logo{
 	display: flex;
 	flex-direction: row;
@@ -98,6 +84,16 @@ a{
     margin-top: -5px;
 }
 
+.category, .mypage, .basket{
+	z-index: 4;
+	opacity: 1;
+}
+
+.category2, .mypage2, .basket2{
+	z-index: -1;
+	opacity: 0;
+}
+
 .category, .category2{
 	position: absolute;
 	color: black;
@@ -119,14 +115,14 @@ a{
 .category{
 	font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 	left: 20px;
-	top: 74px;
+	top: 59px;
 	z-index: 4;
 }
 
 .category2{
 	width: 48px;
-	left: 10px;
-	top: 88px;
+	left: 20px;
+	top: 98.5px;
 	z-index: -1;
 	font-family: "fontello";
 }
@@ -163,8 +159,8 @@ a{
 }
 
 .mypage2{
-	right: 10px;
-	top: 88px;
+	top: 98.5px;
+	right: 20px;
 	font-family: "fontello";
 }
 
@@ -174,13 +170,13 @@ a{
 }
 
 .basket2{
-	right: 68px;
-	top: 88px;
+	top: 60px;
+	right: 20px;
 	font-family: "fontello";
 }
 
 .mypage, .basket{
-	top: 74px;
+	top: 59px;
 	z-index: 4;
 }
 
@@ -582,4 +578,49 @@ main img{
 .START{
 	position: absolute;
 	top: 0;
+}
+
+@media (max-width: 700px){
+	.logo{
+		flex-direction: column;
+	}
+
+	.TEXT{
+		margin-left: 0;
+		margin-top: 10px;
+		height: 36px;
+	}
+
+	[class*=text]{
+		margin-top: 0;
+	}
+
+	.text1{
+		font-size: 20px;
+		margin-top: -5px;
+		margin-bottom: -20px;
+	}
+
+	.text2, .text3{
+		font-size: 16px;
+		display: inline-block;
+	}
+
+	.CT{
+		margin-bottom: 20px;
+	}
+
+	.ct{
+		margin-top: 15px;
+	}
+
+	.category, .mypage, .basket{
+		z-index: -1;
+		opacity: 0;
+	}
+
+	.category2, .mypage2, .basket2{
+		z-index: 4;
+		opacity: 1;
+	}
 }
