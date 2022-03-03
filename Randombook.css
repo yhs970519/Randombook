@@ -50,7 +50,8 @@ a{
 	flex-direction: row;
 	transition: color 0.2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-	transform: scale(75%);
+	/* transform: scale(75%); */
+	transform: translate(50px);
 	transform-origin: 50% 0%;
 }
 
@@ -87,7 +88,6 @@ a{
 	color: black;
 	font-size: 30px;
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
-	transform: scaleX(50%);
 }
 
 .TEXT:hover{
