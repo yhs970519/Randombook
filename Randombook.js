@@ -330,7 +330,6 @@ window.addEventListener('DOMContentLoaded', function(){
 	let frameR = document.querySelector(".frame_right");
 	let mouseX;
 	let mouseY;
-	let header = document.querySelector("header");
 
 	if( is_mobile ) {
 		// translate images in mobile
@@ -344,8 +343,6 @@ window.addEventListener('DOMContentLoaded', function(){
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
 		});
-
-		header.style.transform = 'scale(65%)';
 
 		// document.addEventListener("touchstart", (e) => {
 		// 	mouseX = -e.touches[0].clientX * 2.5 / window.innerWidth;
@@ -373,8 +370,6 @@ window.addEventListener('DOMContentLoaded', function(){
 			// console.log(mouseX);
 			// console.log(mouseY);
 		});
-
-		header.style.transform = 'scale(75%)';
 	}
 
 	// book images array//////////////////////////////////////////////////
@@ -587,7 +582,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	let aside_ul = document.querySelector(".aside");
 	let textSpace1 = document.getElementsByClassName("CT");
 	let textSpace2 = document.getElementsByClassName("ct");
-	// let header = document.querySelector("header");
+	let header = document.querySelector("header");
 	let logo = document.querySelector(".logo");
 	let TEXT = document.querySelector(".TEXT");
 	let text1 = document.querySelector(".text1");
@@ -692,7 +687,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		textSpace2[7].style.marginTop = '20px';
 		textSpace2[8].style.marginTop = '20px';
 		textSpace2[9].style.marginTop = '20px';
-		header.style.transform = 'scale(75%)';
+		// header.style.transform = 'scale(75%)';
 		logo.style.flexDirection = 'row';
 		TEXT.style.marginLeft = '10px';
 		TEXT.style.marginTop = '0';
@@ -735,7 +730,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		textSpace2[7].style.marginTop = '15px';
 		textSpace2[8].style.marginTop = '15px';
 		textSpace2[9].style.marginTop = '15px';
-		header.style.transform = 'scale(65%)';
+		// header.style.transform = 'scale(65%)';
 		logo.style.flexDirection = 'column';
 		TEXT.style.marginLeft = '0';
 		TEXT.style.marginTop = '10px';
@@ -786,7 +781,7 @@ window.addEventListener('DOMContentLoaded', function(){
 			textSpace2[7].style.marginTop = '20px';
 			textSpace2[8].style.marginTop = '20px';
 			textSpace2[9].style.marginTop = '20px';
-			header.style.transform = 'scale(75%)';
+			// header.style.transform = 'scale(75%)';
 			logo.style.flexDirection = 'row';
 			TEXT.style.marginLeft = '10px';
 			TEXT.style.marginTop = '0';
@@ -832,7 +827,7 @@ window.addEventListener('DOMContentLoaded', function(){
 			textSpace2[7].style.marginTop = '15px';
 			textSpace2[8].style.marginTop = '15px';
 			textSpace2[9].style.marginTop = '15px';
-			header.style.transform = 'scale(65%)';
+			// header.style.transform = 'scale(65%)';
 			logo.style.flexDirection = 'column';
 			TEXT.style.marginLeft = '0';
 			TEXT.style.marginTop = '10px';

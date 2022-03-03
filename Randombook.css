@@ -25,13 +25,6 @@ header{
 	z-index: 5;
 	position: absolute;
 	top: 20px;
-	transform: scale(75%);
-}
-
-@media (max-width: 750px){
-	header{
-		transform: scale(65%);
-	}
 }
 
 a{
@@ -43,6 +36,13 @@ a{
 	flex-direction: row;
 	transition: color 0.2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	transform: scale(75%);
+}
+
+@media (max-width: 700px){
+	.logo{
+		transform: scale(65%);
+	}
 }
 
 .circle1, .circle2{
