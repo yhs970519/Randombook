@@ -51,7 +51,7 @@ a{
 	transition: color 0.2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 	/* transform: scale(75%); */
-	transform: scale(2, 2);
+	transform: scale(0.75, 0.75);
 	transform-origin: 50% 0%;
 }
 
