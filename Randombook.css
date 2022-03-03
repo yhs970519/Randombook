@@ -19,7 +19,6 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	transform: scaleX(50%);
 }
 
 header{
@@ -88,6 +87,7 @@ a{
 	color: black;
 	font-size: 30px;
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+	transform: scaleX(50%);
 }
 
 .TEXT:hover{
