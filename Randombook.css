@@ -34,9 +34,6 @@ a{
 .logo{
 	display: flex;
 	flex-direction: row;
-	transition: color 0.2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-	/* transform: scale(75%); */
 	transform: scale(0.75, 0.75);
 	transform-origin: 50% 0%;
 }
@@ -74,10 +71,8 @@ a{
 	color: black;
 	font-size: 30px;
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
-}
-
-.TEXT:hover{
-	color: seagreen;
+	transition: color 0.2s;
+	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 [class*=text]{
@@ -107,8 +102,7 @@ a{
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
 	cursor: pointer;
-	transition: all 0.2s;
-	/* transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955); */
+	transition: all 0.4s;
 	border-radius: 50px;
 }
 
@@ -127,14 +121,6 @@ a{
 	font-family: "fontello";
 }
 
-.category:hover{
-	opacity: 2;
-}
-
-.category2:hover{
-	opacity: 2;
-}
-
 .mypage, .basket, .mypage2, .basket2{
 	position: absolute;
 	font-size: 15px;
@@ -148,8 +134,7 @@ a{
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
 	cursor: pointer;
-	transition: all 0.2s;
-	/* transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955); */
+	transition: all 0.4s;
 	border-radius: 50px;
 }
 
@@ -264,7 +249,7 @@ footer div{
 	margin-bottom: 25px;
 }
 
-[class*="list"] a, .aside a{
+.nav a, .aside a{
 	color: black;
 }
 
@@ -589,9 +574,6 @@ main img{
 		margin-left: 0;
 		margin-top: 10px;
 		height: 36px;
-		/* font-weight: bold;
-		transform: scaleX(0.85);
-		transform-origin: 0% 0%; */
 	}
 
 	[class*=text]{

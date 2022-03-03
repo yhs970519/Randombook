@@ -6,11 +6,25 @@ window.addEventListener('DOMContentLoaded', function(){
 
 		let imgN = 51; //+1
 
+		let linkArray = [];
+		linkArray[0] = 'Full random/Full random.html';
+		linkArray[1] = 'Bestseller/Bestseller.html';
+		linkArray[2] = 'by BTS/by BTS.html';
+		linkArray[3] = 'Novel & Essay/Novel & Essay.html';
+		linkArray[4] = 'Fairy tale/Fairy tale.html';
+		linkArray[5] = 'Humanities/Humanities.html';
+		linkArray[6] = 'Contemporary/Contemporary.html';
+		linkArray[7] = 'Renaissance/Renaissance.html';
+		linkArray[8] = 'William Shakespeare/William Shakespeare.html';
+		linkArray[9] = 'Murakami Haruki/Murakami Haruki.html';
+		
+		let randomnumber = Math.floor(Math.random() * linkArray.length);
+
 		for (let i = 1; i < imgN; i++) {
 			let bookLink = document.createElement("a");
 			let hrefNode = document.createAttribute("href");
 			let classNode = document.createAttribute("class");
-			eval("hrefNode.value = '';");
+			eval("hrefNode.value = '" + linkArray[randomnumber] + "';");
 			eval("classNode.value = 'bookLink" + i + "_" + imgTagGroup + "';");
 			bookLink.setAttributeNode(hrefNode);
 			bookLink.setAttributeNode(classNode);
@@ -308,6 +322,12 @@ window.addEventListener('DOMContentLoaded', function(){
 		rotateEyes(e.pageX, e.pageY)
     });
 
+	$(".logo").hover(function() {
+		$(".TEXT").css("color", "rgba(" + red + ", " + green + ", " + blue + ")");
+	}, function() {
+		$(".TEXT").css("color", "black");
+	});
+
 	// screen move//////////////////////////////////////////////////
 	function isMobile() {
 		let user = navigator.userAgent;
@@ -571,29 +591,20 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	// button transition & viewport transition//////////////////////////////////////////////////
 	let category = document.querySelector(".category");
-	let mypage = document.querySelector(".mypage");
-	let basket = document.querySelector(".basket");
 	let category2 = document.querySelector(".category2");
+	let mypage = document.querySelector(".mypage");
 	let mypage2 = document.querySelector(".mypage2");
-	let basket2 = document.querySelector(".basket2");
 	let nav = document.querySelector("nav");
 	let aside = document.querySelector("aside");
 	let nav_ul = document.querySelector(".nav");
 	let aside_ul = document.querySelector(".aside");
-	let textSpace1 = document.getElementsByClassName("CT");
-	let textSpace2 = document.getElementsByClassName("ct");
-	let logo = document.querySelector(".logo");
-	let TEXT = document.querySelector(".TEXT");
-	let text1 = document.querySelector(".text1");
-	let text2 = document.querySelector(".text2");
-	let text3 = document.querySelector(".text3");
 
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
 
 	category.onclick = categoryClick;
-	mypage.onclick = mypageClick;
 	category2.onclick = categoryClick2;
+	mypage.onclick = mypageClick;
 	mypage2.onclick = mypageClick2;
 	
 	function categoryClick() {
@@ -601,12 +612,12 @@ window.addEventListener('DOMContentLoaded', function(){
 			nav.style.transform = 'translateX(0)';
 			nav_ul.style.transform = 'translateX(0)';
 			nav_ul.style.opacity = '1';
-			category.style.backgroundColor = 'rgba(178, 34, 34, 0.4)';
+			category.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
 		}else{
 			nav.style.transform = 'translateX(-100%)';
 			nav_ul.style.transform = 'translateX(-80px)';
 			nav_ul.style.opacity = '0';
-			category.style.backgroundColor = 'rgba(248, 248, 255, 0.4)';
+			category.style.backgroundColor = 'rgba(248, 248, 255, 0.5)';
 		}
 	}
 
@@ -615,12 +626,12 @@ window.addEventListener('DOMContentLoaded', function(){
 			nav.style.transform = 'translateX(0)';
 			nav_ul.style.transform = 'translateX(0)';
 			nav_ul.style.opacity = '1';
-			category2.style.backgroundColor = 'rgba(178, 34, 34, 0.4)';
+			category2.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
 		}else{
 			nav.style.transform = 'translateX(-100%)';
 			nav_ul.style.transform = 'translateX(-80px)';
 			nav_ul.style.opacity = '0';
-			category2.style.backgroundColor = 'rgba(248, 248, 255, 0.4)';
+			category2.style.backgroundColor = 'rgba(248, 248, 255, 0.5)';
 		}
 	}
 
@@ -629,12 +640,12 @@ window.addEventListener('DOMContentLoaded', function(){
 			aside.style.transform = 'translateX(0)';
 			aside_ul.style.transform = 'translateX(0)';
 			aside_ul.style.opacity = '1';
-			mypage.style.backgroundColor = 'rgba(178, 34, 34, 0.4)';
+			mypage.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
 		}else{
 			aside.style.transform = 'translateX(100%)';
 			aside_ul.style.transform = 'translateX(80px)';
 			aside_ul.style.opacity = '0';
-			mypage.style.backgroundColor = 'rgba(248, 248, 255, 0.4)';
+			mypage.style.backgroundColor = 'rgba(248, 248, 255, 0.5)';
 		}
 	}
 
@@ -643,18 +654,86 @@ window.addEventListener('DOMContentLoaded', function(){
 			aside.style.transform = 'translateX(0)';
 			aside_ul.style.transform = 'translateX(0)';
 			aside_ul.style.opacity = '1';
-			mypage2.style.backgroundColor = 'rgba(178, 34, 34, 0.4)';
+			mypage2.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
 		}else{
 			aside.style.transform = 'translateX(100%)';
 			aside_ul.style.transform = 'translateX(80px)';
 			aside_ul.style.opacity = '0';
-			mypage2.style.backgroundColor = 'rgba(248, 248, 255, 0.4)';
+			mypage2.style.backgroundColor = 'rgba(248, 248, 255, 0.5)';
 		}
 	}
 
+	onmousemove = buttonColor;
+
+	function buttonColor() {
+		categoryHover();
+		categoryHover2();
+		mypageHover();
+		mypageHover2();
+	}
+	function categoryHover() {
+		if(nav.style.transform == 'translateX(-100%)') {
+			$(".category").hover(function() {
+				$(this).css("background-color", "rgba(" + red + ", " + green + ", " + blue + ", 0.5)");
+			}, function() {
+				$(this).css("background-color", "rgba(248, 248, 255, 0.5)");
+			});
+		}else{
+			category.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
+		}
+	}
+
+	function categoryHover2() {
+		if(nav.style.transform == 'translateX(-100%)') {
+			$(".category2").hover(function() {
+				$(this).css("background-color", "rgba(" + red + ", " + green + ", " + blue + ", 0.5)");
+			}, function() {
+				$(this).css("background-color", "rgba(248, 248, 255, 0.5)");
+			});
+		}else{
+			category2.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
+		}
+	}
+
+	function mypageHover() {
+		if(aside.style.transform == 'translateX(100%)') {
+			$(".mypage").hover(function() {
+				$(this).css("background-color", "rgba(" + red + ", " + green + ", " + blue + ", 0.5)");
+			}, function() {
+				$(this).css("background-color", "rgba(248, 248, 255, 0.5)");
+			});
+		}else{
+			mypage.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
+		}
+	}
+
+	function mypageHover2() {
+		if(aside.style.transform == 'translateX(100%)') {
+			$(".mypage2").hover(function() {
+				$(this).css("background-color", "rgba(" + red + ", " + green + ", " + blue + ", 0.5)");
+			}, function() {
+				$(this).css("background-color", "rgba(248, 248, 255, 0.5)");
+			});
+		}else{
+			mypage2.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
+		}
+	}
+
+	$(".basket").hover(function() {
+		$(this).css("background-color", "rgba(" + red + ", " + green + ", " + blue + ", 0.5)");
+	}, function() {
+		$(this).css("background-color", "rgba(248, 248, 255, 0.5)");
+	});
+
+	$(".basket2").hover(function() {
+		$(this).css("background-color", "rgba(" + red + ", " + green + ", " + blue + ", 0.5)");
+	}, function() {
+		$(this).css("background-color", "rgba(248, 248, 255, 0.5)");
+	});
+
 	$(".ract").draggable();
 	// $("main a").draggable({ revert: true });
-})
+});
 
 // loading//////////////////////////////////////////////////
 window.onload = function() {
