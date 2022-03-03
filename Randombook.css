@@ -108,7 +108,7 @@ a{
 	-webkit-backdrop-filter: blur(6px);
 	cursor: pointer;
 	transition: all 0.2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	/* transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955); */
 	border-radius: 50px;
 }
 
@@ -149,7 +149,7 @@ a{
 	-webkit-backdrop-filter: blur(6px);
 	cursor: pointer;
 	transition: all 0.2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	/* transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955); */
 	border-radius: 50px;
 }
 
