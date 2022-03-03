@@ -569,7 +569,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		eval("setInterval(function() { randomframe4(8, " + i + ", B" + b + "img, bA" + b + "); }, drN" + i + ");");
 	}
 
-	// button transition
+	// button transition & viewport transition//////////////////////////////////////////////////
 	let category = document.querySelector(".category");
 	let mypage = document.querySelector(".mypage");
 	let basket = document.querySelector(".basket");
@@ -582,6 +582,11 @@ window.addEventListener('DOMContentLoaded', function(){
 	let aside_ul = document.querySelector(".aside");
 	let textSpace1 = document.getElementsByClassName("CT");
 	let textSpace2 = document.getElementsByClassName("ct");
+	let logo = document.querySelector(".logo");
+	let TEXT = document.querySelector(".TEXT");
+	let text1 = document.querySelector(".text1");
+	let text2 = document.querySelector(".text2");
+	let text3 = document.querySelector(".text3");
 
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
@@ -681,6 +686,13 @@ window.addEventListener('DOMContentLoaded', function(){
 		textSpace2[7].style.marginTop = '20px';
 		textSpace2[8].style.marginTop = '20px';
 		textSpace2[9].style.marginTop = '20px';
+		logo.style.flexDirection = 'row';
+		TEXT.style.marginLeft = '10px';
+		TEXT.style.marginTop = '0';
+		TEXT.style.fontSize = '30px';
+		text1.style.fontSize = '30px';
+		text2.style.display = 'block';
+		text3.style.display = 'block';
 	  } else {
 		category.style.zIndex = '-1';
 		mypage.style.zIndex = '-1';
@@ -715,6 +727,13 @@ window.addEventListener('DOMContentLoaded', function(){
 		textSpace2[7].style.marginTop = '15px';
 		textSpace2[8].style.marginTop = '15px';
 		textSpace2[9].style.marginTop = '15px';
+		logo.style.flexDirection = 'column';
+		TEXT.style.marginLeft = '0';
+		TEXT.style.marginTop = '10px';
+		TEXT.style.fontSize = '16.5px';
+		text1.style.fontSize = '20px';
+		text2.style.display = 'inline-block';
+		text3.style.display = 'inline-block';
 	  }
 
 	  window.addEventListener("resize", resizeicon);
@@ -757,6 +776,13 @@ window.addEventListener('DOMContentLoaded', function(){
 			textSpace2[7].style.marginTop = '20px';
 			textSpace2[8].style.marginTop = '20px';
 			textSpace2[9].style.marginTop = '20px';
+			logo.style.flexDirection = 'row';
+			TEXT.style.marginLeft = '10px';
+			TEXT.style.marginTop = '0';
+			TEXT.style.fontSize = '30px';
+			text1.style.fontSize = '30px';
+			text2.style.display = 'block';
+			text3.style.display = 'block';
 		} else {
 			category.style.zIndex = '-1';
 			mypage.style.zIndex = '-1';
@@ -794,6 +820,13 @@ window.addEventListener('DOMContentLoaded', function(){
 			textSpace2[7].style.marginTop = '15px';
 			textSpace2[8].style.marginTop = '15px';
 			textSpace2[9].style.marginTop = '15px';
+			logo.style.flexDirection = 'column';
+			TEXT.style.marginLeft = '0';
+			TEXT.style.marginTop = '10px';
+			TEXT.style.fontSize = '16.5px';
+			text1.style.fontSize = '20px';
+			text2.style.display = 'inline-block';
+			text3.style.display = 'inline-block';
 		  }
 	  }
 

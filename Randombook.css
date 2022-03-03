@@ -32,15 +32,11 @@ a{
 	text-decoration: none;
 }
 
-header a{
+.logo{
 	display: flex;
 	flex-direction: row;
 	transition: color 0.2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-}
-
-header a:hover{
-	color: seagreen;
 }
 
 .circle1, .circle2{
@@ -75,11 +71,15 @@ header a:hover{
     height: 100px;
     margin-left: 10px;
 	color: black;
+	font-size: 30px;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+}
+
+.TEXT:hover{
+	color: seagreen;
 }
 
 [class*=text]{
-    font-size: 30px;
-    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
     margin-top: -5px;
 }
 
@@ -159,8 +159,8 @@ header a:hover{
 }
 
 .basket2{
-	right: 10px;
-	top: 44px;
+	right: 68px;
+	top: 88px;
 	font-family: "fontello";
 }
 
