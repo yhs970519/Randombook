@@ -1,6 +1,76 @@
 // JavaScript Document
 
 window.addEventListener('DOMContentLoaded', function(){
+
+    // new div tags//////////////////////////////////////////////////
+    function divTag(imgTagGroup) {
+
+		let imgN = 27; //+1
+
+        for (let i = 1; i < imgN; i++) {
+			let bookFrame = document.createElement("div");
+			let classNode = document.createAttribute("class");
+			eval("classNode.value = 'bookFrame" + i + "_" + imgTagGroup + "';");
+			bookFrame.setAttributeNode(classNode);
+			document.querySelector(".main_img" + imgTagGroup + "").appendChild(bookFrame);
+        }
+    }
+
+    divTag(1);
+	divTag(2);
+	divTag(3);
+	divTag(4);
+	divTag(5);
+	divTag(6);
+	divTag(7);
+	divTag(8);
+
+    // screen move//////////////////////////////////////////////////
+	function isMobile() {
+		let user = navigator.userAgent;
+		let is_mobile = false;
+		if( user.indexOf("iPhone") > -1 
+		|| user.indexOf("Android") > -1 
+		|| user.indexOf("iPad") > -1 
+		|| user.indexOf("iPod") > -1 ) 
+		{
+			is_mobile = true; 
+		}
+		return is_mobile; 
+	}
+
+	var is_mobile = isMobile();
+	let main_img = document.querySelector(".mainImg");
+	let frameT = document.querySelector(".frame_top");
+	let frameB = document.querySelector(".frame_bottom");
+	let frameL = document.querySelector(".frame_left");
+	let frameR = document.querySelector(".frame_right");
+	let mouseX;
+	let mouseY;
+
+	if( is_mobile ) {
+		// translate images in mobile
+		main_img.style.marginLeft = '-440px';
+		main_img.style.marginTop = '-360px';
+		frameT.style.display = 'none';
+		frameB.style.display = 'none';
+		frameL.style.display = 'none';
+		frameR.style.display = 'none';
+
+		$(".mainImg").draggable({
+			containment: ".mobilescreen"
+		});
+	} else {
+		// tranlate images in pc
+		document.addEventListener("mousemove", (e) => {
+			mouseX = -e.clientX * 5 / window.innerWidth;
+			mouseY = -e.clientY * 10 / window.innerHeight;
+			main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+			// console.log(mouseX);
+			// console.log(mouseY);
+		});
+	}
+
    // DadA logo//////////////////////////////////////////////////
 	let ract = document.querySelector(".ract");
     let red = Math.floor(Math.random() * 256);
@@ -56,6 +126,8 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
+	nav_ul.style.transform = 'translateX(-80px)';
+    aside_ul.style.transform = 'translateX(80px)';
 
 	category.onclick = categoryClick;
 	category2.onclick = categoryClick2;
@@ -67,11 +139,13 @@ window.addEventListener('DOMContentLoaded', function(){
 			nav.style.transform = 'translateX(0)';
 			nav_ul.style.transform = 'translateX(0)';
 			nav_ul.style.opacity = '1';
+			nav_ul.style.color = 'black';
 			category.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
 		}else{
 			nav.style.transform = 'translateX(-100%)';
 			nav_ul.style.transform = 'translateX(-80px)';
 			nav_ul.style.opacity = '0';
+			nav_ul.style.color = 'rgba(10, 10, 10)';
 			category.style.backgroundColor = 'rgba(248, 248, 255, 0.5)';
 		}
 	}
@@ -81,11 +155,13 @@ window.addEventListener('DOMContentLoaded', function(){
 			nav.style.transform = 'translateX(0)';
 			nav_ul.style.transform = 'translateX(0)';
 			nav_ul.style.opacity = '1';
+			nav_ul.style.color = 'black';
 			category2.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
 		}else{
 			nav.style.transform = 'translateX(-100%)';
 			nav_ul.style.transform = 'translateX(-80px)';
 			nav_ul.style.opacity = '0';
+			nav_ul.style.color = 'rgba(10, 10, 10)';
 			category2.style.backgroundColor = 'rgba(248, 248, 255, 0.5)';
 		}
 	}
@@ -118,6 +194,11 @@ window.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 
+    // let button = document.querySelectorAll("button");
+	// button[3] = onmouseover = buttonColor;
+    // button[4] = onmouseover = buttonColor;
+    // button[5] = onmouseover = buttonColor;
+    // button[6] = onmouseover = buttonColor;
 	onmousemove = buttonColor;
 
 	function buttonColor() {
@@ -126,6 +207,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		mypageHover();
 		mypageHover2();
 	}
+
 	function categoryHover() {
 		if(nav.style.transform == 'translateX(-100%)') {
 			$(".category").hover(function() {

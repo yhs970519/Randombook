@@ -56,6 +56,8 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
+	nav_ul.style.transform = 'translateX(-80px)';
+    aside_ul.style.transform = 'translateX(80px)';
 
 	category.onclick = categoryClick;
 	category2.onclick = categoryClick2;
@@ -67,11 +69,13 @@ window.addEventListener('DOMContentLoaded', function(){
 			nav.style.transform = 'translateX(0)';
 			nav_ul.style.transform = 'translateX(0)';
 			nav_ul.style.opacity = '1';
+			nav_ul.style.color = 'black';
 			category.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
 		}else{
 			nav.style.transform = 'translateX(-100%)';
 			nav_ul.style.transform = 'translateX(-80px)';
 			nav_ul.style.opacity = '0';
+			nav_ul.style.color = 'rgba(10, 10, 10)';
 			category.style.backgroundColor = 'rgba(248, 248, 255, 0.5)';
 		}
 	}
@@ -81,11 +85,13 @@ window.addEventListener('DOMContentLoaded', function(){
 			nav.style.transform = 'translateX(0)';
 			nav_ul.style.transform = 'translateX(0)';
 			nav_ul.style.opacity = '1';
+			nav_ul.style.color = 'black';
 			category2.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
 		}else{
 			nav.style.transform = 'translateX(-100%)';
 			nav_ul.style.transform = 'translateX(-80px)';
 			nav_ul.style.opacity = '0';
+			nav_ul.style.color = 'rgba(10, 10, 10)';
 			category2.style.backgroundColor = 'rgba(248, 248, 255, 0.5)';
 		}
 	}

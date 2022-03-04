@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		linkArray[7] = 'Renaissance/Renaissance.html';
 		linkArray[8] = 'William Shakespeare/William Shakespeare.html';
 		linkArray[9] = 'Murakami Haruki/Murakami Haruki.html';
-
+		
 		let randomnumber = Math.floor(Math.random() * linkArray.length);
 
 		for (let i = 1; i < imgN; i++) {
@@ -363,6 +363,24 @@ window.addEventListener('DOMContentLoaded', function(){
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
 		});
+
+		// document.addEventListener("touchstart", (e) => {
+		// 	mouseX = -e.touches[0].clientX * 2.5 / window.innerWidth;
+		// 	mouseY = -e.touches[0].clientY * 10 / window.innerHeight;
+		// 	main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+		// });
+		// document.addEventListener("touchmove", (e) => {
+		// 	mouseX = -e.changedTouches[0].clientX * 2.5 / window.innerWidth;
+		// 	mouseY = -e.changedTouches[0].clientY * 10 / window.innerHeight;
+		// 	main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+		// 	// console.log(mouseX);
+		// 	// console.log(mouseY);
+		// });
+		// document.addEventListener("touchend", (e) => {
+		// 	mouseX = -e.changedTouches[0].clientX * 2.5 / window.innerWidth;
+		// 	mouseY = -e.changedTouches[0].clientY * 10 / window.innerHeight;
+		// 	main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+		// });
 	} else {
 		// tranlate images in pc
 		document.addEventListener("mousemove", (e) => {
@@ -583,8 +601,6 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
-	nav_ul.style.transform = 'translateX(-80px)';
-    aside_ul.style.transform = 'translateX(80px)';
 
 	category.onclick = categoryClick;
 	category2.onclick = categoryClick2;
@@ -596,13 +612,11 @@ window.addEventListener('DOMContentLoaded', function(){
 			nav.style.transform = 'translateX(0)';
 			nav_ul.style.transform = 'translateX(0)';
 			nav_ul.style.opacity = '1';
-			nav_ul.style.color = 'black';
 			category.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
 		}else{
 			nav.style.transform = 'translateX(-100%)';
 			nav_ul.style.transform = 'translateX(-80px)';
 			nav_ul.style.opacity = '0';
-			nav_ul.style.color = 'rgba(10, 10, 10)';
 			category.style.backgroundColor = 'rgba(248, 248, 255, 0.5)';
 		}
 	}
@@ -612,13 +626,11 @@ window.addEventListener('DOMContentLoaded', function(){
 			nav.style.transform = 'translateX(0)';
 			nav_ul.style.transform = 'translateX(0)';
 			nav_ul.style.opacity = '1';
-			nav_ul.style.color = 'black';
 			category2.style.backgroundColor = 'rgba(178, 34, 34, 0.5)';
 		}else{
 			nav.style.transform = 'translateX(-100%)';
 			nav_ul.style.transform = 'translateX(-80px)';
 			nav_ul.style.opacity = '0';
-			nav_ul.style.color = 'rgba(10, 10, 10)';
 			category2.style.backgroundColor = 'rgba(248, 248, 255, 0.5)';
 		}
 	}
@@ -659,7 +671,6 @@ window.addEventListener('DOMContentLoaded', function(){
 		mypageHover();
 		mypageHover2();
 	}
-	
 	function categoryHover() {
 		if(nav.style.transform == 'translateX(-100%)') {
 			$(".category").hover(function() {
