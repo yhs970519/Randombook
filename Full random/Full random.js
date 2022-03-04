@@ -52,10 +52,10 @@ window.addEventListener('DOMContentLoaded', function(){
 		// translate images in mobile
 		main_img.style.marginLeft = '-440px';
 		main_img.style.marginTop = '-360px';
-		frameT.style.display = 'none';
-		frameB.style.display = 'none';
-		frameL.style.display = 'none';
-		frameR.style.display = 'none';
+		// frameT.style.display = 'none';
+		// frameB.style.display = 'none';
+		// frameL.style.display = 'none';
+		// frameR.style.display = 'none';
 
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
