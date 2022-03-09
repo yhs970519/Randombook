@@ -25,6 +25,28 @@ window.addEventListener('DOMContentLoaded', function(){
 	divTag(7);
 	divTag(8);
 
+    // function divtextTag(packageN) {
+
+	// 	let textN = 21; //+1
+
+    //     for (let i = 1; i < textN; i++) {
+	// 		let slideText = document.createElement("div");
+	// 		let classNode = document.createAttribute("class");
+	// 		eval("classNode.value = 'Text" + i + "_" + packageN + "';");
+	// 		slideText.setAttributeNode(classNode);
+	// 		document.querySelector(".package" + packageN + "").appendChild(slideText);
+
+    //         let slideTextmini = document.querySelector(".Text" + i + "_" + packageN + "");
+    //         slideTextmini.innerHTML = 'Full Random book package Full Random book package Full Random book package Full Random book package Full Random book package';
+    //     }
+    // }
+
+    // divtextTag(1);
+    // divtextTag(2);
+    // divtextTag(3);
+    // divtextTag(4);
+    // divtextTag(5);
+
     // screen move//////////////////////////////////////////////////
 	function isMobile() {
 		let user = navigator.userAgent;
@@ -41,10 +63,20 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	var is_mobile = isMobile();
 	let main_img = document.querySelector(".mainImg");
+    let gradient1 = document.querySelector(".gradient1");
+    let gradient2 = document.querySelector(".gradient2");
+    let gradient3 = document.querySelector(".gradient3");
+    let gradient4 = document.querySelector(".gradient4");
+    let package1 = document.querySelector(".package1");
+    let package2 = document.querySelector(".package2");
+    let package3 = document.querySelector(".package3");
+    let package4 = document.querySelector(".package4");
 	let frameT = document.querySelector(".frame_top");
 	let frameB = document.querySelector(".frame_bottom");
 	let frameL = document.querySelector(".frame_left");
 	let frameR = document.querySelector(".frame_right");
+    let bookRact  = document.querySelector(".bookRact");
+    let bookShadow  = document.querySelector(".bookShadow");
 	let mouseX;
 	let mouseY;
 
@@ -68,6 +100,16 @@ window.addEventListener('DOMContentLoaded', function(){
 			main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
 			// console.log(mouseX);
 			// console.log(mouseY);
+		});
+
+        document.addEventListener("mousemove", (e) => {
+			dragX = e.clientX;
+			dragY = e.clientY;
+			gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
+            gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
+            gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
+            gradient4.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
+            bookShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
 		});
 	}
 

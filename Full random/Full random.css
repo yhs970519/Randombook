@@ -317,8 +317,36 @@ main{
 	height: 180px;
 	margin: 10px;
     background-color: rgba(248, 248, 255, 0);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.bookRact{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 350px;
+    background-color: ghostwhite;
+    border-radius: 5px;
+}
+
+.bookShadow{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    /* margin-left: -0.5%;
+    margin-top: -0.5%; */
+    width: 250px;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    mix-blend-mode: overlay;
+    -webkit-mix-blend-mode: overlay;
 }
 
 [class*=package], .buy, .review{
@@ -329,7 +357,7 @@ main{
     background-color: rgba(248, 248, 255, 0);
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
     font-size: 55px;
-    color: black;
+    color: ghostwhite;
 }
 
 [class*=package]{
@@ -337,9 +365,12 @@ main{
     padding-right: 20px;
     top: -3%;
     left: 0;
+    /* width: 100%; */
     height: 103%;
     text-align: justify;
     color: transparent; 
+    mix-blend-mode: overlay;
+    -webkit-mix-blend-mode: overlay;
 }
 
 .package1{
@@ -366,23 +397,17 @@ main{
     -webkit-background-clip: text;
 }
 
-.package5{
-    background: radial-gradient(at 50% 50%, rgba(238, 238, 245), rgba(238, 238, 245, 0)60%);
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
 .buy{
-    z-index: 2;
-    bottom: 20px;
-    left: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -400%);
     cursor: pointer;
 }
 
 .review{
-    z-index: 2;
-    bottom: 20px;
-    right: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 300%);
     cursor: pointer;
 }
 
@@ -390,28 +415,29 @@ main{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 200%;
+    height: 200%;
+    mix-blend-mode: saturation;
 }
 
 .gradient1{
-    background: radial-gradient(at 0% 0%, rgba(255, 140, 0), rgba(255, 140, 0, 0)60%);
+    background: radial-gradient(at 50% 50%, rgba(25, 25, 112), rgba(25, 25, 112, 0)50%);
 }
 
 .gradient2{
-    background: radial-gradient(at 100% 0%, rgba(25, 25, 112), rgba(25, 25, 112, 0)60%);
+    background: radial-gradient(at 50% 50%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
+    margin-left: -100%;
 }
 
 .gradient3{
-    background: radial-gradient(at 0% 100%, rgba(50, 144, 255), rgba(50, 144, 255, 0)60%);
+    background: radial-gradient(at 50% 50%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
+    margin-top: -50%;
 }
 
 .gradient4{
-    background: radial-gradient(at 100% 100%, rgba(255, 225, 0), rgba(255, 225, 0, 0)60%);
-}
-
-.gradient5{
-    background: radial-gradient(at 50% 50%, rgba(248, 248, 255), rgba(248, 248, 255, 0)60%);
+    background: radial-gradient(at 50% 50%, rgba(50, 144, 255), rgba(50, 144, 255, 0)50%);
+    margin-top: -50%;
+    margin-left: -100%;
 }
 
 @media (max-width: 700px){
