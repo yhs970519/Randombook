@@ -419,14 +419,17 @@ main{
 }
 
 .testract{
-    background: rgba(0, 0, 0, 0.5);
-    width: 50vw;
-    height: 50vh;
     position: fixed;
-    top: 50px;
-    left: 50px;
-    mix-blend-mode: saturation;
-    -webkit-mix-blend-mode: saturation;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    mix-blend-mode: overlay;
+    -webkit-mix-blend-mode: overlay;
 }
 
 [class*=gradient]{
