@@ -99,6 +99,7 @@ window.addEventListener('DOMContentLoaded', function(){
         bookShadow.style.marginTop = '-50%';
         gradient4.style.marginLeft = '-100%';
         gradient4.style.marginTop = '-100%';
+        gradient3.style.marginTop = '-100%';
 
         document.addEventListener("touchstart", (e) => {
 			dragX = -e.touches[0].clientX;
