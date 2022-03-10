@@ -102,8 +102,8 @@ window.addEventListener('DOMContentLoaded', function(){
         gradient3.style.marginTop = '-100%';
 
         document.addEventListener("touchstart", (e) => {
-			dragX = -e.touches[0].clientX;
-			dragY = -e.touches[0].clientY;
+			dragX = e.touches[0].clientX;
+			dragY = e.touches[0].clientY;
 			gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
@@ -111,8 +111,8 @@ window.addEventListener('DOMContentLoaded', function(){
             bookShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
 		});
 		document.addEventListener("touchmove", (e) => {
-			dragX = -e.changedTouches[0].clientX;
-			dragY = -e.changedTouches[0].clientY;
+			dragX = e.changedTouches[0].clientX;
+			dragY = e.changedTouches[0].clientY;
 			gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
@@ -122,8 +122,8 @@ window.addEventListener('DOMContentLoaded', function(){
 			// console.log(mouseY);
 		});
 		document.addEventListener("touchend", (e) => {
-			dragX = -e.changedTouches[0].clientX;
-			dragY = -e.changedTouches[0].clientY;
+			dragX = e.changedTouches[0].clientX;
+			dragY = e.changedTouches[0].clientY;
 			gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
