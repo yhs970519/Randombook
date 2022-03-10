@@ -10,6 +10,11 @@ html, body{
 	height: 100%;
 }
 
+html{
+    background-color: ghostwhite;
+	overflow:hidden;
+}
+
 body{
 	background-color: ghostwhite;
 	overflow:hidden;
@@ -491,9 +496,4 @@ main{
 		z-index: 4;
 		opacity: 1;
 	}
-
-    [class*=package]{
-        mix-blend-mode: overlay;
-        -webkit-mix-blend-mode: overlay;
-    }
 }
