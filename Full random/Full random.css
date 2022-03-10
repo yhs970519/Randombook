@@ -433,9 +433,9 @@ main{
     -webkit-mix-blend-mode: overlay;
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
     font-size: 70px;
-    color: transparent; 
+    /* color: transparent; 
     background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; */
 }
 
 [class*=gradient]{
