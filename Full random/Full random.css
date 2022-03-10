@@ -431,6 +431,8 @@ main{
     border-radius: 5px;
     mix-blend-mode: saturation;
     -webkit-mix-blend-mode: saturation;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 55px;
     color: transparent; 
     background-clip: text;
     -webkit-background-clip: text;
