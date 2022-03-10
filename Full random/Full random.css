@@ -491,4 +491,9 @@ main{
 		z-index: 4;
 		opacity: 1;
 	}
+
+    [class*=package]{
+        mix-blend-mode: overlay;
+        -webkit-mix-blend-mode: overlay;
+    }
 }
