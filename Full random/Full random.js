@@ -97,23 +97,25 @@ window.addEventListener('DOMContentLoaded', function(){
 
         bookShadow.style.marginLeft = '-50%';
         bookShadow.style.marginTop = '-50%';
+        gradient4.style.marginLeft = '-100%';
+        gradient4.style.marginTop = '-100%';
 
         document.addEventListener("touchstart", (e) => {
 			dragX = -e.touches[0].clientX;
 			dragY = -e.touches[0].clientY;
-			gradient1.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-            gradient2.style.transform = 'translate(' + dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-            gradient3.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + dragY * 100 / window.innerHeight + '%)';
-            gradient4.style.transform = 'translate(' + dragX * 100 / window.innerWidth + '%, ' + dragY * 100 / window.innerHeight + '%)';
+			gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
+            gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
+            gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
+            gradient4.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
             bookShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
 		});
 		document.addEventListener("touchmove", (e) => {
 			dragX = -e.changedTouches[0].clientX;
 			dragY = -e.changedTouches[0].clientY;
-			gradient1.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-            gradient2.style.transform = 'translate(' + dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-            gradient3.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + dragY * 100 / window.innerHeight + '%)';
-            gradient4.style.transform = 'translate(' + dragX * 100 / window.innerWidth + '%, ' + dragY * 100 / window.innerHeight + '%)';
+			gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
+            gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
+            gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
+            gradient4.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
             bookShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
 			// console.log(mouseX);
 			// console.log(mouseY);
@@ -121,10 +123,10 @@ window.addEventListener('DOMContentLoaded', function(){
 		document.addEventListener("touchend", (e) => {
 			dragX = -e.changedTouches[0].clientX;
 			dragY = -e.changedTouches[0].clientY;
-			gradient1.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-            gradient2.style.transform = 'translate(' + dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-            gradient3.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + dragY * 100 / window.innerHeight + '%)';
-            gradient4.style.transform = 'translate(' + dragX * 100 / window.innerWidth + '%, ' + dragY * 100 / window.innerHeight + '%)';
+			gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
+            gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
+            gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
+            gradient4.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
             bookShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
 		});
 	} else {
