@@ -420,6 +420,9 @@ main{
 
 .testract{
     position: fixed;
+    display:inline-block;
+    padding: 0;
+    border: none;
     top: 50px;
     left: 50px;
     width: 250px;
@@ -428,6 +431,9 @@ main{
     border-radius: 5px;
     mix-blend-mode: saturation;
     -webkit-mix-blend-mode: saturation;
+    color: transparent; 
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 [class*=gradient]{
