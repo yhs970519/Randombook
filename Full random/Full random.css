@@ -369,8 +369,8 @@ main{
     height: 103%;
     text-align: justify;
     color: transparent; 
-    mix-blend-mode: overlay;
-    -webkit-mix-blend-mode: overlay;
+    mix-blend-mode: difference;
+    -webkit-mix-blend-mode: difference;
 }
 
 .package1{

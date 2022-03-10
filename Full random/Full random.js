@@ -82,11 +82,6 @@ window.addEventListener('DOMContentLoaded', function(){
     let dragX;
     let dragY;
 
-    $(".gradient1").css("mix-blend-mode", "saturation");
-    $(".gradient2").css("mix-blend-mode", "saturation");
-    $(".gradient3").css("mix-blend-mode", "saturation");
-    $(".gradient4").css("mix-blend-mode", "saturation");
-
 	if( is_mobile ) {
 		// translate images in mobile
 		main_img.style.marginLeft = '-440px';
