@@ -424,9 +424,10 @@ main{
     left: 0;
     width: 200vw;
     height: 200vh;
-    color: transparent;
-    mix-blend-mode: saturation;
-    -webkit-mix-blend-mode: saturation;
+    /* mix-blend-mode: saturation;
+    -webkit-mix-blend-mode: saturation; */
+    mix-blend-mode: screen;
+    -webkit-mix-blend-mode: screen;
 }
 
 .gradient1{
