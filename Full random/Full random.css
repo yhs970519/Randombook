@@ -424,8 +424,8 @@ main{
     left: 0;
     width: 200vw;
     height: 200vh;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
+    filter: saturate(100);
+    -webkit-filter: saturate(100);
     mix-blend-mode: saturation;
     -webkit-mix-blend-mode: saturation;
 }
