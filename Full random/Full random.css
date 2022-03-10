@@ -425,6 +425,8 @@ main{
 
 .gradientAll{
     isolation: isolate;
+    mix-blend-mode: saturation;
+    -webkit-mix-blend-mode: saturation;
 }
 
 [class*=gradient]{
@@ -439,26 +441,30 @@ main{
 
 .gradient1{
     background: radial-gradient(at 50% 50%, rgba(25, 25, 112), rgba(25, 25, 112, 0)50%);
-    z-index: 1;
+    mix-blend-mode: saturation;
+    -webkit-mix-blend-mode: saturation;
 }
 
 .gradient2{
     background: radial-gradient(at 50% 50%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
     margin-left: -100vw;
-    z-index: 2;
+    mix-blend-mode: saturation;
+    -webkit-mix-blend-mode: saturation;
 }
 
 .gradient3{
     background: radial-gradient(at 50% 50%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
     margin-top: -100vh;
-    z-index: 3;
+    mix-blend-mode: saturation;
+    -webkit-mix-blend-mode: saturation;
 }
 
 .gradient4{
     background: radial-gradient(at 50% 50%, rgba(50, 144, 255), rgba(50, 144, 255, 0)50%);
     margin-top: -100vh;
     margin-left: -100vw;
-    z-index: 4;
+    mix-blend-mode: saturation;
+    -webkit-mix-blend-mode: saturation;
 }
 
 @media (max-width: 700px){
