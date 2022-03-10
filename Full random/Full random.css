@@ -357,7 +357,7 @@ main{
     background-color: rgba(248, 248, 255, 0);
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
     font-size: 55px;
-    color: ghostwhite;
+    color: black;
 }
 
 [class*=package]{
@@ -400,14 +400,14 @@ main{
 .buy{
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -400%);
+    transform: translate(-50%, -150%);
     cursor: pointer;
 }
 
 .review{
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 300%);
+    transform: translate(-50%, 50%);
     cursor: pointer;
 }
 
@@ -415,9 +415,10 @@ main{
     position: fixed;
     top: 0;
     left: 0;
-    width: 200%;
-    height: 200%;
+    width: 200vw;
+    height: 200vh;
     mix-blend-mode: saturation;
+    -webkit-mix-blend-mode: saturation;
 }
 
 .gradient1{
