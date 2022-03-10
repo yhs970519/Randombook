@@ -444,8 +444,8 @@ main{
     left: 0;
     width: 200vw;
     height: 200vh;
-    mix-blend-mode: overlay;
-    -webkit-mix-blend-mode: overlay;
+    mix-blend-mode: saturation;
+    -webkit-mix-blend-mode: saturation;
 }
 
 .gradient1{
