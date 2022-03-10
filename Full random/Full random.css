@@ -426,8 +426,9 @@ main{
     height: 350px;
     background-color: rgba(0, 0, 100, 0.5);
     border-radius: 5px;
-    mix-blend-mode: saturation;
+    /* mix-blend-mode: saturation; */
     background-blend-mode: saturation;
+    -webkit-background-blend-mode: saturation;
     /* -webkit-mix-blend-mode: saturation; */
 }
 
