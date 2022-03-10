@@ -95,11 +95,11 @@ window.addEventListener('DOMContentLoaded', function(){
 			containment: ".mobilescreen"
 		});
 
-        bookShadow.style.marginLeft = '-50%';
-        bookShadow.style.marginTop = '-50%';
-        gradient4.style.marginLeft = '-100%';
-        gradient4.style.marginTop = '-100%';
-        gradient3.style.marginTop = '-100%';
+        // bookShadow.style.marginLeft = '-50%';
+        // bookShadow.style.marginTop = '-50%';
+        // gradient4.style.marginLeft = '-100%';
+        // gradient4.style.marginTop = '-100%';
+        // gradient3.style.marginTop = '-100%';
 
         document.addEventListener("touchstart", (e) => {
 			dragX = e.touches[0].clientX;
