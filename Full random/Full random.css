@@ -419,7 +419,7 @@ main{
 }
 
 .testract{
-    background: radial-gradient(at 50% 50%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
+    background: rgba(0, 0, 0, 0.5);
     width: 50vw;
     height: 50vh;
     position: fixed;
