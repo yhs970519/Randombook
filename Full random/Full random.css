@@ -426,18 +426,18 @@ main{
 
 .gradient2{
     background: radial-gradient(at 50% 50%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
-    margin-left: -100%;
+    margin-left: -100vw;
 }
 
 .gradient3{
     background: radial-gradient(at 50% 50%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
-    margin-top: -50%;
+    margin-top: -100vh;
 }
 
 .gradient4{
     background: radial-gradient(at 50% 50%, rgba(50, 144, 255), rgba(50, 144, 255, 0)50%);
-    margin-top: -50%;
-    margin-left: -100%;
+    margin-top: -100vh;
+    margin-left: -100vw;
 }
 
 @media (max-width: 700px){
