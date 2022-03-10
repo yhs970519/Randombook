@@ -82,11 +82,6 @@ window.addEventListener('DOMContentLoaded', function(){
     let dragX;
     let dragY;
 
-    gradient1.style.mixBlendMode = 'saturation';
-    gradient2.style.mixBlendMode = 'saturation';
-    gradient3.style.mixBlendMode = 'saturation';
-    gradient4.style.mixBlendMode = 'saturation';
-
 	if( is_mobile ) {
 		// translate images in mobile
 		main_img.style.marginLeft = '-440px';
@@ -106,6 +101,10 @@ window.addEventListener('DOMContentLoaded', function(){
         document.addEventListener("touchstart", (e) => {
 			dragX = e.touches[0].clientX;
 			dragY = e.touches[0].clientY;
+            gradient1.style.mixBlendMode = 'saturation';
+            gradient2.style.mixBlendMode = 'saturation';
+            gradient3.style.mixBlendMode = 'saturation';
+            gradient4.style.mixBlendMode = 'saturation';
 			gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
@@ -115,6 +114,10 @@ window.addEventListener('DOMContentLoaded', function(){
 		document.addEventListener("touchmove", (e) => {
 			dragX = e.changedTouches[0].clientX;
 			dragY = e.changedTouches[0].clientY;
+            gradient1.style.mixBlendMode = 'saturation';
+            gradient2.style.mixBlendMode = 'saturation';
+            gradient3.style.mixBlendMode = 'saturation';
+            gradient4.style.mixBlendMode = 'saturation';
 			gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
@@ -126,6 +129,10 @@ window.addEventListener('DOMContentLoaded', function(){
 		document.addEventListener("touchend", (e) => {
 			dragX = e.changedTouches[0].clientX;
 			dragY = e.changedTouches[0].clientY;
+            gradient1.style.mixBlendMode = 'saturation';
+            gradient2.style.mixBlendMode = 'saturation';
+            gradient3.style.mixBlendMode = 'saturation';
+            gradient4.style.mixBlendMode = 'saturation';
 			gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
             gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
