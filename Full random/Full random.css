@@ -426,43 +426,19 @@ main{
     cursor: pointer;
 }
 
-/* .gradientBack{
+.gradientBack{
     position: fixed;
     top: 0;
     left: 0;
-    width: 200vw;
-    height: 200vh;
+    width: 300vw;
+    height: 300vh;
     background: green;
+    opacity: 0.5;
     mix-blend-mode: overlay;
     -webkit-mix-blend-mode: overlay;
-} */
-
-/* .gradient3{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200vw;
-    height: 200vh;
-    mix-blend-mode: overlay;
-    -webkit-mix-blend-mode: overlay;
-    background: radial-gradient(at 50% 50%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
-    margin-top: -100vh;
 }
 
-.gradient4{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200vw;
-    height: 200vh;
-    mix-blend-mode: overlay;
-    -webkit-mix-blend-mode: overlay;
-    background: radial-gradient(at 50% 50%, rgba(50, 144, 255), rgba(50, 144, 255, 0)50%);
-    margin-top: -100vh;
-    margin-left: -100vw;
-} */
-
-[class*=testRact]{
+/* [class*=testRact]{
     position: fixed;
     mix-blend-mode: overlay;
     -webkit-mix-blend-mode: overlay;
@@ -504,7 +480,7 @@ main{
     background: radial-gradient(at 50% 50%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
     margin-top: -50vw;
     margin-left: -50vh;
-}
+} */
 
 .gradientAll{
     isolation: isolate;
@@ -520,7 +496,7 @@ main{
     -webkit-mix-blend-mode: overlay;
 }
 
-/* .gradient1{
+.gradient1{
     background: radial-gradient(at 50% 50%, rgba(25, 25, 112), rgba(25, 25, 112, 0)50%);
 }
 
@@ -532,14 +508,13 @@ main{
 .gradient3{
     background: radial-gradient(at 50% 50%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
     margin-top: -100vh;
-} */
+}
 
-/* .gradient4{
-    background: blue;
-    opacity: 0.5;
-    margin-top: -100vh;
-    margin-left: -100vw;
-} */
+.gradient4{
+    background: radial-gradient(at 50% 50%, rgba(40, 134, 245), rgba(40, 134, 245, 0)50%);
+    margin-top: -100vw;
+    margin-left: -100vh;
+}
 
 @media (max-width: 700px){
 	.logo{
