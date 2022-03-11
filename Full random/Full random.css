@@ -360,19 +360,23 @@ main{
     padding: 0;
     border: none;
     background-color: rgba(248, 248, 255, 0);
-    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
-    font-size: 55px;
-    color: black;
+    font-family: Futura, Trebuchet MS, Arial, sans-serif; 
+    font-size: 6vw;
+    color: ghostwhite;
+    line-height: 120%;
 }
 
 [class*=package]{
-    padding-left: 20px;
-    padding-right: 20px;
-    top: -3%;
+    margin-right: -20%;
+    margin-left: -20%;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    top: -5%;
     left: 0;
     /* width: 100%; */
-    height: 103%;
-    text-align: justify;
+    height: 105%;
+    font-size: 100px;
+    text-align: center;
     color: transparent; 
     mix-blend-mode: overlay;
     -webkit-mix-blend-mode: overlay;
@@ -405,22 +409,45 @@ main{
 .buy{
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -50%);
     cursor: pointer;
+    color: slategrey;
+    opacity: 0.5;
+    transition: all 0.2s;
+	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
-.review{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    cursor: pointer;
+.buy:hover{
+    color: plum;
+    opacity: 1;
 }
 
 .booklist{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 50%;
+    left: 20px;
+    transform: translateY(50%);
+    text-align: left;
     cursor: pointer;
+    transition: all 0.2s;
+	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+.booklist:hover{
+    color: seagreen;
+}
+
+.review{
+    bottom: 50%;
+    right: 20px;
+    transform: translateY(50%);
+    text-align: right;
+    cursor: pointer;
+    transition: all 0.2s;
+	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+.review:hover{
+    color: steelblue;
 }
 
 .gradientAll{
@@ -438,25 +465,25 @@ main{
 }
 
 .gradient1{
-    background-image: radial-gradient(rgba(25, 25, 112), rgba(25, 25, 112, 0)65%);
+    background-image: radial-gradient(rgba(25, 25, 112), rgba(25, 25, 112, 0)60%);
     background-size: 200vw 200vh;
     background-position: 0% 0%;
 }
 
 .gradient2{
-    background-image: radial-gradient(rgba(255, 140, 0), rgba(255, 140, 0, 0)65%);
+    background-image: radial-gradient(rgba(255, 140, 0), rgba(255, 140, 0, 0)60%);
     background-size: 200vw 200vh;
     background-position: 100% 0%;
 }
 
 .gradient3{
-    background-image: radial-gradient(rgba(255, 225, 0), rgba(255, 225, 0, 0)65%);
+    background-image: radial-gradient(rgba(255, 225, 0), rgba(255, 225, 0, 0)60%);
     background-size: 200vw 200vh;
     background-position: 0% 100%;
 }
 
 .gradient4{
-    background-image: radial-gradient(rgba(40, 134, 245), rgba(40, 134, 245, 0)65%);
+    background-image: radial-gradient(rgba(40, 134, 245), rgba(40, 134, 245, 0)60%);
     background-size: 200vw 200vh;
     background-position: 100% 100%;
 }
@@ -504,4 +531,24 @@ main{
 		z-index: 4;
 		opacity: 1;
 	}
+
+    .bookRact{
+        width: 50vw;
+        height: 35vh;
+        border-radius: 5px;
+    }
+
+    [class*=package], .buy, .review, .booklist{
+        font-size: 8vw;
+    }
+
+    .booklist{
+        bottom: 20px;
+        transform: translateY(0);
+    }
+    
+    .review{
+        bottom: 20px;
+        transform: translateY(0);
+    }
 }
