@@ -16,10 +16,6 @@ html{
 }
 
 body{
-    width: 300vw;
-    height: 300vh;
-    margin-left: -100vw;
-    margin-top: -100vh;
 	background-color: ghostwhite;
 	overflow:hidden;
 }

@@ -156,8 +156,8 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%';
             gradient4.style.backgroundPosition = '' + positionX + '% ' + positionY + '%';
-            bookShadow.style.transformImage = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-			console.log(100 - dragX * 100 / window.innerWidth);
+            bookShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+			// console.log(100 - dragX * 100 / window.innerWidth);
 			// console.log(mouseY);
 		});
 	}
