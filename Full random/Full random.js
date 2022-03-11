@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	let mouseY;
     let dragX;
     let dragY;
-    let testRact1 = document.querySelector(".testRact1");
+    let gradientBack = document.querySelector(".gradientBack");
 
 	if( is_mobile ) {
 		// translate images in mobile
@@ -107,7 +107,7 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
             gradient4.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
             bookShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-            testRact1.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
+            gradientBack.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
 		});
 		document.addEventListener("touchmove", (e) => {
 			dragX = e.changedTouches[0].clientX;
@@ -117,7 +117,7 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
             gradient4.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
             bookShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-            testRact1.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
+            gradientBack.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
 			// console.log(mouseX);
 			// console.log(mouseY);
 		});
@@ -129,7 +129,7 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
             gradient4.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
             bookShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-            testRact1.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
+            gradientBack.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
 		});
 	} else {
 		// tranlate images in pc
