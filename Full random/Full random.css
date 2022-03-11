@@ -538,7 +538,11 @@ main{
         border-radius: 5px;
     }
 
-    [class*=package], .buy, .review, .booklist{
+    [class*=package]{
+        font-size: 55px;
+    }
+
+    .buy, .review, .booklist{
         font-size: 8vw;
     }
 
