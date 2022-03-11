@@ -426,51 +426,46 @@ main{
     cursor: pointer;
 }
 
-.testRact1{
+[class*=testRact]{
     position: fixed;
+    mix-blend-mode: overlay;
+    -webkit-mix-blend-mode: overlay;
+}
+
+.testRact1{
     top: 0;
     left: 0;
     width: 300px;
     height: 300px;
     background: radial-gradient(at 50% 50%, rgba(255, 25, 112)50px, rgba(255, 25, 112, 0)50%);
-    mix-blend-mode: overlay;
-    -webkit-mix-blend-mode: overlay;
 }
 
 .testRact2{
-    position: fixed;
     top: 10%;
     left: 60%;
     transform: translate(-60%, -10%);
     width: 100px;
     height: 100px;
     background: rgba(255, 25, 112);
-    mix-blend-mode: overlay;
-    -webkit-mix-blend-mode: overlay;
 }
 
 .testRact3{
-    position: fixed;
     top: 50px;
     left: 0;
     width: 300px;
     height: 300px;
     background: radial-gradient(at 50% 50%, rgba(25, 255, 112)50px, rgba(25, 255, 112, 0)50%);
-    mix-blend-mode: overlay;
-    -webkit-mix-blend-mode: overlay;
 }
 
 .testRact4{
-    position: fixed;
     top: 10%;
     left: 65%;
     transform: translate(-65%, -10%);
     width: 100px;
     height: 100px;
     background: rgba(25, 255, 112);
-    mix-blend-mode: overlay;
-    -webkit-mix-blend-mode: overlay;
 }
+
 .gradientAll{
     isolation: isolate;
 }
