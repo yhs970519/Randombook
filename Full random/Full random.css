@@ -437,8 +437,8 @@ main{
 
 [class*=testRact]{
     position: fixed;
-    mix-blend-mode: overlay;
-    -webkit-mix-blend-mode: overlay;
+    /* mix-blend-mode: overlay;
+    -webkit-mix-blend-mode: overlay; */
 }
 
 .testRact1{
