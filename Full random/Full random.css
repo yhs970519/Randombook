@@ -433,34 +433,44 @@ main{
 
 [class*=gradient]{
     position: fixed;
-    width: 200vw;
-    height: 200vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     mix-blend-mode: exclusion;
     -webkit-mix-blend-mode: exclusion;
 }
 
 .gradient1{
-    background: radial-gradient(at 50% 50%, rgba(25, 25, 112), rgba(25, 25, 112, 0)50%);
-    top: 0;
-    left: 0;
+    background-image: radial-gradient(rgba(25, 25, 112), rgba(25, 25, 112, 0)50%);
+    background-size: 200vw 200vh;
+    /* top: 0;
+    left: 0; */
+    /* background-position: 0% 0%; */
 }
 
 .gradient2{
-    background: radial-gradient(at 50% 50%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
-    top: 0;
-    left: -100vw;
+    background-image: radial-gradient(rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
+    background-size: 200vw 200vh;
+    /* top: 0;
+    left: -100vw; */
+    background-position: 100% 0%;
 }
 
 .gradient3{
-    background: radial-gradient(at 50% 50%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
-    top: -100vh;
-    left: 0;
+    background-image: radial-gradient(rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
+    background-size: 200vw 200vh;
+    /* top: -100vh;
+    left: 0; */
+    background-position: 0% 100%;
 }
 
 .gradient4{
-    background: radial-gradient(at 50% 50%, rgba(40, 134, 245), rgba(40, 134, 245, 0)50%);
-    top: -100vh;
-    left: -100vw;
+    background-image: radial-gradient(rgba(40, 134, 245), rgba(40, 134, 245, 0)50%);
+    background-size: 200vw 200vh;
+    /* top: -100vh;
+    left: -100vw; */
+    background-position: 100% 100%;
 }
 
 @media (max-width: 700px){
