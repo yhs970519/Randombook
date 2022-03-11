@@ -426,14 +426,18 @@ main{
     cursor: pointer;
 }
 
-/* .gradient1{
+.gradient4{
     position: fixed;
-    width: 50%;
-    height: 100%;
     top: 0;
-    right: 0;
-    background-color: ghostwhite;
-} */
+    left: 0;
+    width: 200vw;
+    height: 200vh;
+    mix-blend-mode: overlay;
+    -webkit-mix-blend-mode: overlay;
+    background: radial-gradient(at 50% 50%, rgba(50, 144, 255), rgba(50, 144, 255, 0)50%);
+    margin-top: -100vh;
+    margin-left: -100vw;
+}
 
 [class*=testRact]{
     position: fixed;
@@ -475,7 +479,7 @@ main{
     background: rgba(25, 255, 112);
 }
 
-.gradientAll{
+/* .gradientAll{
     isolation: isolate;
 }
 
@@ -489,7 +493,7 @@ main{
     -webkit-mix-blend-mode: overlay;
 }
 
-/* .gradient1{
+.gradient1{
     background: radial-gradient(at 50% 50%, rgba(25, 25, 112), rgba(25, 25, 112, 0)50%);
 }
 
@@ -501,13 +505,13 @@ main{
 .gradient3{
     background: radial-gradient(at 50% 50%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
     margin-top: -100vh;
-} */
+}
 
 .gradient4{
     background: radial-gradient(at 50% 50%, rgba(50, 144, 255), rgba(50, 144, 255, 0)50%);
     margin-top: -100vh;
     margin-left: -100vw;
-}
+} */
 
 @media (max-width: 700px){
 	.logo{
