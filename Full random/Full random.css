@@ -425,7 +425,6 @@ main{
 
 .gradientAll{
     isolation: isolate;
-    z-index: 100;
 }
 
 [class*=gradient]{
@@ -434,8 +433,8 @@ main{
     left: 0;
     width: 200vw;
     height: 200vh;
-    mix-blend-mode: saturation;
-    -webkit-mix-blend-mode: saturation;
+    mix-blend-mode: exclusion;
+    -webkit-mix-blend-mode: exclusion;
 }
 
 .gradient1{
