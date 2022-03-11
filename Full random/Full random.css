@@ -490,8 +490,8 @@ main{
     position: fixed;
     top: 0;
     left: 0;
-    width: 200vw;
-    height: 200vh;
+    width: 100vw;
+    height: 100vh;
     mix-blend-mode: overlay;
     -webkit-mix-blend-mode: overlay;
 }
@@ -502,18 +502,18 @@ main{
 
 .gradient2{
     background: radial-gradient(at 50% 50%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
-    margin-left: -100vw;
+    margin-left: -50vw;
 }
 
 .gradient3{
     background: radial-gradient(at 50% 50%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
-    margin-top: -100vh;
+    margin-top: -50vh;
 }
 
 .gradient4{
     background: radial-gradient(at 50% 50%, rgba(40, 134, 245), rgba(40, 134, 245, 0)50%);
-    margin-top: -100vw;
-    margin-left: -100vh;
+    margin-top: -50vw;
+    margin-left: -50vh;
 }
 
 @media (max-width: 700px){
