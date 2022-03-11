@@ -531,7 +531,7 @@ main{
 } */
 
 .gradient4{
-    background: radial-gradient(at 50% 50%, rgba(50, 144, 255), rgba(50, 144, 255, 0)50%);
+    background: blue;
     margin-top: -100vh;
     margin-left: -100vw;
 }
