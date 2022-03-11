@@ -492,8 +492,8 @@ main{
     left: 0;
     width: 100vw;
     height: 100vh;
-    mix-blend-mode: saturation;
-    -webkit-mix-blend-mode: saturation;
+    mix-blend-mode: exclusion;
+    -webkit-mix-blend-mode: exclusion;
 }
 
 .gradient1{
