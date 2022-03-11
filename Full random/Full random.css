@@ -532,6 +532,7 @@ main{
 
 .gradient4{
     background: blue;
+    opacity: 0.5;
     margin-top: -100vh;
     margin-left: -100vw;
 }
