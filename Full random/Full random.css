@@ -433,8 +433,6 @@ main{
 
 [class*=gradient]{
     position: fixed;
-    top: 0;
-    left: 0;
     width: 200vw;
     height: 200vh;
     mix-blend-mode: exclusion;
@@ -443,22 +441,26 @@ main{
 
 .gradient1{
     background: radial-gradient(at 50% 50%, rgba(25, 25, 112), rgba(25, 25, 112, 0)50%);
+    top: 0;
+    left: 0;
 }
 
 .gradient2{
     background: radial-gradient(at 50% 50%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
-    margin-left: -100vw;
+    top: 0;
+    left: -100vw;
 }
 
 .gradient3{
     background: radial-gradient(at 50% 50%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
-    margin-top: -100vh;
+    top: -100vh;
+    left: 0;
 }
 
 .gradient4{
     background: radial-gradient(at 50% 50%, rgba(40, 134, 245), rgba(40, 134, 245, 0)50%);
-    margin-top: -100vw;
-    margin-left: -100vh;
+    top: -100vh;
+    left: -100vw;
 }
 
 @media (max-width: 700px){
