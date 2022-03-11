@@ -426,7 +426,7 @@ main{
     cursor: pointer;
 }
 
-.gradient3{
+/* .gradient3{
     position: fixed;
     top: 0;
     left: 0;
@@ -449,7 +449,7 @@ main{
     background: radial-gradient(at 50% 50%, rgba(50, 144, 255), rgba(50, 144, 255, 0)50%);
     margin-top: -100vh;
     margin-left: -100vw;
-}
+} */
 
 [class*=testRact]{
     position: fixed;
