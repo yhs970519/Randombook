@@ -426,7 +426,7 @@ main{
     cursor: pointer;
 }
 
-.gradientBack{
+/* .gradientBack{
     position: fixed;
     top: 0;
     left: 0;
@@ -436,7 +436,7 @@ main{
     opacity: 0.5;
     mix-blend-mode: overlay;
     -webkit-mix-blend-mode: overlay;
-}
+} */
 
 /* [class*=testRact]{
     position: fixed;
