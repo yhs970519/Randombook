@@ -502,8 +502,8 @@ main{
     width: 200vw;
     height: 200vh;
     background: radial-gradient(at 50% 50%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
-    margin-top: -100vw;
-    margin-left: -100vh;
+    margin-top: -50vw;
+    margin-left: -50vh;
 }
 
 .gradientAll{
