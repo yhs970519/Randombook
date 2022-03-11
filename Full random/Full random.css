@@ -496,8 +496,8 @@ main{
 .testRact4{
     top: 0;
     left: 0;
-    width: 200vw;
-    height: 200vh;
+    width: 200%;
+    height: 200%;
     background: radial-gradient(at 50% 50%, rgba(50, 144, 255), rgba(50, 144, 255, 0)50%);
     margin-top: -100vh;
     margin-left: -100vw;
