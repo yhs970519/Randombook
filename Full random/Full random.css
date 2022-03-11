@@ -426,6 +426,15 @@ main{
     cursor: pointer;
 }
 
+.gradient1{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: ghostwhite;
+}
+
 [class*=testRact]{
     position: fixed;
     mix-blend-mode: overlay;
