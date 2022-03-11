@@ -322,8 +322,8 @@ main{
 	height: 180px;
 	margin: 10px;
     background-color: rgba(248, 248, 255, 0);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); */
 }
 
 .bookRact{
@@ -432,7 +432,7 @@ main{
     left: 0;
     width: 300px;
     height: 300px;
-    background: radial-gradient(at 50% 50%, rgba(255, 25, 112), rgba(255, 25, 112, 0)50%);
+    background: radial-gradient(at 50% 50%, rgba(255, 25, 112)50px, rgba(255, 25, 112, 0)50%);
     mix-blend-mode: overlay;
     -webkit-mix-blend-mode: overlay;
 }
@@ -451,11 +451,11 @@ main{
 
 .testRact3{
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
     width: 300px;
     height: 300px;
-    background: radial-gradient(at 50% 50%, rgba(25, 255, 112), rgba(25, 255, 112, 0)50%);
+    background: radial-gradient(at 50% 50%, rgba(25, 255, 112)50px, rgba(25, 255, 112, 0)50%);
     mix-blend-mode: overlay;
     -webkit-mix-blend-mode: overlay;
 }
