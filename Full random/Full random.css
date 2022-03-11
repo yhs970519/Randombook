@@ -462,7 +462,7 @@ main{
     margin-left: -100vw;
 } */
 
-/* [class*=testRact]{
+[class*=testRact]{
     position: fixed;
     mix-blend-mode: overlay;
     -webkit-mix-blend-mode: overlay;
@@ -500,7 +500,7 @@ main{
     width: 100px;
     height: 100px;
     background: rgba(25, 255, 112);
-} */
+}
 
 .gradientAll{
     isolation: isolate;
