@@ -414,8 +414,8 @@ main{
     left: 50%;
     transform: translate(-50%, 50%);
     cursor: pointer;
-    mix-blend-mode: saturation;
-    -webkit-mix-blend-mode: saturation;
+    mix-blend-mode: overlay;
+    -webkit-mix-blend-mode: overlay;
 }
 
 .booklist{
