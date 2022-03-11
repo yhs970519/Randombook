@@ -432,7 +432,7 @@ main{
     left: 0;
     width: 200vw;
     height: 200vh;
-    background: radial-gradient(at 50% 50%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
+    background: green;
     mix-blend-mode: overlay;
     -webkit-mix-blend-mode: overlay;
 }
