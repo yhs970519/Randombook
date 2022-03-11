@@ -435,28 +435,37 @@ main{
     left: 0;
     width: 200vw;
     height: 200vh;
+    color: transparent; 
     mix-blend-mode: overlay;
     -webkit-mix-blend-mode: overlay;
 }
 
 .gradient1{
     background: radial-gradient(at 50% 50%, rgba(25, 25, 112), rgba(25, 25, 112, 0)50%);
+    background-clip: content-box;
+    -webkit-background-clip: content-box;
 }
 
 .gradient2{
     background: radial-gradient(at 50% 50%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
     margin-left: -100vw;
+    background-clip: content-box;
+    -webkit-background-clip: content-box;
 }
 
 .gradient3{
     background: radial-gradient(at 50% 50%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%);
     margin-top: -100vh;
+    background-clip: content-box;
+    -webkit-background-clip: content-box;
 }
 
 .gradient4{
     background: radial-gradient(at 50% 50%, rgba(50, 144, 255), rgba(50, 144, 255, 0)50%);
     margin-top: -100vh;
     margin-left: -100vw;
+    background-clip: content-box;
+    -webkit-background-clip: content-box;
 }
 
 @media (max-width: 700px){
