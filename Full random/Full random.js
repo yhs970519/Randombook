@@ -100,22 +100,11 @@ window.addEventListener('DOMContentLoaded', function(){
 			containment: ".mobilescreen"
 		});
 
-        // bookShadow.style.marginLeft = '-50%';
-        // bookShadow.style.marginTop = '-50%';
-
         document.addEventListener("touchstart", (e) => {
 			dragX = e.touches[0].clientX;
 			dragY = e.touches[0].clientY;
             positionX = 100 - (dragX * 100 / window.innerWidth);
             positionY = 100 - (dragY * 100 / window.innerHeight);
-			// gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
-            // gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
-            // gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
-            // gradient4.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
-            // gradient1.style.background = 'radial-gradient(at' + -dragX * 50 / window.innerWidth + '% ' + -dragY * 50 / window.innerHeight + '%, rgba(25, 25, 112), rgba(25, 25, 112, 0)50%)';
-            // gradient2.style.background = 'radial-gradient(at' + dragX * 50 / window.innerWidth + '% ' + -dragY * 50 / window.innerHeight + '%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%';
-            // gradient3.style.background = 'radial-gradient(at' + -dragX * 50 / window.innerWidth + '% ' + dragY * 50 / window.innerHeight + '%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%)';
-            // gradient4.style.background = 'radial-gradient(at' + dragX * 50 / window.innerWidth + '% ' + dragY * 50 / window.innerHeight + '%, rgba(40, 134, 245), rgba(40, 134, 245, 0)50%)';
             gradient1.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%';
@@ -127,14 +116,6 @@ window.addEventListener('DOMContentLoaded', function(){
 			dragY = e.changedTouches[0].clientY;
             positionX = 100 - (dragX * 100 / window.innerWidth);
             positionY = 100 - (dragY * 100 / window.innerHeight);
-			// gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
-            // gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
-            // gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
-            // gradient4.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
-            // gradient1.style.background = 'radial-gradient(at' + -dragX * 50 / window.innerWidth + '% ' + -dragY * 50 / window.innerHeight + '%, rgba(25, 25, 112), rgba(25, 25, 112, 0)50%)';
-            // gradient2.style.background = 'radial-gradient(at' + dragX * 50 / window.innerWidth + '% ' + -dragY * 50 / window.innerHeight + '%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%';
-            // gradient3.style.background = 'radial-gradient(at' + -dragX * 50 / window.innerWidth + '% ' + dragY * 50 / window.innerHeight + '%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%)';
-            // gradient4.style.background = 'radial-gradient(at' + dragX * 50 / window.innerWidth + '% ' + dragY * 50 / window.innerHeight + '%, rgba(40, 134, 245), rgba(40, 134, 245, 0)50%)';
             gradient1.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%';
@@ -146,14 +127,6 @@ window.addEventListener('DOMContentLoaded', function(){
 			dragY = e.changedTouches[0].clientY;
             positionX = 100 - (dragX * 100 / window.innerWidth);
             positionY = 100 - (dragY * 100 / window.innerHeight);
-			// gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
-            // gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
-            // gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
-            // gradient4.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
-            // gradient1.style.background = 'radial-gradient(at' + -dragX * 50 / window.innerWidth + '% ' + -dragY * 50 / window.innerHeight + '%, rgba(25, 25, 112), rgba(25, 25, 112, 0)50%)';
-            // gradient2.style.background = 'radial-gradient(at' + dragX * 50 / window.innerWidth + '% ' + -dragY * 50 / window.innerHeight + '%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%';
-            // gradient3.style.background = 'radial-gradient(at' + -dragX * 50 / window.innerWidth + '% ' + dragY * 50 / window.innerHeight + '%, rgba(255, 225, 0), rgba(255, 225, 0, 0)50%)';
-            // gradient4.style.background = 'radial-gradient(at' + dragX * 50 / window.innerWidth + '% ' + dragY * 50 / window.innerHeight + '%, rgba(40, 134, 245), rgba(40, 134, 245, 0)50%)';
             gradient1.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%';
@@ -170,10 +143,6 @@ window.addEventListener('DOMContentLoaded', function(){
             positionX = 100 - (dragX * 100 / window.innerWidth);
             positionY = 100 - (dragY * 100 / window.innerHeight);
             main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
-			// gradient1.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
-            // gradient2.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + -dragY * 50 / window.innerHeight + '%)';
-            // gradient3.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
-            // gradient4.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
             gradient1.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%';
