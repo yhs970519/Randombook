@@ -434,8 +434,8 @@ main{
     width: 200vw;
     height: 200vh;
     color: transparent;
-    mix-blend-mode: saturation;
-    -webkit-mix-blend-mode: saturation;
+    mix-blend-mode: overlay;
+    -webkit-mix-blend-mode: overlay;
 }
 
 .gradient1{
