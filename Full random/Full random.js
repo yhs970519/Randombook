@@ -96,14 +96,14 @@ window.addEventListener('DOMContentLoaded', function(){
 		// frameL.style.display = 'none';
 		// frameR.style.display = 'none';
 
-        gradient1.style['mix-blend-mode'] = 'exclusion';
-        gradient2.style['mix-blend-mode'] = 'exclusion';
-        gradient3.style['mix-blend-mode'] = 'exclusion';
-        gradient4.style['mix-blend-mode'] = 'exclusion';
-        gradient1.style['-webkit-mix-blend-mode'] = 'exclusion';
-        gradient2.style['-webkit-mix-blend-mode'] = 'exclusion';
-        gradient3.style['-webkit-mix-blend-mode'] = 'exclusion';
-        gradient4.style['-webkit-mix-blend-mode'] = 'exclusion';
+        gradient1.style['mix-blend-mode'] = 'difference';
+        gradient2.style['mix-blend-mode'] = 'difference';
+        gradient3.style['mix-blend-mode'] = 'difference';
+        gradient4.style['mix-blend-mode'] = 'difference';
+        gradient1.style['-webkit-mix-blend-mode'] = 'difference';
+        gradient2.style['-webkit-mix-blend-mode'] = 'difference';
+        gradient3.style['-webkit-mix-blend-mode'] = 'difference';
+        gradient4.style['-webkit-mix-blend-mode'] = 'difference';
 
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
