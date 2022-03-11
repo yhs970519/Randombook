@@ -83,6 +83,7 @@ window.addEventListener('DOMContentLoaded', function(){
     let dragY;
     let gradientBack = document.querySelector(".gradientBack");
     let testRact1 = document.querySelector(".testRact1");
+    let testRact4 = document.querySelector(".testRact4");
 
 	if( is_mobile ) {
 		// translate images in mobile
@@ -113,7 +114,8 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient3.style.mixBlendMode = 'overlay';
             gradient4.style.mixBlendMode = 'overlay';
             gradientBack.style.mixBlendMode = 'overlay';
-            testRact1.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
+            testRact1.style.transform = 'translate(' + dragX * 70 / window.innerWidth + '%, ' + dragY * 70 / window.innerHeight + '%)';
+            testRact4.style.transform = 'translate(' + dragX * 30 / window.innerWidth + '%, ' + dragY * 30 / window.innerHeight + '%)';
 		});
 		document.addEventListener("touchmove", (e) => {
 			dragX = e.changedTouches[0].clientX;
@@ -128,7 +130,8 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient3.style.mixBlendMode = 'overlay';
             gradient4.style.mixBlendMode = 'overlay';
             gradientBack.style.mixBlendMode = 'overlay';
-            testRact1.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
+            testRact1.style.transform = 'translate(' + dragX * 70 / window.innerWidth + '%, ' + dragY * 70 / window.innerHeight + '%)';
+            testRact4.style.transform = 'translate(' + dragX * 30 / window.innerWidth + '%, ' + dragY * 30 / window.innerHeight + '%)';
 			// console.log(mouseX);
 			// console.log(mouseY);
 		});
@@ -145,7 +148,8 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient3.style.mixBlendMode = 'overlay';
             gradient4.style.mixBlendMode = 'overlay';
             gradientBack.style.mixBlendMode = 'overlay';
-            testRact1.style.transform = 'translate(' + dragX * 50 / window.innerWidth + '%, ' + dragY * 50 / window.innerHeight + '%)';
+            testRact1.style.transform = 'translate(' + dragX * 70 / window.innerWidth + '%, ' + dragY * 70 / window.innerHeight + '%)';
+            testRact4.style.transform = 'translate(' + dragX * 30 / window.innerWidth + '%, ' + dragY * 30 / window.innerHeight + '%)';
 		});
 	} else {
 		// tranlate images in pc
