@@ -428,9 +428,8 @@ main{
 
 .testRact1{
     position: fixed;
-    top: 10%;
-    left: 20%;
-    transform: translate(-20%, -10%);
+    top: 0;
+    left: 0;
     width: 300px;
     height: 300px;
     background: radial-gradient(at 50% 50%, rgba(255, 25, 112), rgba(255, 25, 112, 0)50%);
@@ -452,9 +451,8 @@ main{
 
 .testRact3{
     position: fixed;
-    top: 10%;
-    left: 25%;
-    transform: translate(-25%, -10%);
+    top: 0;
+    left: 0;
     width: 300px;
     height: 300px;
     background: radial-gradient(at 50% 50%, rgba(25, 255, 112), rgba(25, 255, 112, 0)50%);
