@@ -501,6 +501,8 @@ main{
     background: radial-gradient(at 50% 50%, rgba(255, 140, 0), rgba(255, 140, 0, 0)50%);
     /* margin-top: -100vh;
     margin-left: -100vw; */
+    margin-top: -250px;
+    margin-left: -250px;
 }
 
 .gradientAll{
@@ -533,7 +535,7 @@ main{
 
 .gradient4{
     background: blue;
-    opacity: 0.1;
+    opacity: 0.5;
     margin-top: -100vh;
     margin-left: -100vw;
 }
