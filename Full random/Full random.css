@@ -494,12 +494,13 @@ main{
 }
 
 .testRact4{
-    top: 10%;
-    left: 65%;
-    transform: translate(-65%, -10%);
-    width: 100px;
-    height: 100px;
-    background: rgba(25, 255, 112);
+    top: 0;
+    left: 0;
+    width: 200vw;
+    height: 200vh;
+    background: radial-gradient(at 50% 50%, rgba(50, 144, 255), rgba(50, 144, 255, 0)50%);
+    margin-top: -100vh;
+    margin-left: -100vw;
 }
 
 .gradientAll{
