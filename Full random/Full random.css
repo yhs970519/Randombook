@@ -426,7 +426,7 @@ main{
     cursor: pointer;
 }
 
-.gradientBack{
+/* .gradientBack{
     position: fixed;
     top: 0;
     left: 0;
@@ -435,7 +435,7 @@ main{
     background: green;
     mix-blend-mode: overlay;
     -webkit-mix-blend-mode: overlay;
-}
+} */
 
 /* .gradient3{
     position: fixed;
