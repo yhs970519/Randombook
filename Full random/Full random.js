@@ -111,6 +111,7 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient2.style.mixBlendMode = 'overlay';
             gradient3.style.mixBlendMode = 'overlay';
             gradient4.style.mixBlendMode = 'overlay';
+            gradientBack.style.mixBlendMode = 'overlay';
 		});
 		document.addEventListener("touchmove", (e) => {
 			dragX = e.changedTouches[0].clientX;
@@ -124,6 +125,7 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient2.style.mixBlendMode = 'overlay';
             gradient3.style.mixBlendMode = 'overlay';
             gradient4.style.mixBlendMode = 'overlay';
+            gradientBack.style.mixBlendMode = 'overlay';
 			// console.log(mouseX);
 			// console.log(mouseY);
 		});
@@ -139,6 +141,7 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient2.style.mixBlendMode = 'overlay';
             gradient3.style.mixBlendMode = 'overlay';
             gradient4.style.mixBlendMode = 'overlay';
+            gradientBack.style.mixBlendMode = 'overlay';
 		});
 	} else {
 		// tranlate images in pc
