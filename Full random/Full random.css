@@ -614,6 +614,16 @@ main{
         -webkit-text-stroke: 1.5px black;
     }
 
+    .booklist{
+        bottom: 20px;
+        transform: translateY(0);
+    }
+    
+    .review{
+        bottom: 20px;
+        transform: translateY(0);
+    }
+
     .subShd1{
         bottom: 0;
         transform: translate(10%, 80%);
@@ -624,15 +634,7 @@ main{
         transform: translate(90%, 80%);
     }
 
-    .booklist{
-        bottom: 20px;
-        transform: translateY(0);
-        color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .review{
-        bottom: 20px;
-        transform: translateY(0);
+    .booklistShadow, .reviewShadow{
         color: rgba(0, 0, 0, 0.8);
     }
 }
