@@ -75,17 +75,15 @@ window.addEventListener('DOMContentLoaded', function(){
 	let frameB = document.querySelector(".frame_bottom");
 	let frameL = document.querySelector(".frame_left");
 	let frameR = document.querySelector(".frame_right");
-    let bookRact  = document.querySelector(".bookRact");
-    let bookShadow  = document.querySelector(".bookShadow");
+    let mainShadow  = document.querySelector(".mainShadow");
+    let booklistShadow  = document.querySelector(".booklistShadow");
+    let reviewShadow  = document.querySelector(".reviewShadow");
 	let mouseX;
 	let mouseY;
     let dragX;
     let dragY;
     let positionX;
     let positionY;
-    let gradientBack = document.querySelector(".gradientBack");
-    let testRact1 = document.querySelector(".testRact1");
-    let testRact4 = document.querySelector(".testRact4");
 
 	if( is_mobile ) {
 		// translate images in mobile
@@ -156,7 +154,13 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%';
             gradient4.style.backgroundPosition = '' + positionX + '% ' + positionY + '%';
-            bookShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+            mainShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+            booklistShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+            reviewShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+            // bookShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+            // bookMarkShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+            // booklistShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+            // reviewShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
 			// console.log(100 - dragX * 100 / window.innerWidth);
 			// console.log(mouseY);
 		});
