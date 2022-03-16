@@ -434,7 +434,7 @@ main{
 
 .booksampleGroup, .bookreviewGroup{
     width: 500px;
-    height: 320px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -919,7 +919,7 @@ main{
 
     .booksampleGroup, .bookreviewGroup{
         width: 90vw;
-        height: 30vh;
+        height: 28vh;
     }
 
     .booksample, .bookreview, .buttonbar{
