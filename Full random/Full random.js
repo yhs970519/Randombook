@@ -443,16 +443,16 @@ window.addEventListener('DOMContentLoaded', function(){
 
     function booklistAnimaition(number) {
         bookanimation1(booklistBackground);
-        bookScale.style.transform = 'scale(' + window.innerWidth / number + '%, ' + window.innerWidth / number + '%)';
-        bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / number + '%, ' + window.innerWidth / number + '%)';
+        bookScale.style.transform = 'scale(' + window.innerWidth / number / 100 + ', ' + window.innerWidth / number / 100 + ')';
+        bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / number / 100 + ', ' + window.innerWidth / number / 100 + ')';
         bookSample.style.opacity = '1';
         bookReview.style.visibility = 'hidden';
     }
 
     function reviewAnimaition(number) {
         bookanimation1(reviewBackground);
-        bookScale.style.transform = 'scale(' + window.innerWidth / number + '%, ' + window.innerWidth / number + '%)';
-        bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / number + '%, ' + window.innerWidth / number + '%)';
+        bookScale.style.transform = 'scale(' + window.innerWidth / number / 100 + ', ' + window.innerWidth / number / 100 + ')';
+        bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / number / 100 + ', ' + window.innerWidth / number / 100 + ')';
         bookReview.style.opacity = '1';
         bookReview.style.visibility = 'visible';
     }
@@ -560,36 +560,36 @@ window.addEventListener('DOMContentLoaded', function(){
 	}
 
     window.onresize = function(event){
-        if(bookScale.style.transform != 'scale(1)') {
+        if(bookScale.style.transform != 'scale(1, 1)') {
             var innerWidth = window.innerWidth;
-            innerWidth > "1200" ? bookScale.style.transform = 'scale(' + window.innerWidth / 8 + '%, ' + window.innerWidth / 8 + '%)':
-            innerWidth > "1000" ? bookScale.style.transform = 'scale(' + window.innerWidth / 7 + '%, ' + window.innerWidth / 7 + '%)':
-            innerWidth > "800" ? bookScale.style.transform = 'scale(' + window.innerWidth / 6 + '%, ' + window.innerWidth / 6 + '%)':
-            innerWidth > "700" ? bookScale.style.transform = 'scale(' + window.innerWidth / 5.5 + '%, ' + window.innerWidth / 5.5 + '%)':
-            innerWidth > "650" ? bookScale.style.transform = 'scale(' + window.innerWidth / 3.5 + '%, ' + window.innerWidth / 3.5 + '%)':
-            innerWidth > "600" ? bookScale.style.transform = 'scale(' + window.innerWidth / 3 + '%, ' + window.innerWidth / 3 + '%)':
-            innerWidth > "520" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2.8 + '%, ' + window.innerWidth / 2.8 + '%)':
-            innerWidth > "480" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2.6 + '%, ' + window.innerWidth / 2.6 + '%)':
-            innerWidth > "410" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2.2 + '%, ' + window.innerWidth / 2.2 + '%)':
-            innerWidth > "370" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2 + '%, ' + window.innerWidth / 2 + '%)':
-            innerWidth > "340" ? bookScale.style.transform = 'scale(' + window.innerWidth / 1.8 + '%, ' + window.innerWidth / 1.8 + '%)':
-            innerWidth > "300" ? bookScale.style.transform = 'scale(' + window.innerWidth / 1.6 + '%, ' + window.innerWidth / 1.6 + '%)':
-            innerWidth > "260" ? bookScale.style.transform = 'scale(' + window.innerWidth / 1.4 + '%, ' + window.innerWidth / 1.4 + '%)':
-            bookScale.style.transform = 'scale(' + window.innerWidth / 1.2 + '%, ' + window.innerWidth / 1.2 + '%)';
-            innerWidth > "1200" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 8 + '%, ' + window.innerWidth / 8 + '%)':
-            innerWidth > "1000" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 7 + '%, ' + window.innerWidth / 7 + '%)':
-            innerWidth > "800" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 6 + '%, ' + window.innerWidth / 6 + '%)':
-            innerWidth > "700" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 5.5 + '%, ' + window.innerWidth / 5.5 + '%)':
-            innerWidth > "650" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 3.5 + '%, ' + window.innerWidth / 3.5 + '%)':
-            innerWidth > "600" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 3 + '%, ' + window.innerWidth / 3 + '%)':
-            innerWidth > "520" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2.8 + '%, ' + window.innerWidth / 2.8 + '%)':
-            innerWidth > "480" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2.6 + '%, ' + window.innerWidth / 2.6 + '%)':
-            innerWidth > "410" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2.2 + '%, ' + window.innerWidth / 2.2 + '%)':
-            innerWidth > "370" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2 + '%, ' + window.innerWidth / 2 + '%)':
-            innerWidth > "340" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.8 + '%, ' + window.innerWidth / 1.8 + '%)':
-            innerWidth > "300" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.6 + '%, ' + window.innerWidth / 1.6 + '%)':
-            innerWidth > "260" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.4 + '%, ' + window.innerWidth / 1.4 + '%)':
-            bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.2 + '%, ' + window.innerWidth / 1.2 + '%)';
+            innerWidth > "1200" ? bookScale.style.transform = 'scale(' + window.innerWidth / 8 / 100 + ', ' + window.innerWidth / 8 / 100 + ')':
+            innerWidth > "1000" ? bookScale.style.transform = 'scale(' + window.innerWidth / 7 / 100 + ', ' + window.innerWidth / 7 / 100 + ')':
+            innerWidth > "800" ? bookScale.style.transform = 'scale(' + window.innerWidth / 6 / 100 + ', ' + window.innerWidth / 6 / 100 + ')':
+            innerWidth > "700" ? bookScale.style.transform = 'scale(' + window.innerWidth / 5.5 / 100 + ', ' + window.innerWidth / 5.5 / 100 + ')':
+            innerWidth > "650" ? bookScale.style.transform = 'scale(' + window.innerWidth / 3.5 / 100 + ', ' + window.innerWidth / 3.5 / 100 + ')':
+            innerWidth > "600" ? bookScale.style.transform = 'scale(' + window.innerWidth / 3 / 100 + ', ' + window.innerWidth / 3 / 100 + ')':
+            innerWidth > "520" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2.8 / 100 + ', ' + window.innerWidth / 2.8 / 100 + ')':
+            innerWidth > "480" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2.6 / 100 + ', ' + window.innerWidth / 2.6 / 100 + ')':
+            innerWidth > "410" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2.2 / 100 + ', ' + window.innerWidth / 2.2 / 100 + ')':
+            innerWidth > "370" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2 / 100 + ', ' + window.innerWidth / 2 / 100 + ')':
+            innerWidth > "340" ? bookScale.style.transform = 'scale(' + window.innerWidth / 1.8 / 100 + ', ' + window.innerWidth / 1.8 / 100 + ')':
+            innerWidth > "300" ? bookScale.style.transform = 'scale(' + window.innerWidth / 1.6 / 100 + ', ' + window.innerWidth / 1.6 / 100 + ')':
+            innerWidth > "260" ? bookScale.style.transform = 'scale(' + window.innerWidth / 1.4 / 100 + ', ' + window.innerWidth / 1.4 / 100 + ')':
+            bookScale.style.transform = 'scale(' + window.innerWidth / 1.2 / 100 + ', ' + window.innerWidth / 1.2 / 100 + ')';
+            innerWidth > "1200" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 8 / 100 + ', ' + window.innerWidth / 8 / 100 + ')':
+            innerWidth > "1000" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 7 / 100 + ', ' + window.innerWidth / 7 / 100 + ')':
+            innerWidth > "800" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 6 / 100 + ', ' + window.innerWidth / 6 / 100 + ')':
+            innerWidth > "700" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 5.5 / 100 + ', ' + window.innerWidth / 5.5 / 100 + ')':
+            innerWidth > "650" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 3.5 / 100 + ', ' + window.innerWidth / 3.5 / 100 + ')':
+            innerWidth > "600" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 3 / 100 + ', ' + window.innerWidth / 3 / 100 + ')':
+            innerWidth > "520" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2.8 / 100 + ', ' + window.innerWidth / 2.8 / 100 + ')':
+            innerWidth > "480" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2.6 / 100 + ', ' + window.innerWidth / 2.6 / 100 + ')':
+            innerWidth > "410" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2.2 / 100 + ', ' + window.innerWidth / 2.2 / 100 + ')':
+            innerWidth > "370" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2 / 100 + ', ' + window.innerWidth / 2 / 100 + ')':
+            innerWidth > "340" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.8 / 100 + ', ' + window.innerWidth / 1.8 / 100 + ')':
+            innerWidth > "300" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.6 / 100 + ', ' + window.innerWidth / 1.6 / 100 + ')':
+            innerWidth > "260" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.4 / 100 + ', ' + window.innerWidth / 1.4 / 100 + ')':
+            bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.2 / 100 + ', ' + window.innerWidth / 1.2 / 100 + ')';
         }
         if(bookSample.style.opacity == '1') {
             innerWidth <= "700" ? mainbook.style.transform = 'translate(50%, -50%)':
@@ -613,6 +613,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		categoryHover2();
 		mypageHover();
 		mypageHover2();
+        console.log(window.innerWidth / 8 / 100);
 	}
 
 	function categoryHover() {
