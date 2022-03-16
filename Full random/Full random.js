@@ -396,6 +396,7 @@ window.addEventListener('DOMContentLoaded', function(){
         gradient2.style.opacity = '1';
         gradient3.style.opacity = '1';
         gradient4.style.opacity = '1';
+        bookScale.style.top = '0';
         bookScale.style.zIndex = '0';
         bookScale.style.transform = 'scale(1, 1)';
         bookScale.style.transitionDelay = '1s';
@@ -477,33 +478,43 @@ window.addEventListener('DOMContentLoaded', function(){
         }else if(window.innerWidth > 650) {
             booklistAnimaition(3.5);
             mainbook.style.transform = 'translate(50%, -50%)';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 600) {
             booklistAnimaition(3);
             mainbook.style.transform = 'translate(50%, -50%)';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 520) {
             booklistAnimaition(2.8);
             mainbook.style.transform = 'translate(50%, -50%)';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 480) {
             booklistAnimaition(2.6);
             mainbook.style.transform = 'translate(50%, -50%)';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 410) {
             booklistAnimaition(2.2);
             mainbook.style.transform = 'translate(50%, -50%)';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 370) {
             booklistAnimaition(2);
             mainbook.style.transform = 'translate(50%, -50%)';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 340) {
             booklistAnimaition(1.8);
             mainbook.style.transform = 'translate(50%, -50%)';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 300) {
             booklistAnimaition(1.6);
             mainbook.style.transform = 'translate(50%, -50%)';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 260) {
             booklistAnimaition(1.4);
             mainbook.style.transform = 'translate(50%, -50%)';
+            bookScale.style.top = '5%';
         }else{
             booklistAnimaition(1.2);
             mainbook.style.transform = 'translate(50%, -50%)';
+            bookScale.style.top = '5%';
         }
 	}
 
@@ -520,42 +531,52 @@ window.addEventListener('DOMContentLoaded', function(){
             reviewAnimaition(3.5);
             mainbook.style.transform = 'translate(-50%, -50%)';
             bookReview.style.left = '0';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 600) {
             reviewAnimaition(3);
             mainbook.style.transform = 'translate(-50%, -50%)';
             bookReview.style.left = '0';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 520) {
             reviewAnimaition(2.8);
             mainbook.style.transform = 'translate(-50%, -50%)';
             bookReview.style.left = '0';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 480) {
             reviewAnimaition(2.6);
             mainbook.style.transform = 'translate(-50%, -50%)';
             bookReview.style.left = '0';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 410) {
             reviewAnimaition(2.2);
             mainbook.style.transform = 'translate(-50%, -50%)';
             bookReview.style.left = '0';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 370) {
             reviewAnimaition(2);
             mainbook.style.transform = 'translate(-50%, -50%)';
             bookReview.style.left = '0';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 340) {
             reviewAnimaition(1.8);
             mainbook.style.transform = 'translate(-50%, -50%)';
             bookReview.style.left = '0';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 300) {
             reviewAnimaition(1.6);
             mainbook.style.transform = 'translate(-50%, -50%)';
             bookReview.style.left = '0';
+            bookScale.style.top = '5%';
         }else if(window.innerWidth > 260) {
             reviewAnimaition(1.4);
             mainbook.style.transform = 'translate(-50%, -50%)';
             bookReview.style.left = '0';
+            bookScale.style.top = '5%';
         }else{
             reviewAnimaition(1.2);
             mainbook.style.transform = 'translate(-50%, -50%)';
             bookReview.style.left = '0';
+            bookScale.style.top = '5%';
         }
 	}
 
@@ -594,11 +615,15 @@ window.addEventListener('DOMContentLoaded', function(){
         if(bookSample.style.opacity == '1') {
             innerWidth <= "700" ? mainbook.style.transform = 'translate(50%, -50%)':
             mainbook.style.transform = 'translate(0, -50%)';
+            innerWidth <= "700" ? bookScale.style.top = '5%':
+            bookScale.style.top = '0';
         }else if(bookReview.style.opacity == '1'){
             innerWidth <= "700" ? mainbook.style.transform = 'translate(-50%, -50%)':
             mainbook.style.transform = 'translate(0, -50%)';
             innerWidth <= "700" ? bookReview.style.left = '0':
             bookReview.style.left = '-100%';
+            innerWidth <= "700" ? bookScale.style.top = '5%':
+            bookScale.style.top = '0';
         }
     }
 
@@ -613,7 +638,6 @@ window.addEventListener('DOMContentLoaded', function(){
 		categoryHover2();
 		mypageHover();
 		mypageHover2();
-        console.log(window.innerWidth / 8 / 100);
 	}
 
 	function categoryHover() {

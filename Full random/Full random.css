@@ -352,7 +352,7 @@ main{
     Height: 100%;
     transform: scale(1, 1);
     transition: transform 2s;
-    -webkit-transition: transform 2s;
+    -webkit-transition: transform 2s, top 2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
     -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
