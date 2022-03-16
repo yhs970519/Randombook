@@ -338,14 +338,14 @@ window.addEventListener('DOMContentLoaded', function(){
         bookSample.style['-webkit-transitionDelay'] = '1.8s';
         bookReview.style.transitionDelay = '1.8s';
         bookReview.style['-webkit-transitionDelay'] = '1.8s';
-        bookCoverShadow.style.transform = 'translateX(100%)';
+        bookCoverShadow.style.transform = 'translateX(50%)';
         bookCoverShadow.style.transitionDelay = '0s';
         bookCoverShadow.style['-webkit-transitionDelay'] = '0s';
         bookCoverShadow.style.opacity = '1';
-        bookGroup.style.transform = 'translateX(100%)';
+        bookGroup.style.transform = 'translateX(50%)';
         bookGroup.style.transitionDelay = '0s';
         bookGroup.style['-webkit-transitionDelay'] = '0s';
-        bookMarkShadow.style.left = '55%';
+        bookMarkShadow.style.left = '30%';
         bookMarkShadow.style.transitionDelay = '0s';
         bookMarkShadow.style['-webkit-transitionDelay'] = '0s';
         bookRact1[0].style.transform = 'rotateY(-180deg)';
@@ -460,13 +460,19 @@ window.addEventListener('DOMContentLoaded', function(){
 
     function booklistAnimaition2() {
         mainbook.style.transform = 'translate(50%, -50%)';
-        bookScale.style.top = '7.5%';
+        bookScale.style.top = '8.5%';
+        bookCoverShadow.style.transform = 'translateX(100%)';
+        bookGroup.style.transform = 'translateX(100%)';
+        bookMarkShadow.style.left = '55%';
     }
 
     function reviewAnimaition2() {
         mainbook.style.transform = 'translate(-50%, -50%)';
         bookReview.style.left = '0';
-        bookScale.style.top = '7.5%';
+        bookScale.style.top = '8.5%';
+        bookCoverShadow.style.transform = 'translateX(0)';
+        bookGroup.style.transform = 'translateX(0)';
+        bookMarkShadow.style.left = '5%';
     }
 
     function buyClick() {
@@ -596,15 +602,27 @@ window.addEventListener('DOMContentLoaded', function(){
         if(bookSample.style.opacity == '1') {
             innerWidth <= "700" ? mainbook.style.transform = 'translate(50%, -50%)':
             mainbook.style.transform = 'translate(0, -50%)';
-            innerWidth <= "700" ? bookScale.style.top = '7.5%':
+            innerWidth <= "700" ? bookScale.style.top = '8.5%':
             bookScale.style.top = '0';
+            innerWidth <= "700" ? bookCoverShadow.style.transform = 'translateX(100%)':
+            bookCoverShadow.style.transform = 'translateX(50%)';
+            innerWidth <= "700" ? bookGroup.style.transform = 'translateX(100%)':
+            bookGroup.style.transform = 'translateX(50%)';
+            innerWidth <= "700" ? bookMarkShadow.style.left = '55%':
+            bookMarkShadow.style.left = '30%';
         }else if(bookReview.style.opacity == '1'){
             innerWidth <= "700" ? mainbook.style.transform = 'translate(-50%, -50%)':
             mainbook.style.transform = 'translate(0, -50%)';
             innerWidth <= "700" ? bookReview.style.left = '0':
             bookReview.style.left = '-100%';
-            innerWidth <= "700" ? bookScale.style.top = '7.5%':
+            innerWidth <= "700" ? bookScale.style.top = '8.5%':
             bookScale.style.top = '0';
+            innerWidth <= "700" ? bookCoverShadow.style.transform = 'translateX(0)':
+            bookCoverShadow.style.transform = 'translateX(50%)';
+            innerWidth <= "700" ? bookGroup.style.transform = 'translateX(0)':
+            bookGroup.style.transform = 'translateX(50%)';
+            innerWidth <= "700" ? bookMarkShadow.style.left = '5%':
+            bookMarkShadow.style.left = '30%';
         }
     }
 
