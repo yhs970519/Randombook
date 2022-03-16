@@ -230,8 +230,8 @@ window.addEventListener('DOMContentLoaded', function(){
     aside_ul.style.transform = 'translateX(80px)';
     mainbook.style.transform = 'translate(-50%, -50%)';
     bookCoverShadow.style.opacity = '0';
-    bookScale.style.transform = 'scale(1)'
-    bookScale.style['-webkit-transform'] = 'scale(1)'
+    bookScale.style.transform = 'scale(1, 1)'
+    bookScale.style['-webkit-transform'] = 'scale(1, 1)'
 
 	category.onclick = categoryClick;
 	category2.onclick = categoryClick2;
