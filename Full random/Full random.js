@@ -25,28 +25,6 @@ window.addEventListener('DOMContentLoaded', function(){
 	divTag(7);
 	divTag(8);
 
-    // function divtextTag(packageN) {
-
-	// 	let textN = 21; //+1
-
-    //     for (let i = 1; i < textN; i++) {
-	// 		let slideText = document.createElement("div");
-	// 		let classNode = document.createAttribute("class");
-	// 		eval("classNode.value = 'Text" + i + "_" + packageN + "';");
-	// 		slideText.setAttributeNode(classNode);
-	// 		document.querySelector(".package" + packageN + "").appendChild(slideText);
-
-    //         let slideTextmini = document.querySelector(".Text" + i + "_" + packageN + "");
-    //         slideTextmini.innerHTML = 'Full Random book package Full Random book package Full Random book package Full Random book package Full Random book package';
-    //     }
-    // }
-
-    // divtextTag(1);
-    // divtextTag(2);
-    // divtextTag(3);
-    // divtextTag(4);
-    // divtextTag(5);
-
     // screen move//////////////////////////////////////////////////
 	function isMobile() {
 		let user = navigator.userAgent;
@@ -67,10 +45,6 @@ window.addEventListener('DOMContentLoaded', function(){
     let gradient2 = document.querySelector(".gradient2");
     let gradient3 = document.querySelector(".gradient3");
     let gradient4 = document.querySelector(".gradient4");
-    let package1 = document.querySelector(".package1");
-    let package2 = document.querySelector(".package2");
-    let package3 = document.querySelector(".package3");
-    let package4 = document.querySelector(".package4");
 	let frameT = document.querySelector(".frame_top");
 	let frameB = document.querySelector(".frame_bottom");
 	let frameL = document.querySelector(".frame_left");
@@ -89,10 +63,6 @@ window.addEventListener('DOMContentLoaded', function(){
 		// translate images in mobile
 		main_img.style.marginLeft = '-440px';
 		main_img.style.marginTop = '-360px';
-		// frameT.style.display = 'none';
-		// frameB.style.display = 'none';
-		// frameL.style.display = 'none';
-		// frameR.style.display = 'none';
 
         gradient1.style['mix-blend-mode'] = 'difference';
         gradient2.style['mix-blend-mode'] = 'difference';
@@ -116,7 +86,7 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%';
             gradient4.style.backgroundPosition = '' + positionX + '% ' + positionY + '%';
-            mainShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+            mainShadow.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             booklistShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             reviewShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
 		});
@@ -129,7 +99,7 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%';
             gradient4.style.backgroundPosition = '' + positionX + '% ' + positionY + '%';
-            mainShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+            mainShadow.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             booklistShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             reviewShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
 		});
@@ -142,7 +112,7 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%';
             gradient4.style.backgroundPosition = '' + positionX + '% ' + positionY + '%';
-            mainShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+            mainShadow.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             booklistShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             reviewShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
 		});
@@ -160,7 +130,7 @@ window.addEventListener('DOMContentLoaded', function(){
             gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%';
             gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%';
             gradient4.style.backgroundPosition = '' + positionX + '% ' + positionY + '%';
-            mainShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+            mainShadow.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             booklistShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             reviewShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
 			// console.log(100 - dragX * 100 / window.innerWidth);
@@ -221,15 +191,58 @@ window.addEventListener('DOMContentLoaded', function(){
 	let nav_ul = document.querySelector(".nav");
 	let aside_ul = document.querySelector(".aside");
 
+    let buy = document.querySelector(".buy");
+    let booklist = document.querySelector(".booklist");
+    let review = document.querySelector(".review");
+    
+    let buyBackground = document.querySelector(".buyBackground");
+    let booklistBackground = document.querySelector(".booklistBackground");
+    let reviewBackground = document.querySelector(".reviewBackground");
+
+    let bookScale = document.querySelector(".bookScale");
+    let mainbook = document.querySelector(".mainbook");
+    let bookGroup = document.querySelector(".bookGroup");
+    let bookMarkShadow = document.querySelector(".bookMarkShadow");
+    let bookCoverShadow = document.querySelector(".bookCoverShadow");
+    let bookRact = document.querySelector(".bookRact");
+    let bookShadow = document.querySelector(".bookShadow");
+    let bookRact1 = document.querySelectorAll(".bookRact1");
+    let bookRact2 = document.querySelectorAll(".bookRact2");
+    let bookRact3 = document.querySelectorAll(".bookRact3");
+    let bookRact4 = document.querySelectorAll(".bookRact4");
+    let bookRact5 = document.querySelectorAll(".bookRact5");
+    let bookRact6 = document.querySelectorAll(".bookRact6");
+    let bookRact7 = document.querySelectorAll(".bookRact7");
+    let bookRact8 = document.querySelectorAll(".bookRact8");
+    let bookRact9 = document.querySelectorAll(".bookRact9");
+    let bookRact10 = document.querySelectorAll(".bookRact10");
+
+    let bookSample = document.querySelector(".bookSample");
+    let bookReview = document.querySelector(".bookReview");
+
+    let cancelbutton = document.querySelectorAll(".cancelbutton");
+    let nextbutton1 = document.querySelector(".nextbutton1");
+    let nextbutton2 = document.querySelector(".nextbutton2");
+
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
 	nav_ul.style.transform = 'translateX(-80px)';
     aside_ul.style.transform = 'translateX(80px)';
+    mainbook.style.transform = 'translate(-50%, -50%)';
+    bookCoverShadow.style.opacity = '0';
+    bookScale.style.transform = 'scale(1)'
 
 	category.onclick = categoryClick;
 	category2.onclick = categoryClick2;
 	mypage.onclick = mypageClick;
 	mypage2.onclick = mypageClick2;
+
+    buy.onclick = buyClick;
+    booklist.onclick = booklistClick;
+    review.onclick = reviewClick;
+
+    cancelbutton[0].onclick = cancelClick;
+    cancelbutton[1].onclick = cancelClick;
 	
 	function categoryClick() {
 		if (nav.style.transform == 'translateX(-100%)') {
@@ -291,11 +304,334 @@ window.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 
-    // let button = document.querySelectorAll("button");
-	// button[3] = onmouseover = buttonColor;
-    // button[4] = onmouseover = buttonColor;
-    // button[5] = onmouseover = buttonColor;
-    // button[6] = onmouseover = buttonColor;
+    function bookanimation1(background) {
+        background.style.opacity = '1';
+        background.style.transitionDelay = '0s';
+        buy.style.opacity = '0';
+        buy.style.transitionDelay = '0s';
+        booklist.style.opacity = '0';
+        booklist.style.transitionDelay = '0s';
+        review.style.opacity = '0';
+        review.style.transitionDelay = '0s';
+        booklistShadow.style.opacity = '0';
+        booklistShadow.style.transitionDelay = '0s';
+        reviewShadow.style.opacity = '0';
+        reviewShadow.style.transitionDelay = '0s';
+        gradient1.style.opacity = '0';
+        gradient2.style.opacity = '0';
+        gradient3.style.opacity = '0';
+        gradient4.style.opacity = '0';
+        bookScale.style.zIndex = '1';
+        bookScale.style.transitionDelay = '0s';
+        mainbook.style.transform = 'translate(0, -50%)';
+        mainbook.style.transitionDelay = '0s';
+        bookSample.style.transitionDelay = '1.8s';
+        bookReview.style.transitionDelay = '1.8s';
+        bookCoverShadow.style.transform = 'translateX(100%)';
+        bookCoverShadow.style.transitionDelay = '0s';
+        bookCoverShadow.style.opacity = '1';
+        bookGroup.style.transform = 'translateX(100%)';
+        bookGroup.style.transitionDelay = '0s';
+        bookMarkShadow.style.left = '55%';
+        bookMarkShadow.style.transitionDelay = '0s';
+        bookRact1[0].style.transform = 'rotateY(-180deg)';
+        bookRact2[0].style.transform = 'rotateY(-180deg)';
+        bookRact3[0].style.transform = 'rotateY(-180deg)';
+        bookRact4[0].style.transform = 'rotateY(-180deg)';
+        bookRact5[0].style.transform = 'rotateY(-180deg)';
+        bookRact6[0].style.transform = 'rotateY(-180deg)';
+        bookRact7[0].style.transform = 'rotateY(-180deg)';
+        bookRact8[0].style.transform = 'rotateY(-180deg)';
+        bookRact9[0].style.transform = 'rotateY(-180deg)';
+        bookRact10[0].style.transform = 'rotateY(-180deg)';
+        bookRact1[1].style.transform = 'rotateY(-180deg)';
+        bookRact2[1].style.transform = 'rotateY(-180deg)';
+        bookRact3[1].style.transform = 'rotateY(-180deg)';
+        bookRact4[1].style.transform = 'rotateY(-180deg)';
+        bookRact5[1].style.transform = 'rotateY(-180deg)';
+        bookRact6[1].style.transform = 'rotateY(-180deg)';
+        bookRact7[1].style.transform = 'rotateY(-180deg)';
+        bookRact8[1].style.transform = 'rotateY(-180deg)';
+        bookRact9[1].style.transform = 'rotateY(-180deg)';
+        bookRact10[1].style.transform = 'rotateY(-180deg)';
+    }
+
+    function bookanimation2() {
+        booklistBackground.style.opacity = '0';
+        booklistBackground.style.transitionDelay = '2s';
+        reviewBackground.style.opacity = '0';
+        reviewBackground.style.transitionDelay = '2s';
+        buy.style.opacity = '1';
+        buy.style.transitionDelay = '2s';
+        booklist.style.opacity = '1';
+        booklist.style.transitionDelay = '2s';
+        review.style.opacity = '1';
+        review.style.transitionDelay = '2s';
+        booklistShadow.style.opacity = '1';
+        booklistShadow.style.transitionDelay = '2s';
+        reviewShadow.style.opacity = '1';
+        reviewShadow.style.transitionDelay = '2s';
+        gradient1.style.opacity = '1';
+        gradient2.style.opacity = '1';
+        gradient3.style.opacity = '1';
+        gradient4.style.opacity = '1';
+        bookScale.style.zIndex = '0';
+        bookScale.style.transform = 'scale(1)';
+        bookScale.style.transitionDelay = '1s';
+        mainbook.style.transform = 'translate(-50%, -50%)';
+        mainbook.style.transitionDelay = '1s';
+        bookSample.style.opacity = '0';
+        bookSample.style.transitionDelay = '0s';
+        bookReview.style.opacity = '0';
+        bookReview.style.transitionDelay = '0s';
+        bookCoverShadow.style.transform = 'translateX(0)';
+        bookCoverShadow.style.transitionDelay = '1s';
+        bookCoverShadow.style.opacity = '0';
+        bookGroup.style.transform = 'translateX(0)';
+        bookGroup.style.transitionDelay = '1s';
+        bookMarkShadow.style.left = '5%';
+        bookMarkShadow.style.transitionDelay = '1s';
+		bookRact1[0].style.transform = 'rotateY(0)';
+        bookRact2[0].style.transform = 'rotateY(0)';
+        bookRact3[0].style.transform = 'rotateY(0)';
+        bookRact4[0].style.transform = 'rotateY(0)';
+        bookRact5[0].style.transform = 'rotateY(0)';
+        bookRact6[0].style.transform = 'rotateY(0)';
+        bookRact7[0].style.transform = 'rotateY(0)';
+        bookRact8[0].style.transform = 'rotateY(0)';
+        bookRact9[0].style.transform = 'rotateY(0)';
+        bookRact10[0].style.transform = 'rotateY(0)';
+        bookRact1[1].style.transform = 'rotateY(0)';
+        bookRact2[1].style.transform = 'rotateY(0)';
+        bookRact3[1].style.transform = 'rotateY(0)';
+        bookRact4[1].style.transform = 'rotateY(0)';
+        bookRact5[1].style.transform = 'rotateY(0)';
+        bookRact6[1].style.transform = 'rotateY(0)';
+        bookRact7[1].style.transform = 'rotateY(0)';
+        bookRact8[1].style.transform = 'rotateY(0)';
+        bookRact9[1].style.transform = 'rotateY(0)';
+        bookRact10[1].style.transform = 'rotateY(0)';
+    }
+
+    function buyClick() {
+		if (window.innerWidth > 700) {
+			buy.style.color = 'plum';
+		}else{
+			buy.style.color = 'green';
+		}
+	}
+
+    function booklistClick() {
+		if (window.innerWidth > 1200) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 8 + '%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+		}else if(window.innerWidth > 1000) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 7 + '%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+		}else if(window.innerWidth > 800) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 6 + '%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+        }else if(window.innerWidth > 700) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 5.5 + '%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+        }else if(window.innerWidth > 650) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 3.5 + '%)';
+            mainbook.style.transform = 'translate(50%, -50%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+        }else if(window.innerWidth > 600) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 3 + '%)';
+            mainbook.style.transform = 'translate(50%, -50%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+        }else if(window.innerWidth > 520) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 2.8 + '%)';
+            mainbook.style.transform = 'translate(50%, -50%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+        }else if(window.innerWidth > 480) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 2.6 + '%)';
+            mainbook.style.transform = 'translate(50%, -50%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+        }else if(window.innerWidth > 410) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 2.2 + '%)';
+            mainbook.style.transform = 'translate(50%, -50%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+        }else if(window.innerWidth > 370) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 2 + '%)';
+            mainbook.style.transform = 'translate(50%, -50%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';bookReview.style.visibility = 'hidden';
+        }else if(window.innerWidth > 340) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 1.8 + '%)';
+            mainbook.style.transform = 'translate(50%, -50%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+        }else if(window.innerWidth > 300) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 1.6 + '%)';
+            mainbook.style.transform = 'translate(50%, -50%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+        }else if(window.innerWidth > 260) {
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 1.4 + '%)';
+            mainbook.style.transform = 'translate(50%, -50%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+        }else{
+            bookanimation1(booklistBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 1.2 + '%)';
+            mainbook.style.transform = 'translate(50%, -50%)';
+            bookSample.style.opacity = '1';
+            bookReview.style.visibility = 'hidden';
+        }
+	}
+
+    function reviewClick() {
+		if (window.innerWidth > 1200) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 8 + '%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.visibility = 'visible';
+		}else if(window.innerWidth > 1000) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 7 + '%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.visibility = 'visible';
+		}else if(window.innerWidth > 800) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 6 + '%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.visibility = 'visible';
+        }else if(window.innerWidth > 700) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 5.5 + '%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.visibility = 'visible';
+        }else if(window.innerWidth > 650) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 3.5 + '%)';
+            mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.left = '0';
+            bookReview.style.visibility = 'visible';
+        }else if(window.innerWidth > 600) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 3 + '%)';
+            mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.left = '0';
+            bookReview.style.visibility = 'visible';
+        }else if(window.innerWidth > 520) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 2.8 + '%)';
+            mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.left = '0';
+            bookReview.style.visibility = 'visible';
+        }else if(window.innerWidth > 480) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 2.6 + '%)';
+            mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.left = '0';
+            bookReview.style.visibility = 'visible';
+        }else if(window.innerWidth > 410) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 2.2 + '%)';
+            mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.left = '0';
+            bookReview.style.visibility = 'visible';
+        }else if(window.innerWidth > 370) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 2 + '%)';
+            mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.left = '0';
+            bookReview.style.visibility = 'visible';
+        }else if(window.innerWidth > 340) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 1.8 + '%)';
+            mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.left = '0';
+            bookReview.style.visibility = 'visible';
+        }else if(window.innerWidth > 300) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 1.6 + '%)';
+            mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.left = '0';
+            bookReview.style.visibility = 'visible';
+        }else if(window.innerWidth > 260) {
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 1.4 + '%)';
+            mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.left = '0';
+            bookReview.style.visibility = 'visible';
+        }else{
+            bookanimation1(reviewBackground);
+            bookScale.style.transform = 'scale(' + window.innerWidth / 1.2 + '%)';
+            mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.opacity = '1';
+            bookReview.style.left = '0';
+            bookReview.style.visibility = 'visible';
+        }
+	}
+
+    window.onresize = function(event){
+        if(bookScale.style.transform != 'scale(1)') {
+            var innerWidth = window.innerWidth;
+            innerWidth > "1200" ? bookScale.style.transform = 'scale(' + window.innerWidth / 8 + '%)':
+            innerWidth > "1000" ? bookScale.style.transform = 'scale(' + window.innerWidth / 7 + '%)':
+            innerWidth > "800" ? bookScale.style.transform = 'scale(' + window.innerWidth / 6 + '%)':
+            innerWidth > "700" ? bookScale.style.transform = 'scale(' + window.innerWidth / 5.5 + '%)':
+            innerWidth > "650" ? bookScale.style.transform = 'scale(' + window.innerWidth / 3.5 + '%)':
+            innerWidth > "600" ? bookScale.style.transform = 'scale(' + window.innerWidth / 3 + '%)':
+            innerWidth > "520" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2.8 + '%)':
+            innerWidth > "480" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2.6 + '%)':
+            innerWidth > "410" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2.2 + '%)':
+            innerWidth > "370" ? bookScale.style.transform = 'scale(' + window.innerWidth / 2 + '%)':
+            innerWidth > "340" ? bookScale.style.transform = 'scale(' + window.innerWidth / 1.8 + '%)':
+            innerWidth > "300" ? bookScale.style.transform = 'scale(' + window.innerWidth / 1.6 + '%)':
+            innerWidth > "260" ? bookScale.style.transform = 'scale(' + window.innerWidth / 1.4 + '%)':
+            bookScale.style.transform = 'scale(' + window.innerWidth / 1.2 + '%)';
+        }
+        if(bookSample.style.opacity == '1') {
+            innerWidth <= "700" ? mainbook.style.transform = 'translate(50%, -50%)':
+            mainbook.style.transform = 'translate(0, -50%)';
+        }else if(bookReview.style.opacity == '1'){
+            innerWidth <= "700" ? mainbook.style.transform = 'translate(-50%, -50%)':
+            mainbook.style.transform = 'translate(0, -50%)';
+            innerWidth <= "700" ? bookReview.style.left = '0':
+            bookReview.style.left = '-100%';
+        }
+    }
+
+    function cancelClick() {
+        bookanimation2();
+    }
+
 	onmousemove = buttonColor;
 
 	function buttonColor() {

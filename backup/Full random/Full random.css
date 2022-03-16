@@ -328,20 +328,8 @@ main{
 	height: 180px;
 	margin: 10px;
     background-color: rgba(248, 248, 255, 0);
-    /* backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); */
-}
-
-.bookScale{
-    z-index: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    Height: 100%;
-    transform: scale(1);
-    transition: transform 2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .mainbook{
@@ -349,161 +337,13 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-}
-
-.bookSample, .bookReview{
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.5s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-    /* transition-delay: 2s; */
-}
-
-.bookReview{
-    visibility: hidden;
-}
-
-.buttonbar{
-    width: 500px;
-    padding: 15px;
-    padding-bottom: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.cancelbutton, .nextbutton1, .nextbutton2{
-    display: inline-block;
-    border: none;
-    width: 30px;
-    height: 30px;
-    background-color: black;
-    cursor: pointer;
-}
-
-.nextbutton1{
-    background-color: green;
-}
-
-.nextbutton2{
-    background-color: skyblue;
-}
-
-.booksampleGroup, .bookreviewGroup{
-    width: 500px;
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.booksample, .bookreview{
-    width: 250px;
-    padding: 15px;
-    padding-bottom: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
-.booksample img{
-    width: 30px;
-    height: 40px;
-}
-
-.booksample a, .readertext{
-    margin-left: 5px;
-    color: black;
-    font-family: Futura,Trebuchet MS,Arial,sans-serif;
-    font-size: 12px;
-}
-
-.booksample a{
-    cursor: pointer;
-}
-
-.profile{
-    width: 40px;
-    height: 40px;
-    background-color: darksalmon;
-}
-
-.bookCover, .bookRact, .bookShadow{
-    width: 250px;
-    height: 350px;
-    background-color: ghostwhite;
-    border-radius: 0 2% 2% 0;
-}
-
-.bookGroup{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 350px;
-    transition: transform 2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-}
-
-.bookgroup{
-    position: absolute;
-    perspective: 1500px;
 }
 
 .bookRact, .bookShadow{
-    transition: transform 1s;
-    transform-origin: left center;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-}
-
-.bookRact1{
-    transition-delay: 0s;
-}
-
-.bookRact2{
-    transition-delay: 0.1s;
-}
-
-.bookRact3{
-    transition-delay: 0.2s;
-}
-
-.bookRact4{
-    transition-delay: 0.3s;
-}
-
-.bookRact5{
-    transition-delay: 0.4s;
-}
-
-.bookRact6{
-    transition-delay: 0.5s;
-}
-
-.bookRact7{
-    transition-delay: 0.6s;
-}
-
-.bookRact8{
-    transition-delay: 0.7s;
-}
-
-.bookRact9{
-    transition-delay: 0.8s;
-}
-
-.bookRact10{
-    transition-delay: 0.9s;
+    width: 250px;
+    height: 350px;
+    background-color: ghostwhite;
+    border-radius: 5px;
 }
 
 .bookMark, .bookMarkShadow{
@@ -517,12 +357,6 @@ main{
     border-bottom: 20px solid transparent; 
 }
 
-.bookMarkShadow{
-    left: 5%;
-    transition: left 2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-}
-
 .bookMark{
     border-left: 20px solid black; 
     border-right: 20px solid black; 
@@ -532,8 +366,6 @@ main{
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 500px;
-    height: 350px;
     filter: blur(5px);
     -webkit-filter: blur(5px);
     mix-blend-mode: overlay;
@@ -541,14 +373,7 @@ main{
 }
 
 .bookShadow{
-    background-color: rgba(0, 0, 0, 0.0687);
-}
-
-.bookCoverShadow{
     background-color: rgba(0, 0, 0, 0.5);
-    transition: transform 2s, opacity 1s;
-    opacity: 0;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 [class*=package], .buy, .review, .booklist{
@@ -602,29 +427,6 @@ main{
     -webkit-background-clip: text;
 }
 
-.buyBackground, .booklistBackground, .reviewBackground{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-}
-
-.buyBackground{
-    background-color: plum;
-}
-
-.booklistBackground{
-    background-color: sienna;
-}
-
-.reviewBackground{
-    background-color: teal;
-}
-
 .buy{
     top: 50%;
     left: 50%;
@@ -632,8 +434,6 @@ main{
     cursor: pointer;
     color: ghostwhite;
     -webkit-text-stroke: 2px black;
-    transition: opacity 0.5s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .buy:hover{
@@ -646,8 +446,6 @@ main{
     transform: translateY(50%);
     text-align: left;
     cursor: pointer;
-    transition: opacity 0.5s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .booklist:hover{
@@ -660,8 +458,6 @@ main{
     transform: translateY(50%);
     text-align: right;
     cursor: pointer;
-    transition: opacity 0.5s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .review:hover{
@@ -701,8 +497,6 @@ main{
     line-height: 120%;
     filter: blur(5px);
     -webkit-filter: blur(5px);
-    transition: opacity 0.5s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .booklistShadow{
@@ -723,35 +517,33 @@ main{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     mix-blend-mode: saturation;
     -webkit-mix-blend-mode: saturation;
-    transition: opacity 0.5s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .gradient1{
     background-image: radial-gradient(rgba(25, 25, 112), rgba(25, 25, 112, 0)60%);
-    background-size: 200% 200%;
+    background-size: 200vw 200vh;
     background-position: 0% 0%;
 }
 
 .gradient2{
     background-image: radial-gradient(rgba(255, 140, 0), rgba(255, 140, 0, 0)60%);
-    background-size: 200% 200%;
+    background-size: 200vw 200vh;
     background-position: 100% 0%;
 }
 
 .gradient3{
     background-image: radial-gradient(rgba(255, 225, 0), rgba(255, 225, 0, 0)60%);
-    background-size: 200% 200%;
+    background-size: 200vw 200vh;
     background-position: 0% 100%;
 }
 
 .gradient4{
     background-image: radial-gradient(rgba(40, 134, 245), rgba(40, 134, 245, 0)60%);
-    background-size: 200% 200%;
+    background-size: 200vw 200vh;
     background-position: 100% 100%;
 }
 
@@ -805,42 +597,9 @@ main{
 		opacity: 1;
 	}
 
-    .bookCover, .bookRact, .bookShadow, .bookGroup{
+    .bookRact, .bookShadow{
         width: 45vw;
         height: 32.5vh;
-    }
-
-    .mainShadow{
-        width: 90vw;
-        height: 32.5vh;
-    }
-
-    .cancelbutton, .nextbutton1, .nextbutton2{
-        width: 2.5vh;
-        height: 2.5vh;
-    }
-
-    .bookSample, .bookReview{
-        width: 100%;
-    }
-
-    .buttonbar{
-        padding: 1.2vh;
-        padding-bottom: 0.6vh;
-    }
-
-    .booksampleGroup, .bookreviewGroup{
-        width: 90vw;
-        height: 30vh;
-    }
-
-    .booksample, .bookreview, .buttonbar{
-        width: 45vw;
-    }
-
-    .booksample, .bookreview{
-        padding: 1.2vh;
-        padding-bottom: 0;
     }
 
     [class*=package]{
