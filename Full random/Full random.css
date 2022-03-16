@@ -46,6 +46,7 @@ a{
 	display: flex;
 	flex-direction: row;
 	transform: scale(0.75, 0.75);
+    -webkit-transform: scale(0.75, 0.75);
 	transform-origin: 50% 0%;
 }
 
@@ -83,7 +84,9 @@ a{
 	font-size: 30px;
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
     transition: color 0.2s;
+    -webkit-transition: color 0.2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 [class*=text]{
@@ -216,7 +219,9 @@ footer div{
 	padding-right: 36px;
 	background: linear-gradient(to right, rgba(248, 248, 255), rgba(248, 248, 255, 0));
 	transition: all 0.2s;
+    -webkit-transition: all 0.2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
     transform: translateX(-100px);
 }
 
@@ -230,7 +235,9 @@ footer div{
 	text-align: right;
 	background: linear-gradient(to left, rgba(248, 248, 255), rgba(248, 248, 255, 0));
 	transition: all 0.2s;
+    -webkit-transition: all 0.2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
     transform: translateX(100px);
 }
 
@@ -248,7 +255,9 @@ footer div{
 	transform: translateX(-80px);
 	opacity: 0;
 	transition: all 0.6s;
+    -webkit-transition: all 0.6s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
     color: rgba(20, 20, 20);
 }
 
@@ -256,7 +265,9 @@ footer div{
 	transform: translateX(80px);
 	opacity: 0;
 	transition: all 0.6s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition: all 0.6s;
+    transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	-webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .CT{
@@ -341,7 +352,9 @@ main{
     Height: 100%;
     transform: scale(1);
     transition: transform 2s;
+    -webkit-transition: transform 2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .mainbook{
@@ -350,7 +363,9 @@ main{
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform 2s;
+    -webkit-transition: transform 2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .bookSample, .bookReview{
@@ -364,7 +379,9 @@ main{
     overflow: hidden;
     opacity: 0;
     transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
     /* transition-delay: 2s; */
 }
 
@@ -452,7 +469,9 @@ main{
     width: 250px;
     height: 350px;
     transition: transform 2s;
+    -webkit-transition: transform 2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .bookgroup{
@@ -461,49 +480,61 @@ main{
 }
 
 .bookRact, .bookShadow{
-    transition: transform 1s;
     transform-origin: left center;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .bookRact1{
     transition-delay: 0s;
+    -webkit-transition-delay: 0s;
 }
 
 .bookRact2{
     transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
 }
 
 .bookRact3{
     transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
 }
 
 .bookRact4{
     transition-delay: 0.3s;
+    -webkit-transition-delay: 0.3s;
 }
 
 .bookRact5{
     transition-delay: 0.4s;
+    -webkit-transition-delay: 0.4s;
 }
 
 .bookRact6{
     transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
 }
 
 .bookRact7{
     transition-delay: 0.6s;
+    -webkit-transition-delay: 0.6s;
 }
 
 .bookRact8{
     transition-delay: 0.7s;
+    -webkit-transition-delay: 0.7s;
 }
 
 .bookRact9{
     transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s;
 }
 
 .bookRact10{
     transition-delay: 0.9s;
+    -webkit-transition-delay: 0.9s;
 }
 
 .bookMark, .bookMarkShadow{
@@ -520,7 +551,9 @@ main{
 .bookMarkShadow{
     left: 5%;
     transition: left 2s;
+    -webkit-transition: left 2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .bookMark{
@@ -546,9 +579,11 @@ main{
 
 .bookCoverShadow{
     background-color: rgba(0, 0, 0, 0.5);
-    transition: transform 2s, opacity 1s;
     opacity: 0;
+    transition: transform 2s, opacity 1s;
+    -webkit-transition: transform 2s, opacity 1s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 [class*=package], .buy, .review, .booklist{
@@ -562,7 +597,9 @@ main{
     color: ghostwhite;
     line-height: 120%;
     transition: all 0.2s;
+    -webkit-transition: all 0.2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 [class*=package]{
@@ -610,7 +647,10 @@ main{
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .buyBackground{
@@ -633,7 +673,9 @@ main{
     color: ghostwhite;
     -webkit-text-stroke: 2px black;
     transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .buy:hover{
@@ -647,7 +689,9 @@ main{
     text-align: left;
     cursor: pointer;
     transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .booklist:hover{
@@ -661,7 +705,9 @@ main{
     text-align: right;
     cursor: pointer;
     transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .review:hover{
@@ -702,7 +748,9 @@ main{
     filter: blur(5px);
     -webkit-filter: blur(5px);
     transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .booklistShadow{
@@ -728,7 +776,9 @@ main{
     mix-blend-mode: saturation;
     -webkit-mix-blend-mode: saturation;
     transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;transition: opacity 0.5s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 .gradient1{

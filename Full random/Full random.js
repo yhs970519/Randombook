@@ -231,6 +231,7 @@ window.addEventListener('DOMContentLoaded', function(){
     mainbook.style.transform = 'translate(-50%, -50%)';
     bookCoverShadow.style.opacity = '0';
     bookScale.style.transform = 'scale(1)'
+    bookScale.style['-webkit-transform'] = 'scale(1)'
 
 	category.onclick = categoryClick;
 	category2.onclick = categoryClick2;
@@ -307,33 +308,46 @@ window.addEventListener('DOMContentLoaded', function(){
     function bookanimation1(background) {
         background.style.opacity = '1';
         background.style.transitionDelay = '0s';
+        background.style['-webkit-transitionDelay'] = '0s';
         buy.style.opacity = '0';
         buy.style.transitionDelay = '0s';
+        buy.style['-webkit-transitionDelay'] = '0s';
         booklist.style.opacity = '0';
         booklist.style.transitionDelay = '0s';
+        booklist.style['-webkit-transitionDelay'] = '0s';
         review.style.opacity = '0';
         review.style.transitionDelay = '0s';
+        review.style['-webkit-transitionDelay'] = '0s';
         booklistShadow.style.opacity = '0';
         booklistShadow.style.transitionDelay = '0s';
+        booklistShadow.style['-webkit-transitionDelay'] = '0s';
         reviewShadow.style.opacity = '0';
         reviewShadow.style.transitionDelay = '0s';
+        reviewShadow.style['-webkit-transitionDelay'] = '0s';
         gradient1.style.opacity = '0';
         gradient2.style.opacity = '0';
         gradient3.style.opacity = '0';
         gradient4.style.opacity = '0';
         bookScale.style.zIndex = '1';
         bookScale.style.transitionDelay = '0s';
+        bookScale.style['-webkit-transitionDelay'] = '0s';
         mainbook.style.transform = 'translate(0, -50%)';
         mainbook.style.transitionDelay = '0s';
+        mainbook.style['-webkit-transitionDelay'] = '0s';
         bookSample.style.transitionDelay = '1.8s';
+        bookSample.style['-webkit-transitionDelay'] = '1.8s';
         bookReview.style.transitionDelay = '1.8s';
+        bookReview.style['-webkit-transitionDelay'] = '1.8s';
         bookCoverShadow.style.transform = 'translateX(100%)';
         bookCoverShadow.style.transitionDelay = '0s';
+        bookCoverShadow.style['-webkit-transitionDelay'] = '0s';
         bookCoverShadow.style.opacity = '1';
         bookGroup.style.transform = 'translateX(100%)';
         bookGroup.style.transitionDelay = '0s';
+        bookGroup.style['-webkit-transitionDelay'] = '0s';
         bookMarkShadow.style.left = '55%';
         bookMarkShadow.style.transitionDelay = '0s';
+        bookMarkShadow.style['-webkit-transitionDelay'] = '0s';
         bookRact1[0].style.transform = 'rotateY(-180deg)';
         bookRact2[0].style.transform = 'rotateY(-180deg)';
         bookRact3[0].style.transform = 'rotateY(-180deg)';
@@ -359,18 +373,25 @@ window.addEventListener('DOMContentLoaded', function(){
     function bookanimation2() {
         booklistBackground.style.opacity = '0';
         booklistBackground.style.transitionDelay = '2s';
+        booklistBackground.style['-webkit-transitionDelay'] = '2s';
         reviewBackground.style.opacity = '0';
         reviewBackground.style.transitionDelay = '2s';
+        reviewBackground.style['-webkit-transitionDelay'] = '2s';
         buy.style.opacity = '1';
         buy.style.transitionDelay = '2s';
+        buy.style['-webkit-transitionDelay'] = '2s';
         booklist.style.opacity = '1';
         booklist.style.transitionDelay = '2s';
+        booklist.style['-webkit-transitionDelay'] = '2s';
         review.style.opacity = '1';
         review.style.transitionDelay = '2s';
+        review.style['-webkit-transitionDelay'] = '2s';
         booklistShadow.style.opacity = '1';
         booklistShadow.style.transitionDelay = '2s';
+        booklistShadow.style['-webkit-transitionDelay'] = '2s';
         reviewShadow.style.opacity = '1';
         reviewShadow.style.transitionDelay = '2s';
+        reviewShadow.style['-webkit-transitionDelay'] = '2s';
         gradient1.style.opacity = '1';
         gradient2.style.opacity = '1';
         gradient3.style.opacity = '1';
@@ -378,19 +399,26 @@ window.addEventListener('DOMContentLoaded', function(){
         bookScale.style.zIndex = '0';
         bookScale.style.transform = 'scale(1)';
         bookScale.style.transitionDelay = '1s';
+        bookScale.style['-webkit-transitionDelay'] = '1s';
         mainbook.style.transform = 'translate(-50%, -50%)';
         mainbook.style.transitionDelay = '1s';
+        mainbook.style['-webkit-transitionDelay'] = '1s';
         bookSample.style.opacity = '0';
         bookSample.style.transitionDelay = '0s';
+        bookSample.style['-webkit-transitionDelay'] = '0s';
         bookReview.style.opacity = '0';
         bookReview.style.transitionDelay = '0s';
+        bookReview.style['-webkit-transitionDelay'] = '0s';
         bookCoverShadow.style.transform = 'translateX(0)';
         bookCoverShadow.style.transitionDelay = '1s';
+        bookCoverShadow.style['-webkit-transitionDelay'] = '1s';
         bookCoverShadow.style.opacity = '0';
         bookGroup.style.transform = 'translateX(0)';
         bookGroup.style.transitionDelay = '1s';
+        bookGroup.style['-webkit-transitionDelay'] = '1s';
         bookMarkShadow.style.left = '5%';
         bookMarkShadow.style.transitionDelay = '1s';
+        bookMarkShadow.style['-webkit-transitionDelay'] = '1s';
 		bookRact1[0].style.transform = 'rotateY(0)';
         bookRact2[0].style.transform = 'rotateY(0)';
         bookRact3[0].style.transform = 'rotateY(0)';
@@ -413,6 +441,22 @@ window.addEventListener('DOMContentLoaded', function(){
         bookRact10[1].style.transform = 'rotateY(0)';
     }
 
+    function booklistAnimaition(number) {
+        bookanimation1(booklistBackground);
+        bookScale.style.transform = 'scale(' + window.innerWidth / number + '%)';
+        bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / number + '%)';
+        bookSample.style.opacity = '1';
+        bookReview.style.visibility = 'hidden';
+    }
+
+    function reviewAnimaition(number) {
+        bookanimation1(reviewBackground);
+        bookScale.style.transform = 'scale(' + window.innerWidth / number + '%)';
+        bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / number + '%)';
+        bookReview.style.opacity = '1';
+        bookReview.style.visibility = 'visible';
+    }
+
     function buyClick() {
 		if (window.innerWidth > 700) {
 			buy.style.color = 'plum';
@@ -423,179 +467,85 @@ window.addEventListener('DOMContentLoaded', function(){
 
     function booklistClick() {
 		if (window.innerWidth > 1200) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 8 + '%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
+            booklistAnimaition(8);
 		}else if(window.innerWidth > 1000) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 7 + '%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
+            booklistAnimaition(7);
 		}else if(window.innerWidth > 800) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 6 + '%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
+            booklistAnimaition(6);
         }else if(window.innerWidth > 700) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 5.5 + '%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
+            booklistAnimaition(5.5);
         }else if(window.innerWidth > 650) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 3.5 + '%)';
+            booklistAnimaition(3.5);
             mainbook.style.transform = 'translate(50%, -50%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
         }else if(window.innerWidth > 600) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 3 + '%)';
+            booklistAnimaition(3);
             mainbook.style.transform = 'translate(50%, -50%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
         }else if(window.innerWidth > 520) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 2.8 + '%)';
+            booklistAnimaition(2.8);
             mainbook.style.transform = 'translate(50%, -50%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
         }else if(window.innerWidth > 480) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 2.6 + '%)';
+            booklistAnimaition(2.6);
             mainbook.style.transform = 'translate(50%, -50%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
         }else if(window.innerWidth > 410) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 2.2 + '%)';
+            booklistAnimaition(2.2);
             mainbook.style.transform = 'translate(50%, -50%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
         }else if(window.innerWidth > 370) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 2 + '%)';
+            booklistAnimaition(2);
             mainbook.style.transform = 'translate(50%, -50%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';bookReview.style.visibility = 'hidden';
         }else if(window.innerWidth > 340) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 1.8 + '%)';
+            booklistAnimaition(1.8);
             mainbook.style.transform = 'translate(50%, -50%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
         }else if(window.innerWidth > 300) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 1.6 + '%)';
+            booklistAnimaition(1.6);
             mainbook.style.transform = 'translate(50%, -50%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
         }else if(window.innerWidth > 260) {
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 1.4 + '%)';
+            booklistAnimaition(1.4);
             mainbook.style.transform = 'translate(50%, -50%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
         }else{
-            bookanimation1(booklistBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 1.2 + '%)';
+            booklistAnimaition(1.2);
             mainbook.style.transform = 'translate(50%, -50%)';
-            bookSample.style.opacity = '1';
-            bookReview.style.visibility = 'hidden';
         }
 	}
 
     function reviewClick() {
 		if (window.innerWidth > 1200) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 8 + '%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.visibility = 'visible';
+            reviewAnimaition(8);
 		}else if(window.innerWidth > 1000) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 7 + '%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.visibility = 'visible';
+            reviewAnimaition(7);
 		}else if(window.innerWidth > 800) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 6 + '%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.visibility = 'visible';
+            reviewAnimaition(6);
         }else if(window.innerWidth > 700) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 5.5 + '%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.visibility = 'visible';
+            reviewAnimaition(5.5);
         }else if(window.innerWidth > 650) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 3.5 + '%)';
+            reviewAnimaition(3.5);
             mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.left = '0';
-            bookReview.style.visibility = 'visible';
         }else if(window.innerWidth > 600) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 3 + '%)';
+            reviewAnimaition(3);
             mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.left = '0';
-            bookReview.style.visibility = 'visible';
         }else if(window.innerWidth > 520) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 2.8 + '%)';
+            reviewAnimaition(2.8);
             mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.left = '0';
-            bookReview.style.visibility = 'visible';
         }else if(window.innerWidth > 480) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 2.6 + '%)';
+            reviewAnimaition(2.6);
             mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.left = '0';
-            bookReview.style.visibility = 'visible';
         }else if(window.innerWidth > 410) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 2.2 + '%)';
+            reviewAnimaition(2.2);
             mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.left = '0';
-            bookReview.style.visibility = 'visible';
         }else if(window.innerWidth > 370) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 2 + '%)';
+            reviewAnimaition(2);
             mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.left = '0';
-            bookReview.style.visibility = 'visible';
         }else if(window.innerWidth > 340) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 1.8 + '%)';
+            reviewAnimaition(1.8);
             mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.left = '0';
-            bookReview.style.visibility = 'visible';
         }else if(window.innerWidth > 300) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 1.6 + '%)';
+            reviewAnimaition(1.6);
             mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.left = '0';
-            bookReview.style.visibility = 'visible';
         }else if(window.innerWidth > 260) {
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 1.4 + '%)';
+            reviewAnimaition(1.4);
             mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.left = '0';
-            bookReview.style.visibility = 'visible';
         }else{
-            bookanimation1(reviewBackground);
-            bookScale.style.transform = 'scale(' + window.innerWidth / 1.2 + '%)';
+            reviewAnimaition(1.2);
             mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.opacity = '1';
-            bookReview.style.left = '0';
-            bookReview.style.visibility = 'visible';
         }
 	}
 
@@ -616,6 +566,20 @@ window.addEventListener('DOMContentLoaded', function(){
             innerWidth > "300" ? bookScale.style.transform = 'scale(' + window.innerWidth / 1.6 + '%)':
             innerWidth > "260" ? bookScale.style.transform = 'scale(' + window.innerWidth / 1.4 + '%)':
             bookScale.style.transform = 'scale(' + window.innerWidth / 1.2 + '%)';
+            innerWidth > "1200" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 8 + '%)':
+            innerWidth > "1000" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 7 + '%)':
+            innerWidth > "800" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 6 + '%)':
+            innerWidth > "700" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 5.5 + '%)':
+            innerWidth > "650" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 3.5 + '%)':
+            innerWidth > "600" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 3 + '%)':
+            innerWidth > "520" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2.8 + '%)':
+            innerWidth > "480" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2.6 + '%)':
+            innerWidth > "410" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2.2 + '%)':
+            innerWidth > "370" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 2 + '%)':
+            innerWidth > "340" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.8 + '%)':
+            innerWidth > "300" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.6 + '%)':
+            innerWidth > "260" ? bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.4 + '%)':
+            bookScale.style['-webkit-transform'] = 'scale(' + window.innerWidth / 1.2 + '%)';
         }
         if(bookSample.style.opacity == '1') {
             innerWidth <= "700" ? mainbook.style.transform = 'translate(50%, -50%)':
