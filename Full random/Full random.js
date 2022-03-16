@@ -458,6 +458,17 @@ window.addEventListener('DOMContentLoaded', function(){
         bookReview.style.visibility = 'visible';
     }
 
+    function booklistAnimaition2() {
+        mainbook.style.transform = 'translate(50%, -50%)';
+        bookScale.style.top = '7.5%';
+    }
+
+    function reviewAnimaition2() {
+        mainbook.style.transform = 'translate(-50%, -50%)';
+        bookReview.style.left = '0';
+        bookScale.style.top = '7.5%';
+    }
+
     function buyClick() {
 		if (window.innerWidth > 700) {
 			buy.style.color = 'plum';
@@ -477,44 +488,34 @@ window.addEventListener('DOMContentLoaded', function(){
             booklistAnimaition(5.5);
         }else if(window.innerWidth > 650) {
             booklistAnimaition(3.5);
-            mainbook.style.transform = 'translate(50%, -50%)';
-            bookScale.style.top = '5%';
+            booklistAnimaition2();
         }else if(window.innerWidth > 600) {
             booklistAnimaition(3);
-            mainbook.style.transform = 'translate(50%, -50%)';
-            bookScale.style.top = '5%';
+            booklistAnimaition2();
         }else if(window.innerWidth > 520) {
             booklistAnimaition(2.8);
-            mainbook.style.transform = 'translate(50%, -50%)';
-            bookScale.style.top = '5%';
+            booklistAnimaition2();
         }else if(window.innerWidth > 480) {
             booklistAnimaition(2.6);
-            mainbook.style.transform = 'translate(50%, -50%)';
-            bookScale.style.top = '5%';
+            booklistAnimaition2();
         }else if(window.innerWidth > 410) {
             booklistAnimaition(2.2);
-            mainbook.style.transform = 'translate(50%, -50%)';
-            bookScale.style.top = '5%';
+            booklistAnimaition2();
         }else if(window.innerWidth > 370) {
             booklistAnimaition(2);
-            mainbook.style.transform = 'translate(50%, -50%)';
-            bookScale.style.top = '5%';
+            booklistAnimaition2();
         }else if(window.innerWidth > 340) {
             booklistAnimaition(1.8);
-            mainbook.style.transform = 'translate(50%, -50%)';
-            bookScale.style.top = '5%';
+            booklistAnimaition2();
         }else if(window.innerWidth > 300) {
             booklistAnimaition(1.6);
-            mainbook.style.transform = 'translate(50%, -50%)';
-            bookScale.style.top = '5%';
+            booklistAnimaition2();
         }else if(window.innerWidth > 260) {
             booklistAnimaition(1.4);
-            mainbook.style.transform = 'translate(50%, -50%)';
-            bookScale.style.top = '5%';
+            booklistAnimaition2();
         }else{
             booklistAnimaition(1.2);
-            mainbook.style.transform = 'translate(50%, -50%)';
-            bookScale.style.top = '5%';
+            booklistAnimaition2();
         }
 	}
 
@@ -529,54 +530,34 @@ window.addEventListener('DOMContentLoaded', function(){
             reviewAnimaition(5.5);
         }else if(window.innerWidth > 650) {
             reviewAnimaition(3.5);
-            mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.left = '0';
-            bookScale.style.top = '5%';
+            reviewAnimaition2();
         }else if(window.innerWidth > 600) {
             reviewAnimaition(3);
-            mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.left = '0';
-            bookScale.style.top = '5%';
+            reviewAnimaition2();
         }else if(window.innerWidth > 520) {
             reviewAnimaition(2.8);
-            mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.left = '0';
-            bookScale.style.top = '5%';
+            reviewAnimaition2();
         }else if(window.innerWidth > 480) {
             reviewAnimaition(2.6);
-            mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.left = '0';
-            bookScale.style.top = '5%';
+            reviewAnimaition2();
         }else if(window.innerWidth > 410) {
             reviewAnimaition(2.2);
-            mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.left = '0';
-            bookScale.style.top = '5%';
+            reviewAnimaition2();
         }else if(window.innerWidth > 370) {
             reviewAnimaition(2);
-            mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.left = '0';
-            bookScale.style.top = '5%';
+            reviewAnimaition2();
         }else if(window.innerWidth > 340) {
             reviewAnimaition(1.8);
-            mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.left = '0';
-            bookScale.style.top = '5%';
+            reviewAnimaition2();
         }else if(window.innerWidth > 300) {
             reviewAnimaition(1.6);
-            mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.left = '0';
-            bookScale.style.top = '5%';
+            reviewAnimaition2();
         }else if(window.innerWidth > 260) {
             reviewAnimaition(1.4);
-            mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.left = '0';
-            bookScale.style.top = '5%';
+            reviewAnimaition2();
         }else{
             reviewAnimaition(1.2);
-            mainbook.style.transform = 'translate(-50%, -50%)';
-            bookReview.style.left = '0';
-            bookScale.style.top = '5%';
+            reviewAnimaition2();
         }
 	}
 
@@ -615,14 +596,14 @@ window.addEventListener('DOMContentLoaded', function(){
         if(bookSample.style.opacity == '1') {
             innerWidth <= "700" ? mainbook.style.transform = 'translate(50%, -50%)':
             mainbook.style.transform = 'translate(0, -50%)';
-            innerWidth <= "700" ? bookScale.style.top = '5%':
+            innerWidth <= "700" ? bookScale.style.top = '7.5%':
             bookScale.style.top = '0';
         }else if(bookReview.style.opacity == '1'){
             innerWidth <= "700" ? mainbook.style.transform = 'translate(-50%, -50%)':
             mainbook.style.transform = 'translate(0, -50%)';
             innerWidth <= "700" ? bookReview.style.left = '0':
             bookReview.style.left = '-100%';
-            innerWidth <= "700" ? bookScale.style.top = '5%':
+            innerWidth <= "700" ? bookScale.style.top = '7.5%':
             bookScale.style.top = '0';
         }
     }
