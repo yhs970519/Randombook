@@ -519,33 +519,43 @@ window.addEventListener('DOMContentLoaded', function(){
         }else if(window.innerWidth > 650) {
             reviewAnimaition(3.5);
             mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.left = '0';
         }else if(window.innerWidth > 600) {
             reviewAnimaition(3);
             mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.left = '0';
         }else if(window.innerWidth > 520) {
             reviewAnimaition(2.8);
             mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.left = '0';
         }else if(window.innerWidth > 480) {
             reviewAnimaition(2.6);
             mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.left = '0';
         }else if(window.innerWidth > 410) {
             reviewAnimaition(2.2);
             mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.left = '0';
         }else if(window.innerWidth > 370) {
             reviewAnimaition(2);
             mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.left = '0';
         }else if(window.innerWidth > 340) {
             reviewAnimaition(1.8);
             mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.left = '0';
         }else if(window.innerWidth > 300) {
             reviewAnimaition(1.6);
             mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.left = '0';
         }else if(window.innerWidth > 260) {
             reviewAnimaition(1.4);
             mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.left = '0';
         }else{
             reviewAnimaition(1.2);
             mainbook.style.transform = 'translate(-50%, -50%)';
+            bookReview.style.left = '0';
         }
 	}
 
