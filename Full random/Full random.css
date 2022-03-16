@@ -350,7 +350,7 @@ main{
     left: 0;
     width: 100%;
     Height: 100%;
-    transform: scale(1, 1);
+    transform: scale(2, 2);
     transition: transform 2s;
     -webkit-transition: transform 2s;
 	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
@@ -422,6 +422,7 @@ main{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
 }
 
 .booksample, .bookreview{
