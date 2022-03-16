@@ -357,6 +357,11 @@ main{
     -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
+.bookScale:hover{
+    top: 0;
+    left: 0;
+}
+
 .mainbook{
     position: fixed;
     top: 50%;

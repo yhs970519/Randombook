@@ -175,11 +175,11 @@ window.addEventListener('DOMContentLoaded', function(){
 		rotateEyes(e.pageX, e.pageY)
     });
 
-    $(".logo").hover(function() {
-		$(".TEXT").css("color", "rgba(" + red + ", " + green + ", " + blue + ")");
-	}, function() {
-		$(".TEXT").css("color", "black");
-	});
+    // $(".logo").hover(function() {
+	// 	$(".TEXT").css("color", "rgba(" + red + ", " + green + ", " + blue + ")");
+	// }, function() {
+	// 	$(".TEXT").css("color", "black");
+	// });
 
     // button transition & viewport transition//////////////////////////////////////////////////
 	let category = document.querySelector(".category");
