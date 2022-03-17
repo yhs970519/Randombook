@@ -952,6 +952,16 @@ main{
         padding-bottom: 0;
     }
 
+    .booksample img{
+        width: 3vh;
+        height: 4vh;
+    }
+
+    .profile{
+        width: 3vh;
+        height: 3vh;
+    }
+
     [class*=package]{
         font-size: 55px;
     }
