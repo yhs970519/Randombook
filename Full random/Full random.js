@@ -181,7 +181,9 @@ window.addEventListener('DOMContentLoaded', function(){
 		$(".TEXT").css("color", "black");
 	});
 
-    // button transition & viewport transition//////////////////////////////////////////////////
+    $(".ract").draggable();
+
+    // button transition//////////////////////////////////////////////////
 	let category = document.querySelector(".category");
 	let category2 = document.querySelector(".category2");
 	let mypage = document.querySelector(".mypage");
@@ -194,6 +196,11 @@ window.addEventListener('DOMContentLoaded', function(){
     let buy = document.querySelector(".buy");
     let booklist = document.querySelector(".booklist");
     let review = document.querySelector(".review");
+
+    let package1 = document.querySelector(".package1");
+    let package2 = document.querySelector(".package2");
+    let package3 = document.querySelector(".package3");
+    let package4 = document.querySelector(".package4");
     
     let buyBackground = document.querySelector(".buyBackground");
     let booklistBackground = document.querySelector(".booklistBackground");
@@ -223,6 +230,11 @@ window.addEventListener('DOMContentLoaded', function(){
     let cancelbutton = document.querySelectorAll(".cancelbutton");
     let nextbutton1 = document.querySelector(".nextbutton1");
     let nextbutton2 = document.querySelector(".nextbutton2");
+    let previousbutton1 = document.querySelector(".previousbutton1");
+    let previousbutton2 = document.querySelector(".previousbutton2");
+
+    let booksampleGroup = document.querySelector(".booksampleGroup");
+    let bookreviewGroup = document.querySelector(".bookreviewGroup");
 
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
@@ -230,8 +242,10 @@ window.addEventListener('DOMContentLoaded', function(){
     aside_ul.style.transform = 'translateX(80px)';
     mainbook.style.transform = 'translate(-50%, -50%)';
     bookCoverShadow.style.opacity = '0';
-    bookScale.style.transform = 'scale(1, 1)'
-    bookScale.style['-webkit-transform'] = 'scale(1, 1)'
+    bookScale.style.transform = 'scale(1, 1)';
+    bookScale.style['-webkit-transform'] = 'scale(1, 1)';
+    booksampleGroup.style.transform = 'translateX(0%)';
+    bookreviewGroup.style.transform = 'translateX(0%)';
 
 	category.onclick = categoryClick;
 	category2.onclick = categoryClick2;
@@ -244,6 +258,11 @@ window.addEventListener('DOMContentLoaded', function(){
 
     cancelbutton[0].onclick = cancelClick;
     cancelbutton[1].onclick = cancelClick;
+
+    nextbutton1.onclick = nextClick1;
+    nextbutton2.onclick = nextClick2;
+    previousbutton1.onclick = previousClick1;
+    previousbutton2.onclick = previousClick2;
 	
 	function categoryClick() {
 		if (nav.style.transform == 'translateX(-100%)') {
@@ -306,18 +325,30 @@ window.addEventListener('DOMContentLoaded', function(){
 	}
 
     function bookanimation1(background) {
+        package1.style.opacity = '0';
+        package1.style.transitionDelay = '0s';
+        package1.style['-webkit-transitionDelay'] = '0s';
+        package2.style.opacity = '0';
+        package2.style.transitionDelay = '0s';
+        package2.style['-webkit-transitionDelay'] = '0s';
+        package3.style.opacity = '0';
+        package3.style.transitionDelay = '0s';
+        package3.style['-webkit-transitionDelay'] = '0s';
+        package4.style.opacity = '0';
+        package4.style.transitionDelay = '0s';
+        package4.style['-webkit-transitionDelay'] = '0s';
         background.style.opacity = '1';
         background.style.transitionDelay = '0s';
         background.style['-webkit-transitionDelay'] = '0s';
         buy.style.opacity = '0';
-        buy.style.transitionDelay = '0s';
-        buy.style['-webkit-transitionDelay'] = '0s';
+        buy.style.transition = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
+        buy.style['-webkit-transition'] = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
         booklist.style.opacity = '0';
-        booklist.style.transitionDelay = '0s';
-        booklist.style['-webkit-transitionDelay'] = '0s';
+        booklist.style.transition = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
+        booklist.style['-webkit-transition'] = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
         review.style.opacity = '0';
-        review.style.transitionDelay = '0s';
-        review.style['-webkit-transitionDelay'] = '0s';
+        review.style.transition = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
+        review.style['-webkit-transition'] = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
         booklistShadow.style.opacity = '0';
         booklistShadow.style.transitionDelay = '0s';
         booklistShadow.style['-webkit-transitionDelay'] = '0s';
@@ -368,9 +399,23 @@ window.addEventListener('DOMContentLoaded', function(){
         bookRact8[1].style.transform = 'rotateY(-180deg)';
         bookRact9[1].style.transform = 'rotateY(-180deg)';
         bookRact10[1].style.transform = 'rotateY(-180deg)';
+        booksampleGroup.style.transitionDelay = '0s';
+        bookreviewGroup.style.transitionDelay = '0s';
     }
 
     function bookanimation2() {
+        package1.style.opacity = '1';
+        package1.style.transitionDelay = '2s';
+        package1.style['-webkit-transitionDelay'] = '2s';
+        package2.style.opacity = '1';
+        package2.style.transitionDelay = '2s';
+        package2.style['-webkit-transitionDelay'] = '2s';
+        package3.style.opacity = '1';
+        package3.style.transitionDelay = '2s';
+        package3.style['-webkit-transitionDelay'] = '2s';
+        package4.style.opacity = '1';
+        package4.style.transitionDelay = '2s';
+        package4.style['-webkit-transitionDelay'] = '2s';
         booklistBackground.style.opacity = '0';
         booklistBackground.style.transitionDelay = '2s';
         booklistBackground.style['-webkit-transitionDelay'] = '2s';
@@ -378,14 +423,14 @@ window.addEventListener('DOMContentLoaded', function(){
         reviewBackground.style.transitionDelay = '2s';
         reviewBackground.style['-webkit-transitionDelay'] = '2s';
         buy.style.opacity = '1';
-        buy.style.transitionDelay = '2s';
-        buy.style['-webkit-transitionDelay'] = '2s';
+        buy.style.transition = 'opacity 0.5s ease 2s, color 0.5s ease 0s';
+        buy.style['-webkit-transition'] = 'opacity 0.5s ease 2s, color 0.5s ease 0s';
         booklist.style.opacity = '1';
-        booklist.style.transitionDelay = '2s';
-        booklist.style['-webkit-transitionDelay'] = '2s';
+        booklist.style.transition = 'opacity 0.5s ease 2s, color 0.5s ease 0s';
+        booklist.style['-webkit-transition'] = 'opacity 0.5s ease 2s, color 0.5s ease 0s';
         review.style.opacity = '1';
-        review.style.transitionDelay = '2s';
-        review.style['-webkit-transitionDelay'] = '2s';
+        review.style.transition = 'opacity 0.5s ease 2s, color 0.5s ease 0s';
+        review.style['-webkit-transition'] = 'opacity 0.5s ease 2s, color 0.5s ease 0s';
         booklistShadow.style.opacity = '1';
         booklistShadow.style.transitionDelay = '2s';
         booklistShadow.style['-webkit-transitionDelay'] = '2s';
@@ -440,6 +485,10 @@ window.addEventListener('DOMContentLoaded', function(){
         bookRact8[1].style.transform = 'rotateY(0)';
         bookRact9[1].style.transform = 'rotateY(0)';
         bookRact10[1].style.transform = 'rotateY(0)';
+        booksampleGroup.style.transform = 'translateX(0%)';
+        booksampleGroup.style.transitionDelay = '1.5s';
+        bookreviewGroup.style.transform = 'translateX(0%)';
+        bookreviewGroup.style.transitionDelay = '1.5s';
     }
 
     function booklistAnimaition(number) {
@@ -567,6 +616,84 @@ window.addEventListener('DOMContentLoaded', function(){
         }
 	}
 
+    function cancelClick() {
+        bookanimation2();
+    }
+
+    function nextClick1() {
+        if(window.innerWidth > 700) {
+            booksampleGroup.style.transform == 'translateX(0%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
+            booksampleGroup.style.transform = 'translateX(-200%)';
+
+        }else{
+            booksampleGroup.style.transform == 'translateX(0%)' ? booksampleGroup.style.transform = 'translateX(-50%)':
+            booksampleGroup.style.transform == 'translateX(-50%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
+            booksampleGroup.style.transform == 'translateX(-100%)' ? booksampleGroup.style.transform = 'translateX(-150%)':
+            booksampleGroup.style.transform == 'translateX(-150%)' ? booksampleGroup.style.transform = 'translateX(-200%)':
+            booksampleGroup.style.transform = 'translateX(-250%)';
+        }
+
+        booksampleGroup.style.transition = 'transform 0s ease 0.5s';
+        $(booksampleGroup).animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(".buttonCancel1").animate({height: '30px'}, 0).animate({height: '30px'}, 1000).animate({height: '0'}, 0);
+        $(".buttonbar").animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+    }
+
+    function nextClick2() {
+        if(window.innerWidth > 700) {
+            bookreviewGroup.style.transform == 'translateX(0%)' ? bookreviewGroup.style.transform = 'translateX(-100%)':
+            bookreviewGroup.style.transform = 'translateX(-200%)';
+        }else{
+            bookreviewGroup.style.transform == 'translateX(0%)' ? bookreviewGroup.style.transform = 'translateX(-50%)':
+            bookreviewGroup.style.transform == 'translateX(-50%)' ? bookreviewGroup.style.transform = 'translateX(-100%)':
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookreviewGroup.style.transform = 'translateX(-150%)':
+            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookreviewGroup.style.transform = 'translateX(-200%)':
+            bookreviewGroup.style.transform = 'translateX(-250%)';
+        }
+
+        bookreviewGroup.style.transition = 'transform 0s ease 0.5s';
+        $(bookreviewGroup).animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(".buttonCancel2").animate({height: '30px'}, 0).animate({height: '30px'}, 1000).animate({height: '0'}, 0);
+        $(".buttonbar").animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+    }
+
+    function previousClick1() {
+        if(window.innerWidth > 700) {
+            booksampleGroup.style.transform == 'translateX(-200%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
+            booksampleGroup.style.transform = 'translateX(0%)';
+        }else{
+            booksampleGroup.style.transform == 'translateX(-250%)' ? booksampleGroup.style.transform = 'translateX(-200%)':
+            booksampleGroup.style.transform == 'translateX(-200%)' ? booksampleGroup.style.transform = 'translateX(-150%)':
+            booksampleGroup.style.transform == 'translateX(-150%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
+            booksampleGroup.style.transform == 'translateX(-100%)' ? booksampleGroup.style.transform = 'translateX(-50%)':
+            booksampleGroup.style.transform = 'translateX(0%)';
+        }
+
+        booksampleGroup.style.transition = 'transform 0s ease 0.5s';
+        $(booksampleGroup).animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(".buttonCancel1").animate({height: '30px'}, 0).animate({height: '30px'}, 1000).animate({height: '0'}, 0);
+        $(".buttonbar").animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+    }
+
+    function previousClick2() {
+        if(window.innerWidth > 700) {
+            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookreviewGroup.style.transform = 'translateX(-100%)':
+            bookreviewGroup.style.transform = 'translateX(0%)';
+        }else{
+            bookreviewGroup.style.transform == 'translateX(-250%)' ? bookreviewGroup.style.transform = 'translateX(-200%)':
+            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookreviewGroup.style.transform = 'translateX(-150%)':
+            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookreviewGroup.style.transform = 'translateX(-100%)':
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookreviewGroup.style.transform = 'translateX(-50%)':
+            bookreviewGroup.style.transform = 'translateX(0%)';
+        }
+
+        bookreviewGroup.style.transition = 'transform 0s ease 0.5s';
+        $(bookreviewGroup).animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(".buttonCancel2").animate({height: '30px'}, 0).animate({height: '30px'}, 1000).animate({height: '0'}, 0);
+        $(".buttonbar").animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+    }
+
+    //viewport transition//////////////////////////////////////////////////
     window.onresize = function(event){
         if(bookScale.style.transform != 'scale(1, 1)') {
             var innerWidth = window.innerWidth;
@@ -626,10 +753,7 @@ window.addEventListener('DOMContentLoaded', function(){
         }
     }
 
-    function cancelClick() {
-        bookanimation2();
-    }
-
+    // button color change: hover//////////////////////////////////////////////////
 	onmousemove = buttonColor;
 
 	function buttonColor() {
@@ -698,6 +822,4 @@ window.addEventListener('DOMContentLoaded', function(){
 	}, function() {
 		$(this).css("background-color", "rgba(248, 248, 255, 0.5)");
 	});
-
-	$(".ract").draggable();
 });
