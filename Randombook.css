@@ -102,7 +102,7 @@ a{
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
 	cursor: pointer;
-	transition: all 0.4s;
+	transition: all 0.2s;
 	border-radius: 50px;
 }
 
@@ -134,7 +134,7 @@ a{
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
 	cursor: pointer;
-	transition: all 0.4s;
+	transition: all 0.2s;
 	border-radius: 50px;
 }
 

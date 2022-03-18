@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	divTag(6);
 	divTag(7);
 	divTag(8);
-
+    
     // screen move//////////////////////////////////////////////////
 	function isMobile() {
 		let user = navigator.userAgent;
@@ -126,10 +126,10 @@ window.addEventListener('DOMContentLoaded', function(){
             positionX = 100 - (dragX * 100 / window.innerWidth);
             positionY = 100 - (dragY * 100 / window.innerHeight);
             main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
-            gradient1.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + dragY * 100 / window.innerHeight + '%';
-            gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%';
-            gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%';
-            gradient4.style.backgroundPosition = '' + positionX + '% ' + positionY + '%';
+            gradient1.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + dragY * 100 / window.innerHeight + '%, 0';
+            gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%, 0';
+            gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%, 0';
+            gradient4.style.backgroundPosition = '' + positionX + '% ' + positionY + '%, 0';
             mainShadow.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             booklistShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             reviewShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
@@ -137,6 +137,46 @@ window.addEventListener('DOMContentLoaded', function(){
 			// console.log(mouseY);
 		});
 	}
+
+    // browser check & event//////////////////////////////////////////////////
+    var agent = window.navigator.userAgent.toLowerCase();
+	var browserName;
+	switch (true) {
+		case agent.indexOf("edge") > -1: 
+			browserName = "MS Edge"; // MS 엣지
+			break;
+		case agent.indexOf("edg/") > -1: 
+			browserName = "Edge (chromium based)"; // 크롬 기반 엣지
+			break;
+		case agent.indexOf("opr") > -1 && !!window.opr: 
+			browserName = "Opera"; // 오페라
+			break;
+		case agent.indexOf("chrome") > -1 && !!window.chrome: 
+			browserName = "Chrome"; // 크롬
+			break;
+		case agent.indexOf("trident") > -1: 
+			browserName = "MS IE"; // 익스플로러
+			break;
+		case agent.indexOf("firefox") > -1: 
+			browserName = "Mozilla Firefox"; // 파이어 폭스
+			break;
+		case agent.indexOf("safari") > -1: 
+			browserName = "Safari"; // 사파리
+			break;
+		default: 
+			browserName = "other"; // 기타
+	}
+
+    if(browserName == "Safari") {
+        gradient1.style['mix-blend-mode'] = 'difference';
+        gradient2.style['mix-blend-mode'] = 'difference';
+        gradient3.style['mix-blend-mode'] = 'difference';
+        gradient4.style['mix-blend-mode'] = 'difference';
+        gradient1.style['-webkit-mix-blend-mode'] = 'difference';
+        gradient2.style['-webkit-mix-blend-mode'] = 'difference';
+        gradient3.style['-webkit-mix-blend-mode'] = 'difference';
+        gradient4.style['-webkit-mix-blend-mode'] = 'difference';
+    }
 
    // DadA logo//////////////////////////////////////////////////
 	let ract = document.querySelector(".ract");
@@ -236,6 +276,12 @@ window.addEventListener('DOMContentLoaded', function(){
     let booksampleGroup = document.querySelector(".booksampleGroup");
     let bookreviewGroup = document.querySelector(".bookreviewGroup");
 
+    let bookRact11 = document.querySelectorAll(".bookRact11");
+    let bookRact12 = document.querySelectorAll(".bookRact12");
+    let bookRact13 = document.querySelectorAll(".bookRact13");
+    let bookRact14 = document.querySelectorAll(".bookRact14");
+    let bookRact15 = document.querySelectorAll(".bookRact15");
+
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
 	nav_ul.style.transform = 'translateX(-80px)';
@@ -246,6 +292,9 @@ window.addEventListener('DOMContentLoaded', function(){
     bookScale.style['-webkit-transform'] = 'scale(1, 1)';
     booksampleGroup.style.transform = 'translateX(0%)';
     bookreviewGroup.style.transform = 'translateX(0%)';
+    // bookRact11[1].style.transform = 'rotateY(0)';
+    // bookRact12[1].style.transform = 'rotateY(0)';
+    // bookRact13[1].style.transform = 'rotateY(0)';
 
 	category.onclick = categoryClick;
 	category2.onclick = categoryClick2;
@@ -489,6 +538,16 @@ window.addEventListener('DOMContentLoaded', function(){
         booksampleGroup.style.transitionDelay = '1.5s';
         bookreviewGroup.style.transform = 'translateX(0%)';
         bookreviewGroup.style.transitionDelay = '1.5s';
+        bookRact11[0].style.transform = 'rotateY(0)';
+        bookRact12[0].style.transform = 'rotateY(0)';
+        bookRact13[0].style.transform = 'rotateY(0)';
+        bookRact14[0].style.transform = 'rotateY(0)';
+        bookRact15[0].style.transform = 'rotateY(0)';
+        bookRact11[1].style.transform = 'rotateY(0)';
+        bookRact12[1].style.transform = 'rotateY(0)';
+        bookRact13[1].style.transform = 'rotateY(0)';
+        bookRact14[1].style.transform = 'rotateY(0)';
+        bookRact15[1].style.transform = 'rotateY(0)';
     }
 
     function booklistAnimaition(number) {
@@ -624,73 +683,144 @@ window.addEventListener('DOMContentLoaded', function(){
         if(window.innerWidth > 700) {
             booksampleGroup.style.transform == 'translateX(0%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
             booksampleGroup.style.transform = 'translateX(-200%)';
-
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact11[1].style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact12[1].style.transform = 'rotateY(-180deg)':
+            bookRact13[1].style.transform = 'rotateY(-180deg)';
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact11[0].style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact12[0].style.transform = 'rotateY(-180deg)':
+            bookRact13[0].style.transform = 'rotateY(-180deg)';
         }else{
             booksampleGroup.style.transform == 'translateX(0%)' ? booksampleGroup.style.transform = 'translateX(-50%)':
             booksampleGroup.style.transform == 'translateX(-50%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
             booksampleGroup.style.transform == 'translateX(-100%)' ? booksampleGroup.style.transform = 'translateX(-150%)':
             booksampleGroup.style.transform == 'translateX(-150%)' ? booksampleGroup.style.transform = 'translateX(-200%)':
             booksampleGroup.style.transform = 'translateX(-250%)';
+            booksampleGroup.style.transform == 'translateX(-50%)' ? bookRact11[1].style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact12[1].style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-150%)' ? bookRact13[1].style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact14[1].style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-250%)' ? bookRact15[1].style.transform = 'rotateY(-180deg)':
+            bookRact15[1].style.transform = 'rotateY(-180deg)';
+            booksampleGroup.style.transform == 'translateX(-50%)' ? bookRact11[0].style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact12[0].style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-150%)' ? bookRact13[0].style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact14[0].style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-250%)' ? bookRact15[0].style.transform = 'rotateY(-180deg)':
+            bookRact15[0].style.transform = 'rotateY(-180deg)';
         }
 
         booksampleGroup.style.transition = 'transform 0s ease 0.5s';
-        $(booksampleGroup).animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(booksampleGroup).animate({opacity: '0'}, 300).animate({opacity: '0'}, 400).animate({opacity: '1'}, 300);
         $(".buttonCancel1").animate({height: '30px'}, 0).animate({height: '30px'}, 1000).animate({height: '0'}, 0);
-        $(".buttonbar").animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(".buttonbar").animate({opacity: '0'}, 300).animate({opacity: '0'}, 400).animate({opacity: '1'}, 300);
     }
 
     function nextClick2() {
         if(window.innerWidth > 700) {
             bookreviewGroup.style.transform == 'translateX(0%)' ? bookreviewGroup.style.transform = 'translateX(-100%)':
             bookreviewGroup.style.transform = 'translateX(-200%)';
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact11[1].style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact12[1].style.transform = 'rotateY(-180deg)':
+            bookRact13[1].style.transform = 'rotateY(-180deg)';
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact11[0].style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact12[0].style.transform = 'rotateY(-180deg)':
+            bookRact13[0].style.transform = 'rotateY(-180deg)';
         }else{
             bookreviewGroup.style.transform == 'translateX(0%)' ? bookreviewGroup.style.transform = 'translateX(-50%)':
             bookreviewGroup.style.transform == 'translateX(-50%)' ? bookreviewGroup.style.transform = 'translateX(-100%)':
             bookreviewGroup.style.transform == 'translateX(-100%)' ? bookreviewGroup.style.transform = 'translateX(-150%)':
             bookreviewGroup.style.transform == 'translateX(-150%)' ? bookreviewGroup.style.transform = 'translateX(-200%)':
             bookreviewGroup.style.transform = 'translateX(-250%)';
+            bookreviewGroup.style.transform == 'translateX(-50%)' ? bookRact11[1].style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact12[1].style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookRact13[1].style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact14[1].style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-250%)' ? bookRact15[1].style.transform = 'rotateY(-180deg)':
+            bookRact15[1].style.transform = 'rotateY(-180deg)';
+            bookreviewGroup.style.transform == 'translateX(-50%)' ? bookRact11[0].style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact12[0].style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookRact13[0].style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact14[0].style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-250%)' ? bookRact15[0].style.transform = 'rotateY(-180deg)':
+            bookRact15[0].style.transform = 'rotateY(-180deg)';
         }
 
         bookreviewGroup.style.transition = 'transform 0s ease 0.5s';
-        $(bookreviewGroup).animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(bookreviewGroup).animate({opacity: '0'}, 300).animate({opacity: '0'}, 400).animate({opacity: '1'}, 300);
         $(".buttonCancel2").animate({height: '30px'}, 0).animate({height: '30px'}, 1000).animate({height: '0'}, 0);
-        $(".buttonbar").animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(".buttonbar").animate({opacity: '0'}, 300).animate({opacity: '0'}, 400).animate({opacity: '1'}, 300);
     }
 
     function previousClick1() {
         if(window.innerWidth > 700) {
             booksampleGroup.style.transform == 'translateX(-200%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
             booksampleGroup.style.transform = 'translateX(0%)';
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact12[1].style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(0%)' ? bookRact11[1].style.transform = 'rotateY(0deg)':
+            bookRact13[1].style.transform = 'rotateY(0deg)';
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact12[0].style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(0%)' ? bookRact11[0].style.transform = 'rotateY(0deg)':
+            bookRact13[0].style.transform = 'rotateY(0deg)';
         }else{
             booksampleGroup.style.transform == 'translateX(-250%)' ? booksampleGroup.style.transform = 'translateX(-200%)':
             booksampleGroup.style.transform == 'translateX(-200%)' ? booksampleGroup.style.transform = 'translateX(-150%)':
             booksampleGroup.style.transform == 'translateX(-150%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
             booksampleGroup.style.transform == 'translateX(-100%)' ? booksampleGroup.style.transform = 'translateX(-50%)':
             booksampleGroup.style.transform = 'translateX(0%)';
+            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact15[1].style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(-150%)' ? bookRact14[1].style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact13[1].style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(-50%)' ? bookRact12[1].style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(0%)' ? bookRact11[1].style.transform = 'rotateY(0deg)':
+            bookRact11[1].style.transform = 'rotateY(0deg)';
+            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact15[0].style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(-150%)' ? bookRact14[0].style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact13[0].style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(-50%)' ? bookRact12[0].style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(0%)' ? bookRact11[0].style.transform = 'rotateY(0deg)':
+            bookRact11[0].style.transform = 'rotateY(0deg)';
         }
 
         booksampleGroup.style.transition = 'transform 0s ease 0.5s';
-        $(booksampleGroup).animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(booksampleGroup).animate({opacity: '0'}, 300).animate({opacity: '0'}, 400).animate({opacity: '1'}, 300);
         $(".buttonCancel1").animate({height: '30px'}, 0).animate({height: '30px'}, 1000).animate({height: '0'}, 0);
-        $(".buttonbar").animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(".buttonbar").animate({opacity: '0'}, 300).animate({opacity: '0'}, 400).animate({opacity: '1'}, 300);
     }
 
     function previousClick2() {
         if(window.innerWidth > 700) {
             bookreviewGroup.style.transform == 'translateX(-200%)' ? bookreviewGroup.style.transform = 'translateX(-100%)':
             bookreviewGroup.style.transform = 'translateX(0%)';
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact12[1].style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(0%)' ? bookRact11[1].style.transform = 'rotateY(0deg)':
+            bookRact13[1].style.transform = 'rotateY(0deg)';
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact12[0].style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(0%)' ? bookRact11[0].style.transform = 'rotateY(0deg)':
+            bookRact13[0].style.transform = 'rotateY(0deg)';
         }else{
             bookreviewGroup.style.transform == 'translateX(-250%)' ? bookreviewGroup.style.transform = 'translateX(-200%)':
             bookreviewGroup.style.transform == 'translateX(-200%)' ? bookreviewGroup.style.transform = 'translateX(-150%)':
             bookreviewGroup.style.transform == 'translateX(-150%)' ? bookreviewGroup.style.transform = 'translateX(-100%)':
             bookreviewGroup.style.transform == 'translateX(-100%)' ? bookreviewGroup.style.transform = 'translateX(-50%)':
             bookreviewGroup.style.transform = 'translateX(0%)';
+            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact15[1].style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookRact14[1].style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact13[1].style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(-50%)' ? bookRact12[1].style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(0%)' ? bookRact11[1].style.transform = 'rotateY(0deg)':
+            bookRact11[1].style.transform = 'rotateY(0deg)';
+            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact15[0].style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookRact14[0].style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact13[0].style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(-50%)' ? bookRact12[0].style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(0%)' ? bookRact11[0].style.transform = 'rotateY(0deg)':
+            bookRact11[0].style.transform = 'rotateY(0deg)';
         }
 
         bookreviewGroup.style.transition = 'transform 0s ease 0.5s';
-        $(bookreviewGroup).animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(bookreviewGroup).animate({opacity: '0'}, 300).animate({opacity: '0'}, 400).animate({opacity: '1'}, 300);
         $(".buttonCancel2").animate({height: '30px'}, 0).animate({height: '30px'}, 1000).animate({height: '0'}, 0);
-        $(".buttonbar").animate({opacity: '0'}, 500).animate({opacity: '1'}, 500);
+        $(".buttonbar").animate({opacity: '0'}, 300).animate({opacity: '0'}, 400).animate({opacity: '1'}, 300);
     }
 
     //viewport transition//////////////////////////////////////////////////
@@ -821,5 +951,35 @@ window.addEventListener('DOMContentLoaded', function(){
 		$(this).css("background-color", "rgba(" + red + ", " + green + ", " + blue + ", 0.5)");
 	}, function() {
 		$(this).css("background-color", "rgba(248, 248, 255, 0.5)");
+	});
+
+    $(".cancelbutton").hover(function() {
+		$(this).css("color", "rgba(" + red + ", " + green + ", " + blue + ")");
+	}, function() {
+		$(this).css("color", "slategrey");
+	});
+
+    $(".nextbutton1").hover(function() {
+		$(this).css("color", "rgba(" + red + ", " + green + ", " + blue + ")");
+	}, function() {
+		$(this).css("color", "slategrey");
+	});
+
+    $(".nextbutton2").hover(function() {
+		$(this).css("color", "rgba(" + red + ", " + green + ", " + blue + ")");
+	}, function() {
+		$(this).css("color", "slategrey");
+	});
+
+    $(".previousbutton1").hover(function() {
+		$(this).css("color", "rgba(" + red + ", " + green + ", " + blue + ")");
+	}, function() {
+		$(this).css("color", "slategrey");
+	});
+
+    $(".previousbutton2").hover(function() {
+		$(this).css("color", "rgba(" + red + ", " + green + ", " + blue + ")");
+	}, function() {
+		$(this).css("color", "slategrey");
 	});
 });
