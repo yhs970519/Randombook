@@ -942,6 +942,8 @@ main{
 
     .bookinfo, .readertext{
         width: calc(45vw - 4vh - 2.4vh);
+        height: 4vh;
+        flex-wrap: nowrap;
     }
 
     .booksample a, .readername{
