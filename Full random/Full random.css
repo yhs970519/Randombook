@@ -946,11 +946,10 @@ main{
     }
 
     .booksample a, .readername{
-        display: flex;
-        flex-wrap: nowrap;
         transform: scale(0.8, 0.8);
         transform-origin: 0 0;
         margin-bottom: 0;
+        width: 45vw;
     }
 
     .booksample img{
