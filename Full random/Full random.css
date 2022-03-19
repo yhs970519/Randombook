@@ -947,6 +947,10 @@ main{
         transform-origin: 0 0;
     }
 
+    .readertext{
+        width: calc(45vw - 4vh - 2.4vh - 5px);
+    }
+
     .booksample a, .readername{
         width: 45vw;
         margin-top: -2px;
