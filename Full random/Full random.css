@@ -943,12 +943,11 @@ main{
     .bookinfo, .readertext{
         width: calc(45vw - 4vh - 2.4vh);
         height: 4vh;
+        transform: scale(0.8, 0.8);
+        transform-origin: 0 0;
     }
 
     .booksample a, .readername{
-        transform: scale(0.8, 0.8);
-        transform-origin: 0 0;
-        margin-bottom: 0;
         width: 45vw;
     }
 
