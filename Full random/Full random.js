@@ -276,11 +276,19 @@ window.addEventListener('DOMContentLoaded', function(){
     let booksampleGroup = document.querySelector(".booksampleGroup");
     let bookreviewGroup = document.querySelector(".bookreviewGroup");
 
-    let bookRact11 = document.querySelectorAll(".bookRact11");
-    let bookRact12 = document.querySelectorAll(".bookRact12");
-    let bookRact13 = document.querySelectorAll(".bookRact13");
-    let bookRact14 = document.querySelectorAll(".bookRact14");
-    let bookRact15 = document.querySelectorAll(".bookRact15");
+    let bookRact11 = document.querySelector(".bookRact11");
+    let bookRact12 = document.querySelector(".bookRact12");
+    let bookRact13 = document.querySelector(".bookRact13");
+    let bookRact14 = document.querySelector(".bookRact14");
+    let bookRact15 = document.querySelector(".bookRact15");
+
+    let now = document.querySelector(".now");
+    let get = document.querySelector(".get");
+    let priceLabel = document.querySelector(".priceLabel");
+    let priceLabelShadow = document.querySelector(".priceLabelShadow");
+    
+    let purchase = document.querySelector(".purchase");
+    let complete = document.querySelector(".complete");
 
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
@@ -292,9 +300,6 @@ window.addEventListener('DOMContentLoaded', function(){
     bookScale.style['-webkit-transform'] = 'scale(1, 1)';
     booksampleGroup.style.transform = 'translateX(0%)';
     bookreviewGroup.style.transform = 'translateX(0%)';
-    // bookRact11[1].style.transform = 'rotateY(0)';
-    // bookRact12[1].style.transform = 'rotateY(0)';
-    // bookRact13[1].style.transform = 'rotateY(0)';
 
 	category.onclick = categoryClick;
 	category2.onclick = categoryClick2;
@@ -312,6 +317,11 @@ window.addEventListener('DOMContentLoaded', function(){
     nextbutton2.onclick = nextClick2;
     previousbutton1.onclick = previousClick1;
     previousbutton2.onclick = previousClick2;
+
+    now.onclick = nowClick;
+    get.onclick = getClick;
+
+    complete.onclick = completeClick;
 	
 	function categoryClick() {
 		if (nav.style.transform == 'translateX(-100%)') {
@@ -450,6 +460,14 @@ window.addEventListener('DOMContentLoaded', function(){
         bookRact10[1].style.transform = 'rotateY(-180deg)';
         booksampleGroup.style.transitionDelay = '0s';
         bookreviewGroup.style.transitionDelay = '0s';
+        now.style.visibility = 'hidden';
+        now.style.opacity = '0';
+        get.style.visibility = 'hidden';
+        get.style.opacity = '0';
+        priceLabel.style.opacity = '0';
+        priceLabelShadow.style.opacity = '0';
+        purchase.style.opacity = '0';
+        purchase.style.visibility = 'hidden';
     }
 
     function bookanimation2() {
@@ -538,16 +556,12 @@ window.addEventListener('DOMContentLoaded', function(){
         booksampleGroup.style.transitionDelay = '1.5s';
         bookreviewGroup.style.transform = 'translateX(0%)';
         bookreviewGroup.style.transitionDelay = '1.5s';
-        bookRact11[0].style.transform = 'rotateY(0)';
-        bookRact12[0].style.transform = 'rotateY(0)';
-        bookRact13[0].style.transform = 'rotateY(0)';
-        bookRact14[0].style.transform = 'rotateY(0)';
-        bookRact15[0].style.transform = 'rotateY(0)';
-        bookRact11[1].style.transform = 'rotateY(0)';
-        bookRact12[1].style.transform = 'rotateY(0)';
-        bookRact13[1].style.transform = 'rotateY(0)';
-        bookRact14[1].style.transform = 'rotateY(0)';
-        bookRact15[1].style.transform = 'rotateY(0)';
+        bookRact11.style.transform = 'rotateY(0)';
+        bookRact12.style.transform = 'rotateY(0)';
+        bookRact13.style.transform = 'rotateY(0)';
+        bookRact14.style.transform = 'rotateY(0)';
+        bookRact15.style.transform = 'rotateY(0)';
+        buy.style.visibility = 'visible';
     }
 
     function booklistAnimaition(number) {
@@ -584,11 +598,44 @@ window.addEventListener('DOMContentLoaded', function(){
     }
 
     function buyClick() {
-		if (window.innerWidth > 700) {
-			buy.style.color = 'plum';
-		}else{
-			buy.style.color = 'green';
-		}
+        buy.style.transition = 'all 0.5s ease';
+        buy.style.visibility = 'hidden';
+        buy.style.opacity = '0';
+        now.style.visibility = 'visible';
+        now.style.opacity = '1';
+        get.style.visibility = 'visible';
+        get.style.opacity = '1';
+        priceLabel.style.opacity = '1';
+        priceLabelShadow.style.opacity = '1';
+	}
+
+    function nowClick() {
+        purchase.style.opacity = '1';
+        purchase.style.visibility = 'visible';
+        now.style.visibility = 'hidden';
+        now.style.opacity = '0';
+        get.style.visibility = 'hidden';
+        get.style.opacity = '0';
+	}
+
+    function completeClick() {
+        purchase.style.opacity = '0';
+        purchase.style.visibility = 'hidden';
+        buy.style.visibility = 'visible';
+        buy.style.opacity = '1';
+        priceLabel.style.opacity = '0';
+        priceLabelShadow.style.opacity = '0';
+    }
+
+    function getClick() {
+        buy.style.visibility = 'visible';
+        buy.style.opacity = '1';
+        now.style.visibility = 'hidden';
+        now.style.opacity = '0';
+        get.style.visibility = 'hidden';
+        get.style.opacity = '0';
+        priceLabel.style.opacity = '0';
+        priceLabelShadow.style.opacity = '0';
 	}
 
     function booklistClick() {
@@ -683,30 +730,21 @@ window.addEventListener('DOMContentLoaded', function(){
         if(window.innerWidth > 700) {
             booksampleGroup.style.transform == 'translateX(0%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
             booksampleGroup.style.transform = 'translateX(-200%)';
-            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact11[1].style.transform = 'rotateY(-180deg)':
-            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact12[1].style.transform = 'rotateY(-180deg)':
-            bookRact13[1].style.transform = 'rotateY(-180deg)';
-            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact11[0].style.transform = 'rotateY(-180deg)':
-            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact12[0].style.transform = 'rotateY(-180deg)':
-            bookRact13[0].style.transform = 'rotateY(-180deg)';
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact11.style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact12.style.transform = 'rotateY(-180deg)':
+            bookRact13.style.transform = 'rotateY(-180deg)';
         }else{
             booksampleGroup.style.transform == 'translateX(0%)' ? booksampleGroup.style.transform = 'translateX(-50%)':
             booksampleGroup.style.transform == 'translateX(-50%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
             booksampleGroup.style.transform == 'translateX(-100%)' ? booksampleGroup.style.transform = 'translateX(-150%)':
             booksampleGroup.style.transform == 'translateX(-150%)' ? booksampleGroup.style.transform = 'translateX(-200%)':
             booksampleGroup.style.transform = 'translateX(-250%)';
-            booksampleGroup.style.transform == 'translateX(-50%)' ? bookRact11[1].style.transform = 'rotateY(-180deg)':
-            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact12[1].style.transform = 'rotateY(-180deg)':
-            booksampleGroup.style.transform == 'translateX(-150%)' ? bookRact13[1].style.transform = 'rotateY(-180deg)':
-            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact14[1].style.transform = 'rotateY(-180deg)':
-            booksampleGroup.style.transform == 'translateX(-250%)' ? bookRact15[1].style.transform = 'rotateY(-180deg)':
-            bookRact15[1].style.transform = 'rotateY(-180deg)';
-            booksampleGroup.style.transform == 'translateX(-50%)' ? bookRact11[0].style.transform = 'rotateY(-180deg)':
-            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact12[0].style.transform = 'rotateY(-180deg)':
-            booksampleGroup.style.transform == 'translateX(-150%)' ? bookRact13[0].style.transform = 'rotateY(-180deg)':
-            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact14[0].style.transform = 'rotateY(-180deg)':
-            booksampleGroup.style.transform == 'translateX(-250%)' ? bookRact15[0].style.transform = 'rotateY(-180deg)':
-            bookRact15[0].style.transform = 'rotateY(-180deg)';
+            booksampleGroup.style.transform == 'translateX(-50%)' ? bookRact11.style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact12.style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-150%)' ? bookRact13.style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact14.style.transform = 'rotateY(-180deg)':
+            booksampleGroup.style.transform == 'translateX(-250%)' ? bookRact15.style.transform = 'rotateY(-180deg)':
+            bookRact15.style.transform = 'rotateY(-180deg)';
         }
 
         booksampleGroup.style.transition = 'transform 0s ease 0.5s';
@@ -719,30 +757,21 @@ window.addEventListener('DOMContentLoaded', function(){
         if(window.innerWidth > 700) {
             bookreviewGroup.style.transform == 'translateX(0%)' ? bookreviewGroup.style.transform = 'translateX(-100%)':
             bookreviewGroup.style.transform = 'translateX(-200%)';
-            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact11[1].style.transform = 'rotateY(-180deg)':
-            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact12[1].style.transform = 'rotateY(-180deg)':
-            bookRact13[1].style.transform = 'rotateY(-180deg)';
-            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact11[0].style.transform = 'rotateY(-180deg)':
-            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact12[0].style.transform = 'rotateY(-180deg)':
-            bookRact13[0].style.transform = 'rotateY(-180deg)';
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact11.style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact12.style.transform = 'rotateY(-180deg)':
+            bookRact13.style.transform = 'rotateY(-180deg)';
         }else{
             bookreviewGroup.style.transform == 'translateX(0%)' ? bookreviewGroup.style.transform = 'translateX(-50%)':
             bookreviewGroup.style.transform == 'translateX(-50%)' ? bookreviewGroup.style.transform = 'translateX(-100%)':
             bookreviewGroup.style.transform == 'translateX(-100%)' ? bookreviewGroup.style.transform = 'translateX(-150%)':
             bookreviewGroup.style.transform == 'translateX(-150%)' ? bookreviewGroup.style.transform = 'translateX(-200%)':
             bookreviewGroup.style.transform = 'translateX(-250%)';
-            bookreviewGroup.style.transform == 'translateX(-50%)' ? bookRact11[1].style.transform = 'rotateY(-180deg)':
-            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact12[1].style.transform = 'rotateY(-180deg)':
-            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookRact13[1].style.transform = 'rotateY(-180deg)':
-            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact14[1].style.transform = 'rotateY(-180deg)':
-            bookreviewGroup.style.transform == 'translateX(-250%)' ? bookRact15[1].style.transform = 'rotateY(-180deg)':
-            bookRact15[1].style.transform = 'rotateY(-180deg)';
-            bookreviewGroup.style.transform == 'translateX(-50%)' ? bookRact11[0].style.transform = 'rotateY(-180deg)':
-            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact12[0].style.transform = 'rotateY(-180deg)':
-            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookRact13[0].style.transform = 'rotateY(-180deg)':
-            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact14[0].style.transform = 'rotateY(-180deg)':
-            bookreviewGroup.style.transform == 'translateX(-250%)' ? bookRact15[0].style.transform = 'rotateY(-180deg)':
-            bookRact15[0].style.transform = 'rotateY(-180deg)';
+            bookreviewGroup.style.transform == 'translateX(-50%)' ? bookRact11.style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact12.style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookRact13.style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact14.style.transform = 'rotateY(-180deg)':
+            bookreviewGroup.style.transform == 'translateX(-250%)' ? bookRact15.style.transform = 'rotateY(-180deg)':
+            bookRact15.style.transform = 'rotateY(-180deg)';
         }
 
         bookreviewGroup.style.transition = 'transform 0s ease 0.5s';
@@ -755,30 +784,21 @@ window.addEventListener('DOMContentLoaded', function(){
         if(window.innerWidth > 700) {
             booksampleGroup.style.transform == 'translateX(-200%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
             booksampleGroup.style.transform = 'translateX(0%)';
-            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact12[1].style.transform = 'rotateY(0deg)':
-            booksampleGroup.style.transform == 'translateX(0%)' ? bookRact11[1].style.transform = 'rotateY(0deg)':
-            bookRact13[1].style.transform = 'rotateY(0deg)';
-            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact12[0].style.transform = 'rotateY(0deg)':
-            booksampleGroup.style.transform == 'translateX(0%)' ? bookRact11[0].style.transform = 'rotateY(0deg)':
-            bookRact13[0].style.transform = 'rotateY(0deg)';
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact12.style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(0%)' ? bookRact11.style.transform = 'rotateY(0deg)':
+            bookRact13.style.transform = 'rotateY(0deg)';
         }else{
             booksampleGroup.style.transform == 'translateX(-250%)' ? booksampleGroup.style.transform = 'translateX(-200%)':
             booksampleGroup.style.transform == 'translateX(-200%)' ? booksampleGroup.style.transform = 'translateX(-150%)':
             booksampleGroup.style.transform == 'translateX(-150%)' ? booksampleGroup.style.transform = 'translateX(-100%)':
             booksampleGroup.style.transform == 'translateX(-100%)' ? booksampleGroup.style.transform = 'translateX(-50%)':
             booksampleGroup.style.transform = 'translateX(0%)';
-            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact15[1].style.transform = 'rotateY(0deg)':
-            booksampleGroup.style.transform == 'translateX(-150%)' ? bookRact14[1].style.transform = 'rotateY(0deg)':
-            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact13[1].style.transform = 'rotateY(0deg)':
-            booksampleGroup.style.transform == 'translateX(-50%)' ? bookRact12[1].style.transform = 'rotateY(0deg)':
-            booksampleGroup.style.transform == 'translateX(0%)' ? bookRact11[1].style.transform = 'rotateY(0deg)':
-            bookRact11[1].style.transform = 'rotateY(0deg)';
-            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact15[0].style.transform = 'rotateY(0deg)':
-            booksampleGroup.style.transform == 'translateX(-150%)' ? bookRact14[0].style.transform = 'rotateY(0deg)':
-            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact13[0].style.transform = 'rotateY(0deg)':
-            booksampleGroup.style.transform == 'translateX(-50%)' ? bookRact12[0].style.transform = 'rotateY(0deg)':
-            booksampleGroup.style.transform == 'translateX(0%)' ? bookRact11[0].style.transform = 'rotateY(0deg)':
-            bookRact11[0].style.transform = 'rotateY(0deg)';
+            booksampleGroup.style.transform == 'translateX(-200%)' ? bookRact15.style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(-150%)' ? bookRact14.style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(-100%)' ? bookRact13.style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(-50%)' ? bookRact12.style.transform = 'rotateY(0deg)':
+            booksampleGroup.style.transform == 'translateX(0%)' ? bookRact11.style.transform = 'rotateY(0deg)':
+            bookRact11.style.transform = 'rotateY(0deg)';
         }
 
         booksampleGroup.style.transition = 'transform 0s ease 0.5s';
@@ -794,27 +814,18 @@ window.addEventListener('DOMContentLoaded', function(){
             bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact12[1].style.transform = 'rotateY(0deg)':
             bookreviewGroup.style.transform == 'translateX(0%)' ? bookRact11[1].style.transform = 'rotateY(0deg)':
             bookRact13[1].style.transform = 'rotateY(0deg)';
-            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact12[0].style.transform = 'rotateY(0deg)':
-            bookreviewGroup.style.transform == 'translateX(0%)' ? bookRact11[0].style.transform = 'rotateY(0deg)':
-            bookRact13[0].style.transform = 'rotateY(0deg)';
         }else{
             bookreviewGroup.style.transform == 'translateX(-250%)' ? bookreviewGroup.style.transform = 'translateX(-200%)':
             bookreviewGroup.style.transform == 'translateX(-200%)' ? bookreviewGroup.style.transform = 'translateX(-150%)':
             bookreviewGroup.style.transform == 'translateX(-150%)' ? bookreviewGroup.style.transform = 'translateX(-100%)':
             bookreviewGroup.style.transform == 'translateX(-100%)' ? bookreviewGroup.style.transform = 'translateX(-50%)':
             bookreviewGroup.style.transform = 'translateX(0%)';
-            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact15[1].style.transform = 'rotateY(0deg)':
-            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookRact14[1].style.transform = 'rotateY(0deg)':
-            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact13[1].style.transform = 'rotateY(0deg)':
-            bookreviewGroup.style.transform == 'translateX(-50%)' ? bookRact12[1].style.transform = 'rotateY(0deg)':
-            bookreviewGroup.style.transform == 'translateX(0%)' ? bookRact11[1].style.transform = 'rotateY(0deg)':
-            bookRact11[1].style.transform = 'rotateY(0deg)';
-            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact15[0].style.transform = 'rotateY(0deg)':
-            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookRact14[0].style.transform = 'rotateY(0deg)':
-            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact13[0].style.transform = 'rotateY(0deg)':
-            bookreviewGroup.style.transform == 'translateX(-50%)' ? bookRact12[0].style.transform = 'rotateY(0deg)':
-            bookreviewGroup.style.transform == 'translateX(0%)' ? bookRact11[0].style.transform = 'rotateY(0deg)':
-            bookRact11[0].style.transform = 'rotateY(0deg)';
+            bookreviewGroup.style.transform == 'translateX(-200%)' ? bookRact15.style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(-150%)' ? bookRact14.style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(-100%)' ? bookRact13.style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(-50%)' ? bookRact12.style.transform = 'rotateY(0deg)':
+            bookreviewGroup.style.transform == 'translateX(0%)' ? bookRact11.style.transform = 'rotateY(0deg)':
+            bookRact11.style.transform = 'rotateY(0deg)';
         }
 
         bookreviewGroup.style.transition = 'transform 0s ease 0.5s';
