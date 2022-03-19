@@ -949,6 +949,11 @@ main{
 
     .booksample a, .readername{
         width: 45vw;
+        margin-top: -2px;
+    }
+
+    .booksample a{
+        margin-bottom: 3px;
     }
 
     .booksample img{
