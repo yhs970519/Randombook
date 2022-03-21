@@ -741,11 +741,11 @@
                         <div class="purchase">
                             <div class="purchaseBox">
                                 <div class="userName">Name</div>
-                                <input type="text" class="name">
+                                <input type="text" maxlength="20" class="name">
                                 <div class="userAddress">Address</div>
-                                <input type="text" class="address">
+                                <textarea type="text" cols="4" class="address"></textarea>
                                 <div class="userPhonenumber">Phone number</div>
-                                <input type="text" class="phonenumber">
+                                <input type="tel" maxlength="11" class="phonenumber" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                                 <div class="userPayment">Payment method</div>
                                 <button class="payment">初回無料</button>
                             </div>
