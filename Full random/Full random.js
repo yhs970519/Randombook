@@ -289,6 +289,7 @@ window.addEventListener('DOMContentLoaded', function(){
     
     let purchase = document.querySelector(".purchase");
     let complete = document.querySelector(".complete");
+    let thank = document.querySelector(".thank");
 
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
@@ -619,17 +620,23 @@ window.addEventListener('DOMContentLoaded', function(){
 	}
 
     function completeClick() {
+        $(thank).animate({opacity: '1'}, 500).animate({opacity: '1'}, 1000).animate({opacity: '0'}, 500);
+        thank.style.visibility = 'visible';
         purchase.style.opacity = '0';
         purchase.style.visibility = 'hidden';
         buy.style.visibility = 'visible';
-        buy.style.opacity = '1';
+        $(buy).animate({opacity: '0'}, 2000).animate({opacity: '1'}, 500);
         priceLabel.style.opacity = '0';
         priceLabelShadow.style.opacity = '0';
     }
 
     function getClick() {
+        $(thank).animate({opacity: '1'}, 500).animate({opacity: '1'}, 1000).animate({opacity: '0'}, 500);
+        thank.style.visibility = 'visible';
+        purchase.style.opacity = '0';
+        purchase.style.visibility = 'hidden';
         buy.style.visibility = 'visible';
-        buy.style.opacity = '1';
+        $(buy).animate({opacity: '0'}, 2000).animate({opacity: '1'}, 500);
         now.style.visibility = 'hidden';
         now.style.opacity = '0';
         get.style.visibility = 'hidden';

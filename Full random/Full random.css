@@ -420,6 +420,25 @@ main{
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    font-size: 12px;
+    font-family: Futura,'M PLUS 1',Trebuchet MS,Arial,sans-serif;
+    font-weight: 500;
+}
+
+.thank{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: calc(16px + 2vw);
+    font-family: Futura,'M PLUS 1',Trebuchet MS,Arial,sans-serif;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s ease;
+    -webkit-transition: visibility 0.5s ease;
 }
 
 .bookSample, .bookReview{
@@ -1073,8 +1092,10 @@ main{
     }
 
     .booksample a, .readername{
-        width: 45vw;
-        margin-top: -2px;
+        width: 60vw;
+        margin-top: -1px;
+        transform: scale(0.8, 0.8);
+        transform-origin: 0 0;
     }
 
     .booksample a{
