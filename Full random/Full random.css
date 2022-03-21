@@ -1094,12 +1094,19 @@ main{
     .booksample a, .readername{
         width: 60vw;
         margin-top: -1px;
+        margin-bottom: 0;
         transform: scale(0.8, 0.8);
         transform-origin: 0 0;
     }
 
     .booksample a{
-        margin-bottom: 3px;
+        margin-bottom: -1px;
+    }
+
+    .author, .publisher, .price, .readercomment{
+        line-height: 0.8;
+        transform: scale(0.6, 0.6);
+        opacity: 0.75;
     }
 
     .booksample img{
