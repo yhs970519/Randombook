@@ -32,11 +32,11 @@ window.addEventListener('DOMContentLoaded', function(){
 		if( user.indexOf("iPhone") > -1 
 		|| user.indexOf("Android") > -1 
 		|| user.indexOf("iPad") > -1 
-		|| user.indexOf("iPod") > -1 ) 
+		|| user.indexOf("iPod") > -1 )
 		{
 			is_mobile = true; 
 		}
-		return is_mobile; 
+		return is_mobile;
 	}
 
 	var is_mobile = isMobile();
@@ -45,6 +45,10 @@ window.addEventListener('DOMContentLoaded', function(){
     let gradient2 = document.querySelector(".gradient2");
     let gradient3 = document.querySelector(".gradient3");
     let gradient4 = document.querySelector(".gradient4");
+    let package1 = document.querySelector(".package1");
+    let package2 = document.querySelector(".package2");
+    let package3 = document.querySelector(".package3");
+    let package4 = document.querySelector(".package4");
 	let frameT = document.querySelector(".frame_top");
 	let frameB = document.querySelector(".frame_bottom");
 	let frameL = document.querySelector(".frame_left");
@@ -58,6 +62,32 @@ window.addEventListener('DOMContentLoaded', function(){
     let dragY;
     let positionX;
     let positionY;
+
+    let red1 = Math.floor(Math.random() * 256);
+    let green1 = Math.floor(Math.random() * 256);
+    let blue1 = Math.floor(Math.random() * 256);
+
+    let red2 = Math.floor(Math.random() * 256);
+    let green2 = Math.floor(Math.random() * 256);
+    let blue2 = Math.floor(Math.random() * 256);
+
+    let red3 = Math.floor(Math.random() * 256);
+    let green3 = Math.floor(Math.random() * 256);
+    let blue3 = Math.floor(Math.random() * 256);
+
+    let red4 = Math.floor(Math.random() * 256);
+    let green4 = Math.floor(Math.random() * 256);
+    let blue4 = Math.floor(Math.random() * 256);
+
+    gradient1.style['background-image'] = 'radial-gradient(rgba(' + red1 + ', ' + green1 + ', ' + blue1 + '), rgba(25, 25, 112, 0)60%)';
+    gradient2.style['background-image'] = 'radial-gradient(rgba(' + red2 + ', ' + green2 + ', ' + blue2 + '), rgba(25, 25, 112, 0)60%)';
+    gradient3.style['background-image'] = 'radial-gradient(rgba(' + red3 + ', ' + green3 + ', ' + blue3 + '), rgba(25, 25, 112, 0)60%)';
+    gradient4.style['background-image'] = 'radial-gradient(rgba(' + red4 + ', ' + green4 + ', ' + blue4 + '), rgba(25, 25, 112, 0)60%)';
+
+    package1.style['background-image'] = 'radial-gradient(at 0% 0%, rgba(' + red1 + ', ' + green1 + ', ' + blue1 + '), rgba(' + red1 + ', ' + green1 + ', ' + blue1 + ', 0)60%)';
+    package2.style['background-image'] = 'radial-gradient(at 100% 0%, rgba(' + red2 + ', ' + green2 + ', ' + blue2 + '), rgba(' + red2 + ', ' + green2 + ', ' + blue2 + ', 0)60%)';
+    package3.style['background-image'] = 'radial-gradient(at 0% 100%, rgba(' + red3 + ', ' + green3 + ', ' + blue3 + '), rgba(' + red3 + ', ' + green3 + ', ' + blue3 + ', 0)60%)';
+    package4.style['background-image'] = 'radial-gradient(at 100% 100%, rgba(' + red4 + ', ' + green4 + ', ' + blue4 + '), rgba(' + red4 + ', ' + green4 + ', ' + blue4 + ', 0)60%)';
 
 	if( is_mobile ) {
 		// translate images in mobile
@@ -236,11 +266,6 @@ window.addEventListener('DOMContentLoaded', function(){
     let buy = document.querySelector(".buy");
     let booklist = document.querySelector(".booklist");
     let review = document.querySelector(".review");
-
-    let package1 = document.querySelector(".package1");
-    let package2 = document.querySelector(".package2");
-    let package3 = document.querySelector(".package3");
-    let package4 = document.querySelector(".package4");
     
     let buyBackground = document.querySelector(".buyBackground");
     let booklistBackground = document.querySelector(".booklistBackground");
