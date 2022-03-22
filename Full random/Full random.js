@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	}
 
 	var is_mobile = isMobile();
-	let main_img = document.querySelector(".mainImg");
+	// let main_img = document.querySelector(".mainImg");
     let gradient1 = document.querySelector(".gradient1");
     let gradient2 = document.querySelector(".gradient2");
     let gradient3 = document.querySelector(".gradient3");
@@ -93,8 +93,8 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	if( is_mobile ) {
 		// translate images in mobile
-		main_img.style.marginLeft = '-440px';
-		main_img.style.marginTop = '-360px';
+		// main_img.style.marginLeft = '-440px';
+		// main_img.style.marginTop = '-360px';
 
         gradient1.style['mix-blend-mode'] = 'difference';
         gradient2.style['mix-blend-mode'] = 'difference';
