@@ -24,6 +24,46 @@ window.addEventListener('DOMContentLoaded', function(){
 	divTag(6);
 	divTag(7);
 	divTag(8);
+
+    // browser check & event//////////////////////////////////////////////////
+    var agent = window.navigator.userAgent.toLowerCase();
+	var browserName;
+	switch (true) {
+		case agent.indexOf("edge") > -1: 
+			browserName = "MS Edge"; // MS 엣지
+			break;
+		case agent.indexOf("edg/") > -1: 
+			browserName = "Edge (chromium based)"; // 크롬 기반 엣지
+			break;
+		case agent.indexOf("opr") > -1 && !!window.opr: 
+			browserName = "Opera"; // 오페라
+			break;
+		case agent.indexOf("chrome") > -1 && !!window.chrome: 
+			browserName = "Chrome"; // 크롬
+			break;
+		case agent.indexOf("trident") > -1: 
+			browserName = "MS IE"; // 익스플로러
+			break;
+		case agent.indexOf("firefox") > -1: 
+			browserName = "Mozilla Firefox"; // 파이어 폭스
+			break;
+		case agent.indexOf("safari") > -1: 
+			browserName = "Safari"; // 사파리
+			break;
+		default: 
+			browserName = "other"; // 기타
+	}
+
+    if(browserName == "Safari") {
+        gradient1.style['mix-blend-mode'] = 'difference';
+        gradient2.style['mix-blend-mode'] = 'difference';
+        gradient3.style['mix-blend-mode'] = 'difference';
+        gradient4.style['mix-blend-mode'] = 'difference';
+        gradient1.style['-webkit-mix-blend-mode'] = 'difference';
+        gradient2.style['-webkit-mix-blend-mode'] = 'difference';
+        gradient3.style['-webkit-mix-blend-mode'] = 'difference';
+        gradient4.style['-webkit-mix-blend-mode'] = 'difference';
+    }
     
     // screen move//////////////////////////////////////////////////
 	function isMobile() {
@@ -105,8 +145,16 @@ window.addEventListener('DOMContentLoaded', function(){
         gradient3.style['-webkit-mix-blend-mode'] = 'difference';
         gradient4.style['-webkit-mix-blend-mode'] = 'difference';
 
-        purchaseBox.style.transform = 'scale(0.75, 0.75)';
-        complete.style.transform = 'scale(0.75, 0.75)';
+        if(browserName == "Opera") {
+            purchaseBox.style.transform = 'scale(0.65, 0.65)';
+            complete.style.transform = 'scale(0.65, 0.65)';
+        }else if(browserName == "Mozilla Firefox"){
+            purchaseBox.style.transform = 'scale(0.65, 0.65)';
+            complete.style.transform = 'scale(0.65, 0.65)';
+        }else{
+            purchaseBox.style.transform = 'scale(0.75, 0.75)';
+            complete.style.transform = 'scale(0.75, 0.75)';
+        }
 
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
@@ -172,46 +220,6 @@ window.addEventListener('DOMContentLoaded', function(){
 			// console.log(mouseY);
 		});
 	}
-
-    // browser check & event//////////////////////////////////////////////////
-    var agent = window.navigator.userAgent.toLowerCase();
-	var browserName;
-	switch (true) {
-		case agent.indexOf("edge") > -1: 
-			browserName = "MS Edge"; // MS 엣지
-			break;
-		case agent.indexOf("edg/") > -1: 
-			browserName = "Edge (chromium based)"; // 크롬 기반 엣지
-			break;
-		case agent.indexOf("opr") > -1 && !!window.opr: 
-			browserName = "Opera"; // 오페라
-			break;
-		case agent.indexOf("chrome") > -1 && !!window.chrome: 
-			browserName = "Chrome"; // 크롬
-			break;
-		case agent.indexOf("trident") > -1: 
-			browserName = "MS IE"; // 익스플로러
-			break;
-		case agent.indexOf("firefox") > -1: 
-			browserName = "Mozilla Firefox"; // 파이어 폭스
-			break;
-		case agent.indexOf("safari") > -1: 
-			browserName = "Safari"; // 사파리
-			break;
-		default: 
-			browserName = "other"; // 기타
-	}
-
-    if(browserName == "Safari") {
-        gradient1.style['mix-blend-mode'] = 'difference';
-        gradient2.style['mix-blend-mode'] = 'difference';
-        gradient3.style['mix-blend-mode'] = 'difference';
-        gradient4.style['mix-blend-mode'] = 'difference';
-        gradient1.style['-webkit-mix-blend-mode'] = 'difference';
-        gradient2.style['-webkit-mix-blend-mode'] = 'difference';
-        gradient3.style['-webkit-mix-blend-mode'] = 'difference';
-        gradient4.style['-webkit-mix-blend-mode'] = 'difference';
-    }
 
    // DadA logo//////////////////////////////////////////////////
 	let ract = document.querySelector(".ract");
