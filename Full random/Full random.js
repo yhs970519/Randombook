@@ -105,15 +105,8 @@ window.addEventListener('DOMContentLoaded', function(){
         gradient3.style['-webkit-mix-blend-mode'] = 'difference';
         gradient4.style['-webkit-mix-blend-mode'] = 'difference';
 
-        // purchaseBox.style.transform = 'scale(0.75, 0.75)';
-        // complete.style.transform = 'scale(0.75, 0.75)';
-
-        browserName == "Opera" ? purchaseBox.style.transform = 'scale(0.6, 0.6)':
-        browserName == "Mozilla Firefox" ? purchaseBox.style.transform = 'scale(0.6, 0.6)':
-        purchaseBox.style.transform = 'scale(0.7, 0.7)';
-        browserName == "Opera" ? complete.style.transform = 'scale(0.6, 0.6)':
-        browserName == "Mozilla Firefox" ? complete.style.transform = 'scale(0.6, 0.6)':
-        complete.style.transform = 'scale(0.7, 0.7)';
+        purchaseBox.style.transform = 'scale(' + 100 / window.innerHeight + ', ' + 100 / window.innerHeight + ')';
+        complete.style.transform = 'scale(' + 100 / window.innerHeight + ', ' + 100 / window.innerHeight + ')';
 
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
