@@ -109,7 +109,7 @@ window.addEventListener('DOMContentLoaded', function(){
         complete.style.transform = 'scale(0.7, 0.7)';
 
 		$(main_img).draggable({
-			// containment: ".mobilescreen"
+			containment: ".mobilescreen"
 		});
 
         document.addEventListener("touchstart", (e) => {
