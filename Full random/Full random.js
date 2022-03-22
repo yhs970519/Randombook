@@ -110,10 +110,10 @@ window.addEventListener('DOMContentLoaded', function(){
 
         browserName == "Opera" ? purchaseBox.style.transform = 'scale(0.6, 0.6)':
         browserName == "Mozilla Firefox" ? purchaseBox.style.transform = 'scale(0.6, 0.6)':
-        purchaseBox.style.transform = 'scale(0.75, 0.75)';
+        purchaseBox.style.transform = 'scale(0.7, 0.7)';
         browserName == "Opera" ? complete.style.transform = 'scale(0.6, 0.6)':
         browserName == "Mozilla Firefox" ? complete.style.transform = 'scale(0.6, 0.6)':
-        complete.style.transform = 'scale(0.75, 0.75)';
+        complete.style.transform = 'scale(0.7, 0.7)';
 
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
