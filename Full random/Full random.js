@@ -105,8 +105,8 @@ window.addEventListener('DOMContentLoaded', function(){
         gradient3.style['-webkit-mix-blend-mode'] = 'difference';
         gradient4.style['-webkit-mix-blend-mode'] = 'difference';
 
-        purchaseBox.style.transform = 'scale(' + 1000 / window.innerHeight + ', ' + 1000 / window.innerHeight + ')';
-        complete.style.transform = 'scale(' + 1000 / window.innerHeight + ', ' + 1000 / window.innerHeight + ')';
+        purchaseBox.style.transform = 'scale(' + 600 / window.innerHeight + ', ' + 600 / window.innerHeight + ')';
+        complete.style.transform = 'scale(' + 600 / window.innerHeight + ', ' + 600 / window.innerHeight + ')';
 
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
