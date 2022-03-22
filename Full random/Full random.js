@@ -3,27 +3,27 @@
 window.addEventListener('DOMContentLoaded', function(){
 
     // new div tags//////////////////////////////////////////////////
-    function divTag(imgTagGroup) {
+    // function divTag(imgTagGroup) {
 
-		let imgN = 27; //+1
+	// 	let imgN = 27; //+1
 
-        for (let i = 1; i < imgN; i++) {
-			let bookFrame = document.createElement("div");
-			let classNode = document.createAttribute("class");
-			eval("classNode.value = 'bookFrame" + i + "_" + imgTagGroup + "';");
-			bookFrame.setAttributeNode(classNode);
-			document.querySelector(".main_img" + imgTagGroup + "").appendChild(bookFrame);
-        }
-    }
+    //     for (let i = 1; i < imgN; i++) {
+	// 		let bookFrame = document.createElement("div");
+	// 		let classNode = document.createAttribute("class");
+	// 		eval("classNode.value = 'bookFrame" + i + "_" + imgTagGroup + "';");
+	// 		bookFrame.setAttributeNode(classNode);
+	// 		document.querySelector(".main_img" + imgTagGroup + "").appendChild(bookFrame);
+    //     }
+    // }
 
-    divTag(1);
-	divTag(2);
-	divTag(3);
-	divTag(4);
-	divTag(5);
-	divTag(6);
-	divTag(7);
-	divTag(8);
+    // divTag(1);
+	// divTag(2);
+	// divTag(3);
+	// divTag(4);
+	// divTag(5);
+	// divTag(6);
+	// divTag(7);
+	// divTag(8);
     
     // screen move//////////////////////////////////////////////////
 	function isMobile() {
@@ -108,9 +108,9 @@ window.addEventListener('DOMContentLoaded', function(){
         purchaseBox.style.transform = 'scale(0.7, 0.7)';
         complete.style.transform = 'scale(0.7, 0.7)';
 
-		$(main_img).draggable({
-			containment: ".mobilescreen"
-		});
+		// $(main_img).draggable({
+		// 	containment: ".mobilescreen"
+		// });
 
         document.addEventListener("touchstart", (e) => {
 			dragX = e.touches[0].clientX;

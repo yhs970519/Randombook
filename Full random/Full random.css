@@ -307,7 +307,7 @@ main{
 	overflow: hidden;
 }
 
-.mainImg{
+/* .mainImg{
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -320,7 +320,6 @@ main{
 	align-content: center;
 	align-items: center;
 	margin-left: -90px;
-	/* filter: drop-shadow(-2.5px 5px 5px rgba(0, 0, 0, 0.3)); */
 }
 
 .mobilescreen{
@@ -341,7 +340,7 @@ main{
     background-color: rgba(248, 248, 255, 0);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-}
+} */
 
 .bookScale{
     z-index: none;
