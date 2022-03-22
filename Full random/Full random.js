@@ -108,6 +108,10 @@ window.addEventListener('DOMContentLoaded', function(){
         purchaseBox.style.transform = 'scale(0.7, 0.7)';
         complete.style.transform = 'scale(0.7, 0.7)';
 
+		$(main_img).draggable({
+			containment: ".mobilescreen"
+		});
+
         document.addEventListener("touchstart", (e) => {
 			dragX = e.touches[0].clientX;
 			dragY = e.touches[0].clientY;
@@ -146,10 +150,6 @@ window.addEventListener('DOMContentLoaded', function(){
             mainShadow.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             booklistShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
             reviewShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-		});
-
-        $(".mainImg").draggable({
-			containment: ".mobilescreen"
 		});
 	} else {
 		// tranlate images in pc
