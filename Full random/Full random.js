@@ -108,11 +108,11 @@ window.addEventListener('DOMContentLoaded', function(){
         // purchaseBox.style.transform = 'scale(0.75, 0.75)';
         // complete.style.transform = 'scale(0.75, 0.75)';
 
-        browserName == "Opera" ? purchaseBox.style.transform = 'scale(0.65, 0.65)':
-        browserName == "Mozilla Firefox" ? purchaseBox.style.transform = 'scale(0.65, 0.65)':
+        browserName == "Opera" ? purchaseBox.style.transform = 'scale(0.6, 0.6)':
+        browserName == "Mozilla Firefox" ? purchaseBox.style.transform = 'scale(0.6, 0.6)':
         purchaseBox.style.transform = 'scale(0.75, 0.75)';
-        browserName == "Opera" ? complete.style.transform = 'scale(0.65, 0.65)':
-        browserName == "Mozilla Firefox" ? complete.style.transform = 'scale(0.65, 0.65)':
+        browserName == "Opera" ? complete.style.transform = 'scale(0.6, 0.6)':
+        browserName == "Mozilla Firefox" ? complete.style.transform = 'scale(0.6, 0.6)':
         complete.style.transform = 'scale(0.75, 0.75)';
 
 		$(".mainImg").draggable({
