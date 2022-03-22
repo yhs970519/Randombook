@@ -56,6 +56,8 @@ window.addEventListener('DOMContentLoaded', function(){
     let mainShadow  = document.querySelector(".mainShadow");
     let booklistShadow  = document.querySelector(".booklistShadow");
     let reviewShadow  = document.querySelector(".reviewShadow");
+    let purchaseBox = document.querySelector(".purchaseBox");
+    let complete = document.querySelector(".complete");
 	let mouseX;
 	let mouseY;
     let dragX;
@@ -102,6 +104,9 @@ window.addEventListener('DOMContentLoaded', function(){
         gradient2.style['-webkit-mix-blend-mode'] = 'difference';
         gradient3.style['-webkit-mix-blend-mode'] = 'difference';
         gradient4.style['-webkit-mix-blend-mode'] = 'difference';
+
+        purchaseBox.style.transform = 'scale(0.75, 0.75)';
+        complete.style.transform = 'scale(0.75, 0.75)';
 
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
@@ -313,7 +318,6 @@ window.addEventListener('DOMContentLoaded', function(){
     let priceLabelShadow = document.querySelector(".priceLabelShadow");
     
     let purchase = document.querySelector(".purchase");
-    let complete = document.querySelector(".complete");
     let thank = document.querySelector(".thank");
 
 	nav.style.transform = 'translateX(-100%)';
