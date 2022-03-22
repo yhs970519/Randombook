@@ -433,6 +433,7 @@ main{
     font-size: 14px;
     font-family: Futura,'M PLUS 1',Trebuchet MS,Arial,sans-serif;
     font-weight: 500;
+    transform-origin: 50% 100%;
 }
 
 .thank{
