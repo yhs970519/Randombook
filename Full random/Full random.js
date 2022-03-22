@@ -160,7 +160,7 @@ window.addEventListener('DOMContentLoaded', function(){
 			dragY = e.clientY;
             positionX = 100 - (dragX * 100 / window.innerWidth);
             positionY = 100 - (dragY * 100 / window.innerHeight);
-            main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
+            // main_img.style.transform = 'translate(' + mouseX + '%, ' + mouseY + '%)';
             gradient1.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + dragY * 100 / window.innerHeight + '%, 0';
             gradient2.style.backgroundPosition = '' + positionX + '% ' + dragY * 100 / window.innerHeight + '%, 0';
             gradient3.style.backgroundPosition = '' + dragX * 100 / window.innerWidth + '% ' + positionY + '%, 0';
