@@ -412,9 +412,9 @@ main{
     text-align: left;
 }
 
-/* .address{
-    height: auto;
-} */
+.address{
+    min-height: 1.725rem;
+}
 
 .payment{
     opacity: 0.5;
@@ -423,9 +423,11 @@ main{
 .complete{
     color: ghostwhite;
     background-color: dodgerblue;
+    flex-shrink: 0;
     border: none;
-    width: 40%;
-    height: 10%;
+    width: 90px;
+    height: 35px;
+    /* padding: 5px; */
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 10%;
