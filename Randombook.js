@@ -348,6 +348,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	let frameB = document.querySelector(".frame_bottom");
 	let frameL = document.querySelector(".frame_left");
 	let frameR = document.querySelector(".frame_right");
+	let clickSign = document.querySelector(".clickSign");
 	let mouseX;
 	let mouseY;
 
@@ -359,6 +360,8 @@ window.addEventListener('DOMContentLoaded', function(){
 		frameB.style.display = 'none';
 		frameL.style.display = 'none';
 		frameR.style.display = 'none';
+
+		clickSign.style.opacity = '1';
 
 		$(".mainImg").draggable({
 			containment: ".mobilescreen"
@@ -741,7 +744,8 @@ window.addEventListener('DOMContentLoaded', function(){
 	$(".ract").draggable();
 
 	function colorAnimation() {
-		$(".quote span, .source").animate({backgroundColor: 'rgba(' + red + ', ' + green + ', ' + blue + ', 0.2)'}, 3000).animate({backgroundColor: 'rgba(248, 248, 255, 0.9)'}, 3000, colorAnimation);
+		$(".quote span, .source").animate({backgroundColor: 'rgba(' + red + ', ' + green + ', ' + blue + ', 0.2)'}, 3000).animate({backgroundColor: 'rgba(248, 248, 255, 0.2)'}, 1500, colorAnimation);
+		$(".clickSign").animate({color: 'rgba(' + red + ', ' + green + ', ' + blue + ', 0.5)'}, 3000).animate({color: 'rgba(248, 248, 255, 0)'}, 1500, colorAnimation);
 	}
 
 	colorAnimation();
