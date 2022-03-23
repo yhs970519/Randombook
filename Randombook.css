@@ -1,6 +1,12 @@
 @charset "UTF-8";
 /* CSS Document */
 
+*, *:before, *:after{ 
+    box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+}
+
 html, body{
 	box-sizing: border-box;
 	border: 0;
@@ -72,7 +78,8 @@ a{
 	font-size: 30px;
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
 	transition: color 0.2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
 }
 
 [class*=text]{
@@ -205,7 +212,8 @@ footer div{
 	padding-right: 36px;
 	background: linear-gradient(to right, rgba(248, 248, 255), rgba(248, 248, 255, 0));
 	transition: all 0.2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
 	transform: translateX(-100px);
 }
 
@@ -219,7 +227,8 @@ footer div{
 	text-align: right;
 	background: linear-gradient(to left, rgba(248, 248, 255), rgba(248, 248, 255, 0));
 	transition: all 0.2s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
 	transform: translateX(100px);
 }
 
@@ -237,7 +246,8 @@ footer div{
 	transform: translateX(-80px);
 	opacity: 0;
 	transition: all 0.6s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
 	color: rgba(20, 20, 20);
 }
 
@@ -245,7 +255,8 @@ footer div{
 	transform: translateX(80px);
 	opacity: 0;
 	transition: all 0.6s;
-	transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
 }
 
 .CT{
@@ -299,7 +310,12 @@ main{
 	align-content: center;
 	align-items: center;
 	margin-left: -90px;
-	/* filter: drop-shadow(-2.5px 5px 5px rgba(0, 0, 0, 0.3)); */
+	opacity: 0;
+	visibility: hidden;
+	filter: blur(20px);
+	-webkit-filter: blur(20px);
+	transition: opacity 3s ease, visibility 3s ease, filter 2s ease;
+	-webkit-transition: opacity 3s ease, visibility 3s ease, filter 2s ease;
 }
 
 .mobilescreen{
@@ -334,7 +350,7 @@ main img{
 	position: relative;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	animation-timing-function: ease;
 }
 
 .main_img1, .main_img3, .main_img5, .main_img7{
@@ -342,7 +358,7 @@ main img{
 }
 
 .main_img1{
-	animation-duration: 90s;
+	animation-duration: 280s;
 }
 
 .main_img1:hover{
@@ -350,7 +366,7 @@ main img{
 }
 
 .main_img3{
-	animation-duration: 87.5s;
+	animation-duration: 285s;
 }
 
 .main_img3:hover{
@@ -358,7 +374,7 @@ main img{
 }
 
 .main_img5{
-	animation-duration: 95s;
+	animation-duration: 290s;
 }
 
 .main_img5:hover{
@@ -366,7 +382,7 @@ main img{
 }
 
 .main_img7{
-	animation-duration: 100s;
+	animation-duration: 300s;
 }
 
 .main_img7:hover{
@@ -383,7 +399,7 @@ main img{
 }
 
 .main_img2{
-	animation-duration: 105s;
+	animation-duration: 310s;
 }
 
 .main_img2:hover{
@@ -391,7 +407,7 @@ main img{
 }
 
 .main_img4{
-	animation-duration: 102.5s;
+	animation-duration: 305s;
 }
 
 .main_img4:hover{
@@ -399,7 +415,7 @@ main img{
 }
 
 .main_img6{
-	animation-duration: 110s;
+	animation-duration: 320s;
 }
 
 .main_img6:hover{
@@ -407,7 +423,7 @@ main img{
 }
 
 .main_img8{
-	animation-duration: 82.5s;
+	animation-duration: 295s;
 }
 
 .main_img8:hover{
@@ -419,9 +435,191 @@ main img{
 	100% { left: -60%; }
 }
 
+.quotation{
+	position: fixed;
+	top: 52.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	writing-mode: vertical-rl;
+	color: black;
+	font-size: calc(1rem + 0.5vw);
+	font-family: Futura,'M PLUS 1',Trebuchet MS,Arial,sans-serif;
+    font-weight: 500;
+	cursor: pointer;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+@keyframes blur{
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+		filter: blur(50px);
+		-webkit-filter: blur(50px);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0);
+		-webkit-filter: blur(0);
+	}
+}
+
+.quote, .source{
+	letter-spacing: calc(0.3rem + 0.2vw);
+	white-space: nowrap;
+	line-height: 200%;
+}
+
+.quote span, .source{
+	background-color: rgba(248, 248, 255, 0.9);
+	padding: calc(0.3rem + 0.2vw);
+	padding-left: calc(0.1rem + 0.2vw);
+	padding-right: calc(0.1rem + 0.2vw);
+	animation: motion 3s ease 0s infinite alternate;
+}
+
+.quote span:nth-of-type(1){
+	animation-duration: 4.5s;
+}
+
+.quote span:nth-of-type(2){
+	animation-duration: 6s;
+}
+
+.quote span:nth-of-type(3){
+	animation-duration: 5s;
+}
+
+.quote span:nth-of-type(4){
+	animation-duration: 7s;
+}
+
+.quote span:nth-of-type(5){
+	animation-duration: 5.5s;
+}
+
+.quote span:nth-of-type(6){
+	animation-duration: 6.5s;
+}
+
+.source{
+	position: absolute;
+	bottom: 0;
+	left: -20%;
+	font-size: calc(0.5rem + 0.5vw);
+	letter-spacing: calc(0.2rem + 0.2vw);
+}
+
+@keyframes motion{
+	0%{
+		margin-top: -10px;
+		filter: blur(5px);
+	}
+	100%{
+		margin-top: 10px;
+	}
+}
+
+[class*=booksource]{
+	position: fixed;
+	height: auto;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+.booksource1{
+	top: 22%;
+	left: 34%;
+	width: calc(100px + 6vw);
+	transform: rotateZ(120deg);
+	filter: blur(1px);
+	-webkit-filter: blur(1px);
+	animation: motion2 3s ease 0s infinite alternate;
+	animation-duration: 3.5s;
+}
+
+.booksource2{
+	bottom: -5%;
+	right: 28%;
+	width: calc(240px + 6vw);;
+	transform: rotateZ(-5deg);
+	filter: blur(7px);
+	-webkit-filter: blur(7px);
+	animation: motion3 3s ease 0s infinite alternate;
+	animation-duration: 5s;
+}
+
+.booksource3{
+	bottom: 40%;
+	right: -8%;
+	width: calc(220px + 6vw);
+	transform: rotateZ(280deg);
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	animation: motion3 3s ease 0s infinite alternate;
+	animation-duration: 4.5s;
+}
+
+.booksource4{
+	top: 5%;
+	right: 25%;
+	width: calc(190px + 6vw);
+	transform: rotateZ(200deg);
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+	animation: motion2 3s ease 0s infinite alternate;
+	animation-duration: 4s;
+}
+
+.booksource5{
+	bottom: 18%;
+	left: 8%;
+	width: calc(270px + 6vw);
+	transform: rotateZ(20deg);
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+	animation: motion3 3s ease 0s infinite alternate;
+	animation-duration: 6s;
+}
+
+.booksource6{
+	top: -15%;
+	left: -8%;
+	width: calc(550px + 7vw);
+	transform: rotateZ(150deg);
+	filter: blur(20px);
+	-webkit-filter: blur(20px);
+	animation: motion2 3s ease 0s infinite alternate;
+	animation-duration: 8s;
+}
+
+@keyframes motion2{
+	0%{
+		margin-top: -3%;
+		filter: blur(0.5px);
+	}
+	100%{
+		margin-top: 3%;
+	}
+}
+
+@keyframes motion3{
+	0%{
+		margin-bottom: -3%;
+		filter: blur(0.5px);
+	}
+	100%{
+		margin-bottom: 3%;
+	}
+}
+
 [class*="frame"]{
 	z-index: 2;
 	position: absolute;
+	/* filter: url(#drawn2);
+	-webkit-filter: url(#drawn2); */
 }
 
 .frame_top{
@@ -480,7 +678,7 @@ main img{
 	text-align: center;
 	animation-name: wave;
 	animation-duration: 20s;
-	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	animation-timing-function: ease;
 	animation-fill-mode: forwards;
 	animation-iteration-count: 5;
 }
@@ -517,7 +715,7 @@ main img{
 	font-size: 4rem;
 	animation-name: moving1;
 	animation-duration: 0.5s;
-	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	animation-timing-function: ease;
 	animation-fill-mode: forwards;
 }
 
@@ -533,7 +731,7 @@ main img{
 	margin-bottom: -5px;
 	animation-name: moving2;
 	animation-duration: 1s;
-	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	animation-timing-function: ease;
 	animation-fill-mode: forwards;
 }
 
@@ -549,7 +747,7 @@ main img{
 .loadText3{
 	animation-name: moving3;
 	animation-duration: 2s;
-	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+	animation-timing-function: ease;
 	animation-fill-mode: forwards;
 }
 
@@ -610,5 +808,29 @@ main img{
 	.category2, .mypage2, .basket2{
 		z-index: 4;
 		opacity: 1;
+	}
+
+	.booksource1{
+		left: calc(34% * 0.2);
+	}
+
+	.booksource2{
+		right: calc(28% * 0.2);
+	}
+
+	.booksource3{
+		right: calc(-8% * 5);
+	}
+
+	.booksource4{
+		right: calc(25% * 0.2);
+	}
+
+	.booksource5{
+		left: calc(8% * 0.2);
+	}
+
+	.booksource6{
+		left: calc(-8% * 5);
 	}
 }

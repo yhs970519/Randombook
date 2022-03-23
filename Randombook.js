@@ -580,6 +580,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	let aside = document.querySelector("aside");
 	let nav_ul = document.querySelector(".nav");
 	let aside_ul = document.querySelector(".aside");
+	let quotation = document.querySelector(".quotation");
 
 	nav.style.transform = 'translateX(-100%)';
 	aside.style.transform = 'translateX(100%)';
@@ -590,6 +591,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	category2.onclick = categoryClick2;
 	mypage.onclick = mypageClick;
 	mypage2.onclick = mypageClick2;
+	quotation.onclick =  mainImg;
 	
 	function categoryClick() {
 		if (nav.style.transform == 'translateX(-100%)') {
@@ -649,6 +651,17 @@ window.addEventListener('DOMContentLoaded', function(){
 			aside_ul.style.opacity = '0';
 			mypage2.style.backgroundColor = 'rgba(248, 248, 255, 0.5)';
 		}
+	}
+
+	function mainImg() {
+		main_img.style.opacity = '1';
+		main_img.style.visibility = 'visible';
+		main_img.style.filter = 'blur(0)';
+		main_img.style['-webkit-filter'] = 'blur(0)';
+		quotation.style.animation = 'blur 3s ease';
+		// quotation.style.opacity = '0';
+		// quotation.style.visibility = 'hidden';
+		// quotation.style.filter = 'blur(50px)';
 	}
 
 	onmousemove = buttonColor;
@@ -718,6 +731,12 @@ window.addEventListener('DOMContentLoaded', function(){
 		$(this).css("background-color", "rgba(" + red + ", " + green + ", " + blue + ", 0.5)");
 	}, function() {
 		$(this).css("background-color", "rgba(248, 248, 255, 0.5)");
+	});
+
+	$(quotation).hover(function() {
+		$(this).css("color", "rgba(" + red + ", " + green + ", " + blue + ")");
+	}, function() {
+		$(this).css("color", "black");
 	});
 
 	$(".ract").draggable();
