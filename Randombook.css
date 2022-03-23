@@ -184,10 +184,10 @@ footer{
 	left: 50%;
 	transform: translateX(-50%);
 	text-align: center;
-}
-
-footer div{
+	font-family: Futura,'M PLUS 1',Trebuchet MS,Arial,sans-serif;
+    font-weight: 500;
 	font-size: 10px;
+	line-height: 160%;
 }
 
 .content{
@@ -534,8 +534,8 @@ main img{
 	left: 34%;
 	width: calc(100px + 6vw);
 	transform: rotateZ(120deg);
-	filter: blur(1px);
-	-webkit-filter: blur(1px);
+	filter: blur(1.5px);
+	-webkit-filter: blur(1.5px);
 	animation: motion2 3s ease 0s infinite alternate;
 	animation-duration: 3.5s;
 }
@@ -819,7 +819,7 @@ main img{
 	}
 
 	.booksource3{
-		right: calc(-8% * 5);
+		right: calc(-8% * 3.5);
 	}
 
 	.booksource4{
@@ -827,7 +827,8 @@ main img{
 	}
 
 	.booksource5{
-		left: calc(8% * 0.2);
+		bottom: 10%;
+		left: calc(-8% * 2);
 	}
 
 	.booksource6{

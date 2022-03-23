@@ -571,7 +571,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		eval("setInterval(function() { randomframe4(8, " + i + ", B" + b + "img, bA" + b + "); }, drN" + i + ");");
 	}
 
-	// button transition & viewport transition//////////////////////////////////////////////////
+	// button transition//////////////////////////////////////////////////
 	let category = document.querySelector(".category");
 	let category2 = document.querySelector(".category2");
 	let mypage = document.querySelector(".mypage");
@@ -659,11 +659,9 @@ window.addEventListener('DOMContentLoaded', function(){
 		main_img.style.filter = 'blur(0)';
 		main_img.style['-webkit-filter'] = 'blur(0)';
 		quotation.style.animation = 'blur 3s ease';
-		// quotation.style.opacity = '0';
-		// quotation.style.visibility = 'hidden';
-		// quotation.style.filter = 'blur(50px)';
 	}
 
+	// viewport transition//////////////////////////////////////////////////
 	onmousemove = buttonColor;
 
 	function buttonColor() {
@@ -739,8 +737,14 @@ window.addEventListener('DOMContentLoaded', function(){
 		$(this).css("color", "black");
 	});
 
+	// active & animation//////////////////////////////////////////////////
 	$(".ract").draggable();
-	// $("main a").draggable({ revert: true });
+
+	function colorAnimation() {
+		$(".quote span, .source").animate({backgroundColor: 'rgba(' + red + ', ' + green + ', ' + blue + ', 0.2)'}, 3000).animate({backgroundColor: 'rgba(248, 248, 255, 0.9)'}, 3000, colorAnimation);
+	}
+
+	colorAnimation();
 });
 
 // loading//////////////////////////////////////////////////
