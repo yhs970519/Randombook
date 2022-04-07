@@ -747,8 +747,18 @@ window.addEventListener('DOMContentLoaded', function(){
 		$(".quote span, .source").animate({backgroundColor: 'rgba(' + red + ', ' + green + ', ' + blue + ', 0.2)'}, 3000).animate({backgroundColor: 'rgba(248, 248, 255, 0.2)'}, 1500, colorAnimation);
 		$(".clickSign").animate({color: 'rgba(' + red + ', ' + green + ', ' + blue + ', 0.5)'}, 3000).animate({color: 'rgba(248, 248, 255, 0)'}, 1500, colorAnimation);
 	}
-
 	colorAnimation();
+	
+	let quotationBox = document.querySelector(".quotationBox");
+	let quotationGroup = [];
+	quotationGroup[0] = '<span class="quote"><span>いつかはついに平穏に達するために、</span><br><span>君の世界を狭め、</span><br><span>君の魂を単純化するのではなく、</span><br><span>より多くの世界を、結局はこの世界全体を</span><br><span>君の苦痛に満ちた魂に</span><br><span>受け入れなければならない。</span></span><div class="source">『荒野の狼』より</div>';
+	quotationGroup[1] = '<span class="quote"><span>真の知とは、</span><br><span>知るべきもの、知れるものだけを</span><br><span>知ればいいものではない。</span><br><span>知れたはずのもの、</span><br><span>知ってはならないものまでを</span><br><span>知ることである。</span></span><div class="source">『薔薇の名前』より</div>';
+	quotationGroup[2] = '<span class="quote"><span>本当の探検というのは、</span><br><span>新しい景色を探すことではなく、</span><br><span>新しい目で旅に出ることである。</span><br></span><div class="source">マルセル・プルースト</div>';
+	quotationGroup[3] = '<span class="quote"><span>苦境に陥るのは</span><br><span>何かを知っていないためではなく、</span><br><span>何かを確実に知っているという</span><br><span>勘違いのためである。</span></span><div class="source">マーク・トウェイン</div>';
+	quotationGroup[4] = '<span class="quote"><span>全てには教訓が込められている。</span><br><span>ただそれを見つけられる時にのみ。</span></span><div class="source">『ふしぎの国のアリス』より</div>';
+	quotationGroup[5] = '<span class="quote"><span>誰がイカれているのか?</span><br><span>この先成し遂げられる世を想像する</span><br><span>私がイカれているのか?</span><br><span>それとも世をありのままでしか</span><br><span>見ない者がイカれているのか?</span></span><div class="source">『ドン・キホーテ』より</div>';
+	let quotationRandom = Math.floor(Math.random() * quotationGroup.length);
+	quotationBox.innerHTML = quotationGroup[quotationRandom];
 });
 
 // loading//////////////////////////////////////////////////

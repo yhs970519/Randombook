@@ -468,8 +468,8 @@ main img{
 
 .clickSign{
 	position: absolute;
-	top: 0;
-	left: -20%;
+	top: 30px;
+	left: -52px;
 	font-size: calc(0.75rem + 0.5vw);
 	letter-spacing: calc(0.1rem + 0.2vw);
 	/* opacity: 0; */
@@ -526,7 +526,7 @@ main img{
 .source{
 	position: absolute;
 	bottom: 0;
-	left: -20%;
+	left: -60px;
 	font-size: calc(0.5rem + 0.5vw);
 	letter-spacing: calc(0.2rem + 0.2vw);
 }
