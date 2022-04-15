@@ -393,7 +393,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		// 	containment: ".mobilescreen"
 		// });
 
-        canvasGroup.style.transform = 'scale(0.5, 0.5)';
+        // canvasGroup.style.transform = 'scale(0.5, 0.5)';
 
         purchaseBox.style.transform = 'scale(0.7, 0.7)';
         complete.style.transform = 'scale(0.7, 0.7)';
