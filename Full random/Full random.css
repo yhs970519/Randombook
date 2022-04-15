@@ -942,6 +942,75 @@ main{
     isolation: isolate;
 }
 
+.canvasGroup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    mix-blend-mode: saturation;
+    mix-blend-mode: -webkit-saturation;
+    -webkit-mix-blend-mode: saturation;
+}
+
+.canvas{
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    filter: blur(15px);
+    -webkit-filter: blur(15px);
+    /* opacity: 0.95; */
+    mix-blend-mode: saturation;
+    mix-blend-mode: -webkit-saturation;
+    -webkit-mix-blend-mode: saturation;
+}
+
+#canvas1{
+    margin-top: -200px;
+    margin-left: -550px;
+    /* animation: motion1 10s ease-in-out 0s infinite alternate; */
+}
+
+#canvas2{
+    margin-top: -100px;
+    margin-left: -400px;
+}
+
+#canvas3{
+    margin-top: -600px;
+    margin-left: 200px;
+}
+
+#canvas4{
+    margin-top: 250px;
+    margin-left: 900px;
+}
+
+#canvas5{
+    margin-top: -50px;
+    margin-left: 600px;
+}
+
+@keyframes motion1{
+	0%{
+		transform: translate(-1%, -1%);
+	}
+    20%{
+		transform: translate(1%, 1%);
+	}
+    40%{
+		transform: translate(3%, -1%);
+	}
+    60%{
+		transform: translate(5%, 1%);
+	}
+    80%{
+		transform: translate(7%, -1%);
+	}
+	100%{
+		transform: translate(9%, 1%);
+	}
+}
+
 [class*=gradient]{
     position: fixed;
     top: 0;
