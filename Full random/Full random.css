@@ -954,40 +954,50 @@ main{
 
 .canvas{
     position: fixed;
-    width: 200%;
-    height: 200%;
+    width: 50%;
+    height: 50%;
     filter: blur(15px);
     -webkit-filter: blur(15px);
-    /* opacity: 0.95; */
+    opacity: 0.8;
     mix-blend-mode: saturation;
     mix-blend-mode: -webkit-saturation;
     -webkit-mix-blend-mode: saturation;
-}
-
-#canvas1{
-    margin-top: -200px;
-    margin-left: -550px;
     /* animation: motion1 10s ease-in-out 0s infinite alternate; */
 }
 
+#canvas1{
+    width: calc(100vw * 0.6);
+    height: calc(100vh * 0.6);
+    margin-top: -2vw;
+    margin-left: -10vw;
+}
+
 #canvas2{
-    margin-top: -100px;
-    margin-left: -400px;
+    width: calc(100vw * 1);
+    height: calc(100vh * 1.2);
+    margin-top: 12vw;
+    margin-left: -5vw;
 }
 
 #canvas3{
-    margin-top: -600px;
-    margin-left: 200px;
+    width: calc(100vw * 0.75);
+    height: calc(100vh * 0.9);
+    margin-top: -10vw;
+    margin-left: 35vw;
 }
 
 #canvas4{
-    margin-top: 250px;
-    margin-left: 900px;
+    width: calc(100vw * 0.6);
+    height: calc(100vh * 0.6);
+    margin-top: 8vw;
+    margin-left: 70vw;
 }
 
 #canvas5{
-    margin-top: -50px;
-    margin-left: 600px;
+    width: calc(100vw * 0.3);
+    height: calc(100vh * 0.3);
+    margin-top: 35vw;
+    margin-left: 25vw;
 }
 
 @keyframes motion1{
