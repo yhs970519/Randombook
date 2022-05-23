@@ -754,6 +754,10 @@ main{
     -webkit-transition-timing-function: ease;
 }
 
+.buy, .now, .get{
+    z-index: 1;
+}
+
 [class*=package]{
     margin-right: -20%;
     margin-left: -20%;
@@ -822,7 +826,7 @@ main{
     transform: translate(-50%, -50%);
     cursor: pointer;
     color: ghostwhite;
-    -webkit-text-stroke: 2px black;
+    /* -webkit-text-stroke: 2px black; */
     transition: all 0.5s, color 0.5s;
     -webkit-transition: all 0.5s, color 0.5s;
     transition-timing-function: ease;
