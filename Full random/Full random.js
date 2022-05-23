@@ -53,6 +53,12 @@ window.addEventListener('DOMContentLoaded', function(){
     let ctx4 = canvas4.getContext("2d");
     let canvas5 = document.querySelector("#canvas5");
     let ctx5 = canvas5.getContext("2d");
+    let canvas6 = document.querySelector("#canvas6");
+    let ctx6 = canvas6.getContext("2d");
+    let canvas7 = document.querySelector("#canvas7");
+    let ctx7 = canvas7.getContext("2d");
+    let canvas8 = document.querySelector("#canvas8");
+    let ctx8 = canvas8.getContext("2d");
 
     let gradient1 = document.querySelector(".gradient1");
     let gradient2 = document.querySelector(".gradient2");
@@ -94,19 +100,33 @@ window.addEventListener('DOMContentLoaded', function(){
     let blue4 = Math.floor(Math.random() * 256);
 
     let psN1 = 0.6;
+    // let wsN1_1 = 500 + window.innerWidth / 2;
+    // let wsN1_2 = 500 + window.innerHeight / 2;
     let psN2_1 = 1;
     let psN2_2 = 1.2;
     let psN3_1 = 0.75;
     let psN3_2 = 0.9;
     let psN4 = 0.6;
-    let psN5_1 = 0.3;
-    let psN5_2 = 0.17;
+    let psN5_1 = 0.8;
+    let psN5_2 = 0.4;
+    let psN6_1 = 0.6;
+    let psN6_2 = 0.4;
+    let psN7_1 = 0.3;
+    let psN7_2 = 0.5;
+    let psN8_1 = 0.3;
+    let psN8_2 = 0.3;
 
     let mN1 = 60;
     let mN2 = 180;
     let mN3 = 220;
     let mN4 = 250;
     let mN5 = 240;
+    let mN6 = 150;
+    let mN7 = 50;
+    let mN8 = 220;
+
+    let blankX = window.innerWidth / 5;
+    let blankY = 200000 / window.innerWidth;
 
     function drawShape1(x1, y1, x1_1, y1_1,
         x2, y2, x2_1, x2_2, y2_1, y2_2,
@@ -118,8 +138,8 @@ window.addEventListener('DOMContentLoaded', function(){
         x8, y8, x8_1, y8_1) {
         canvas1 = document.querySelector("#canvas1");
         ctx1 = canvas1.getContext("2d");
-        canvas1.width = window.innerWidth * psN1 + 20;
-        canvas1.height = window.innerHeight * psN1 + 20;
+        canvas1.width = window.innerWidth * psN1 + 50;
+        canvas1.height = window.innerHeight * psN1 + 50;
         ctx1.clearRect(0, 0, window.innerWidth, window.innerHeight);
         ctx1.fillStyle = 'rgba(' + red1 + ', ' + green1 + ', ' + blue1 + ')';
         ctx1.beginPath();
@@ -133,6 +153,8 @@ window.addEventListener('DOMContentLoaded', function(){
         ctx1.bezierCurveTo((159 - mN1) * x7_2, (209 - mN1) * y7_2, (260 - mN1) * x8_1, (208 - mN1) * y8_1, (330 - mN1) * x8, (198 - mN1) * y8);
         ctx1.closePath();
         ctx1.fill();
+        canvas1.style.marginTop = '' + -canvas1.width / 10 * 5 + 'px';
+        canvas1.style.marginLeft = '' + -canvas1.height / 10 * 5 + 'px';
     }
 
     function drawShape2(x1, y1, x1_1, y1_1,
@@ -145,8 +167,8 @@ window.addEventListener('DOMContentLoaded', function(){
         x8, y8, x8_1, y8_1) {
         canvas2 = document.querySelector("#canvas2");
         ctx2 = canvas2.getContext("2d");
-        canvas2.width = window.innerWidth * psN2_1 + 20;
-        canvas2.height = window.innerHeight * psN2_2 + 20;
+        canvas2.width = window.innerWidth * psN2_1 + 50;
+        canvas2.height = window.innerHeight * psN2_2 + 50;
         ctx2.clearRect(0, 0, window.innerWidth, window.innerHeight);
         ctx2.fillStyle = 'rgba(' + red3 + ', ' + green3 + ', ' + blue3 + ')';
         ctx2.beginPath();
@@ -160,6 +182,8 @@ window.addEventListener('DOMContentLoaded', function(){
         ctx2.bezierCurveTo((435 - mN2) * x7_2, (750 - mN2) * y7_2, (297 - mN2) * x8_1, (693 - mN2) * y8_1, (273 - mN2) * x8, (599 - mN2) * y8);
         ctx2.closePath();
         ctx2.fill();
+        canvas2.style.marginTop = '' + -canvas2.width / 10 * 5 + 'px';
+        canvas2.style.marginLeft = '' + -canvas2.height / 10 * 5 + 'px';
     }
 
     function drawShape3(x1, y1, x1_1, y1_1,
@@ -171,8 +195,8 @@ window.addEventListener('DOMContentLoaded', function(){
         x7, y7, x7_1, y7_1) {
         canvas3 = document.querySelector("#canvas3");
         ctx3 = canvas3.getContext("2d");
-        canvas3.width = window.innerWidth * psN3_1 + 20;
-        canvas3.height = window.innerHeight * psN3_2 + 20;
+        canvas3.width = window.innerWidth * psN3_1 + 50;
+        canvas3.height = window.innerHeight * psN3_2 + 50;
         ctx3.clearRect(0, 0, window.innerWidth, window.innerHeight);
         ctx3.fillStyle = 'rgba(' + red2 + ', ' + green2 + ', ' + blue2 + ')';
         ctx3.beginPath();
@@ -185,6 +209,8 @@ window.addEventListener('DOMContentLoaded', function(){
         ctx3.bezierCurveTo((937 - mN3) * x6_2, (446 - mN3) * y6_2, (928 - mN3) * x7_1, (350 - mN3) * y7_1, (885 - mN3) * x7, (302 - mN3) * y7);
         ctx3.closePath();
         ctx3.fill();
+        canvas3.style.marginTop = '' + -canvas3.width / 10 * 5 + 'px';
+        canvas3.style.marginLeft = '' + -canvas3.height / 10 * 5 + 'px';
     }
 
     function drawShape4(x1, y1, x1_1, y1_1,
@@ -196,8 +222,8 @@ window.addEventListener('DOMContentLoaded', function(){
         x7, y7, x7_1, y7_1) {
         canvas4 = document.querySelector("#canvas4");
         ctx4 = canvas4.getContext("2d");
-        canvas4.width = window.innerWidth * psN4 + 20;
-        canvas4.height = window.innerHeight * psN4 + 20;
+        canvas4.width = window.innerWidth * psN4 + 50;
+        canvas4.height = window.innerHeight * psN4 + 50;
         ctx4.clearRect(0, 0, window.innerWidth, window.innerHeight);
         ctx4.fillStyle = 'rgba(' + red4 + ', ' + green4 + ', ' + blue4 + ')';
         ctx4.beginPath();
@@ -210,6 +236,8 @@ window.addEventListener('DOMContentLoaded', function(){
         ctx4.bezierCurveTo((658 - mN4) * x6_2, (286 - mN4) * y6_2, (578 - mN4) * x7_1, (266 - mN4) * y7_1, (510 - mN4) * x7, (308 - mN4) * y7);
         ctx4.closePath();
         ctx4.fill();
+        canvas4.style.marginTop = '' + -canvas4.width / 10 * 5 + 'px';
+        canvas4.style.marginLeft = '' + -canvas4.height / 10 * 5 + 'px';
     }
 
     function drawShape5(x1, y1, x1_1, y1_1,
@@ -221,8 +249,8 @@ window.addEventListener('DOMContentLoaded', function(){
         x7, y7, x7_1, y7_1) {
         canvas5 = document.querySelector("#canvas5");
         ctx5 = canvas5.getContext("2d");
-        canvas5.width = window.innerWidth * psN5_1 + 20;
-        canvas5.height = window.innerWidth * psN5_2 + 20;
+        canvas5.width = window.innerWidth * psN5_1 + 120;
+        canvas5.height = window.innerWidth * psN5_2 + 120;
         ctx5.clearRect(0, 0, window.innerWidth, window.innerHeight);
         ctx5.fillStyle = 'rgba(' + red1 + ', ' + green2 + ', ' + blue4 + ')';
         ctx5.beginPath();
@@ -235,115 +263,303 @@ window.addEventListener('DOMContentLoaded', function(){
         ctx5.bezierCurveTo((396 - mN5) * x6_2, (378 - mN5) * y6_2, (354 - mN5) * x7_1, (444 - mN5) * y7_1, (360 - mN5) * x7, (506 - mN5) * y7);
         ctx5.closePath();
         ctx5.fill();
+        canvas5.style.marginTop = '' + -canvas5.width / 10 * 5 + 'px';
+        canvas5.style.marginLeft = '' + -canvas5.height / 10 * 5 + 'px';
+    }
+
+    function drawShape6(x1, y1, x1_1, y1_1,
+        x2, y2, x2_1, x2_2, y2_1, y2_2,
+        x3, y3, x3_1, x3_2, y3_1, y3_2,
+        x4, y4, x4_1, x4_2, y4_1, y4_2,
+        x5, y5, x5_1, x5_2, y5_1, y5_2,
+        x6, y6, x6_1, y6_1) {
+        canvas6 = document.querySelector("#canvas6");
+        ctx6 = canvas6.getContext("2d");
+        canvas6.width = window.innerWidth * psN6_1 + 50;
+        canvas6.height = window.innerWidth * psN6_2 + 50;
+        ctx6.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        ctx6.fillStyle = 'rgba(' + red3 + ', ' + green1 + ', ' + blue2 + ')';
+        ctx6.beginPath();
+        ctx6.moveTo((342 - mN6) * x1, (217 - mN6) * y1);
+        ctx6.bezierCurveTo((416 - mN6) * x1_1, (182 - mN6) * y1_1, (445 - mN6) * x2_1, (244 - mN6) * y2_1, (545 - mN6) * x2, (236 - mN6) * y2);
+        ctx6.bezierCurveTo((619 - mN6) * x2_2, (230 - mN6) * y2_2, (728 - mN6) * x3_1, (221 - mN6) * y3_1, (747 - mN6) * x3, (298 - mN6) * y3);
+        ctx6.bezierCurveTo((767 - mN6) * x3_2, (377 - mN6) * y3_2, (680 - mN6) * x4_1, (418 - mN6) * y4_1, (611 - mN6) * x4, (466 - mN6) * y4);
+        ctx6.bezierCurveTo((524 - mN6) * x4_2, (527 - mN6) * y4_2, (393 - mN6) * x5_1, (517 - mN6) * y5_1, (361 - mN6) * x5, (442 - mN6) * y5);
+        ctx6.bezierCurveTo((333 - mN6) * x5_2, (378 - mN6) * y5_2, (251 - mN6) * x6_1, (269 - mN6) * y6_1, (342 - mN6) * x6, (217 - mN6) * y6);
+        ctx6.closePath();
+        ctx6.fill();
+        canvas6.style.marginTop = '' + -canvas6.width / 10 * 5 + 'px';
+        canvas6.style.marginLeft = '' + -canvas6.height / 10 * 5 + 'px';
+    }
+
+    function drawShape7(x1, y1, x1_1, y1_1,
+        x2, y2, x2_1, x2_2, y2_1, y2_2,
+        x3, y3, x3_1, x3_2, y3_1, y3_2,
+        x4, y4, x4_1, x4_2, y4_1, y4_2,
+        x5, y5, x5_1, x5_2, y5_1, y5_2,
+        x6, y6, x6_1, y6_1) {
+        canvas7 = document.querySelector("#canvas7");
+        ctx7 = canvas7.getContext("2d");
+        canvas7.width = window.innerWidth * psN7_1 + 50;
+        canvas7.height = window.innerWidth * psN7_2 + 50;
+        ctx7.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        ctx7.fillStyle = 'rgba(' + red4 + ', ' + green3 + ', ' + blue1 + ')';
+        ctx7.beginPath();
+        ctx7.moveTo((263 - mN7) * x1, (104 - mN7) * y1);
+        ctx7.bezierCurveTo((363 - mN7) * x1_1, (170 - mN7) * y1_1, (267 - mN7) * x2_1, (303 - mN7) * y2_1, (407 - mN7) * x2, (333 - mN7) * y2);
+        ctx7.bezierCurveTo((525 - mN7) * x2_2, (358 - mN7) * y2_2, (568 - mN7) * x3_1, (480 - mN7) * y3_1, (488 - mN7) * x3, (543 - mN7) * y3);
+        ctx7.bezierCurveTo((411 - mN7) * x3_2, (603 - mN7) * y3_2, (302 - mN7) * x4_1, (548 - mN7) * y4_1, (261 - mN7) * x4, (466 - mN7) * y4);
+        ctx7.bezierCurveTo((208 - mN7) * x4_2, (359 - mN7) * y4_2, (115 - mN7) * x5_1, (299 - mN7) * y5_1, (117 - mN7) * x5, (190 - mN7) * y5);
+        ctx7.bezierCurveTo((118 - mN7) * x5_2, (118 - mN7) * y5_2, (198 - mN7) * x6_1, (64 - mN7) * y6_1, (263 - mN7) * x6, (104 - mN7) * y6);
+        ctx7.closePath();
+        ctx7.fill();
+        canvas7.style.marginTop = '' + -canvas7.width / 10 * 5 + 'px';
+        canvas7.style.marginLeft = '' + -canvas7.height / 10 * 5 + 'px';
+    }
+
+    function drawShape8(x1, y1, x1_1, y1_1,
+        x2, y2, x2_1, x2_2, y2_1, y2_2,
+        x3, y3, x3_1, x3_2, y3_1, y3_2,
+        x4, y4, x4_1, x4_2, y4_1, y4_2,
+        x5, y5, x5_1, x5_2, y5_1, y5_2,
+        x6, y6, x6_1, y6_1) {
+        canvas8 = document.querySelector("#canvas8");
+        ctx8 = canvas8.getContext("2d");
+        canvas8.width = window.innerWidth * psN8_1 + 50;
+        canvas8.height = window.innerWidth * psN8_2 + 50;
+        ctx8.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        ctx8.fillStyle = 'rgba(' + red2 + ', ' + green4 + ', ' + blue3 + ')';
+        ctx8.beginPath();
+        ctx8.moveTo((288 - mN8) * x1, (306 - mN8) * y1);
+        ctx8.bezierCurveTo((290 - mN8) * x1_1, (265 - mN8) * y1_1, (341 - mN8) * x2_1, (240 - mN8) * y2_1, (376 - mN8) * x2, (264 - mN8) * y2);
+        ctx8.bezierCurveTo((401 - mN8) * x2_2, (281 - mN8) * y2_2, (430 - mN8) * x3_1, (303 - mN8) * y3_1, (438 - mN8) * x3, (343 - mN8) * y3);
+        ctx8.bezierCurveTo((448 - mN8) * x3_2, (391 - mN8) * y3_2, (449 - mN8) * x4_1, (436 - mN8) * y4_1, (363 - mN8) * x4, (453 - mN8) * y4);
+        ctx8.bezierCurveTo((333 - mN8) * x4_2, (464 - mN8) * y4_2, (257 - mN8) * x5_1, (469 - mN8) * y5_1, (248 - mN8) * x5, (415 - mN8) * y5);
+        ctx8.bezierCurveTo((240 - mN8) * x5_2, (369 - mN8) * y5_2, (284 - mN8) * x6_1, (352 - mN8) * y6_1, (288 - mN8) * x6, (306 - mN8) * y6);
+        ctx8.closePath();
+        ctx8.fill();
+        canvas8.style.marginTop = '' + -canvas8.width / 10 * 5 + 'px';
+        canvas8.style.marginLeft = '' + -canvas8.height / 10 * 5 + 'px';
     }
     
     function moveShape() {
-        sN1 = window.innerWidth / 1520;
-        sN2 = window.innerWidth / 820;
-        sN3 = window.innerWidth / 1150;
-        sN4 = window.innerWidth / 1520;
-        sN5 = window.innerWidth / 2100;
 
-        pN1_1 = 0.2;
-        pN1_2 = 0.15;
-        pN1_3 = 0.1;
-        pN1_4 = 0.06;
-        pN1_5 = 0.04;
-        pN1_6 = 0.02;
+        sN1_1 = window.innerWidth / 1520;
+        sN1_2 = window.innerHeight / 960;
+        sN2_1 = window.innerWidth / 820;
+        sN2_2 = window.innerHeight / 520;
+        sN3_1 = window.innerWidth / 1150;
+        sN3_2 = window.innerHeight / 750;
+        sN4_1 = window.innerWidth / 1520;
+        sN4_2 = window.innerHeight / 1020;
+        sN5_1 = window.innerWidth / 2000;
+        sN5_2 = window.innerHeight / 1900;
+        sN6_1 = window.innerWidth / 1150;
+        sN6_2 = window.innerHeight / (1000000 / window.innerWidth);
+        sN7_1 = window.innerWidth / 1520;
+        sN7_2 = window.innerHeight / (1300000 / window.innerWidth);
+        sN8_1 = window.innerWidth / 820;
+        sN8_2 = window.innerHeight / (1000000 / window.innerWidth);
 
-        pN2_1 = 2;
-        pN2_2 = 0.25;
-        pN2_3 = 0.2;
-        pN2_4 = 0.1;
-        pN2_5 = 0.05;
-        pN2_6 = 0.02;
+        // pN1_1 = 0.2;
+        // pN1_2 = 0.15;
+        // pN1_3 = 0.1;
+        // pN1_4 = 0.06;
+        // pN1_5 = 0.04;
+        // pN1_6 = 0.02;
 
-        pN3_1 = 1;
-        pN3_2 = 0.5;
-        pN3_3 = 0.25;
-        pN3_4 = 0.15;
-        pN3_5 = 0.075;
-        pN3_6 = 0.05;
+        pN1_1 = window.innerWidth / 8400;
+        pN1_2 = window.innerWidth / 11200;
+        pN1_3 = window.innerWidth / 16800;
+        pN1_4 = window.innerWidth / 28000;
+        pN1_5 = window.innerWidth / 42000;
+        pN1_6 = window.innerWidth / 84000;
 
-        pN4_1 = 0.7;
-        pN4_2 = 0.15;
-        pN4_3 = 0.1;
-        pN4_4 = 0.06;
-        pN4_5 = 0.04;
-        pN4_6 = 0.02;
+        // pN2_1 = 2;
+        // pN2_2 = 0.25;
+        // pN2_3 = 0.2;
+        // pN2_4 = 0.1;
+        // pN2_5 = 0.05;
+        // pN2_6 = 0.02;
 
-        pN5_0 = 1.5;
-        pN5_1 = 0.5;
-        pN5_2 = 0.15;
-        pN5_3 = 0.1;
-        pN5_4 = 0.06;
-        pN5_5 = 0.04;
-        pN5_6 = 0.02;
+        pN2_1 = window.innerWidth / 840;
+        pN2_2 = window.innerWidth / 6720;
+        pN2_3 = window.innerWidth / 8400;
+        pN2_4 = window.innerWidth / 16800;
+        pN2_5 = window.innerWidth / 33600;
+        pN2_6 = window.innerWidth / 84000;
+
+        // pN3_1 = 1;
+        // pN3_2 = 0.5;
+        // pN3_3 = 0.25;
+        // pN3_4 = 0.15;
+        // pN3_5 = 0.075;
+        // pN3_6 = 0.05;
+
+        pN3_1 = window.innerWidth / 1680;
+        pN3_2 = window.innerWidth / 3360;
+        pN3_3 = window.innerWidth / 6720;
+        pN3_4 = window.innerWidth / 11200;
+        pN3_5 = window.innerWidth / 22400;
+        pN3_6 = window.innerWidth / 33600;
+
+        // pN4_1 = 0.7;
+        // pN4_2 = 0.15;
+        // pN4_3 = 0.1;
+        // pN4_4 = 0.06;
+        // pN4_5 = 0.04;
+        // pN4_6 = 0.02;
+
+        pN4_1 = window.innerWidth / 2240;
+        pN4_2 = window.innerWidth / 11200;
+        pN4_3 = window.innerWidth / 16800;
+        pN4_4 = window.innerWidth / 28000;
+        pN4_5 = window.innerWidth / 42000;
+        pN4_6 = window.innerWidth / 84000;
         
-        bX1 = sN1 + dragX * pN1_1 / window.innerWidth;
-        bY1 = sN1 + dragY * pN1_1 / window.innerHeight;
-        bX2 = sN1 + -dragX * pN1_2 / window.innerWidth;
-        bY2 = sN1 + -dragY * pN1_2 / window.innerHeight;
-        bX3 = sN1 + dragX * pN1_3 / window.innerWidth;
-        bY3 = sN1 + dragY * pN1_3 / window.innerHeight;
-        bX4 = sN1 + -dragX * pN1_4 / window.innerWidth;
-        bY4 = sN1 + -dragY * pN1_4 / window.innerHeight;
-        bX5 = sN1 + dragX * pN1_5 / window.innerWidth;
-        bY5 = sN1 + dragY * pN1_5 / window.innerHeight;
-        bX6 = sN1 + -dragX * pN1_6 / window.innerWidth;
-        bY6 = sN1 + -dragY * pN1_6 / window.innerHeight;
+        // pN5_0 = 1;
+        // pN5_1 = 0.5;
+        // pN5_2 = 0.15;
+        // pN5_3 = 0.1;
+        // pN5_4 = 0.05;
+        // pN5_5 = 0.2;
+        // pN5_6 = 0.3;
 
-        bX7 = sN2 + dragX * pN2_1 / window.innerWidth;
-        bY7 = sN2 + dragY * pN2_1 / window.innerHeight;
-        bX8 = sN2 + -dragX * pN2_2 / window.innerWidth;
-        bY8 = sN2 + -dragY * pN2_2 / window.innerHeight;
-        bX9 = sN2 + dragX * pN2_3 / window.innerWidth;
-        bY9 = sN2 + dragY * pN2_3 / window.innerHeight;
-        bX10 = sN2 + -dragX * pN2_4 / window.innerWidth;
-        bY10 = sN2 + -dragY * pN2_4 / window.innerHeight;
-        bX11 = sN2 + dragX * pN2_5 / window.innerWidth;
-        bY11 = sN2 + dragY * pN2_5 / window.innerHeight;
-        bX12 = sN2 + -dragX * pN2_6 / window.innerWidth;
-        bY12 = sN2 + -dragY * pN2_6 / window.innerHeight;
+        pN5_0 = window.innerWidth / 1680;
+        pN5_1 = window.innerWidth / 3360;
+        pN5_2 = window.innerWidth / 11200;
+        pN5_3 = window.innerWidth / 16800;
+        pN5_4 = window.innerWidth / 33600;
+        pN5_5 = window.innerWidth / 8400;
+        pN5_6 = window.innerWidth / 5600;
 
-        bX13 = sN3 + dragX * pN3_1 / window.innerWidth;
-        bY13 = sN3 + dragY * pN3_1 / window.innerHeight;
-        bX14 = sN3 + -dragX * pN3_2 / window.innerWidth;
-        bY14 = sN3 + -dragY * pN3_2 / window.innerHeight;
-        bX15 = sN3 + dragX * pN3_3 / window.innerWidth;
-        bY15 = sN3 + dragY * pN3_3 / window.innerHeight;
-        bX16 = sN3 + -dragX * pN3_4 / window.innerWidth;
-        bY16 = sN3 + -dragY * pN3_4 / window.innerHeight;
-        bX17 = sN3 + dragX * pN3_5 / window.innerWidth;
-        bY17 = sN3 + dragY * pN3_5 / window.innerHeight;
-        bX18 = sN3 + -dragX * pN3_6 / window.innerWidth;
-        bY18 = sN3 + -dragY * pN3_6 / window.innerHeight;
+        pN6_1 = window.innerWidth / 6720;
+        pN6_2 = window.innerWidth / 8400;
+        pN6_3 = window.innerWidth / 16800;
+        pN6_4 = window.innerWidth / 28000;
+        pN6_5 = window.innerWidth / 42000;
+        pN6_6 = window.innerWidth / 84000;
 
-        bX19 = sN4 + dragX * pN4_1 / window.innerWidth;
-        bY19 = sN4 + dragY * pN4_1 / window.innerHeight;
-        bX20 = sN4 + -dragX * pN4_2 / window.innerWidth;
-        bY20 = sN4 + -dragY * pN4_2 / window.innerHeight;
-        bX21 = sN4 + dragX * pN4_3 / window.innerWidth;
-        bY21 = sN4 + dragY * pN4_3 / window.innerHeight;
-        bX22 = sN4 + -dragX * pN4_4 / window.innerWidth;
-        bY22 = sN4 + -dragY * pN4_4 / window.innerHeight;
-        bX23 = sN4 + dragX * pN4_5 / window.innerWidth;
-        bY23 = sN4 + dragY * pN4_5 / window.innerHeight;
-        bX24 = sN4 + -dragX * pN4_6 / window.innerWidth;
-        bY24 = sN4 + -dragY * pN4_6 / window.innerHeight;
+        pN7_1 = window.innerWidth / 8400;
+        pN7_2 = window.innerWidth / 11200;
+        pN7_3 = window.innerWidth / 16800;
+        pN7_4 = window.innerWidth / 28000;
+        pN7_5 = window.innerWidth / 42000;
+        pN7_6 = window.innerWidth / 84000;
 
-        bX25 = sN5 + -dragX * pN5_1 / window.innerWidth;
-        bY25 = sN5 + -dragY * pN5_1 / window.innerHeight;
-        bX26 = sN5 + -dragX * pN5_2 / window.innerWidth;
-        bY26 = sN5 + -dragY * pN5_2 / window.innerHeight;
-        bX27 = sN5 + dragX * pN5_3 / window.innerWidth;
-        bY27 = sN5 + dragY * pN5_3 / window.innerHeight;
-        bX28 = sN5 + -dragX * pN5_4 / window.innerWidth;
-        bY28 = sN5 + -dragY * pN5_4 / window.innerHeight;
-        bX29 = sN5 + dragX * pN5_5 / window.innerWidth;
-        bY29 = sN5 + dragY * pN5_5 / window.innerHeight;
-        bX30 = sN5 + -dragX * pN5_6 / window.innerWidth;
-        bY30 = sN5 + -dragY * pN5_6 / window.innerHeight;
+        pN8_1 = window.innerWidth / 6720;
+        pN8_2 = window.innerWidth / 8400;
+        pN8_3 = window.innerWidth / 11200;
+        pN8_4 = window.innerWidth / 16800;
+        pN8_5 = window.innerWidth / 5600;
+        pN8_6 = window.innerWidth / 8400;
+
+        macWidth = window.innerWidth;
+        macHeight = window.innerHeight;
+        
+        bX1 = sN1_1 + dragX * pN1_1 / macWidth;
+        bY1 = sN1_2 + dragY * pN1_1 / macHeight;
+        bX2 = sN1_1 + -dragX * pN1_2 / macWidth;
+        bY2 = sN1_2 + -dragY * pN1_2 / macHeight;
+        bX3 = sN1_1 + dragX * pN1_3 / macWidth;
+        bY3 = sN1_2 + dragY * pN1_3 / macHeight;
+        bX4 = sN1_1 + -dragX * pN1_4 / macWidth;
+        bY4 = sN1_2 + -dragY * pN1_4 / macHeight;
+        bX5 = sN1_1 + dragX * pN1_5 / macWidth;
+        bY5 = sN1_2 + dragY * pN1_5 / macHeight;
+        bX6 = sN1_1 + -dragX * pN1_6 / macWidth;
+        bY6 = sN1_2 + -dragY * pN1_6 / macHeight;
+
+        bX7 = sN2_1 + dragX * pN2_1 / window.innerWidth;
+        bY7 = sN2_2 + dragY * pN2_1 / window.innerHeight;
+        bX8 = sN2_1 + -dragX * pN2_2 / window.innerWidth;
+        bY8 = sN2_2 + -dragY * pN2_2 / window.innerHeight;
+        bX9 = sN2_1 + dragX * pN2_3 / window.innerWidth;
+        bY9 = sN2_2 + dragY * pN2_3 / window.innerHeight;
+        bX10 = sN2_1 + -dragX * pN2_4 / window.innerWidth;
+        bY10 = sN2_2 + -dragY * pN2_4 / window.innerHeight;
+        bX11 = sN2_1 + dragX * pN2_5 / window.innerWidth;
+        bY11 = sN2_2 + dragY * pN2_5 / window.innerHeight;
+        bX12 = sN2_1 + -dragX * pN2_6 / window.innerWidth;
+        bY12 = sN2_2 + -dragY * pN2_6 / window.innerHeight;
+
+        bX13 = sN3_1 + dragX * pN3_1 / window.innerWidth;
+        bY13 = sN3_2 + dragY * pN3_1 / window.innerHeight;
+        bX14 = sN3_1 + -dragX * pN3_2 / window.innerWidth;
+        bY14 = sN3_2 + -dragY * pN3_2 / window.innerHeight;
+        bX15 = sN3_1 + dragX * pN3_3 / window.innerWidth;
+        bY15 = sN3_2 + dragY * pN3_3 / window.innerHeight;
+        bX16 = sN3_1 + -dragX * pN3_4 / window.innerWidth;
+        bY16 = sN3_2 + -dragY * pN3_4 / window.innerHeight;
+        bX17 = sN3_1 + dragX * pN3_5 / window.innerWidth;
+        bY17 = sN3_2 + dragY * pN3_5 / window.innerHeight;
+        bX18 = sN3_1 + -dragX * pN3_6 / window.innerWidth;
+        bY18 = sN3_2 + -dragY * pN3_6 / window.innerHeight;
+
+        bX19 = sN4_1 + dragX * pN4_1 / window.innerWidth;
+        bY19 = sN4_2 + dragY * pN4_1 / window.innerHeight;
+        bX20 = sN4_1 + -dragX * pN4_2 / window.innerWidth;
+        bY20 = sN4_2 + -dragY * pN4_2 / window.innerHeight;
+        bX21 = sN4_1 + dragX * pN4_3 / window.innerWidth;
+        bY21 = sN4_2 + dragY * pN4_3 / window.innerHeight;
+        bX22 = sN4_1 + -dragX * pN4_4 / window.innerWidth;
+        bY22 = sN4_2 + -dragY * pN4_4 / window.innerHeight;
+        bX23 = sN4_1 + dragX * pN4_5 / window.innerWidth;
+        bY23 = sN4_2 + dragY * pN4_5 / window.innerHeight;
+        bX24 = sN4_1 + -dragX * pN4_6 / window.innerWidth;
+        bY24 = sN4_2 + -dragY * pN4_6 / window.innerHeight;
+
+        bX25 = sN5_1 + -dragX * pN5_1 / window.innerWidth;
+        bY25 = sN5_2 + -dragY * pN5_1 / window.innerHeight;
+        bX26 = sN5_1 + dragX * pN5_2 / window.innerWidth;
+        bY26 = sN5_2 + dragY * pN5_2 / window.innerHeight;
+        bX27 = sN5_1 + dragX * pN5_3 / window.innerWidth;
+        bY27 = sN5_2 + dragY * pN5_3 / window.innerHeight;
+        bX28 = sN5_1 + -dragX * pN5_4 / window.innerWidth;
+        bY28 = sN5_2 + -dragY * pN5_4 / window.innerHeight;
+        bX29 = sN5_1 + dragX * pN5_5 / window.innerWidth;
+        bY29 = sN5_2 + dragY * pN5_5 / window.innerHeight;
+        bX30 = sN5_1 + -dragX * pN5_6 / window.innerWidth;
+        bY30 = sN5_2 + -dragY * pN5_6 / window.innerHeight;
+
+        bX31 = sN6_1 + dragX * pN6_1 / window.innerWidth;
+        bY31 = sN6_2 + dragY * pN6_1 / window.innerHeight;
+        bX32 = sN6_1 + -dragX * pN6_2 / window.innerWidth;
+        bY32 = sN6_2 + -dragY * pN6_2 / window.innerHeight;
+        bX33 = sN6_1 + dragX * pN6_3 / window.innerWidth;
+        bY33 = sN6_2 + dragY * pN6_3 / window.innerHeight;
+        bX34 = sN6_1 + -dragX * pN6_4 / window.innerWidth;
+        bY34 = sN6_2 + -dragY * pN6_4 / window.innerHeight;
+        bX35 = sN6_1 + dragX * pN6_5 / window.innerWidth;
+        bY35 = sN6_2 + dragY * pN6_5 / window.innerHeight;
+        bX36 = sN6_1 + -dragX * pN6_6 / window.innerWidth;
+        bY36 = sN6_2 + -dragY * pN6_6 / window.innerHeight;
+
+        bX37 = sN7_1 + dragX * pN7_1 / window.innerWidth;
+        bY37 = sN7_2 + dragY * pN7_1 / window.innerHeight;
+        bX38 = sN7_1 + -dragX * pN7_2 / window.innerWidth;
+        bY38 = sN7_2 + -dragY * pN7_2 / window.innerHeight;
+        bX39 = sN7_1 + dragX * pN7_3 / window.innerWidth;
+        bY39 = sN7_2 + dragY * pN7_3 / window.innerHeight;
+        bX40 = sN7_1 + -dragX * pN7_4 / window.innerWidth;
+        bY40 = sN7_2 + -dragY * pN7_4 / window.innerHeight;
+        bX41 = sN7_1 + dragX * pN7_5 / window.innerWidth;
+        bY41 = sN7_2 + dragY * pN7_5 / window.innerHeight;
+        bX42 = sN7_1 + -dragX * pN7_6 / window.innerWidth;
+        bY42 = sN7_2 + -dragY * pN7_6 / window.innerHeight;
+
+        bX43 = sN8_1 + dragX * pN8_1 / window.innerWidth;
+        bY43 = sN8_2 + dragY * pN8_1 / window.innerHeight;
+        bX44 = sN8_1 + -dragX * pN8_2 / window.innerWidth;
+        bY44 = sN8_2 + -dragY * pN8_2 / window.innerHeight;
+        bX45 = sN8_1 + dragX * pN8_3 / window.innerWidth;
+        bY45 = sN8_2 + dragY * pN8_3 / window.innerHeight;
+        bX46 = sN8_1 + -dragX * pN8_4 / window.innerWidth;
+        bY46 = sN8_2 + -dragY * pN8_4 / window.innerHeight;
+        bX47 = sN8_1 + dragX * pN8_5 / window.innerWidth;
+        bY47 = sN8_2 + dragY * pN8_5 / window.innerHeight;
+        bX48 = sN8_1 + -dragX * pN8_6 / window.innerWidth;
+        bY48 = sN8_2 + -dragY * pN8_6 / window.innerHeight;
         
         drawShape1(bX2, bY3, bX2, bY3, 
             bX4, bY1, bX4, bX4, bY1, bY1, 
@@ -382,31 +598,208 @@ window.addEventListener('DOMContentLoaded', function(){
         drawShape5(bX27, bY26, bX27, bY26, 
             bX28, bY29, bX28, bX28, bY29, bY29, 
             bX29, bY30, bX29, bX29, bY30, bY30, 
-            bX30, bY29, bX30, bX30, bY29, bY29, 
+            bX28, bY29, bX28, bX28, bY29, bY29, 
             bX27, bY25, bX27, bX27, bY25, bY25, 
             bX26, bY26, bX26, bX26, bY26, bY26, 
             bX27, bY26, bX27, bY26);
+
+        drawShape6(bX31, bY32, bX31, bY32, 
+            bX32, bY33, bX32, bX32, bY33, bY33, 
+            bX33, bY34, bX33, bX33, bY34, bY34, 
+            bX34, bY35, bX34, bX34, bY35, bY35, 
+            bX35, bY36, bX35, bX35, bY36, bY36, 
+            bX31, bY32, bX31, bY32);
+
+        drawShape7(bX37, bY38, bX37, bY38, 
+            bX38, bY39, bX38, bX38, bY39, bY39, 
+            bX39, bY40, bX39, bX39, bY40, bY40, 
+            bX40, bY41, bX40, bX40, bY41, bY41, 
+            bX41, bY42, bX41, bX41, bY42, bY42, 
+            bX37, bY38, bX37, bY38);
+
+        drawShape8(bX43, bY44, bX43, bY44, 
+            bX44, bY45, bX44, bX44, bY45, bY45, 
+            bX45, bY46, bX45, bX45, bY46, bY46, 
+            bX46, bY47, bX46, bX46, bY47, bY47, 
+            bX47, bY48, bX47, bX48, bY47, bY48, 
+            bX43, bY44, bX43, bY44);
     }
 
     function stopShape() {
-        let bN1 = window.innerWidth / 1520;
-        let bN2 = window.innerWidth / 820;
-        let bN3 = window.innerWidth / 1150;
-        let bN4 = window.innerWidth / 1520;
-        let bN5 = window.innerWidth / 2100;
+        let bN1x = window.innerWidth / 1520;
+        let bN1y = window.innerHeight / 960;
+        let bN2x = window.innerWidth / 820;
+        let bN2y = window.innerHeight / 520;
+        let bN3x = window.innerWidth / 1150;
+        let bN3y = window.innerHeight / 750;
+        let bN4x = window.innerWidth / 1520;
+        let bN4y = window.innerHeight / 1020;
+        let bN5x = window.innerWidth / 2000;
+        let bN5y = window.innerHeight / 1900;
+        let bN6x = window.innerWidth / 1150;
+        let bN6y = window.innerHeight / (1000000 / window.innerWidth);
+        let bN7x = window.innerWidth / 1520;
+        let bN7y = window.innerHeight / (1300000 / window.innerWidth);
+        let bN8x = window.innerWidth / 820;
+        let bN8y = window.innerHeight / (1000000 / window.innerWidth);
     
-        drawShape1(bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1, bN1);
+        drawShape1(bN1x, bN1y, bN1x, bN1y, 
+            bN1x, bN1y, bN1x, bN1x, bN1y, bN1y, 
+            bN1x, bN1y, bN1x, bN1x, bN1y, bN1y, 
+            bN1x, bN1y, bN1x, bN1x, bN1y, bN1y, 
+            bN1x, bN1y, bN1x, bN1x, bN1y, bN1y, 
+            bN1x, bN1y, bN1x, bN1x, bN1y, bN1y, 
+            bN1x, bN1y, bN1x, bN1x, bN1y, bN1y, 
+            bN1x, bN1y, bN1x, bN1y);
 
-        drawShape2(bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2, bN2);
+        drawShape2(bN2x, bN2y, bN2x, bN2y, 
+            bN2x, bN2y, bN2x, bN2x, bN2y, bN2y, 
+            bN2x, bN2y, bN2x, bN2x, bN2y, bN2y, 
+            bN2x, bN2y, bN2x, bN2x, bN2y, bN2y, 
+            bN2x, bN2y, bN2x, bN2x, bN2y, bN2y, 
+            bN2x, bN2y, bN2x, bN2x, bN2y, bN2y, 
+            bN2x, bN2y, bN2x, bN2x, bN2y, bN2y, 
+            bN2x, bN2y, bN2x, bN2y);
 
-        drawShape3(bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3, bN3);
+        drawShape3(bN3x, bN3y, bN3x, bN3y, 
+            bN3x, bN3y, bN3x, bN3x, bN3y, bN3y, 
+            bN3x, bN3y, bN3x, bN3x, bN3y, bN3y, 
+            bN3x, bN3y, bN3x, bN3x, bN3y, bN3y, 
+            bN3x, bN3y, bN3x, bN3x, bN3y, bN3y, 
+            bN3x, bN3y, bN3x, bN3x, bN3y, bN3y, 
+            bN3x, bN3y, bN3x, bN3y);
 
-        drawShape4(bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4, bN4);
+        drawShape4(bN4x, bN4y, bN4x, bN4y, 
+            bN4x, bN4y, bN4x, bN4x, bN4y, bN4y, 
+            bN4x, bN4y, bN4x, bN4x, bN4y, bN4y, 
+            bN4x, bN4y, bN4x, bN4x, bN4y, bN4y, 
+            bN4x, bN4y, bN4x, bN4x, bN4y, bN4y, 
+            bN4x, bN4y, bN4x, bN4x, bN4y, bN4y, 
+            bN4x, bN4y, bN4x, bN4y);
 
-        drawShape5(bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5, bN5);
+        drawShape5(bN5x, bN5y, bN5x, bN5y, 
+            bN5x, bN5y, bN5x, bN5x, bN5y, bN5y, 
+            bN5x, bN5y, bN5x, bN5x, bN5y, bN5y, 
+            bN5x, bN5y, bN5x, bN5x, bN5y, bN5y, 
+            bN5x, bN5y, bN5x, bN5x, bN5y, bN5y, 
+            bN5x, bN5y, bN5x, bN5x, bN5y, bN5y, 
+            bN5x, bN5y, bN5x, bN5y);
+
+        drawShape6(bN6x, bN6y, bN6x, bN6y, 
+            bN6x, bN6y, bN6x, bN6x, bN6y, bN6y, 
+            bN6x, bN6y, bN6x, bN6x, bN6y, bN6y, 
+            bN6x, bN6y, bN6x, bN6x, bN6y, bN6y, 
+            bN6x, bN6y, bN6x, bN6x, bN6y, bN6y, 
+            bN6x, bN6y, bN6x, bN6y);
+
+        drawShape7(bN7x, bN7y, bN7x, bN7y, 
+            bN7x, bN7y, bN7x, bN7x, bN7y, bN7y, 
+            bN7x, bN7y, bN7x, bN7x, bN7y, bN7y, 
+            bN7x, bN7y, bN7x, bN7x, bN7y, bN7y, 
+            bN7x, bN7y, bN7x, bN7x, bN7y, bN7y, 
+            bN7x, bN7y, bN7x, bN7y);
+
+        drawShape8(bN8x, bN8y, bN8x, bN8y, 
+            bN8x, bN8y, bN8x, bN8x, bN8y, bN8y, 
+            bN8x, bN8y, bN8x, bN8x, bN8y, bN8y, 
+            bN8x, bN8y, bN8x, bN8x, bN8y, bN8y, 
+            bN8x, bN8y, bN8x, bN8x, bN8y, bN8y, 
+            bN8x, bN8y, bN8x, bN8y);
     }
 
     stopShape();
+
+    function randomPurupuru() {
+        Xno1 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno1 = Math.floor(Math.random() * (window.innerHeight + 1));
+        Xno2 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno2 = Math.floor(Math.random() * (window.innerHeight + 1));
+        Xno3 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno3 = Math.floor(Math.random() * (window.innerHeight + 1));
+        Xno4 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno4 = Math.floor(Math.random() * (window.innerHeight + 1));
+        Xno5 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno5 = Math.floor(Math.random() * (window.innerHeight + (canvas5.height / 10 * 7) + 1));
+        Xno6 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno6 = Math.floor(Math.random() * (window.innerHeight + 1));
+        Xno7 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno7 = Math.floor(Math.random() * (window.innerHeight + 1));
+        Xno8 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno8 = Math.floor(Math.random() * (window.innerHeight + 1));
+        canvas1.style.transform = 'translate(' + Xno1 + 'px,' + Yno1 + 'px)';
+        canvas2.style.transform = 'translate(' + Xno2 + 'px,' + Yno2 + 'px)';
+        canvas3.style.transform = 'translate(' + Xno3 + 'px,' + Yno3 + 'px)';
+        canvas4.style.transform = 'translate(' + Xno4 + 'px,' + Yno4 + 'px)';
+        canvas5.style.transform = 'translate(' + Xno5 + 'px,' + Yno5 + 'px)';
+        canvas6.style.transform = 'translate(' + Xno6 + 'px,' + Yno6 + 'px)';
+        canvas7.style.transform = 'translate(' + Xno7 + 'px,' + Yno7 + 'px)';
+        canvas8.style.transform = 'translate(' + Xno8 + 'px,' + Yno8 + 'px)';
+    }
+
+    randomPurupuru();
+
+    function opacityAnimation() {
+		$(canvas1).animate({opacity: '0'}, 3200).animate({opacity: '1'}, 3200).animate({opacity: '1'}, 3200).animate({opacity: '0'}, 3200, opacityAnimation);
+        $(canvas2).animate({opacity: '0'}, 4000).animate({opacity: '1'}, 4000).animate({opacity: '1'}, 4000).animate({opacity: '0'}, 4000, opacityAnimation);
+        $(canvas3).animate({opacity: '0'}, 2700).animate({opacity: '1'}, 2700).animate({opacity: '1'}, 2700).animate({opacity: '0'}, 2700, opacityAnimation);
+        $(canvas4).animate({opacity: '0'}, 2100).animate({opacity: '1'}, 2100).animate({opacity: '1'}, 2100).animate({opacity: '0'}, 2100, opacityAnimation);
+        $(canvas5).animate({opacity: '0'}, 1500).animate({opacity: '1'}, 1500).animate({opacity: '1'}, 1500).animate({opacity: '0'}, 1500, opacityAnimation);
+        $(canvas6).animate({opacity: '0'}, 1500).animate({opacity: '1'}, 1500).animate({opacity: '1'}, 1500).animate({opacity: '0'}, 1500, opacityAnimation);
+        $(canvas7).animate({opacity: '0'}, 1500).animate({opacity: '1'}, 1500).animate({opacity: '1'}, 1500).animate({opacity: '0'}, 1500, opacityAnimation);
+        $(canvas8).animate({opacity: '0'}, 1500).animate({opacity: '1'}, 1500).animate({opacity: '1'}, 1500).animate({opacity: '0'}, 1500, opacityAnimation);
+	}
+
+    // opacityAnimation();
+
+    let canvasOpacity1 = () => {
+        Xno1 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno1 = Math.floor(Math.random() * (window.innerHeight + 1));
+        canvas1.style.transform = 'translate(' + Xno1 + 'px,' + Yno1 + 'px)';
+    }
+    let canvasOpacity2 = () => {
+        Xno2 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno2 = Math.floor(Math.random() * (window.innerHeight + 1));
+        canvas2.style.transform = 'translate(' + Xno2 + 'px,' + Yno2 + 'px)';
+    }
+    let canvasOpacity3 = () => {
+        Xno3 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno3 = Math.floor(Math.random() * (window.innerHeight + 1));
+        canvas3.style.transform = 'translate(' + Xno3 + 'px,' + Yno3 + 'px)';
+    }
+    let canvasOpacity4 = () => {
+        Xno4 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno4 = Math.floor(Math.random() * (window.innerHeight + 1));
+        canvas4.style.transform = 'translate(' + Xno4 + 'px,' + Yno4 + 'px)';
+    }
+    let canvasOpacity5 = () => {
+        Xno5 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno5 = Math.floor(Math.random() * (window.innerHeight + 1));
+        canvas5.style.transform = 'translate(' + Xno5 + 'px,' + Yno5 + 'px)';
+    }
+    let canvasOpacity6 = () => {
+        Xno6 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno6 = Math.floor(Math.random() * (window.innerHeight + 1));
+        canvas6.style.transform = 'translate(' + Xno6 + 'px,' + Yno6 + 'px)';
+    }
+    let canvasOpacity7 = () => {
+        Xno7 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno7 = Math.floor(Math.random() * (window.innerHeight + 1));
+        canvas7.style.transform = 'translate(' + Xno7 + 'px,' + Yno7 + 'px)';
+    }
+    let canvasOpacity8 = () => {
+        Xno8 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno8 = Math.floor(Math.random() * (window.innerHeight + 1));
+        canvas8.style.transform = 'translate(' + Xno8 + 'px,' + Yno8 + 'px)';
+    }
+
+    setInterval(canvasOpacity1, 12800);
+    setInterval(canvasOpacity2, 16000);
+    setInterval(canvasOpacity3, 10800);
+    setInterval(canvasOpacity4, 8400);
+    setInterval(canvasOpacity5, 6000);
+    setInterval(canvasOpacity6, 5400);
+    setInterval(canvasOpacity7, 9600);
+    setInterval(canvasOpacity8, 7200);
 
     gradient1.style['background-image'] = 'radial-gradient(rgba(' + red1 + ', ' + green1 + ', ' + blue1 + '), rgba(25, 25, 112, 0)60%)';
     gradient2.style['background-image'] = 'radial-gradient(rgba(' + red2 + ', ' + green2 + ', ' + blue2 + '), rgba(25, 25, 112, 0)60%)';
@@ -1313,6 +1706,10 @@ window.addEventListener('DOMContentLoaded', function(){
             innerWidth <= "700" ? bookMarkShadow.style.left = '5%':
             bookMarkShadow.style.left = '30%';
         }
+        stopShape();
+        let bN8y = window.innerHeight / (1000000 / window.innerWidth);
+        console.log(bY42);
+        console.log(bN8y);
         // canvas1.width = window.innerWidth * 2;
         // canvas1.height = window.innerHeight * 2;
     }
