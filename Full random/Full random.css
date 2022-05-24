@@ -1055,6 +1055,15 @@ main{
     animation: opacity2 7.2s ease-in-out 0s infinite alternate;
 }
 
+#canvas9{
+    width: calc((1000px + 40vw) * 0.7);
+    height: calc((1000px + 40vw) * 0.8);
+    mix-blend-mode: normal;
+    mix-blend-mode: -webkit-normal;
+    -webkit-mix-blend-mode: normal;
+    animation: opacity2 6.7s ease-in-out 0s infinite alternate;
+}
+
 @keyframes opacity{
 	0%{
 		opacity: 0;

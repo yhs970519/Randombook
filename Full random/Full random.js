@@ -59,6 +59,8 @@ window.addEventListener('DOMContentLoaded', function(){
     let ctx7 = canvas7.getContext("2d");
     let canvas8 = document.querySelector("#canvas8");
     let ctx8 = canvas8.getContext("2d");
+    let canvas9 = document.querySelector("#canvas9");
+    let ctx9 = canvas9.getContext("2d");
 
     let gradient1 = document.querySelector(".gradient1");
     let gradient2 = document.querySelector(".gradient2");
@@ -115,6 +117,8 @@ window.addEventListener('DOMContentLoaded', function(){
     let psN7_2 = 0.5;
     let psN8_1 = 0.3;
     let psN8_2 = 0.3;
+    let psN9_1 = 0.7;
+    let psN9_2 = 0.8;
 
     let mN1 = 60;
     let mN2 = 180;
@@ -124,6 +128,7 @@ window.addEventListener('DOMContentLoaded', function(){
     let mN6 = 150;
     let mN7 = 50;
     let mN8 = 220;
+    let mN9 = 120;
 
     let blankX = window.innerWidth / 5;
     let blankY = 200000 / window.innerWidth;
@@ -341,6 +346,33 @@ window.addEventListener('DOMContentLoaded', function(){
         canvas8.style.marginTop = '' + -canvas8.width / 10 * 5 + 'px';
         canvas8.style.marginLeft = '' + -canvas8.height / 10 * 5 + 'px';
     }
+
+    function drawShape9(x1, y1, x1_1, y1_1,
+        x2, y2, x2_1, x2_2, y2_1, y2_2,
+        x3, y3, x3_1, x3_2, y3_1, y3_2,
+        x4, y4, x4_1, x4_2, y4_1, y4_2,
+        x5, y5, x5_1, x5_2, y5_1, y5_2,
+        x6, y6, x6_1, y6_1) {
+        canvas9 = document.querySelector("#canvas9");
+        ctx9 = canvas9.getContext("2d");
+        canvas9.width = window.innerWidth * psN9_1 + 50;
+        canvas9.height = window.innerWidth * psN9_2 + 50;
+        ctx9.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        ctx9.fillStyle = 'rgba(' + red2 + ', ' + green3 + ', ' + blue4 + ')';
+        ctx9.beginPath();
+        ctx9.moveTo((689 - mN9) * x1, (251 - mN9) * y1);
+        ctx9.bezierCurveTo((587 - mN9) * x1_1, (162 - mN9) * y1_1, (449 - mN9) * x2_1, (114 - mN9) * y2_1, (356 - mN9) * x2, (185 - mN9) * y2);
+        ctx9.bezierCurveTo((255 - mN9) * x2_2, (261 - mN9) * y2_2, (318 - mN9) * x3_1, (349 - mN9) * y3_1, (261 - mN9) * x3, (456 - mN9) * y3);
+        ctx9.bezierCurveTo((217 - mN9) * x3_2, (539 - mN9) * y3_2, (165 - mN9) * x4_1, (778 - mN9) * y4_1, (322 - mN9) * x4, (836 - mN9) * y4);
+        ctx9.bezierCurveTo((445 - mN9) * x4_2, (881 - mN9) * y4_2, (724 - mN9) * x5_1, (736 - mN9) * y5_1, (795 - mN9) * x5, (540 - mN9) * y5);
+        ctx9.bezierCurveTo((835 - mN9) * x5_2, (429 - mN9) * y5_2, (772 - mN9) * x6_1, (329 - mN9) * y6_1, (689 - mN9) * x6, (251 - mN9) * y6);
+        ctx9.closePath();
+        ctx9.fill();
+        mX = (window.innerWidth * 2) + 2630;
+        minusX = mX / window.innerWidth;
+        canvas9.style.marginTop = '' + -canvas9.width / 10 * minusX + 'px';
+        canvas9.style.marginLeft = '' + -canvas9.height / 10 * minusX + 'px';
+    }
     
     function moveShape() {
 
@@ -360,6 +392,8 @@ window.addEventListener('DOMContentLoaded', function(){
         sN7_2 = window.innerHeight / (1300000 / window.innerWidth);
         sN8_1 = window.innerWidth / 820;
         sN8_2 = window.innerHeight / (1000000 / window.innerWidth);
+        sN9_1 = window.innerWidth / 1020;
+        sN9_2 = window.innerHeight / (1000000 / window.innerWidth);
 
         // pN1_1 = 0.2;
         // pN1_2 = 0.15;
@@ -453,6 +487,13 @@ window.addEventListener('DOMContentLoaded', function(){
         pN8_4 = window.innerWidth / 16800;
         pN8_5 = window.innerWidth / 5600;
         pN8_6 = window.innerWidth / 8400;
+
+        pN9_1 = window.innerWidth / 840;
+        pN9_2 = window.innerWidth / 6720;
+        pN9_3 = window.innerWidth / 8400;
+        pN9_4 = window.innerWidth / 16800;
+        pN9_5 = window.innerWidth / 33600;
+        pN9_6 = window.innerWidth / 84000;
 
         macWidth = window.innerWidth;
         macHeight = window.innerHeight;
@@ -560,6 +601,19 @@ window.addEventListener('DOMContentLoaded', function(){
         bY47 = sN8_2 + dragY * pN8_5 / window.innerHeight;
         bX48 = sN8_1 + -dragX * pN8_6 / window.innerWidth;
         bY48 = sN8_2 + -dragY * pN8_6 / window.innerHeight;
+
+        bX49 = sN9_1 + dragX * pN9_1 / window.innerWidth;
+        bY49 = sN9_2 + dragY * pN9_1 / window.innerHeight;
+        bX50 = sN9_1 + -dragX * pN9_2 / window.innerWidth;
+        bY50 = sN9_2 + -dragY * pN9_2 / window.innerHeight;
+        bX51 = sN9_1 + dragX * pN9_3 / window.innerWidth;
+        bY51 = sN9_2 + dragY * pN9_3 / window.innerHeight;
+        bX52 = sN9_1 + -dragX * pN9_4 / window.innerWidth;
+        bY52 = sN9_2 + -dragY * pN9_4 / window.innerHeight;
+        bX53 = sN9_1 + dragX * pN9_5 / window.innerWidth;
+        bY53 = sN9_2 + dragY * pN9_5 / window.innerHeight;
+        bX54 = sN9_1 + -dragX * pN9_6 / window.innerWidth;
+        bY54 = sN9_2 + -dragY * pN9_6 / window.innerHeight;
         
         drawShape1(bX2, bY3, bX2, bY3, 
             bX4, bY1, bX4, bX4, bY1, bY1, 
@@ -623,6 +677,13 @@ window.addEventListener('DOMContentLoaded', function(){
             bX46, bY47, bX46, bX46, bY47, bY47, 
             bX47, bY48, bX47, bX48, bY47, bY48, 
             bX43, bY44, bX43, bY44);
+
+        drawShape9(bX51, bY50, bX51, bY50, 
+            bX50, bY51, bX50, bX50, bY51, bY51, 
+            bX51, bY52, bX51, bX51, bY52, bY52, 
+            bX53, bY54, bX53, bX53, bY54, bY54, 
+            bX52, bY51, bX52, bX52, bY51, bY51, 
+            bX51, bY50, bX51, bY50);
     }
 
     function stopShape() {
@@ -642,6 +703,8 @@ window.addEventListener('DOMContentLoaded', function(){
         let bN7y = window.innerHeight / (1300000 / window.innerWidth);
         let bN8x = window.innerWidth / 820;
         let bN8y = window.innerHeight / (1000000 / window.innerWidth);
+        let bN9x = window.innerWidth / 1020;
+        let bN9y = window.innerHeight / (1000000 / window.innerWidth);
     
         drawShape1(bN1x, bN1y, bN1x, bN1y, 
             bN1x, bN1y, bN1x, bN1x, bN1y, bN1y, 
@@ -705,6 +768,13 @@ window.addEventListener('DOMContentLoaded', function(){
             bN8x, bN8y, bN8x, bN8x, bN8y, bN8y, 
             bN8x, bN8y, bN8x, bN8x, bN8y, bN8y, 
             bN8x, bN8y, bN8x, bN8y);
+
+        drawShape9(bN9x, bN9y, bN9x, bN9y, 
+            bN9x, bN9y, bN9x, bN9x, bN9y, bN9y, 
+            bN9x, bN9y, bN9x, bN9x, bN9y, bN9y, 
+            bN9x, bN9y, bN9x, bN9x, bN9y, bN9y, 
+            bN9x, bN9y, bN9x, bN9x, bN9y, bN9y, 
+            bN9x, bN9y, bN9x, bN9y);
     }
 
     stopShape();
@@ -726,6 +796,8 @@ window.addEventListener('DOMContentLoaded', function(){
         Yno7 = Math.floor(Math.random() * (window.innerHeight + 1));
         Xno8 = Math.floor(Math.random() * (window.innerWidth + 1));
         Yno8 = Math.floor(Math.random() * (window.innerHeight + 1));
+        Xno9 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno9 = Math.floor(Math.random() * (window.innerHeight + 1));
         canvas1.style.transform = 'translate(' + Xno1 + 'px,' + Yno1 + 'px)';
         canvas2.style.transform = 'translate(' + Xno2 + 'px,' + Yno2 + 'px)';
         canvas3.style.transform = 'translate(' + Xno3 + 'px,' + Yno3 + 'px)';
@@ -734,6 +806,7 @@ window.addEventListener('DOMContentLoaded', function(){
         canvas6.style.transform = 'translate(' + Xno6 + 'px,' + Yno6 + 'px)';
         canvas7.style.transform = 'translate(' + Xno7 + 'px,' + Yno7 + 'px)';
         canvas8.style.transform = 'translate(' + Xno8 + 'px,' + Yno8 + 'px)';
+        canvas9.style.transform = 'translate(' + Xno9 + 'px,' + Yno9 + 'px)';
     }
 
     randomPurupuru();
@@ -791,6 +864,11 @@ window.addEventListener('DOMContentLoaded', function(){
         Yno8 = Math.floor(Math.random() * (window.innerHeight + 1));
         canvas8.style.transform = 'translate(' + Xno8 + 'px,' + Yno8 + 'px)';
     }
+    let canvasOpacity9 = () => {
+        Xno9 = Math.floor(Math.random() * (window.innerWidth + 1));
+        Yno9 = Math.floor(Math.random() * (window.innerHeight + 1));
+        canvas9.style.transform = 'translate(' + Xno9 + 'px,' + Yno9 + 'px)';
+    }
 
     setInterval(canvasOpacity1, 12800);
     setInterval(canvasOpacity2, 16000);
@@ -800,6 +878,7 @@ window.addEventListener('DOMContentLoaded', function(){
     setInterval(canvasOpacity6, 5400);
     setInterval(canvasOpacity7, 9600);
     setInterval(canvasOpacity8, 7200);
+    setInterval(canvasOpacity9, 6700);
 
     gradient1.style['background-image'] = 'radial-gradient(rgba(' + red1 + ', ' + green1 + ', ' + blue1 + '), rgba(25, 25, 112, 0)60%)';
     gradient2.style['background-image'] = 'radial-gradient(rgba(' + red2 + ', ' + green2 + ', ' + blue2 + '), rgba(25, 25, 112, 0)60%)';
@@ -1707,9 +1786,6 @@ window.addEventListener('DOMContentLoaded', function(){
             bookMarkShadow.style.left = '30%';
         }
         stopShape();
-        let bN8y = window.innerHeight / (1000000 / window.innerWidth);
-        console.log(bY42);
-        console.log(bN8y);
         // canvas1.width = window.innerWidth * 2;
         // canvas1.height = window.innerHeight * 2;
     }
