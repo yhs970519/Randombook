@@ -1278,9 +1278,9 @@ main{
         font-size: 8vw;
     }
 
-    .buy{
+    /* .buy{
         -webkit-text-stroke: 1.5px black;
-    }
+    } */
 
     .now{
         font-size: 6vw;
@@ -1318,9 +1318,9 @@ main{
 }
 
 @media (max-width: 500px){
-    .buy{
+    /* .buy{
         -webkit-text-stroke: 1px black;
-    }
+    } */
     
     .now{
         -webkit-text-stroke: 1px brown;
