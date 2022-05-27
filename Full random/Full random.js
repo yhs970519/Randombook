@@ -1114,8 +1114,10 @@ window.addEventListener('DOMContentLoaded', function(){
 	let aside_ul = document.querySelector(".aside");
 
     let buy = document.querySelector(".buy");
-    let booklist = document.querySelector(".booklist");
-    let review = document.querySelector(".review");
+    let booklist = document.querySelector("#Bbooklist");
+    let review = document.querySelector("#Breview");
+    let Fbooklist = document.querySelector("#Fbooklist");
+    let Freview = document.querySelector("#Freview");
     
     let buyBackground = document.querySelector(".buyBackground");
     let booklistBackground = document.querySelector(".booklistBackground");
@@ -1182,8 +1184,10 @@ window.addEventListener('DOMContentLoaded', function(){
 	mypage2.onclick = mypageClick2;
 
     buy.onclick = buyClick;
-    booklist.onclick = booklistClick;
-    review.onclick = reviewClick;
+    // booklist.onclick = booklistClick;
+    Fbooklist.onclick = FbooklistClick;
+    // review.onclick = reviewClick;
+    Freview.onclick = FreviewClick;
 
     cancelbutton[0].onclick = cancelClick;
     cancelbutton[1].onclick = cancelClick;
@@ -1286,9 +1290,11 @@ window.addEventListener('DOMContentLoaded', function(){
         booklist.style.opacity = '0';
         booklist.style.transition = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
         booklist.style['-webkit-transition'] = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
+        Fbooklist.style.zIndex = '1';
         review.style.opacity = '0';
         review.style.transition = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
         review.style['-webkit-transition'] = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
+        Freview.style.zIndex = '1';
         booklistShadow.style.opacity = '0';
         booklistShadow.style.transitionDelay = '0s';
         booklistShadow.style['-webkit-transitionDelay'] = '0s';
@@ -1382,9 +1388,11 @@ window.addEventListener('DOMContentLoaded', function(){
         booklist.style.opacity = '1';
         booklist.style.transition = 'opacity 0.5s ease 2s, color 0.5s ease 0s';
         booklist.style['-webkit-transition'] = 'opacity 0.5s ease 2s, color 0.5s ease 0s';
+        Fbooklist.style.zIndex = '2';
         review.style.opacity = '1';
         review.style.transition = 'opacity 0.5s ease 2s, color 0.5s ease 0s';
         review.style['-webkit-transition'] = 'opacity 0.5s ease 2s, color 0.5s ease 0s';
+        Freview.style.zIndex = '2';
         booklistShadow.style.opacity = '1';
         booklistShadow.style.transitionDelay = '2s';
         booklistShadow.style['-webkit-transitionDelay'] = '2s';
@@ -1497,6 +1505,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	}
 
     function nowClick() {
+        purchase.style.zIndex = '2';
         purchase.style.opacity = '1';
         purchase.style.visibility = 'visible';
         now.style.visibility = 'hidden';
@@ -1508,6 +1517,7 @@ window.addEventListener('DOMContentLoaded', function(){
     function completeClick() {
         $(thank).animate({opacity: '1'}, 500).animate({opacity: '1'}, 1000).animate({opacity: '0'}, 500);
         thank.style.visibility = 'visible';
+        purchase.style.zIndex = '0';
         purchase.style.opacity = '0';
         purchase.style.visibility = 'hidden';
         buy.style.visibility = 'visible';
@@ -1531,7 +1541,7 @@ window.addEventListener('DOMContentLoaded', function(){
         priceLabelShadow.style.opacity = '0';
 	}
 
-    function booklistClick() {
+    function FbooklistClick() {
 		if (window.innerWidth > 1200) {
             booklistAnimaition(8);
 		}else if(window.innerWidth > 1000) {
@@ -1573,7 +1583,7 @@ window.addEventListener('DOMContentLoaded', function(){
         }
 	}
 
-    function reviewClick() {
+    function FreviewClick() {
 		if (window.innerWidth > 1200) {
             reviewAnimaition(8);
 		}else if(window.innerWidth > 1000) {
@@ -1614,6 +1624,24 @@ window.addEventListener('DOMContentLoaded', function(){
             reviewAnimaition2();
         }
 	}
+
+    $(Fbooklist).hover(
+        function() {
+            $(booklist).css("color", "rgba(0, 0, 0)");
+        },
+        function() {
+            $(booklist).css("color", "rgba(248, 248, 255)");
+        }
+    );
+
+    $(Freview).hover(
+        function() {
+            $(review).css("color", "rgba(0, 0, 0)");
+        },
+        function() {
+            $(review).css("color", "rgba(248, 248, 255)");
+        }
+    );
 
     function cancelClick() {
         bookanimation2();
@@ -1889,4 +1917,12 @@ window.addEventListener('DOMContentLoaded', function(){
 	}, function() {
 		$(this).css("color", "slategrey");
 	});
+
+    let startScreen = document.querySelector(".startScreen");
+    startScreen.style.backgroundColor = 'rgba(' + red1 + ', ' + green2 + ', ' + blue3 + ')';
 });
+
+// loading//////////////////////////////////////////////////
+window.onload = function() {
+	$(".START").delay(2000).fadeOut( 1000 );
+}
