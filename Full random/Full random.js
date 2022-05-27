@@ -1290,11 +1290,11 @@ window.addEventListener('DOMContentLoaded', function(){
         booklist.style.opacity = '0';
         booklist.style.transition = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
         booklist.style['-webkit-transition'] = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
-        Fbooklist.style.zIndex = '1';
+        Fbooklist.style.zIndex = '0';
         review.style.opacity = '0';
         review.style.transition = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
         review.style['-webkit-transition'] = 'opacity 0.5s ease 0s, color 0.5s ease 0s';
-        Freview.style.zIndex = '1';
+        Freview.style.zIndex = '0';
         booklistShadow.style.opacity = '0';
         booklistShadow.style.transitionDelay = '0s';
         booklistShadow.style['-webkit-transitionDelay'] = '0s';
