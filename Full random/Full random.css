@@ -1425,6 +1425,18 @@ main{
     .booklistShadow, .reviewShadow{
         color: rgba(0, 0, 0, 0.8);
     }
+
+    .loadText1{
+        position: relative;
+        top: -27rem;
+        left: 0;
+        font-size: 1.25rem;
+        transform: rotate(0deg);
+    }
+
+    .loadText2{
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 500px){
