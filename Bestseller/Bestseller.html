@@ -2,14 +2,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Randombook</title>
+<title>Bestseller</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="Bestseller.css">
 <link rel="stylesheet" href="../fontello-01cc8579/css/fontello.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <script src="../jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
 <script src="Bestseller.js"></script>
 </head>
 <body>
@@ -38,8 +42,8 @@
         <div class="content">
             <nav>
 				<ul class="nav">
-                    <li class="CT"><a href="../Full random/Full random.html">FULL RANDOM</a></li>
-					<li class="CT"><a href="Bestseller.html">BESTSELLER</a></li>
+                    <li class="CT"><a href="Full random/Full random.html">FULL RANDOM</a></li>
+                    <li class="CT"><a href="../Bestseller/Bestseller.html">BESTSELLER</a></li>
 					<li class="CT">RECOMMENDED  <span class="limited">limited event</span>
 						<ul class="list_nav1">
 							<li class="ct"><a href="../by BTS/by BTS.html">by BTS</a></li>
@@ -67,7 +71,656 @@
 				</ul>
 			</nav>
             <main>
-
+                <div id="backGround"></div>
+                <div id="imageGroupe1" class="imageGroupe">
+                    <img src="king/kingback.png" alt="throne" id="image9" class="image">
+                    <div id="stair">
+                        <img src="king/stair4.png" alt="throne" id="image5" class="image">
+                        <img src="king/stair3.png" alt="throne" id="image6" class="image">
+                        <img src="king/stair2.png" alt="throne" id="image7" class="image">
+                        <img src="king/stair1.png" alt="throne" id="image8" class="image">
+                    </div>
+                    <img src="king/throne.png" alt="throne" id="image1" class="image">
+                </div>
+                <div class="subShadow">
+                    <div class="subShd1">
+                        <div class="booklistShadow">book<br>list</div>
+                    </div>
+                    <div class="subShd2">
+                        <div class="reviewShadow">Readers<br>review</div>
+                    </div>
+                </div>
+                <div class="bookScale">
+                    <div class="mainShadow">
+                        <div class="priceLabelShadow"></div>
+                        <div class="bookMarkShadow"></div>
+                        <div class="bookShadow bookCoverShadow"></div>
+                        <div class="bookGroup">
+                            <div class="bookgroup">
+                                <div class="bookShadow bookRact10"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookShadow bookRact9"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookShadow bookRact8"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookShadow bookRact7"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookShadow bookRact6"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookShadow bookRact5"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookShadow bookRact4"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookShadow bookRact3"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookShadow bookRact2"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookShadow bookRact1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = mainbook>
+                        <div class="priceLabel">￥2,500</div>
+                        <div class="bookMark"></div>
+                        <div class="bookCover"></div>
+                        <div class="bookGroup">
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact15"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact14"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact13"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact12"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact11"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact10"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact9"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact8"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact7"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact6"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact5"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact4"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact3"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact2"></div>
+                            </div>
+                            <div class="bookgroup">
+                                <div class="bookRact bookRact1"></div>
+                            </div>
+                        </div>
+                        <div class="bookSample">
+                            <div class="buttonbar">
+                                <button class="cancelbutton">
+                                    <i class="icon-cancel-circled"></i>
+                                </button>
+                                <span class="arrowbutton">
+                                    <button class="previousbutton1">
+                                        <i class="icon-angle-circled-left"></i>
+                                    </button>
+                                    <button class="nextbutton1">
+                                        <i class="icon-angle-circled-right"></i>
+                                    </button>
+                                    <div class="buttonCancel1"></div>
+                                </span>
+                            </div>
+                            <div class="booksampleGroup">
+                                <div class="booksample">
+                                    <img src="../book1/book1.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">里奈やの大冒険 全230巻 special edition</a>
+                                        <span class="author">里奈や</span>
+                                        <span class="publisher">里奈や出版社</span>
+                                        <span class="price">¥980,630</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book1/book2.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">赤いトウモロコシ畑の里奈や</a>
+                                        <span class="author">大沢 里奈や</span>
+                                        <span class="publisher">Rina出版</span>
+                                        <span class="price">￥3,600</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book1/book3.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">大沢里奈の現代美術理論とそのDIY</a>
+                                        <span class="author">大沢 里奈</span>
+                                        <span class="publisher">里奈現代アート委員会出版局</span>
+                                        <span class="price">￥1,600</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book1/book4.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">Bloody fox 「OsRn」</a>
+                                        <span class="author">O. Rina 訳ヤンヒョクス</span>
+                                        <span class="publisher">RINA文学</span>
+                                        <span class="price">￥2,300</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book1/book5.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">プリンスコパラダイス全史 産業革命編</a>
+                                        <span class="author">元プリンスコパラダイス初代国王 ヤンヒョクス</span>
+                                        <span class="publisher">プリンスコパラダイス文化省</span>
+                                        <span class="price">一般購入不可</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book1/book6.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">ヤンヒョクスの仮面</a>
+                                        <span class="author">里奈やちゃん</span>
+                                        <span class="publisher">ヤンヒョクス研究協会</span>
+                                        <span class="price">￥300</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book1/book7.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">軍でサッカーした話し</a>
+                                        <span class="author">Y. Hyucksoo 訳ヤンヒョクス</span>
+                                        <span class="publisher">ヤン's戯言 文化記録部</span>
+                                        <span class="price">無料</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book1/book8.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">変態の末路</a>
+                                        <span class="author">リナ オオサワ</span>
+                                        <span class="publisher">シモネタ社</span>
+                                        <span class="price">￥1,500</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book1/book9.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">うんちジャーナリストやんの人生</a>
+                                        <span class="author">里奈やちゃん</span>
+                                        <span class="publisher">ヤンヒョクス研究協会</span>
+                                        <span class="price">￥800</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book1/book10.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">プリンスコパラダイスの三代ミステリー</a>
+                                        <span class="author">現プリンスコパラダイス第二代女王 大沢里奈</span>
+                                        <span class="publisher">プリパラエンタテインメント</span>
+                                        <span class="price">￥5,000</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book2/book1.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name11</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book2/book2.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name12</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book2/book3.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name13</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book2/book4.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name14</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book2/book5.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name15</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book2/book6.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name16</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book2/book7.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name17</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book2/book8.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name18</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book2/book9.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name19</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book2/book10.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name20</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book3/book1.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name21</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book3/book2.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name22</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book3/book3.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name23</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book3/book4.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name24</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book3/book5.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name25</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book3/book6.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name26</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book3/book7.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name27</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book3/book8.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name28</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book3/book9.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name29</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                                <div class="booksample">
+                                    <img src="../book3/book10.png" alt="booksample1">
+                                    <div class="bookinfo">
+                                        <a href="">book name30</a>
+                                        <span class="author">author</span>
+                                        <span class="publisher">publisher</span>
+                                        <span class="price">original price</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bookReview">
+                            <div class="buttonbar">
+                                <button class="cancelbutton">
+                                    <i class="icon-cancel-circled"></i>
+                                </button>
+                                <span class="arrowbutton">
+                                    <button class="previousbutton2">
+                                        <i class="icon-angle-circled-left"></i>
+                                    </button>
+                                    <button class="nextbutton2">
+                                        <i class="icon-angle-circled-right"></i>
+                                    </button>
+                                    <div class="buttonCancel2"></div>
+                                </span>
+                            </div>
+                            <div class="bookreviewGroup">
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-happy"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader1</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-surprised"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader2</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-thumbsup"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader3</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-displeased"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader4</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-wink"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader5</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-thumbsup"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader6</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-grin"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader7</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-happy"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader8</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-unhappy"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader9</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-tongue"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader10</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-grin"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader11</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-surprised"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader12</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-grin"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader13</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-happy"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader14</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-sleep"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader15</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-unhappy"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader16</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-wink"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader17</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-thumbsup"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader18</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-thumbsup"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader19</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-unhappy"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader20</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-surprised"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader21</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-happy"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader22</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-grin"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader23</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-happy"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader24</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-tongue"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader25</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-sleep"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader26</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-unhappy"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader27</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-happy"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader28</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-displeased"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader29</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                                <div class="bookreview">
+                                    <div class="profile"><i class="icon-emo-surprised"></i></div>
+                                    <span class="readertext">
+                                        <span class="readername">reader30</span>
+                                        <span class="readercomment">review comment</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="imageGroupe2" class="imageGroupe">
+                    <img src="king/crown.png" alt="throne" id="image2" class="image">
+                </div>
+                <div class="purchase">
+                            <div class="purchaseBox">
+                                <div class="userName">Name</div>
+                                <input type="text" maxlength="20" class="name">
+                                <div class="userAddress">Address</div>
+                                <textarea type="text" cols="4" class="address"></textarea>
+                                <div class="userPhonenumber">Phone number</div>
+                                <input type="tel" maxlength="11" class="phonenumber" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                                <div class="userPayment">Payment method</div>
+                                <button class="payment">初回無料</button>
+                            </div>
+                            <button class="complete">complete</button>
+                        </div>
+                        <div class="thank">Thank you!</div>
+                <button class="now">Buy<br>now</button>
+                <button class="get">get in<br>basket</button>
+                <button class="buy">Buy<br>it</button>
+                <button class="review" id="Freview">Readers<br>review</button>
+                <button class="review" id="Breview">Readers<br>review</button>
+                <button class="booklist" id="Fbooklist">book<br>list</button>
+                <button class="booklist" id="Bbooklist">book<br>list</button>
             </main>
             <aside>
 				<ul class="aside">
@@ -84,14 +737,21 @@
 			</aside>
         </div>
         <footer>
-            
         </footer>
     </div>
+    <!-- <div class="mobilescreen"></div> -->
     <button class="category">Book category</button>
 	<button class="category2">&#xf0c9</button>
     <button class="mypage">My page</button>
     <button class="mypage2">&#xe800</button>
 	<a href=""><button class="basket">Basket</button></a>
 	<a href=""></a><button class="basket2">&#xf290</button></a>
+    <div class="START">
+		<div class="startScreen"></div>
+		<div class="startText">
+			<div class="loadText1">DadA Random Bookstore</div>
+            <div class="loadText2">Bestseller</div>
+		</div>
+	</div>
 </body>
 </html>
