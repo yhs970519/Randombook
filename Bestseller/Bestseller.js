@@ -94,15 +94,30 @@ window.addEventListener('DOMContentLoaded', function(){
 
     let backGround = document.querySelector("#backGround");
 
-    let image1 = document.querySelector("#image1");
-    let image2 = document.querySelector("#image2");
-    let image3 = document.querySelector("#image3");
-    let image4 = document.querySelector("#image4");
-    let image5 = document.querySelector("#image5");
-    let image6 = document.querySelector("#image6");
-    let image7 = document.querySelector("#image7");
-    let image8 = document.querySelector("#image8");
-    let image9 = document.querySelector("#image9");
+    let kingImage = new Array;
+    for(let i = 0; i < 7; i++){
+        let j = i + 1;
+        kingImage[i] = document.querySelector("#kingImage" + j);
+    }
+    let heroImage = new Array;
+    for(let i = 0; i < 18; i++){
+        let j = i + 1;
+        heroImage[i] = document.querySelector("#heroImage" + j);
+    }
+    let starImage = new Array;
+    for(let i = 0; i < 19; i++){
+        let j = i + 1;
+        starImage[i] = document.querySelector("#starImage" + j);
+    }
+
+    const ns = 'http://www.w3.org/2000/svg';
+
+    let spotlight1 = document.querySelector("#spotlight1");
+    let spotlight2 = document.querySelector("#spotlight2");
+    let crowd = document.querySelector("#crowd");
+    let slG2 = document.querySelector("#slG2");
+    let slG4 = document.querySelector("#slG4");
+    let crowdGroup = document.querySelector("#crowdGroup");
 
     let body = document.querySelector("body");
     let a = document.querySelectorAll("a");
@@ -130,35 +145,56 @@ window.addEventListener('DOMContentLoaded', function(){
     let blue3 = Math.floor(Math.random() * 256);
 
     let KHS = Math.floor(Math.random() * 3) + 1;
-    // let KHS = 1;
+    // let KHS = 3;
     console.log(KHS);
+
+    function KingHeroStar(cursor1, cursor2, visibleImage, hiddenImage1, hiddenImage2, cursor1XY, cursor2XY) {
+        let cursorImage1 = cursor1;
+        let cursorImage2 = cursor2;
+        let url1 = 'url(' + cursorImage1 + ') ' + cursor1XY + ', url(' + cursorImage1 + ') ' + cursor1XY + ', auto';
+        let url2 = 'url(' + cursorImage2 + ') ' + cursor2XY + ', url(' + cursorImage2 + ') ' + cursor2XY + ', auto';
+
+        body.style.cursor = url1;
+        for(let i = 0; i < a.length; i++){
+            a[i].style.cursor = url2;
+        }
+
+        category.style.cursor = url2;
+        category2.style.cursor = url2;
+        mypage.style.cursor = url2;
+        mypage2.style.cursor = url2;
+        basket.style.cursor = url2;
+        basket2.style.cursor = url2;
+        complete.style.cursor = url2;
+        cancelbutton[0].style.cursor = url2;
+        cancelbutton[1].style.cursor = url2;
+        nextbutton1.style.cursor = url2;
+        nextbutton2.style.cursor = url2;
+        previousbutton1.style.cursor = url2;
+        previousbutton2.style.cursor = url2;
+        buy.style.cursor = url2;
+        now.style.cursor = url2;
+        get.style.cursor = url2;
+        Fbooklist.style.cursor = url2;
+        Freview.style.cursor = url2;
+
+        for(let i = 0; i < visibleImage.length; i++){
+            visibleImage[i].style.visibility = 'visible';
+        }
+        for(let i = 0; i < hiddenImage1.length; i++){
+            hiddenImage1[i].style.visibility = 'hidden';
+        }
+        for(let i = 0; i < hiddenImage2.length; i++){
+            hiddenImage2[i].style.visibility = 'hidden';
+        }
+    }
     
     if(KHS == '1') {
+        KingHeroStar('king/cane1.png', 'king/cane2.png', kingImage, heroImage, starImage, '20 20', '20 20');
+
         backGround.style.backgroundColor = 'rgba(50, 0, 15)';
 
-        body.style.cursor = 'url(king/cane1.png) 20 20, url(king/cane1.cur) 20 20, auto';
-        for(let i = 0; i < a.length; i++){
-            a[i].style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, auto';
-        }
-        category.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        category2.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        mypage.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        mypage2.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        basket.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        basket2.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        complete.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        cancelbutton[0].style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        cancelbutton[1].style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        nextbutton1.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        nextbutton2.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        previousbutton1.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        previousbutton2.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        buy.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        now.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        get.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        Fbooklist.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-        Freview.style.cursor = 'url(king/cane2.png) 20 20, url(king/cane2.cur) 20 20, pointer';
-
+        bookScale.style.top = '-100%';
         bookScale.style.animation = 'down3 1.8s cubic-bezier(1, 1.57, 0.2, 0.8) 7.5s forwards';
         buy.style.opacity = 'none';
         buy.style.animation = 'opa1 1s ease-in-out 8.2s backwards';
@@ -169,33 +205,178 @@ window.addEventListener('DOMContentLoaded', function(){
         subShadow.style.opacity = 'none';
         subShadow.style.animation = 'opa1 1s ease-in-out 8.2s backwards';
 
-        image1.style.visibility = 'visible';
-        image2.style.visibility = 'visible';
-        image5.style.visibility = 'visible';
-        image6.style.visibility = 'visible';
-        image7.style.visibility = 'visible';
-        image8.style.visibility = 'visible';
-        image9.style.visibility = 'visible';
+        spotlight1.style.visibility = "hidden";
+        spotlight2.style.visibility = "hidden";
+        crowd.style.visibility = "hidden";
+
     }else if(KHS == '2'){
-        // body.style.cursor = 'url() 20 20, url() 20 20, auto';
         // backGround.style.backgroundColor = 'rgba(0, 0, 0)';
-        image1.style.visibility = 'hidden';
-        image2.style.visibility = 'hidden';
-        image5.style.visibility = 'hidden';
-        image6.style.visibility = 'hidden';
-        image7.style.visibility = 'hidden';
-        image8.style.visibility = 'hidden';
-        image9.style.visibility = 'hidden';
+        KingHeroStar('hero/glove1.png', 'hero/glove2.png', heroImage, kingImage, starImage, '25 25', '50 55');
+
+        backGround.style.background = 'linear-gradient(0deg, rgba(20, 150, 240) 0%, rgba(0, 100, 200) 100%)';
+
+        function wave1() {
+            $(bookScale).animate({marginLeft: '-10px'}, 500).animate({marginLeft: '10px'}, 500, wave1);
+            $(buy).animate({marginLeft: '-10px'}, 500).animate({marginLeft: '10px'}, 500, wave1);
+            $(now).animate({marginLeft: '-10px'}, 500).animate({marginLeft: '10px'}, 500, wave1);
+            $(get).animate({marginLeft: '-10px'}, 500).animate({marginLeft: '10px'}, 500, wave1);
+            $(purchase).animate({marginLeft: '-10px'}, 500).animate({marginLeft: '10px'}, 500, wave1);
+        }
+        wave1();
+        function wave2() {
+            $(bookScale).animate({top: '0%'}, 1500);
+            $(buy).animate({opacity: '0'}, 2500).animate({opacity: '1'}, 1500);
+            $(now).animate({opacity: '0'}, 2500).animate({opacity: '1'}, 1500);
+            $(get).animate({opacity: '0'}, 2500).animate({opacity: '1'}, 1500);
+            $(purchase).animate({opacity: '0'}, 2500).animate({opacity: '1'}, 1500);
+        }
+        setTimeout(wave2, 1200)
+        bookScale.style.top = '150%';
+        bookScale.style.animation = 'up1 1.8s ease 0s infinite';
+        buy.style.opacity = '0';
+        buy.style.animation = 'up1 1.8s ease 0s infinite';
+        now.style.opacity = '0';
+        now.style.animation = 'up1 1.8s ease 0s infinite';
+        get.style.opacity = '0';
+        get.style.animation = 'up1 1.8s ease 0s infinite';
+        purchase.style.opacity = '0';
+        purchase.style.animation = 'up1 1.8s ease 0s infinite';
+        booklist.style.opacity = 'none';
+        booklist.style.animation = 'opa1 1s ease-in-out 3s backwards';
+        review.style.opacity = 'none';
+        review.style.animation = 'opa1 1s ease-in-out 3s backwards';
+        subShadow.style.opacity = 'none';
+        subShadow.style.animation = 'opa1 1s ease-in-out 3s backwards';
+        
+        spotlight1.style.visibility = "hidden";
+        spotlight2.style.visibility = "hidden";
+        crowd.style.visibility = "hidden";
+
     }else if(KHS == '3'){
-        // body.style.cursor = 'url() 20 20, url() 20 20, auto';
         // backGround.style.backgroundColor = 'rgba(0, 0, 0)';
-        image1.style.visibility = 'hidden';
-        image2.style.visibility = 'hidden';
-        image5.style.visibility = 'hidden';
-        image6.style.visibility = 'hidden';
-        image7.style.visibility = 'hidden';
-        image8.style.visibility = 'hidden';
-        image9.style.visibility = 'hidden';
+        KingHeroStar('star/trophy1.png', 'star/trophy2.png', starImage, kingImage, heroImage, '20 20', '42 40');
+
+        backGround.style.backgroundColor = 'rgba(0, 45, 145)';
+
+        function position(){
+            let reverse = 1000000 / window.innerWidth;
+            let reverse2 = 60000 / window.innerWidth;
+            let reverse3 = 95000 / window.innerWidth;
+            let reverse4 = 117000 / window.innerWidth;
+            let inverse = window.innerWidth / 2;
+            let inverse2 = window.innerWidth / 18;
+            let reverseX1 = 880 - reverse;
+            let reverseX2 = 800 - reverse;
+            let reverseX3 = 660 - reverse;
+            let reverseX4 = 820 - reverse;
+            let reverseX5 = 45 - reverse2;
+            let reverseX6 = 46 - reverse3;
+            let reverseX7 = 50 - reverse4;
+            let inverseX1 = 570 + inverse;
+            let inverseX2 = 760 + inverse;
+            let inverseX3 = 660 + inverse;
+            let inverseX4 = 560 + inverse;
+            let inverseX5 = 590 + inverse;
+            console.log(reverse2);
+            starImage[1].style.left = reverseX1 + 'px';
+            starImage[3].style.left = reverseX2 + 'px';
+            starImage[6].style.left = reverseX3 + 'px';
+            starImage[16].style.left = reverseX4 + 'px';
+            starImage[2].style.left = inverseX1 + 'px';
+            starImage[4].style.left = inverseX2 + 'px';
+            starImage[5].style.left = inverseX3 + 'px';
+            starImage[17].style.left = inverseX4 + 'px';
+            starImage[18].style.left = inverseX5 + 'px';
+            slG2.style.transform = 'translate(' + reverseX5 + '%, -32%) scale(0.9)';
+            slG4.style.transform = 'translate(' + reverseX6 + '%, -17.5%) scale(0.9)';
+            crowdGroup.style.transform = 'translate(' + reverseX7 + '%, 55%)';
+        }
+        setInterval(position, 100);
+
+        let light1 = document.querySelector("#light1");
+        let light2 = document.querySelector("#light2");
+        let light3 = document.querySelector("#light3");
+        let light4 = document.querySelector("#light4");
+        let light5 = document.querySelector("#light5");
+        let classNodeLight1 = document.createAttribute("class");
+        let classNodeLight2 = document.createAttribute("class");
+        let classNodeLight3 = document.createAttribute("class");
+        let classNodeLight4 = document.createAttribute("class");
+        let classNodeLight5 = document.createAttribute("class");
+        let classNodeLine1 = document.createAttribute("class");
+        let classNodeLine2 = document.createAttribute("class");
+        let classNodeLine3 = document.createAttribute("class");
+        let classNodeLine4 = document.createAttribute("class");
+        let classNodeLine5 = document.createAttribute("class");
+
+        classNodeLight1.value = 'light';
+        let slight1 = document.createElementNS(ns, "polygon");
+        slight1.setAttributeNode(classNodeLight1);
+        light1.appendChild(slight1);
+        classNodeLight2.value = 'light';
+        let slight2 = document.createElementNS(ns, "polygon");
+        slight2.setAttributeNode(classNodeLight2);
+        light2.appendChild(slight2);
+        classNodeLight3.value = 'light';
+        let slight3 = document.createElementNS(ns, "polygon");
+        slight3.setAttributeNode(classNodeLight3);
+        light3.appendChild(slight3);
+        classNodeLight4.value = 'light';
+        let slight4 = document.createElementNS(ns, "polygon");
+        slight4.setAttributeNode(classNodeLight4);
+        light4.appendChild(slight4);
+        classNodeLight5.value = 'light';
+        let slight5 = document.createElementNS(ns, "polygon");
+        slight5.setAttributeNode(classNodeLight5);
+        light5.appendChild(slight5);
+
+        classNodeLine1.value = 'line';
+        let sline1 = document.createElementNS(ns, "polygon");
+        sline1.setAttributeNode(classNodeLine1);
+        light1.appendChild(sline1);
+        classNodeLine2.value = 'line';
+        let sline2 = document.createElementNS(ns, "polygon");
+        sline2.setAttributeNode(classNodeLine2);
+        light2.appendChild(sline2);
+        classNodeLine3.value = 'line';
+        let sline3 = document.createElementNS(ns, "polygon");
+        sline3.setAttributeNode(classNodeLine3);
+        light3.appendChild(sline3);
+        classNodeLine4.value = 'line';
+        let sline4 = document.createElementNS(ns, "polygon");
+        sline4.setAttributeNode(classNodeLine4);
+        light4.appendChild(sline4);
+        classNodeLine5.value = 'line';
+        let sline5 = document.createElementNS(ns, "polygon");
+        sline5.setAttributeNode(classNodeLine5);
+        light5.appendChild(sline5);
+            
+        function moveLight() {
+            let lightX1_1 = dragX + 345.2 - window.innerWidth / 2;
+            let lightX1_2 = dragX + 1044.9 - window.innerWidth / 2;
+            let lightX2_1 = dragX + 474.53 - window.innerWidth / 2;
+            let lightX2_2 = dragX + 766.53 - window.innerWidth / 2;
+            let lightX3_1 = dragX + 912.53 - window.innerWidth / 2;
+            let lightX3_2 = dragX + 545.12 - window.innerWidth / 2;
+            let lightX4_1 = dragX + 717.76 - window.innerWidth / 2;
+            let lightX4_2 = dragX + 1116.38 - window.innerWidth / 2;
+            let lightX5_1 = dragX + 953.18 - window.innerWidth / 2;
+            let lightX5_2 = dragX + 1363.61 - window.innerWidth / 2;
+            slight1.setAttribute("points", lightX1_1 + " 1058.81 " + lightX1_2 + " 1058.81 862.08 210.16 482.31 210.16 " + lightX1_1 + " 1058.81");
+            slight2.setAttribute("points", lightX2_1 + " 1148.62 " + lightX2_2 + " 1148.62 165.8 7.7 7.31 92.86 " + lightX2_1 + " 1148.62");
+            slight3.setAttribute("points", lightX3_1 + " 1085.7 " + lightX3_2 + " 1085.7 1213.79 7.7 1372.28 92.86 " + lightX3_1 + " 1085.7");
+            slight4.setAttribute("points", lightX4_1 + " 1045.16 " + lightX4_2 + " 1046.2 134.77 8.13 7.55 135.35 " + lightX4_1 + " 1045.16");
+            slight5.setAttribute("points", lightX5_1 + " 1022.76 " + lightX5_2 + " 1022.9 2100.01 140.3 1972.79 13.08 " + lightX5_1 + " 1022.76");
+            sline1.setAttribute("points", lightX1_1 + " 1058.81 " + lightX1_2 + " 1058.81 862.08 210.16 482.31 210.16 " + lightX1_1 + " 1058.81");
+            sline2.setAttribute("points", lightX2_1 + " 1148.62 " + lightX2_2 + " 1148.62 165.8 7.7 7.31 92.86 " + lightX2_1 + " 1148.62");
+            sline3.setAttribute("points", lightX3_1 + " 1085.7 " + lightX3_2 + " 1085.7 1213.79 7.7 1372.28 92.86 " + lightX3_1 + " 1085.7");
+            sline4.setAttribute("points", lightX4_1 + " 1045.16 " + lightX4_2 + " 1046.2 134.77 8.13 7.55 135.35 " + lightX4_1 + " 1045.16");
+            sline5.setAttribute("points", lightX5_1 + " 1022.76 " + lightX5_2 + " 1022.9 2100.01 140.3 1972.79 13.08 " + lightX5_1 + " 1022.76");
+        }
+
+        spotlight1.style.visibility = "visible";
+        spotlight2.style.visibility = "visible";
+        crowd.style.visibility = "visible";
     }
 
     function moveObject() {
@@ -208,10 +389,12 @@ window.addEventListener('DOMContentLoaded', function(){
 
     function mouseControl1() {
         moveObject();
+        moveLight();
     }
 
     function mouseControl2() {
         moveObject();
+        moveLight();
     }
 
     let ugoku = 1;
