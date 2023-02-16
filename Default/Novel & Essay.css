@@ -868,8 +868,8 @@ main{
     width: 100%;
     height: 100%;
     align-items: center;
-    /* mix-blend-mode: overlay;
-    -webkit-mix-blend-mode: overlay; */
+    mix-blend-mode: overlay;
+    -webkit-mix-blend-mode: overlay;
     /* opacity: none;
     animation: opa1 1s ease-in-out 8.2s backwards; */
 }
@@ -1007,7 +1007,7 @@ main{
         opacity: 1; }
 }
 
-/* #backGround{
+#backGround{
     z-index: 0;
     position: fixed;
     top: 0;
@@ -1015,26 +1015,6 @@ main{
     width: 100%;
     height: 100%;
     background-color: ghostwhite;
-} */
-
-#textSVG1, #textSVG2{
-	position: fixed;
-	top: -30vw;
-	left: -30vh;
-	width: 160vw;
-	height: 160vh;
-}
-
-#moji1{
-	animation: haikai1 60s ease 0s infinite;
-}
-
-@keyframes haikai1{
-	0% { transform: translate(50%, 80%); }
-	25% { transform: translate(30%, 90%); }
-	50% { transform: translate(10%, 70%); }
-	75% { transform: translate(20%, 40%); }
-	100% { transform: translate(50%, 80%); }
 }
 
 

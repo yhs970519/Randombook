@@ -1,24 +1,7 @@
 // JavaScript Document
 
 window.addEventListener('DOMContentLoaded', function(){
-    
-    // screen move//////////////////////////////////////////////////
-	function isMobile() {
-		let user = navigator.userAgent;
-		let is_mobile = false;
-		if( user.indexOf("iPhone") > -1 
-		|| user.indexOf("Android") > -1 
-		|| user.indexOf("iPad") > -1 
-		|| user.indexOf("iPod") > -1 )
-		{
-			is_mobile = true; 
-		}
-		return is_mobile;
-	}
 
-	var is_mobile = isMobile();
-
-	// let main_img = document.querySelector(".mainImg");
     let category = document.querySelector(".category");
 	let category2 = document.querySelector(".category2");
 	let mypage = document.querySelector(".mypage");
@@ -379,12 +362,26 @@ window.addEventListener('DOMContentLoaded', function(){
         crowd.style.visibility = "visible";
     }
 
+        // screen move//////////////////////////////////////////////////
+	function isMobile() {
+		let user = navigator.userAgent;
+		let is_mobile = false;
+		if( user.indexOf("iPhone") > -1 
+		|| user.indexOf("Android") > -1 
+		|| user.indexOf("iPad") > -1 
+		|| user.indexOf("iPod") > -1 )
+		{
+			is_mobile = true; 
+		}
+		return is_mobile;
+	}
+
+	var is_mobile = isMobile();
+
     function moveObject() {
         mainShadow.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
         booklistShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
         reviewShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
-        // image3.style.transform = 'translate(' + dragXm + 'px, ' + dragYm + 'px)';
-        // image4.style.transform = 'translate(' + dragXm + 'px, ' + dragYm + 'px)';
     }
 
     function mouseControl1() {
