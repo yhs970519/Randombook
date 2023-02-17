@@ -1026,15 +1026,19 @@ main{
 }
 
 #moji1{
+	perspective: 1000;
+	will-change: transform;
+	transform: translate(50%, 80%) translateZ(0);
+	transition : transform;
 	animation: haikai1 60s ease 0s infinite;
 }
 
 @keyframes haikai1{
-	0% { transform: translate(50%, 80%); }
-	25% { transform: translate(30%, 90%); }
-	50% { transform: translate(10%, 70%); }
-	75% { transform: translate(20%, 40%); }
-	100% { transform: translate(50%, 80%); }
+	0% { transform: translate(50%, 80%) translateZ(0); }
+	25% { transform: translate(30%, 90%) translateZ(0); }
+	50% { transform: translate(10%, 70%) translateZ(0); }
+	75% { transform: translate(20%, 40%) translateZ(0); }
+	100% { transform: translate(50%, 80%) translateZ(0); }
 }
 
 

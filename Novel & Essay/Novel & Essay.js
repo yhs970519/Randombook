@@ -110,15 +110,21 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	let textSVG1 = document.querySelector("#textSVG1");
 	let textSVG2 = document.querySelector("#textSVG2");
-	let nagare1 = 21;
-	let nagare2 = 17;
-	let nagare3 = 19;
-	let nagare4 = 13;
-	let nagare5 = 11;
+	
+	let nagare1 = 3;
+	let nagare2 = 2;
+	let nagare3 = 2;
+	let nagare4 = 2;
+	let nagare5 = 2;
+
 	let nagare6 = 2;
 	let nagare7 = 2;
+	let nagare8 = 2;
+	let nagare9 = 2;
 
 	let path1Num = 43;
+
+	let WorB = Math.floor(Math.random() * 2) + 1;
 
 	let randomPath1 = new Array;
 	let randomPath2 = new Array;
@@ -225,15 +231,16 @@ window.addEventListener('DOMContentLoaded', function(){
 		
 			window["text" + number + "_" + i] = document.createElementNS(ns, "text");
 			window["text" + number + "_" + i].setAttribute("font-family", "'M PLUS 1',Trebuchet MS,Arial,sans-serif");
-			window["text" + number + "_" + i].setAttribute("font-size", "8px");
+			window["text" + number + "_" + i].setAttribute("fill", "rgba(" + red + ", " + green + ", " + blue + ")");
+			window["text" + number + "_" + i].setAttribute("font-size", "6px");
 			// window["text" + number + "_" + i].setAttribute("font-weight", "300");
 			eval("textGroup" + number + "_" + i + ".appendChild(text" + number + "_" + i + ");");
 		
 			window["textPath" + number + "_" + i] = document.createElementNS(ns, "textPath");
 			eval("textPath" + number + "_" + i + ".setAttributeNode(idNodeTP" + number + "_" + i + ");");
 			eval("textPath" + number + "_" + i + ".setAttribute('href', '#ugokuText" + number + "_" + i + "');");
-			window["textPath" + number + "_" + i].setAttribute("textLength", "15%");
-			window["textPath" + number + "_" + i].innerHTML = "試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。";
+			window["textPath" + number + "_" + i].setAttribute("textLength", "250%");
+			window["textPath" + number + "_" + i].innerHTML = "試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。";
 			eval("text" + number + "_" + i + ".appendChild(textPath" + number + "_" + i + ");");
 	
 			pathPoint1_1[0] = pp1;
@@ -323,6 +330,8 @@ window.addEventListener('DOMContentLoaded', function(){
 	autoPath(2, nagare5, 5, 1155.5, 570.45, -44.16, -151.52, -302.1, -367.97, -621.37, -344.52, 214.87, 249.37, 131.89, 63.16, 0.21, 0.45, 0, 0 ,0 ,0 ,0 ,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0);
 	autoPath(1, nagare6, 6, 0.5, 746.86, 16.3, 124.99, 152.17, 171.19, 263.58, 130.43, 685.25, 288.57, 1068.39, 316.64, 432.05, 358.52, 331.51, 493.55, -347.81, -8.98, -453.79, 333.4, -487.17, 160.68, -448.35, -43.48, 73.37, -385.85, 470.09, -402.16, 184.77, -731.81, 467.63, 120.01, 750.46, -35.71, 878.18, 7.76);
 	autoPath(2, nagare7, 7, 0.5, 746.86, 16.3, 124.99, 152.17, 171.19, 263.58, 130.43, 685.25, 288.57, 1068.39, 316.64, 432.05, 358.52, 331.51, 493.55, -347.81, -8.98, -453.79, 333.4, -487.17, 160.68, -448.35, -43.48, 73.37, -385.85, 470.09, -402.16, 184.77, -731.81, 467.63, 120.01, 750.46, -35.71, 878.18, 7.76);
+	autoPath(1, nagare8, 8, 0.5, 746.86, 16.3, 124.99, 152.17, 171.19, 263.58, 130.43, 685.25, 288.57, 1068.39, 316.64, 432.05, 358.52, 331.51, 493.55, -347.81, -8.98, -453.79, 333.4, -487.17, 160.68, -448.35, -43.48, 73.37, -385.85, 470.09, -402.16, 184.77, -731.81, 467.63, 120.01, 750.46, -35.71, 878.18, 7.76);
+	autoPath(2, nagare9, 9, 0.5, 746.86, 16.3, 124.99, 152.17, 171.19, 263.58, 130.43, 685.25, 288.57, 1068.39, 316.64, 432.05, 358.52, 331.51, 493.55, -347.81, -8.98, -453.79, 333.4, -487.17, 160.68, -448.35, -43.48, 73.37, -385.85, 470.09, -402.16, 184.77, -731.81, 467.63, 120.01, 750.46, -35.71, 878.18, 7.76);
 
 	function customPath1(number, i, j) {
 		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[j] + ", " + pathPoint1_2[j] + " S" + pathPoint1_3[j] + " " + pathPoint1_4[j] + ", " + pathPoint1_5[j] + ", " + pathPoint1_6[j] + " c" + pathPoint1_7[j] + ", " + pathPoint1_8[j] + ", " + pathPoint1_9[j] + ", " + pathPoint1_10[j] + ", " + pathPoint1_11[j] + ", " + pathPoint1_12[j] + "");
@@ -349,12 +358,20 @@ window.addEventListener('DOMContentLoaded', function(){
 		window["textGroup" + number + "_" + i].style.transform = 'translate(10%, 55%)';
 		window["text" + number + "_" + i].setAttribute("font-weight", "300");
 	}
+	// for(i = 1; i < (nagare1 - 2); i++) {
+	// 	window["textGroup1_" + i].style.visibility = 'hidden';
+	// 	window["textGroup2_" + i].style.visibility = 'hidden';
+	// 	window["textGroup3_" + i].style.visibility = 'hidden';
+	// 	window["textGroup4_" + i].style.visibility = 'hidden';
+	// 	window["textGroup5_" + i].style.visibility = 'hidden';
+	// }
+
 	function customPath6(number, i, j) {
 		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[rBT1] + ", " + pathPoint1_2[rBT2] + " c" + pathPoint1_3[rBT3] + ", " + pathPoint1_4[rBT4] + ", " + pathPoint1_5[rBT5] + ", " + pathPoint1_6[rBT6] + ", " + pathPoint1_7[rBT7] + ", " + pathPoint1_8[rBT8] + " S" + pathPoint1_9[rBT9] + ", " + pathPoint1_10[rBT10] + ", " + pathPoint1_11[rBT11] + ", " + pathPoint1_12[rBT12] + " s" + pathPoint1_13[rBT13] + ", " + pathPoint1_14[rBT14] + ", " + pathPoint1_15[rBT15] + ", " + pathPoint1_16[rBT16] + " " + pathPoint1_17[rBT17] + " " + pathPoint1_18[rBT18] + " " + pathPoint1_19[rBT19] + ", " + pathPoint1_20[rBT20] + " " + pathPoint1_21[rBT21] + ", " + pathPoint1_22[rBT22] + " " + pathPoint1_23[rBT23] + " " + pathPoint1_24[rBT24] + " c" + pathPoint1_25[rBT25] + " " + pathPoint1_26[rBT26] + ", " + pathPoint1_27[rBT27] + " " + pathPoint1_28[rBT28] + ", " + pathPoint1_29[rBT29] + " " + pathPoint1_30[rBT30] + " C" + pathPoint1_31[rBT31] + ", " + pathPoint1_32[rBT32] + ", " + pathPoint1_33[rBT33] + " " + pathPoint1_34[rBT34] + ", " + pathPoint1_35[rBT35] + ", " + pathPoint1_36[rBT36] + "");
 		window["textGroup" + number + "_" + i].style.transform = 'translate(17%, 14%) scale(1.5)';
 		window["textGroup" + number + "_" + i].style.transformOrigin = '50% 50%';
-		window["text" + number + "_" + i].setAttribute("fill", "rgba(" + red + ", " + green + ", " + blue + ")");
-		window["text" + number + "_" + i].setAttribute("filter", "url(#blur)");
+		// window["text" + number + "_" + i].setAttribute("fill", "rgba(" + red + ", " + green + ", " + blue + ")");
+		// window["text" + number + "_" + i].setAttribute("filter", "url(#blur)");
 		window["text" + number + "_" + i].setAttribute("font-size", "100px");
 		window["text" + number + "_" + i].setAttribute("font-weight", "1000");
 		window["textPath" + number + "_" + i].setAttribute("textLength", "850%");
@@ -372,6 +389,47 @@ window.addEventListener('DOMContentLoaded', function(){
 		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[rBT1] + ", " + pathPoint1_2[rBT2] + " c" + pathPoint1_3[rBT3] + ", " + pathPoint1_4[rBT4] + ", " + pathPoint1_5[rBT5] + ", " + pathPoint1_6[rBT6] + ", " + pathPoint1_7[rBT7] + ", " + pathPoint1_8[rBT8] + " S" + pathPoint1_9[rBT9] + ", " + pathPoint1_10[rBT10] + ", " + pathPoint1_11[rBT11] + ", " + pathPoint1_12[rBT12] + " s" + pathPoint1_13[rBT13] + ", " + pathPoint1_14[rBT14] + ", " + pathPoint1_15[rBT15] + ", " + pathPoint1_16[rBT16] + " " + pathPoint1_17[rBT17] + " " + pathPoint1_18[rBT18] + " " + pathPoint1_19[rBT19] + ", " + pathPoint1_20[rBT20] + " " + pathPoint1_21[rBT21] + ", " + pathPoint1_22[rBT22] + " " + pathPoint1_23[rBT23] + " " + pathPoint1_24[rBT24] + " c" + pathPoint1_25[rBT25] + " " + pathPoint1_26[rBT26] + ", " + pathPoint1_27[rBT27] + " " + pathPoint1_28[rBT28] + ", " + pathPoint1_29[rBT29] + " " + pathPoint1_30[rBT30] + " C" + pathPoint1_31[rBT31] + ", " + pathPoint1_32[rBT32] + ", " + pathPoint1_33[rBT33] + " " + pathPoint1_34[rBT34] + ", " + pathPoint1_35[rBT35] + ", " + pathPoint1_36[rBT36] + "");
 		window["textGroup" + number + "_" + i].style.transform = 'translate(18%, 15%) scale(1.5)';
 		window["textGroup" + number + "_" + i].style.transformOrigin = '50% 50%';
+		window["text" + number + "_" + i].setAttribute("fill", "rgba(0, 0, 0)");
+		window["text" + number + "_" + i].setAttribute("font-size", "100px");
+		window["text" + number + "_" + i].setAttribute("font-weight", "1000");
+		window["textPath" + number + "_" + i].setAttribute("textLength", "850%");
+		window["textPath" + number + "_" + i].innerHTML = "試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。";
+		window["offsetAni" + number + "_" + i] = document.createElementNS(ns, "animate");
+		window["offsetAni" + number + "_" + i].setAttribute("attributeName", "startOffset");
+		window["offsetAni" + number + "_" + i].setAttribute("form", "-50%");
+		window["offsetAni" + number + "_" + i].setAttribute("to", "50%");
+		window["offsetAni" + number + "_" + i].setAttribute("begin", "0s");
+		window["offsetAni" + number + "_" + i].setAttribute("dur", "120s");
+		window["offsetAni" + number + "_" + i].setAttribute("repeatCount", "indefinite");
+		eval("textPath" + number + "_" + i + ".appendChild(offsetAni" + number + "_" + i + ");");
+	}
+	function customPath8(number, i, j) {
+		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[rBT36] + ", " + pathPoint1_2[rBT35] + " c" + pathPoint1_3[rBT34] + ", " + pathPoint1_4[rBT33] + ", " + pathPoint1_5[rBT32] + ", " + pathPoint1_6[rBT31] + ", " + pathPoint1_7[rBT30] + ", " + pathPoint1_8[rBT29] + " S" + pathPoint1_9[rBT28] + ", " + pathPoint1_10[rBT27] + ", " + pathPoint1_11[rBT26] + ", " + pathPoint1_12[rBT25] + " s" + pathPoint1_13[rBT24] + ", " + pathPoint1_14[rBT23] + ", " + pathPoint1_15[rBT22] + ", " + pathPoint1_16[rBT21] + " " + pathPoint1_17[rBT20] + " " + pathPoint1_18[rBT19] + " " + pathPoint1_19[rBT18] + ", " + pathPoint1_20[rBT17] + " " + pathPoint1_21[rBT16] + ", " + pathPoint1_22[rBT15] + " " + pathPoint1_23[rBT14] + " " + pathPoint1_24[rBT13] + " c" + pathPoint1_25[rBT12] + " " + pathPoint1_26[rBT11] + ", " + pathPoint1_27[rBT10] + " " + pathPoint1_28[rBT9] + ", " + pathPoint1_29[rBT8] + " " + pathPoint1_30[rBT7] + " C" + pathPoint1_31[rBT6] + ", " + pathPoint1_32[rBT5] + ", " + pathPoint1_33[rBT4] + " " + pathPoint1_34[rBT3] + ", " + pathPoint1_35[rBT2] + ", " + pathPoint1_36[rBT1] + "");
+		window["textGroup" + number + "_" + i].style.transform = 'translate(17%, 14%) scale(1.5)';
+		window["textGroup" + number + "_" + i].style.transformOrigin = '50% 50%';
+		window["text" + number + "_" + i].setAttribute("fill", "rgba(248, 248, 255)");
+		window["text" + number + "_" + i].setAttribute("stroke", "rgba(" + red + ", " + green + ", " + blue + ")");
+		window["text" + number + "_" + i].setAttribute("stroke-width", "0.5px");
+		window["text" + number + "_" + i].setAttribute("font-size", "100px");
+		window["text" + number + "_" + i].setAttribute("font-weight", "1000");
+		window["textPath" + number + "_" + i].setAttribute("textLength", "850%");
+		window["textPath" + number + "_" + i].innerHTML = "試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。";
+		window["offsetAni" + number + "_" + i] = document.createElementNS(ns, "animate");
+		window["offsetAni" + number + "_" + i].setAttribute("attributeName", "startOffset");
+		window["offsetAni" + number + "_" + i].setAttribute("form", "-50%");
+		window["offsetAni" + number + "_" + i].setAttribute("to", "50%");
+		window["offsetAni" + number + "_" + i].setAttribute("begin", "0s");
+		window["offsetAni" + number + "_" + i].setAttribute("dur", "120s");
+		window["offsetAni" + number + "_" + i].setAttribute("repeatCount", "indefinite");
+		eval("textPath" + number + "_" + i + ".appendChild(offsetAni" + number + "_" + i + ");");
+	}
+		function customPath9(number, i, j) {
+		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[rBT36] + ", " + pathPoint1_2[rBT35] + " c" + pathPoint1_3[rBT34] + ", " + pathPoint1_4[rBT33] + ", " + pathPoint1_5[rBT32] + ", " + pathPoint1_6[rBT31] + ", " + pathPoint1_7[rBT30] + ", " + pathPoint1_8[rBT29] + " S" + pathPoint1_9[rBT28] + ", " + pathPoint1_10[rBT27] + ", " + pathPoint1_11[rBT26] + ", " + pathPoint1_12[rBT25] + " s" + pathPoint1_13[rBT24] + ", " + pathPoint1_14[rBT23] + ", " + pathPoint1_15[rBT22] + ", " + pathPoint1_16[rBT21] + " " + pathPoint1_17[rBT20] + " " + pathPoint1_18[rBT19] + " " + pathPoint1_19[rBT18] + ", " + pathPoint1_20[rBT17] + " " + pathPoint1_21[rBT16] + ", " + pathPoint1_22[rBT15] + " " + pathPoint1_23[rBT14] + " " + pathPoint1_24[rBT13] + " c" + pathPoint1_25[rBT12] + " " + pathPoint1_26[rBT11] + ", " + pathPoint1_27[rBT10] + " " + pathPoint1_28[rBT9] + ", " + pathPoint1_29[rBT8] + " " + pathPoint1_30[rBT7] + " C" + pathPoint1_31[rBT6] + ", " + pathPoint1_32[rBT5] + ", " + pathPoint1_33[rBT4] + " " + pathPoint1_34[rBT3] + ", " + pathPoint1_35[rBT2] + ", " + pathPoint1_36[rBT1] + "");
+		window["textGroup" + number + "_" + i].style.transform = 'translate(18%, 15%) scale(1.5)';
+		window["textGroup" + number + "_" + i].style.transformOrigin = '50% 50%';
+		window["text" + number + "_" + i].setAttribute("fill", "rgba(248, 248, 255)");
+		window["text" + number + "_" + i].setAttribute("stroke", "rgba(0, 0, 0)");
+		window["text" + number + "_" + i].setAttribute("stroke-width", "0.5px");
 		window["text" + number + "_" + i].setAttribute("font-size", "100px");
 		window["text" + number + "_" + i].setAttribute("font-weight", "1000");
 		window["textPath" + number + "_" + i].setAttribute("textLength", "850%");
@@ -391,17 +449,25 @@ window.addEventListener('DOMContentLoaded', function(){
 			let j = i - 1;
 			let k = i * 150;
 			let startOffset = new Array;
-			startOffset[j] = ((dragX + dragY) * speed + k) - 3800;
+			startOffset[j] = ((dragX + dragY) * speed) - 5800;
+			// startOffset[j] = ((dragX + dragY) * speed + k) - 6000;
+			// startOffset[j] = (speed + k);
 			eval("textPath" + number + "_" + i + ".setAttribute('startOffset', '" + startOffset[j] + "px');");
 		}
 	}
+	
+	// pathSelect(nagare1, 1, 30);
+	// pathSelect(nagare2, 2, 30);
+	// pathSelect(nagare3, 3, 30);
+	// pathSelect(nagare4, 4, 30);
+	// pathSelect(nagare5, 5, 30);
 
 	function moveText() {
-		pathSelect(nagare1, 1, 2.2);
-		pathSelect(nagare2, 2, 2.2);
-		pathSelect(nagare3, 3, 2.2);
-		pathSelect(nagare4, 4, 2.2);
-		pathSelect(nagare5, 5, 2.2);
+		pathSelect(nagare1, 1, 3);
+		pathSelect(nagare2, 2, 3);
+		pathSelect(nagare3, 3, 3);
+		pathSelect(nagare4, 4, 3);
+		pathSelect(nagare5, 5, 3);
 		// pathSelect(nagare6, 6, 1);
 		// pathSelect(nagare7, 7, 1);
 	}
@@ -412,13 +478,32 @@ window.addEventListener('DOMContentLoaded', function(){
     mojiIdNode1.value = "moji1";
 	let moji1 = document.createElementNS(ns, "text");
 	moji1.setAttributeNode(mojiIdNode1);
-    moji1.setAttribute("font-size", "800px");
+	moji1.setAttribute("font-family", "'M PLUS 1',Trebuchet MS,Arial,sans-serif");
+    moji1.setAttribute("font-size", "1000px");
     moji1.setAttribute("font-weight", "1000");
     moji1.setAttribute("fill", "rgba(248, 248, 255)");
 	moji1.setAttribute("stroke", "rgba(0, 0, 0)");
 	moji1.setAttribute("stroke-width", "0.5px");
 	moji1.innerHTML = hiragana[hira46];
     textSVG1.appendChild(moji1);
+
+	if(WorB == '1') {
+		body.style.backgroundColor = 'rgba(248, 248, 255)';
+		moji1.setAttribute("fill", "rgba(248, 248, 255)");
+		moji1.setAttribute("stroke", "rgba(0, 0, 0)");
+		text7_1.setAttribute("fill", "rgba(0, 0, 0)");
+		text8_1.setAttribute("fill", "rgba(248, 248, 255)");
+		text9_1.setAttribute("fill", "rgba(248, 248, 255)");
+		text9_1.setAttribute("stroke", "rgba(0, 0, 0)");
+	}else if(WorB == '2') {
+		body.style.backgroundColor = 'rgba(0, 0, 0)';
+		moji1.setAttribute("fill", "rgba(0, 0, 0)");
+		moji1.setAttribute("stroke", "rgba(248, 248, 255)");
+		text7_1.setAttribute("fill", "rgba(248, 248, 255)");
+		text8_1.setAttribute("fill", "rgba(0, 0, 0)");
+		text9_1.setAttribute("fill", "rgba(0, 0, 0)");
+		text9_1.setAttribute("stroke", "rgba(248, 248, 255)");
+	}
     
     // screen move//////////////////////////////////////////////////
 	function isMobile() {
