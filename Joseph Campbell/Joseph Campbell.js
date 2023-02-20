@@ -92,10 +92,6 @@ window.addEventListener('DOMContentLoaded', function(){
     let dragXm;
     let dragYm;
 
-	let red = Math.floor(Math.random() * 256);
-    let green = Math.floor(Math.random() * 256);
-    let blue = Math.floor(Math.random() * 256);
-
     let red1 = Math.floor(Math.random() * 256);
     let green1 = Math.floor(Math.random() * 256);
     let blue1 = Math.floor(Math.random() * 256);
@@ -108,418 +104,37 @@ window.addEventListener('DOMContentLoaded', function(){
     let green3 = Math.floor(Math.random() * 256);
     let blue3 = Math.floor(Math.random() * 256);
 
-	let textSVG1 = document.querySelector("#textSVG1");
-	let textSVG2 = document.querySelector("#textSVG2");
-	
-	let nagare1 = 3;
-	let nagare2 = 2;
-	let nagare3 = 2;
-	let nagare4 = 2;
-	let nagare5 = 2;
+    // var myCanvas = document.getElementById("my_canvas");
+    // var ctx = myCanvas.getContext("2d");
+    // function draw(startX, startY, len, angle, branchWidth) {
+    //     ctx.lineWidth = branchWidth;
 
-	let nagare6 = 2;
-	let nagare7 = 2;
-	let nagare8 = 2;
-	let nagare9 = 2;
+    //     ctx.beginPath();
+    //     ctx.save();
 
-	let path1Num = 43;
+    //     ctx.strokeStyle = "rgab(0, 0, 0)";
+    //     ctx.fillStyle = "rgab(0, 0, 0)";
 
-	let WorB = Math.floor(Math.random() * 2) + 1;
+    //     ctx.translate(startX, startY);
+    //     ctx.rotate(angle * Math.PI/180);
+    //     ctx.moveTo(0, 0);
+    //     ctx.lineTo(0, -len);
+    //     ctx.stroke();
 
-	let bunsyou = new Array;
-	bunsyou[0] = '木理美しき槻胴、縁にはわざと赤樫を用いたる岩畳作りの長火鉢に対いて話し敵もなくただ一人、少しは淋しそうに坐り居る三十前後の女、男のように立派な眉をいつ掃いしか剃ったる痕の青々と、見る眼も覚むべき雨後の山の色をとどめて翠の匂いひとしお床しく、 幸田露伴『五重塔』 木理美しき槻胴、縁にはわざと赤樫を用いたる岩畳作りの長火鉢に対いて話し敵もなくただ一人、少しは淋しそうに坐り居る三十前後の女、男のように立派な眉をいつ掃いしか剃ったる痕の青々と、見る眼も覚むべき雨後の山の色をとどめて翠の匂いひとしお床しく、 幸田露伴『五重塔』 木理美しき槻胴、縁にはわざと赤樫を用いたる岩畳作りの長火鉢に対いて話し敵もなくただ一人、少しは淋しそうに坐り居る三十前後の女、男のように立派な眉をいつ掃いしか剃ったる痕の青々と、見る眼も覚むべき雨後の山の色をとどめて翠の匂いひとしお床しく、 幸田露伴『五重塔』 ';
-	bunsyou[1] = '山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。 夏目漱石『草枕』 山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。 夏目漱石『草枕』 山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。 夏目漱石『草枕』 山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。 夏目漱石『草枕』 山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。 夏目漱石『草枕』 山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。 夏目漱石『草枕』 ';
-	bunsyou[2] = '石炭をば早や積み果てつ。中等室の卓のほとりはいと静にて、熾熱燈の光の晴れがましきも徒なり。今宵は夜毎にこゝに集ひ来る骨牌仲間も「ホテル」に宿りて、舟に残れるは余一人のみなれば。 森鴎外『舞姫』 石炭をば早や積み果てつ。中等室の卓のほとりはいと静にて、熾熱燈の光の晴れがましきも徒なり。今宵は夜毎にこゝに集ひ来る骨牌仲間も「ホテル」に宿りて、舟に残れるは余一人のみなれば。 森鴎外『舞姫』 石炭をば早や積み果てつ。中等室の卓のほとりはいと静にて、熾熱燈の光の晴れがましきも徒なり。今宵は夜毎にこゝに集ひ来る骨牌仲間も「ホテル」に宿りて、舟に残れるは余一人のみなれば。 森鴎外『舞姫』 石炭をば早や積み果てつ。中等室の卓のほとりはいと静にて、熾熱燈の光の晴れがましきも徒なり。今宵は夜毎にこゝに集ひ来る骨牌仲間も「ホテル」に宿りて、舟に残れるは余一人のみなれば。 森鴎外『舞姫』 ';
-	bunsyou[3] = '「こいさん、頼むわ。―――」 鏡の中で、廊下からうしろへ這入って来た妙子を見ると、自分で襟を塗りかけていた刷毛を渡して、其方は見ずに、眼の前に映っている長襦袢姿の、抜き衣紋の顔を他人の顔のように見据えながら、「雪子ちゃん下で何してる」 と、幸子はきいた。 谷崎潤一郎『細雪』 「こいさん、頼むわ。―――」 鏡の中で、廊下からうしろへ這入って来た妙子を見ると、自分で襟を塗りかけていた刷毛を渡して、其方は見ずに、眼の前に映っている長襦袢姿の、抜き衣紋の顔を他人の顔のように見据えながら、「雪子ちゃん下で何してる」 と、幸子はきいた。 谷崎潤一郎『細雪』 「こいさん、頼むわ。―――」 鏡の中で、廊下からうしろへ這入って来た妙子を見ると、自分で襟を塗りかけていた刷毛を渡して、其方は見ずに、眼の前に映っている長襦袢姿の、抜き衣紋の顔を他人の顔のように見据えながら、「雪子ちゃん下で何してる」 と、幸子はきいた。 谷崎潤一郎『細雪』 ';
-	bunsyou[4] = '禅智内供の鼻と云えば、池の尾で知らない者はない。長さは五六寸あって上唇の上から顋の下まで下っている。形は元も先も同じように太い。云わば細長い腸詰のような物が、ぶらりと顔のまん中からぶら下っているのである。 芥川龍之介『鼻』 禅智内供の鼻と云えば、池の尾で知らない者はない。長さは五六寸あって上唇の上から顋の下まで下っている。形は元も先も同じように太い。云わば細長い腸詰のような物が、ぶらりと顔のまん中からぶら下っているのである。 芥川龍之介『鼻』 禅智内供の鼻と云えば、池の尾で知らない者はない。長さは五六寸あって上唇の上から顋の下まで下っている。形は元も先も同じように太い。云わば細長い腸詰のような物が、ぶらりと顔のまん中からぶら下っているのである。 芥川龍之介『鼻』 禅智内供の鼻と云えば、池の尾で知らない者はない。長さは五六寸あって上唇の上から顋の下まで下っている。形は元も先も同じように太い。云わば細長い腸詰のような物が、ぶらりと顔のまん中からぶら下っているのである。 芥川龍之介『鼻』 ';
-	bunsyou[5] = 'えたいの知れない不吉な塊が私の心を始終圧えつけていた。焦躁と言おうか、嫌悪と言おうか――酒を飲んだあとに宿酔があるように、酒を毎日飲んでいると宿酔に相当した時期がやって来る。それが来たのだ。 梶井基次郎『檸檬 えたいの知れない不吉な塊が私の心を始終圧えつけていた。焦躁と言おうか、嫌悪と言おうか――酒を飲んだあとに宿酔があるように、酒を毎日飲んでいると宿酔に相当した時期がやって来る。それが来たのだ。 梶井基次郎『檸檬 えたいの知れない不吉な塊が私の心を始終圧えつけていた。焦躁と言おうか、嫌悪と言おうか――酒を飲んだあとに宿酔があるように、酒を毎日飲んでいると宿酔に相当した時期がやって来る。それが来たのだ。 梶井基次郎『檸檬 えたいの知れない不吉な塊が私の心を始終圧えつけていた。焦躁と言おうか、嫌悪と言おうか――酒を飲んだあとに宿酔があるように、酒を毎日飲んでいると宿酔に相当した時期がやって来る。それが来たのだ。 梶井基次郎『檸檬 ';
-	bunsyou[6] = 'どっどど どどうど どどうど どどう 青いくるみも吹きとばせ すっぱいかりんも吹きとばせ どっどど どどうど どどうど どどう 宮沢賢治『風の又三郎』 どっどど どどうど どどうど どどう 青いくるみも吹きとばせ すっぱいかりんも吹きとばせ どっどど どどうど どどうど どどう 宮沢賢治『風の又三郎』 どっどど どどうど どどうど どどう 青いくるみも吹きとばせ すっぱいかりんも吹きとばせ どっどど どどうど どどうど どどう 宮沢賢治『風の又三郎』 どっどど どどうど どどうど どどう 青いくるみも吹きとばせ すっぱいかりんも吹きとばせ どっどど どどうど どどうど どどう 宮沢賢治『風の又三郎』 どっどど どどうど どどうど どどう 青いくるみも吹きとばせ すっぱいかりんも吹きとばせ どっどど どどうど どどうど どどう 宮沢賢治『風の又三郎』 どっどど どどうど どどうど どどう 青いくるみも吹きとばせ すっぱいかりんも吹きとばせ どっどど どどうど どどうど どどう 宮沢賢治『風の又三郎』 ';
+    //     ctx.shadowBlur = 15;
+    //     ctx.shadowColor = "rgba(0,0,0,0.8)";
 
-	let randomBunsyou = Math.floor(Math.random() * 7);
+    //     if(len < 10) {
+    //         ctx.restore();
+    //         return;
+    //     }
 
-	let randomPath1 = new Array;
-	let randomPath2 = new Array;
-	let randomPath3 = new Array;
-	let randomPath4 = new Array;
-	let randomPath5 = new Array;
-	let randomPath6 = new Array;
-	let randomPath7 = new Array;
-	let randomPath8 = new Array;
-	let randomPath9 = new Array;
-	let randomPath10 = new Array;
-	let randomPath11 = new Array;
-	let randomPath12 = new Array;
-	let randomPath13 = new Array;
-	let randomPath14 = new Array;
-	let randomPath15 = new Array;
-	let randomPath16 = new Array;
-	let randomPath17 = new Array;
-	let randomPath18 = new Array;
-	let randomPath19 = new Array;
-	let randomPath20 = new Array;
-	let randomPath21 = new Array;
-	let randomPath22 = new Array;
-	let randomPath23 = new Array;
-	let randomPath24 = new Array;
-	let randomPath25 = new Array;
-	let randomPath26 = new Array;
-	let randomPath27 = new Array;
-	let randomPath28 = new Array;
-	let randomPath29 = new Array;
-	let randomPath30 = new Array;
-	let randomPath31 = new Array;
-	let randomPath32 = new Array;
-	let randomPath33 = new Array;
-	let randomPath34 = new Array;
-	let randomPath35 = new Array;
-	let randomPath36 = new Array;
-	let randomPath37 = new Array;
+    //     draw(0, -len, len * 0.8, angle - 15, branchWidth * 0.8);
+    //     draw(0, -len, len * 0.8, angle + 15, branchWidth * 0.8);
 
-	for(i = 1; i < path1Num; i++) {
-		let j = i - 1;
-		window["pathPoint1_" + i] = new Array;
-		window["pathPoint2_" + i] = new Array;
-		randomPath1[j] = Math.floor(Math.random() * 50) + 1;
-		randomPath2[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath3[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath4[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath5[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath6[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath7[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath8[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath9[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath10[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath11[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath12[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath13[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath14[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath15[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath16[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath17[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath18[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath19[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath20[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath21[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath22[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath23[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath24[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath25[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath26[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath27[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath28[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath29[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath30[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath31[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath32[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath33[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath34[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath35[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath36[j] = Math.floor(Math.random() * 101) - 50;
-		randomPath37[j] = Math.floor(Math.random() * 101) - 50;
-		window["rBT" + i] = Math.floor(Math.random() * 3);
-	}
-
-	function autoPath(svgNum, nagare, number, pp1, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10, pp11, pp12, pp13, pp14, pp15, pp16, pp17, pp18, pp19, pp20, pp21, pp22, pp23, pp24, pp25, p26, pp27, pp28, pp29, pp30, pp31, pp32, pp33, pp34, pp35, pp36, pp37) {
-		for(i = 1; i < nagare; i++) {
-			let j = i - 1;
-			window["idNodeG" + number + "_" + i] = document.createAttribute("id");
-			window["idNodePath" + number + "_" + i] = document.createAttribute("id");
-			window["idNodeTP" + number + "_" + i] = document.createAttribute("id");
-			eval("idNodeG" + number + "_" + i + ".value = 'textGroup" + number + "_" + i + "';");
-			eval("idNodePath" + number + "_" + i + ".value = 'ugokuText" + number + "_" + i + "';");
-			eval("idNodeTP" + number + "_" + i + ".value = 'ugokuTP" + number + "_" + i + "';");
-		
-			window["textGroup" + number + "_" + i] = document.createElementNS(ns, "g");
-			eval("textGroup" + number + "_" + i + ".setAttributeNode(idNodeG" + number + "_" + i + ");");
-			eval("textSVG" + svgNum + ".appendChild(textGroup" + number + "_" + i + ");");
-		
-			window["path" + number + "_" + i] = document.createElementNS(ns, "path");
-			eval("path" + number + "_" + i + ".setAttributeNode(idNodePath" + number + "_" + i + ");");
-			window["path" + number + "_" + i].setAttribute("fill", "none");
-			window["path" + number + "_" + i].setAttribute("stroke", "none");
-			window["path" + number + "_" + i].setAttribute("stroke-miterlimit", "10");
-			eval("textGroup" + number + "_" + i + ".appendChild(path" + number + "_" + i + ");");
-		
-			window["text" + number + "_" + i] = document.createElementNS(ns, "text");
-			window["text" + number + "_" + i].setAttribute("font-family", "'M PLUS 1',Trebuchet MS,Arial,sans-serif");
-			window["text" + number + "_" + i].setAttribute("fill", "rgba(" + red + ", " + green + ", " + blue + ")");
-			window["text" + number + "_" + i].setAttribute("font-size", "6px");
-			// window["text" + number + "_" + i].setAttribute("font-weight", "300");
-			eval("textGroup" + number + "_" + i + ".appendChild(text" + number + "_" + i + ");");
-		
-			window["textPath" + number + "_" + i] = document.createElementNS(ns, "textPath");
-			eval("textPath" + number + "_" + i + ".setAttributeNode(idNodeTP" + number + "_" + i + ");");
-			eval("textPath" + number + "_" + i + ".setAttribute('href', '#ugokuText" + number + "_" + i + "');");
-			window["textPath" + number + "_" + i].setAttribute("textLength", "250%");
-			// window["textPath" + number + "_" + i].innerHTML = "試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。試しの文章です。";
-			eval("text" + number + "_" + i + ".appendChild(textPath" + number + "_" + i + ");");
-	
-			pathPoint1_1[0] = pp1;
-			pathPoint1_2[0] = pp2;
-			pathPoint1_3[0] = pp3;
-			pathPoint1_4[0] = pp4;
-			pathPoint1_5[0] = pp5;
-			pathPoint1_6[0] = pp6;
-			pathPoint1_7[0] = pp7;
-			pathPoint1_8[0] = pp8;
-			pathPoint1_9[0] = pp9;
-			pathPoint1_10[0] = pp10;
-			pathPoint1_11[0] = pp11;
-			pathPoint1_12[0] = pp12;
-			pathPoint1_13[0] = pp13;
-			pathPoint1_14[0] = pp14;
-			pathPoint1_15[0] = pp15;
-			pathPoint1_16[0] = pp16;
-			pathPoint1_17[0] = pp17;
-			pathPoint1_18[0] = pp18;
-			pathPoint1_19[0] = pp19;
-			pathPoint1_20[0] = pp20;
-			pathPoint1_21[0] = pp21;
-			pathPoint1_22[0] = pp22;
-			pathPoint1_23[0] = pp1;
-			pathPoint1_24[0] = pp2;
-			pathPoint1_25[0] = pp3;
-			pathPoint1_26[0] = pp4;
-			pathPoint1_27[0] = pp5;
-			pathPoint1_28[0] = pp6;
-			pathPoint1_29[0] = pp7;
-			pathPoint1_30[0] = pp8;
-			pathPoint1_31[0] = pp9;
-			pathPoint1_32[0] = pp10;
-			pathPoint1_33[0] = pp11;
-			pathPoint1_34[0] = pp12;
-			pathPoint1_35[0] = pp13;
-			pathPoint1_36[0] = pp14;
-			pathPoint1_37[0] = pp15;
-	
-			pathPoint1_1[i] = pathPoint1_1[j] + randomPath1[j];
-			pathPoint1_2[i] = pathPoint1_2[j] + randomPath2[j];
-			pathPoint1_3[i] = pathPoint1_3[j] + randomPath3[j];
-			pathPoint1_4[i] = pathPoint1_4[j] + randomPath4[j];
-			pathPoint1_5[i] = pathPoint1_5[j] + randomPath5[j];
-			pathPoint1_6[i] = pathPoint1_6[j] + randomPath6[j];
-			pathPoint1_7[i] = pathPoint1_7[j] + randomPath7[j];
-			pathPoint1_8[i] = pathPoint1_8[j] + randomPath8[j];
-			pathPoint1_9[i] = pathPoint1_9[j] + randomPath9[j];
-			pathPoint1_10[i] = pathPoint1_10[j] + randomPath10[j];
-			pathPoint1_11[i] = pathPoint1_11[j] + randomPath11[j];
-			pathPoint1_12[i] = pathPoint1_12[j] + randomPath12[j];
-			pathPoint1_13[i] = pathPoint1_13[j] + randomPath13[j];
-			pathPoint1_14[i] = pathPoint1_14[j] + randomPath14[j];
-			pathPoint1_15[i] = pathPoint1_15[j] + randomPath15[j];
-			pathPoint1_16[i] = pathPoint1_16[j] + randomPath16[j];
-			pathPoint1_17[i] = pathPoint1_17[j] + randomPath17[j];
-			pathPoint1_18[i] = pathPoint1_18[j] + randomPath18[j];
-			pathPoint1_19[i] = pathPoint1_19[j] + randomPath19[j];
-			pathPoint1_20[i] = pathPoint1_20[j] + randomPath20[j];
-			pathPoint1_21[i] = pathPoint1_21[j] + randomPath21[j];
-			pathPoint1_22[i] = pathPoint1_22[j] + randomPath22[j];
-			pathPoint1_23[i] = pathPoint1_23[j] + randomPath23[j];
-			pathPoint1_24[i] = pathPoint1_24[j] + randomPath24[j];
-			pathPoint1_25[i] = pathPoint1_25[j] + randomPath25[j];
-			pathPoint1_26[i] = pathPoint1_26[j] + randomPath26[j];
-			pathPoint1_27[i] = pathPoint1_27[j] + randomPath27[j];
-			pathPoint1_28[i] = pathPoint1_28[j] + randomPath28[j];
-			pathPoint1_29[i] = pathPoint1_29[j] + randomPath29[j];
-			pathPoint1_30[i] = pathPoint1_30[j] + randomPath30[j];
-			pathPoint1_31[i] = pathPoint1_31[j] + randomPath31[j];
-			pathPoint1_32[i] = pathPoint1_32[j] + randomPath32[j];
-			pathPoint1_33[i] = pathPoint1_33[j] + randomPath33[j];
-			pathPoint1_34[i] = pathPoint1_34[j] + randomPath34[j];
-			pathPoint1_35[i] = pathPoint1_35[j] + randomPath35[j];
-			pathPoint1_36[i] = pathPoint1_36[j] + randomPath36[j];
-			pathPoint1_37[i] = pathPoint1_37[j] + randomPath37[j];
-	
-			eval("customPath" + number + "(" + number + ", " + i + ", " + j + ");");
-		}
-	}
-
-	autoPath(1, nagare1, 1, 42, 234.58, 175.72, -31.42, 463.37, 3.69, 384.21, 46.9, 515.88, 422.12, 1008.32, 465.38, 0, 0, 0, 0 ,0 ,0 ,0 ,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0);
-	autoPath(1, nagare2, 2, 1746.45, 13.73, -214.65, -147.91, -335.01, 999.65, -964.53, 683.98, 327.93, 470.07, 354.39, 937.71, 0.38, 522.4, 0, 0 ,0 ,0 ,0 ,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0);
-	autoPath(1, nagare3, 3, 39.11, 936.6, -43.86, 786.89, 4.84, 561.41, 205.06, 500.08, 200.22, -61.33, 358.75, 222.98, 478, 144.3, -243.51, 104.62 ,-292.21 ,-64.94 ,450.38 ,115.88, 246.55, 0.44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0);
-	autoPath(2, nagare4, 4, 9.81, 0.08, -13.63, 143.64, -3.56, 312.01, 168.55, 391.18, 409.46, -115.86, 847.78, 499.66, 0, 0, 0, 0 ,0 ,0 ,0 ,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0);
-	autoPath(2, nagare5, 5, 1155.5, 570.45, -44.16, -151.52, -302.1, -367.97, -621.37, -344.52, 214.87, 249.37, 131.89, 63.16, 0.21, 0.45, 0, 0 ,0 ,0 ,0 ,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 , 0, 0);
-	autoPath(1, nagare6, 6, 0.5, 746.86, 16.3, 124.99, 152.17, 171.19, 263.58, 130.43, 685.25, 288.57, 1068.39, 316.64, 432.05, 358.52, 331.51, 493.55, -347.81, -8.98, -453.79, 333.4, -487.17, 160.68, -448.35, -43.48, 73.37, -385.85, 470.09, -402.16, 184.77, -731.81, 467.63, 120.01, 750.46, -35.71, 878.18, 7.76);
-	autoPath(2, nagare7, 7, 0.5, 746.86, 16.3, 124.99, 152.17, 171.19, 263.58, 130.43, 685.25, 288.57, 1068.39, 316.64, 432.05, 358.52, 331.51, 493.55, -347.81, -8.98, -453.79, 333.4, -487.17, 160.68, -448.35, -43.48, 73.37, -385.85, 470.09, -402.16, 184.77, -731.81, 467.63, 120.01, 750.46, -35.71, 878.18, 7.76);
-	autoPath(1, nagare8, 8, 0.5, 746.86, 16.3, 124.99, 152.17, 171.19, 263.58, 130.43, 685.25, 288.57, 1068.39, 316.64, 432.05, 358.52, 331.51, 493.55, -347.81, -8.98, -453.79, 333.4, -487.17, 160.68, -448.35, -43.48, 73.37, -385.85, 470.09, -402.16, 184.77, -731.81, 467.63, 120.01, 750.46, -35.71, 878.18, 7.76);
-	autoPath(2, nagare9, 9, 0.5, 746.86, 16.3, 124.99, 152.17, 171.19, 263.58, 130.43, 685.25, 288.57, 1068.39, 316.64, 432.05, 358.52, 331.51, 493.55, -347.81, -8.98, -453.79, 333.4, -487.17, 160.68, -448.35, -43.48, 73.37, -385.85, 470.09, -402.16, 184.77, -731.81, 467.63, 120.01, 750.46, -35.71, 878.18, 7.76);
-
-	function customPath1(number, i, j) {
-		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[j] + ", " + pathPoint1_2[j] + " S" + pathPoint1_3[j] + " " + pathPoint1_4[j] + ", " + pathPoint1_5[j] + ", " + pathPoint1_6[j] + " c" + pathPoint1_7[j] + ", " + pathPoint1_8[j] + ", " + pathPoint1_9[j] + ", " + pathPoint1_10[j] + ", " + pathPoint1_11[j] + ", " + pathPoint1_12[j] + "");
-		window["textPath" + number + "_" + i].innerHTML = bunsyou[randomBunsyou];
-		window["textGroup" + number + "_" + i].style.transform = 'translate(10%, 30%)';
-		window["text" + number + "_" + i].setAttribute("font-weight", "200");
-	}
-	function customPath2(number, i, j) {
-		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[j] + ", " + pathPoint1_2[j] + " c" + pathPoint1_3[j] + " " + pathPoint1_4[j] + " " + pathPoint1_5[j] + ", " + pathPoint1_6[j] + " " + pathPoint1_7[j] + ", " + pathPoint1_8[j] + " C" + pathPoint1_9[j] + ", " + pathPoint1_10[j] + ", " + pathPoint1_11[j] + ", " + pathPoint1_2[j] + ", " + pathPoint1_13[j] + ", " + pathPoint1_4[j] + "");
-		window["textPath" + number + "_" + i].innerHTML = bunsyou[randomBunsyou];
-		window["textGroup" + number + "_" + i].style.transform = 'translate(0, 30%)';
-		window["text" + number + "_" + i].setAttribute("font-weight", "200");
-	}
-	function customPath3(number, i, j) {
-		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[j] + ", " + pathPoint1_2[j] + " C" + pathPoint1_3[j] + ", " + pathPoint1_4[j] + ", " + pathPoint1_5[j] + ", " + pathPoint1_6[j] + ", " + pathPoint1_7[j] + ", " + pathPoint1_8[j] + " c" + pathPoint1_9[j] + " " + pathPoint1_10[j] + ", " + pathPoint1_11[j] + ", " + pathPoint1_12[j] + ", " + pathPoint1_13[j] + ", " + pathPoint1_14[j] + " s" + pathPoint1_15[j] + ", " + pathPoint1_16[j] + " " + pathPoint1_17[j] + " " + pathPoint1_18[j] + " S" + pathPoint1_19[j] + ", " + pathPoint1_20[j] + ", " + pathPoint1_21[j] + ", " + pathPoint1_22[j] + "");
-		window["textPath" + number + "_" + i].innerHTML = bunsyou[randomBunsyou];
-		window["textGroup" + number + "_" + i].style.transform = 'translate(20%, 25%)';
-		window["text" + number + "_" + i].setAttribute("font-weight", "100");
-	}
-	function customPath4(number, i, j) {
-		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[j] + ", " + pathPoint1_2[j] + " C" + pathPoint1_3[j] + ", " + pathPoint1_4[j] + " " + pathPoint1_5[j] + ", " + pathPoint1_6[j] + ", " + pathPoint1_7[j] + ", " + pathPoint1_8[j] + " s" + pathPoint1_9[j] + " " + pathPoint1_10[j] + ", " + pathPoint1_11[j] + ", " + pathPoint1_12[j] + "");
-		window["textPath" + number + "_" + i].innerHTML = bunsyou[randomBunsyou];
-		window["textGroup" + number + "_" + i].style.transform = 'translate(35%, 25%)';
-		window["text" + number + "_" + i].setAttribute("font-weight", "300");
-	}
-	function customPath5(number, i, j) {
-		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[j] + ", " + pathPoint1_2[j] + " c" + pathPoint1_3[j] + " " + pathPoint1_4[j] + " " + pathPoint1_5[j] + " " + pathPoint1_6[j] + " " + pathPoint1_7[j] + " " + pathPoint1_8[j] + " C" + pathPoint1_9[j] + ", " + pathPoint1_10[j] + ", " + pathPoint1_11[j] + ", " + pathPoint1_12[j] + ", " + pathPoint1_13[j] + ", " + pathPoint1_14[j] + "");
-		window["textPath" + number + "_" + i].innerHTML = bunsyou[randomBunsyou];
-		window["textGroup" + number + "_" + i].style.transform = 'translate(10%, 55%)';
-		window["text" + number + "_" + i].setAttribute("font-weight", "300");
-	}
-	// for(i = 1; i < (nagare1 - 2); i++) {
-	// 	window["textGroup1_" + i].style.visibility = 'hidden';
-	// 	window["textGroup2_" + i].style.visibility = 'hidden';
-	// 	window["textGroup3_" + i].style.visibility = 'hidden';
-	// 	window["textGroup4_" + i].style.visibility = 'hidden';
-	// 	window["textGroup5_" + i].style.visibility = 'hidden';
-	// }
-
-	function customPath6(number, i, j) {
-		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[rBT1] + ", " + pathPoint1_2[rBT2] + " c" + pathPoint1_3[rBT3] + ", " + pathPoint1_4[rBT4] + ", " + pathPoint1_5[rBT5] + ", " + pathPoint1_6[rBT6] + ", " + pathPoint1_7[rBT7] + ", " + pathPoint1_8[rBT8] + " S" + pathPoint1_9[rBT9] + ", " + pathPoint1_10[rBT10] + ", " + pathPoint1_11[rBT11] + ", " + pathPoint1_12[rBT12] + " s" + pathPoint1_13[rBT13] + ", " + pathPoint1_14[rBT14] + ", " + pathPoint1_15[rBT15] + ", " + pathPoint1_16[rBT16] + " " + pathPoint1_17[rBT17] + " " + pathPoint1_18[rBT18] + " " + pathPoint1_19[rBT19] + ", " + pathPoint1_20[rBT20] + " " + pathPoint1_21[rBT21] + ", " + pathPoint1_22[rBT22] + " " + pathPoint1_23[rBT23] + " " + pathPoint1_24[rBT24] + " c" + pathPoint1_25[rBT25] + " " + pathPoint1_26[rBT26] + ", " + pathPoint1_27[rBT27] + " " + pathPoint1_28[rBT28] + ", " + pathPoint1_29[rBT29] + " " + pathPoint1_30[rBT30] + " C" + pathPoint1_31[rBT31] + ", " + pathPoint1_32[rBT32] + ", " + pathPoint1_33[rBT33] + " " + pathPoint1_34[rBT34] + ", " + pathPoint1_35[rBT35] + ", " + pathPoint1_36[rBT36] + "");
-		window["textGroup" + number + "_" + i].style.transform = 'translate(17%, 14%) scale(1.5)';
-		window["textGroup" + number + "_" + i].style.transformOrigin = '50% 50%';
-		// window["text" + number + "_" + i].setAttribute("fill", "rgba(" + red + ", " + green + ", " + blue + ")");
-		// window["text" + number + "_" + i].setAttribute("filter", "url(#blur)");
-		window["text" + number + "_" + i].setAttribute("font-size", "100px");
-		window["text" + number + "_" + i].setAttribute("font-weight", "1000");
-		window["textPath" + number + "_" + i].setAttribute("textLength", "1500%");
-		window["textPath" + number + "_" + i].innerHTML = bunsyou[randomBunsyou];
-		window["offsetAni" + number + "_" + i] = document.createElementNS(ns, "animate");
-		window["offsetAni" + number + "_" + i].setAttribute("attributeName", "startOffset");
-		window["offsetAni" + number + "_" + i].setAttribute("form", "-50%");
-		window["offsetAni" + number + "_" + i].setAttribute("to", "50%");
-		window["offsetAni" + number + "_" + i].setAttribute("begin", "0s");
-		window["offsetAni" + number + "_" + i].setAttribute("dur", "120s");
-		window["offsetAni" + number + "_" + i].setAttribute("repeatCount", "indefinite");
-		eval("textPath" + number + "_" + i + ".appendChild(offsetAni" + number + "_" + i + ");");
-	}
-	function customPath7(number, i, j) {
-		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[rBT1] + ", " + pathPoint1_2[rBT2] + " c" + pathPoint1_3[rBT3] + ", " + pathPoint1_4[rBT4] + ", " + pathPoint1_5[rBT5] + ", " + pathPoint1_6[rBT6] + ", " + pathPoint1_7[rBT7] + ", " + pathPoint1_8[rBT8] + " S" + pathPoint1_9[rBT9] + ", " + pathPoint1_10[rBT10] + ", " + pathPoint1_11[rBT11] + ", " + pathPoint1_12[rBT12] + " s" + pathPoint1_13[rBT13] + ", " + pathPoint1_14[rBT14] + ", " + pathPoint1_15[rBT15] + ", " + pathPoint1_16[rBT16] + " " + pathPoint1_17[rBT17] + " " + pathPoint1_18[rBT18] + " " + pathPoint1_19[rBT19] + ", " + pathPoint1_20[rBT20] + " " + pathPoint1_21[rBT21] + ", " + pathPoint1_22[rBT22] + " " + pathPoint1_23[rBT23] + " " + pathPoint1_24[rBT24] + " c" + pathPoint1_25[rBT25] + " " + pathPoint1_26[rBT26] + ", " + pathPoint1_27[rBT27] + " " + pathPoint1_28[rBT28] + ", " + pathPoint1_29[rBT29] + " " + pathPoint1_30[rBT30] + " C" + pathPoint1_31[rBT31] + ", " + pathPoint1_32[rBT32] + ", " + pathPoint1_33[rBT33] + " " + pathPoint1_34[rBT34] + ", " + pathPoint1_35[rBT35] + ", " + pathPoint1_36[rBT36] + "");
-		window["textGroup" + number + "_" + i].style.transform = 'translate(18%, 15%) scale(1.5)';
-		window["textGroup" + number + "_" + i].style.transformOrigin = '50% 50%';
-		window["text" + number + "_" + i].setAttribute("fill", "rgba(0, 0, 0)");
-		window["text" + number + "_" + i].setAttribute("font-size", "100px");
-		window["text" + number + "_" + i].setAttribute("font-weight", "1000");
-		window["textPath" + number + "_" + i].setAttribute("textLength", "1500%");
-		window["textPath" + number + "_" + i].innerHTML = bunsyou[randomBunsyou];
-		window["offsetAni" + number + "_" + i] = document.createElementNS(ns, "animate");
-		window["offsetAni" + number + "_" + i].setAttribute("attributeName", "startOffset");
-		window["offsetAni" + number + "_" + i].setAttribute("form", "-50%");
-		window["offsetAni" + number + "_" + i].setAttribute("to", "50%");
-		window["offsetAni" + number + "_" + i].setAttribute("begin", "0s");
-		window["offsetAni" + number + "_" + i].setAttribute("dur", "120s");
-		window["offsetAni" + number + "_" + i].setAttribute("repeatCount", "indefinite");
-		eval("textPath" + number + "_" + i + ".appendChild(offsetAni" + number + "_" + i + ");");
-	}
-	function customPath8(number, i, j) {
-		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[rBT36] + ", " + pathPoint1_2[rBT35] + " c" + pathPoint1_3[rBT34] + ", " + pathPoint1_4[rBT33] + ", " + pathPoint1_5[rBT32] + ", " + pathPoint1_6[rBT31] + ", " + pathPoint1_7[rBT30] + ", " + pathPoint1_8[rBT29] + " S" + pathPoint1_9[rBT28] + ", " + pathPoint1_10[rBT27] + ", " + pathPoint1_11[rBT26] + ", " + pathPoint1_12[rBT25] + " s" + pathPoint1_13[rBT24] + ", " + pathPoint1_14[rBT23] + ", " + pathPoint1_15[rBT22] + ", " + pathPoint1_16[rBT21] + " " + pathPoint1_17[rBT20] + " " + pathPoint1_18[rBT19] + " " + pathPoint1_19[rBT18] + ", " + pathPoint1_20[rBT17] + " " + pathPoint1_21[rBT16] + ", " + pathPoint1_22[rBT15] + " " + pathPoint1_23[rBT14] + " " + pathPoint1_24[rBT13] + " c" + pathPoint1_25[rBT12] + " " + pathPoint1_26[rBT11] + ", " + pathPoint1_27[rBT10] + " " + pathPoint1_28[rBT9] + ", " + pathPoint1_29[rBT8] + " " + pathPoint1_30[rBT7] + " C" + pathPoint1_31[rBT6] + ", " + pathPoint1_32[rBT5] + ", " + pathPoint1_33[rBT4] + " " + pathPoint1_34[rBT3] + ", " + pathPoint1_35[rBT2] + ", " + pathPoint1_36[rBT1] + "");
-		window["textGroup" + number + "_" + i].style.transform = 'translate(17%, 14%) scale(1.5)';
-		window["textGroup" + number + "_" + i].style.transformOrigin = '50% 50%';
-		window["text" + number + "_" + i].setAttribute("fill", "rgba(248, 248, 255)");
-		window["text" + number + "_" + i].setAttribute("stroke", "rgba(" + red + ", " + green + ", " + blue + ")");
-		window["text" + number + "_" + i].setAttribute("stroke-width", "0.5px");
-		window["text" + number + "_" + i].setAttribute("font-size", "100px");
-		window["text" + number + "_" + i].setAttribute("font-weight", "1000");
-		window["textPath" + number + "_" + i].setAttribute("textLength", "1500%");
-		window["textPath" + number + "_" + i].innerHTML = bunsyou[randomBunsyou];
-		window["offsetAni" + number + "_" + i] = document.createElementNS(ns, "animate");
-		window["offsetAni" + number + "_" + i].setAttribute("attributeName", "startOffset");
-		window["offsetAni" + number + "_" + i].setAttribute("form", "-50%");
-		window["offsetAni" + number + "_" + i].setAttribute("to", "50%");
-		window["offsetAni" + number + "_" + i].setAttribute("begin", "0s");
-		window["offsetAni" + number + "_" + i].setAttribute("dur", "120s");
-		window["offsetAni" + number + "_" + i].setAttribute("repeatCount", "indefinite");
-		eval("textPath" + number + "_" + i + ".appendChild(offsetAni" + number + "_" + i + ");");
-	}
-		function customPath9(number, i, j) {
-		window["path" + number + "_" + i].setAttribute("d", "M" + pathPoint1_1[rBT36] + ", " + pathPoint1_2[rBT35] + " c" + pathPoint1_3[rBT34] + ", " + pathPoint1_4[rBT33] + ", " + pathPoint1_5[rBT32] + ", " + pathPoint1_6[rBT31] + ", " + pathPoint1_7[rBT30] + ", " + pathPoint1_8[rBT29] + " S" + pathPoint1_9[rBT28] + ", " + pathPoint1_10[rBT27] + ", " + pathPoint1_11[rBT26] + ", " + pathPoint1_12[rBT25] + " s" + pathPoint1_13[rBT24] + ", " + pathPoint1_14[rBT23] + ", " + pathPoint1_15[rBT22] + ", " + pathPoint1_16[rBT21] + " " + pathPoint1_17[rBT20] + " " + pathPoint1_18[rBT19] + " " + pathPoint1_19[rBT18] + ", " + pathPoint1_20[rBT17] + " " + pathPoint1_21[rBT16] + ", " + pathPoint1_22[rBT15] + " " + pathPoint1_23[rBT14] + " " + pathPoint1_24[rBT13] + " c" + pathPoint1_25[rBT12] + " " + pathPoint1_26[rBT11] + ", " + pathPoint1_27[rBT10] + " " + pathPoint1_28[rBT9] + ", " + pathPoint1_29[rBT8] + " " + pathPoint1_30[rBT7] + " C" + pathPoint1_31[rBT6] + ", " + pathPoint1_32[rBT5] + ", " + pathPoint1_33[rBT4] + " " + pathPoint1_34[rBT3] + ", " + pathPoint1_35[rBT2] + ", " + pathPoint1_36[rBT1] + "");
-		window["textGroup" + number + "_" + i].style.transform = 'translate(18%, 15%) scale(1.5)';
-		window["textGroup" + number + "_" + i].style.transformOrigin = '50% 50%';
-		window["text" + number + "_" + i].setAttribute("fill", "rgba(248, 248, 255)");
-		window["text" + number + "_" + i].setAttribute("stroke", "rgba(0, 0, 0)");
-		window["text" + number + "_" + i].setAttribute("stroke-width", "0.5px");
-		window["text" + number + "_" + i].setAttribute("font-size", "100px");
-		window["text" + number + "_" + i].setAttribute("font-weight", "1000");
-		window["textPath" + number + "_" + i].setAttribute("textLength", "1500%");
-		window["textPath" + number + "_" + i].innerHTML = bunsyou[randomBunsyou];
-		window["offsetAni" + number + "_" + i] = document.createElementNS(ns, "animate");
-		window["offsetAni" + number + "_" + i].setAttribute("attributeName", "startOffset");
-		window["offsetAni" + number + "_" + i].setAttribute("form", "-50%");
-		window["offsetAni" + number + "_" + i].setAttribute("to", "50%");
-		window["offsetAni" + number + "_" + i].setAttribute("begin", "0s");
-		window["offsetAni" + number + "_" + i].setAttribute("dur", "120s");
-		window["offsetAni" + number + "_" + i].setAttribute("repeatCount", "indefinite");
-		eval("textPath" + number + "_" + i + ".appendChild(offsetAni" + number + "_" + i + ");");
-	}
-
-	function pathSelect(nagare, number, speed) {
-		for(i = 1; i < nagare; i++) {
-			let j = i - 1;
-			let k = i * 150;
-			let startOffset = new Array;
-			startOffset[j] = ((dragX + dragY) * speed) - 6500;
-			// startOffset[j] = ((dragX + dragY) * speed + k) - 6000;
-			// startOffset[j] = (speed + k);
-			eval("textPath" + number + "_" + i + ".setAttribute('startOffset', '" + startOffset[j] + "px');");
-		}
-	}
-	
-	// pathSelect(nagare1, 1, 30);
-	// pathSelect(nagare2, 2, 30);
-	// pathSelect(nagare3, 3, 30);
-	// pathSelect(nagare4, 4, 30);
-	// pathSelect(nagare5, 5, 30);
-
-	function moveText() {
-		pathSelect(nagare1, 1, 3.5);
-		pathSelect(nagare2, 2, 3.5);
-		pathSelect(nagare3, 3, 3.5);
-		pathSelect(nagare4, 4, 3.5);
-		pathSelect(nagare5, 5, 3.5);
-		// pathSelect(nagare6, 6, 1);
-		// pathSelect(nagare7, 7, 1);
-	}
-
-	let hiragana = ['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ', 'さ', 'し', 'す', 'せ', 'そ', 'た', 'ち', 'つ', 'て', 'と', 'な', 'に', 'ぬ', 'ね', 'の', 'は', 'ひ', 'ふ', 'へ', 'ほ', 'ま', 'み', 'む', 'め', 'も', 'や', 'よ', 'ゆ', 'ら', 'り', 'る', 'れ', 'ろ', 'わ', 'を', 'ん'];
-	let hira46 = Math.floor(Math.random() * 46);
-	let mojiIdNode1 = document.createAttribute("id");
-    mojiIdNode1.value = "moji1";
-	let moji1 = document.createElementNS(ns, "text");
-	moji1.setAttributeNode(mojiIdNode1);
-	moji1.setAttribute("font-family", "'M PLUS 1',Trebuchet MS,Arial,sans-serif");
-    moji1.setAttribute("font-size", "1000px");
-    moji1.setAttribute("font-weight", "1000");
-    moji1.setAttribute("fill", "rgba(248, 248, 255)");
-	moji1.setAttribute("stroke", "rgba(0, 0, 0)");
-	moji1.setAttribute("stroke-width", "0.5px");
-	moji1.innerHTML = hiragana[hira46];
-    textSVG1.appendChild(moji1);
-
-	if(WorB == '1') {
-		body.style.backgroundColor = 'rgba(248, 248, 255)';
-		moji1.setAttribute("fill", "rgba(248, 248, 255)");
-		moji1.setAttribute("stroke", "rgba(0, 0, 0)");
-		text7_1.setAttribute("fill", "rgba(0, 0, 0)");
-		text8_1.setAttribute("fill", "rgba(248, 248, 255)");
-		text9_1.setAttribute("fill", "rgba(248, 248, 255)");
-		text9_1.setAttribute("stroke", "rgba(0, 0, 0)");
-	}else if(WorB == '2') {
-		body.style.backgroundColor = 'rgba(0, 0, 0)';
-		moji1.setAttribute("fill", "rgba(0, 0, 0)");
-		moji1.setAttribute("stroke", "rgba(248, 248, 255)");
-		text7_1.setAttribute("fill", "rgba(248, 248, 255)");
-		text8_1.setAttribute("fill", "rgba(0, 0, 0)");
-		text9_1.setAttribute("fill", "rgba(0, 0, 0)");
-		text9_1.setAttribute("stroke", "rgba(248, 248, 255)");
-	}
+    //     ctx.restore();
+    // }
+    // draw(400, 600, 120, 0, 10)
     
     // screen move//////////////////////////////////////////////////
 	function isMobile() {
@@ -545,12 +160,10 @@ window.addEventListener('DOMContentLoaded', function(){
 
     function mouseControl1() {
         moveObject();
-		moveText();
     }
 
     function mouseControl2() {
         moveObject();
-		moveText();
     }
 
     let ugoku = 1;
@@ -640,9 +253,9 @@ window.addEventListener('DOMContentLoaded', function(){
 
    // DadA logo//////////////////////////////////////////////////
 	let ract = document.querySelector(".ract");
-    // let red = Math.floor(Math.random() * 256);
-    // let green = Math.floor(Math.random() * 256);
-    // let blue = Math.floor(Math.random() * 256);
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
     ract.style.width = Math.sqrt(2) * 100 + 'px';
     ract.style.height = 100 + 'px';
     ract.style.backgroundColor = 'rgba(' + red + ', ' + green + ', ' + blue + ')';
@@ -1394,3 +1007,34 @@ window.addEventListener('DOMContentLoaded', function(){
 window.onload = function() {
 	$(".START").delay(2000).fadeOut(1000);
 }
+
+let plusCount1 = 0;
+let plusCount2 = 0;
+let plusCount3 = 0;
+let minusCount1 = 0;
+let minusCount2 = 0;
+let minusCount3 = 0;
+
+function preload() {
+}
+
+function setup() {
+    let canvas = createCanvas(windowWidth, windowHeight);
+    canvas.parent("fractalCanvas1"); 
+}
+
+function draw() {
+    // background(0);
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
+
+function mouseClicked() {
+    if (value === 0) {
+      value = 255;
+    } else {
+      value = 0;
+    }
+  }

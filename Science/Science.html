@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Novel & Essay</title>
+<title>Science</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="stylesheet" href="Novel & Essay.css">
+<link rel="stylesheet" href="Science.css">
 <link rel="stylesheet" href="../fontello-01cc8579/css/fontello.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <script src="../jquery-ui.min.js"></script>
+<script src="../p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-<script src="Novel & Essay.js"></script>
+<script src="Science.js"></script>
 </head>
 <body>
     <div class="container">
@@ -50,9 +51,10 @@
 					</li>
 					<li class="CT">GENRE
 						<ul class="list_nav2">
-							<li class="ct"><a href="Novel & Essay.html">Novel & Essay</a></li>
-							<li class="ct"><a href="../Fairy tale/Fairy tale.html">Fairy tale</a></li>
-							<li class="ct"><a href="../Humanities/Humanities.html">Humanities</a></li>
+							<li class="ct"><a href="../Novel & Essay/Novel & Essay.html">Novel & Essay</a></li>
+                            <li class="ct"><a href="Science.html">Science</a></li>
+							<!-- <li class="ct"><a href="../Fairy tale/Fairy tale.html">Fairy tale</a></li>
+							<li class="ct"><a href="../Humanities/Humanities.html">Humanities</a></li> -->
 						</ul>
 					</li>
 					<li class="CT">PERIOD
@@ -63,13 +65,16 @@
 					</li>
 					<li class="CT">AUTHOR
 						<ul class="list_nav4">
-							<li class="ct"><a href="../William Shakespeare/William Shakespeare.html">William Shakespeare</a></li>
-							<li class="ct"><a href="../Murakami Haruki/Murakami Haruki.html">Murakami Haruki</a></li>
+                            <li class="ct"><a href="../Joseph Campbell/Joseph Campbell.html">Science</a></li>
+                            <li class="ct"><a href="../Daivd Hume/Daivd Hume.html">Science</a></li>
+							<!-- <li class="ct"><a href="../William Shakespeare/William Shakespeare.html">William Shakespeare</a></li>
+							<li class="ct"><a href="../Murakami Haruki/Murakami Haruki.html">Murakami Haruki</a></li> -->
 						</ul>
 					</li>
 				</ul>
 			</nav>
             <main>
+                <!-- <canvas id="my_canvas" width="1000" height="800"></canvas> -->
 				<div id="backGround"></div>
                 <div class="subShadow">
                     <div class="subShd1">
@@ -80,6 +85,7 @@
                     </div>
                 </div>
                 <div class="bookScale">
+                    <div id="fractalCanvas1"></div>
                     <div class="mainShadow">
                         <div class="priceLabelShadow"></div>
                         <div class="bookMarkShadow"></div>
@@ -685,6 +691,26 @@
                             </div>
                         </div>
                     </div>
+                    <div id="textOnCanvas">
+                        <span id="toc1" class="toc">angle</span>
+                        <span id="toc2" class="toc">quantity</span>
+                        <span id="toc3" class="toc">length</span>
+                        <span id="toc4" class="toc">length limit</span>
+                        <span id="toc5" class="toc">start point x</span>
+                        <span id="toc6" class="toc">start point y</span>
+                        <span id="toc7" class="toc">end point x</span>
+                        <span id="toc8" class="toc">end point y</span>
+                        <span id="toc9" class="toc">thickness</span>
+                        <span id="toc10" class="toc">thickness ratio</span>
+                        <span id="toc11" class="toc">red</span>
+                        <span id="toc12" class="toc">green</span>
+                        <span id="toc13" class="toc">blue</span>
+                        <span id="toc14" class="toc">translate x</span>
+                        <span id="toc15" class="toc">translate y</span>
+                        <span id="toc16" class="toc">line1 length ratio</span>
+                        <span id="toc17" class="toc">line2 length ratio</span>
+                        <span id="toc18" class="toc">line3 length ratio</span>
+                    </div>
                 </div>
                 <div class="purchase">
                             <div class="purchaseBox">
@@ -735,7 +761,7 @@
 		<div class="startScreen"></div>
 		<div class="startText">
 			<div class="loadText1">DadA Random Bookstore</div>
-            <div class="loadText2">Bestseller</div>
+            <div class="loadText2">Science</div>
 		</div>
 	</div>
 </body>

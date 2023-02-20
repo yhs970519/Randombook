@@ -77,6 +77,14 @@ window.addEventListener('DOMContentLoaded', function(){
 
     let backGround = document.querySelector("#backGround");
 
+    let heroImage16 = document.querySelector("#heroImage16");
+    let heroImage17 = document.querySelector("#heroImage17");
+    let starImage12 = document.querySelector("#starImage12");
+    let starImage13 = document.querySelector("#starImage13");
+    let starImage14 = document.querySelector("#starImage14");
+    let starImage15 = document.querySelector("#starImage15");
+    let starImage16 = document.querySelector("#starImage16");
+
     let kingImage = new Array;
     for(let i = 0; i < 7; i++){
         let j = i + 1;
@@ -692,6 +700,28 @@ window.addEventListener('DOMContentLoaded', function(){
         priceLabelShadow.style.opacity = '0';
         purchase.style.opacity = '0';
         purchase.style.visibility = 'hidden';
+
+        heroImage16.style.opacity = '0';
+        heroImage16.style.transition = 'opacity 0.5s ease 0s';
+        heroImage16.style['-webkit-transition'] = 'opacity 0.5s ease 0s';
+        heroImage17.style.opacity = '0';
+        heroImage17.style.transition = 'opacity 0.5s ease 0s';
+        heroImage17.style['-webkit-transition'] = 'opacity 0.5s ease 0s';
+        starImage12.style.opacity = '0';
+        starImage12.style.transition = 'opacity 0.5s ease 0s';
+        starImage12.style['-webkit-transition'] = 'opacity 0.5s ease 0s';
+        starImage13.style.opacity = '0';
+        starImage13.style.transition = 'opacity 0.5s ease 0s';
+        starImage13.style['-webkit-transition'] = 'opacity 0.5s ease 0s';
+        starImage14.style.opacity = '0';
+        starImage14.style.transition = 'opacity 0.5s ease 0s';
+        starImage14.style['-webkit-transition'] = 'opacity 0.5s ease 0s';
+        starImage15.style.opacity = '0';
+        starImage15.style.transition = 'opacity 0.5s ease 0s';
+        starImage15.style['-webkit-transition'] = 'opacity 0.5s ease 0s';
+        starImage16.style.opacity = '0';
+        starImage16.style.transition = 'opacity 0.5s ease 0s';
+        starImage16.style['-webkit-transition'] = 'opacity 0.5s ease 0s';
     }
 
     function bookanimation2() {
@@ -769,6 +799,28 @@ window.addEventListener('DOMContentLoaded', function(){
         bookRact14.style.transform = 'rotateY(0)';
         bookRact15.style.transform = 'rotateY(0)';
         buy.style.visibility = 'visible';
+
+        heroImage16.style.opacity = '1';
+        heroImage16.style.transition = 'opacity 2s ease 1s';
+        heroImage16.style['-webkit-transition'] = 'opacity 2s ease 1s';
+        heroImage17.style.opacity = '1';
+        heroImage17.style.transition = 'opacity 2s ease 1s';
+        heroImage17.style['-webkit-transition'] = 'opacity 2s ease 1s';
+        starImage12.style.opacity = '1';
+        starImage12.style.transition = 'opacity 2s ease 1s';
+        starImage12.style['-webkit-transition'] = 'opacity 2s ease 1s';
+        starImage13.style.opacity = '1';
+        starImage13.style.transition = 'opacity 2s ease 1s';
+        starImage13.style['-webkit-transition'] = 'opacity 2s ease 1s';
+        starImage14.style.opacity = '1';
+        starImage14.style.transition = 'opacity 2s ease 1s';
+        starImage14.style['-webkit-transition'] = 'opacity 2s ease 1s';
+        starImage15.style.opacity = '1';
+        starImage15.style.transition = 'opacity 2s ease 1s';
+        starImage15.style['-webkit-transition'] = 'opacity 2s ease 1s';
+        starImage16.style.opacity = '1';
+        starImage16.style.transition = 'opacity 2s ease 1s';
+        starImage16.style['-webkit-transition'] = 'opacity 2s ease 1s';
     }
 
     function booklistAnimaition(number) {
