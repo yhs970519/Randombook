@@ -6,6 +6,7 @@
     box-sizing: border-box; 
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
+    cursor: url(mural/mud\ hand.cur) 20 20, auto;
 }
 
 html, body{
@@ -1017,10 +1018,117 @@ main{
     background-color: ghostwhite;
 }
 
-#fractalCanvas1{
+.canvas{
     position: fixed;
     top: 0;
     left: 0;
+}
+
+#view{
+    position: absolute;
+    /* right: -5%;
+    bottom: 5%; */
+}
+
+#opacityBar{
+    position: absolute;
+    /* right: -5%;
+    bottom: 5%; */
+    width: 80vh;
+    height: 60vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0 5%, rgba(0, 0, 0, 0) 20% 100%);
+}
+
+#fireCanvas{
+    position: fixed;
+    top: 32%;
+    left: 50%;
+    width: 80vh;
+    height: 60vh;
+    mix-blend-mode: screen;
+}
+
+#wood{
+    position: fixed;
+    top: 32%;
+    left: 50%;
+    width: 80vh;
+    height: 60vh;
+}
+
+#woodStick{
+    position: absolute;
+    top: 77.5%;
+    left: 72%;
+    width: 5.5vh;
+    transform: rotate(-45deg);
+}
+
+#muralTesxture{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 120vh;
+}
+
+#muralShadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 50%, rgba(66, 33, 11, 0) 30%, rgba(66, 33, 11, 1));
+    mix-blend-mode: hard-light;
+    -webkit-mix-blend-mode: hard-light;
+}
+
+.mural{
+    position: fixed;
+}
+
+#mural1{
+    width: 30vw;
+}
+
+#mural2{
+    width: 50vw;
+    visibility: hidden;
+}
+
+#mural3{
+    width: 40vw;
+    visibility: hidden;
+}
+
+#mural4{
+    width: 20vw;
+    visibility: hidden;
+}
+
+#mural5{
+    width: 16vw;
+    visibility: hidden;
+}
+
+#mural6{
+    width: 25vw;
+    visibility: hidden;
+}
+
+#mural7{
+    width: 30vw;
+    visibility: hidden;
+}
+
+#mural8{
+    width: 40vw;
+    visibility: hidden;
+}
+
+#mural9{
+    width: 45vw;
+    visibility: hidden;
 }
 
 /* .toc{

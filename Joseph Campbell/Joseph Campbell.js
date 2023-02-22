@@ -104,38 +104,150 @@ window.addEventListener('DOMContentLoaded', function(){
     let green3 = Math.floor(Math.random() * 256);
     let blue3 = Math.floor(Math.random() * 256);
 
-    // var myCanvas = document.getElementById("my_canvas");
-    // var ctx = myCanvas.getContext("2d");
-    // function draw(startX, startY, len, angle, branchWidth) {
-    //     ctx.lineWidth = branchWidth;
+    let muralNum = 9;
 
-    //     ctx.beginPath();
-    //     ctx.save();
+    let muralShadow = document.querySelector("#muralShadow");
 
-    //     ctx.strokeStyle = "rgab(0, 0, 0)";
-    //     ctx.fillStyle = "rgab(0, 0, 0)";
+    for(let i = 0; i < muralNum; i++) {
+        let j = i + 1;
+        eval("let mural" + j + " = document.querySelector('#mural" + j + "');");
+        window["muralRandom" +  j] = Math.floor(Math.random() * 2);
+        window["mXRandom" + j] = Math.floor(Math.random() * 86) - 15;
+        window["mYRandom" + j] = Math.floor(Math.random() * 86) - 15;
+        eval("muralVisible(muralRandom" + j + ", mural" + j + ", mXRandom" + j + ", mYRandom" + j + ");");
+    }
 
-    //     ctx.translate(startX, startY);
-    //     ctx.rotate(angle * Math.PI/180);
-    //     ctx.moveTo(0, 0);
-    //     ctx.lineTo(0, -len);
-    //     ctx.stroke();
+    function muralVisible(muralRandom, mural, mXRandom, mYRandom) {
+        if(muralRandom == 0) {
+            mural.style.visibility = 'visible';
+            mural.style.top = mXRandom + 'vw';
+            mural.style.left = mYRandom + 'vh';
+        }else{
+            mural.style.visibility = 'hidden';
+        }
+    }
 
-    //     ctx.shadowBlur = 15;
-    //     ctx.shadowColor = "rgba(0,0,0,0.8)";
+    //fire motion
 
-    //     if(len < 10) {
-    //         ctx.restore();
-    //         return;
-    //     }
+    console.clear();
 
-    //     draw(0, -len, len * 0.8, angle - 15, branchWidth * 0.8);
-    //     draw(0, -len, len * 0.8, angle + 15, branchWidth * 0.8);
+    const flameFrag = document.querySelector("#flame-frag").textContent;
+    const baseUrl = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/";
 
-    //     ctx.restore();
-    // }
-    // draw(400, 600, 120, 0, 10)
+    const manifest = [
+    { name: "noise", url: "noise-texture-11.png?v=9" }
+    ];
+
+
+    //
+    // FLAME FILTER
+    // ===========================================================================
+    class FlameFilter extends PIXI.Filter {
     
+    constructor(texture, time = 0.0) {    
+        super(null, flameFrag);
+        
+        this.uniforms.dimensions = new Float32Array(2);   
+        this.texture = texture;
+        this.time = time;
+    }
+    
+    get texture() {
+        return this.uniforms.mapSampler;
+    }
+    
+    set texture(texture) {
+        texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
+        this.uniforms.mapSampler = texture;
+    }
+    
+    apply(filterManager, input, output, clear) {
+            
+        this.uniforms.dimensions[0] = input.sourceFrame.width;
+        this.uniforms.dimensions[1] = input.sourceFrame.height;    
+        this.uniforms.time = this.time;
+
+        filterManager.applyFilter(this, input, output, clear);
+    }
+    }
+
+
+    //
+    // APPLICATION
+    // ===========================================================================
+    class Application extends PIXI.Application {
+        
+    constructor() {
+        
+        if (window.devicePixelRatio > 1) {
+        PIXI.settings.RESOLUTION = 2;
+        }
+        
+        PIXI.settings.PRECISION_FRAGMENT = "highp";
+        
+        super({
+        view: document.querySelector("#view"),
+        width: window.innerHeight * 0.8,
+        height: window.innerHeight * 0.6,
+        backgroundColor: 0x000000,
+        transparent: true,
+        autoResize: true
+        });   
+        
+        this.isResized = true;    
+        this.loader.baseUrl = baseUrl;   
+    }
+        
+    load(manifest) {
+        
+        this.loader
+        .add(manifest)
+        .load((l, r) => this.init(r));   
+    }
+        
+    init(resources) {     
+            
+        this.flame = new FlameFilter(resources.noise.texture);
+        
+        this.stage.filterArea = this.screen;
+        this.stage.filters = [this.flame];
+        
+        this.ticker.add(this.update, this);                     
+        window.addEventListener("resize", () => this.isResized = true);
+    }
+    
+    update(delta) {
+        
+        if (this.isResized) {
+        this.renderer.resize(window.innerHeight * 0.8, window.innerHeight * 0.6);
+        this.isResized = false;
+        }
+        
+        this.flame.time += 0.1 * delta;
+    }
+    }
+
+    const app = new Application();
+    app.load(manifest);
+
+    //wood motion
+
+    let fireCanvas = document.querySelector("#fireCanvas");
+    let wood = document.querySelector("#wood");
+
+    function woodMotion() {
+        let fireCanvasX = (dragX / 100) + 48;
+        let fireCanvasY = (dragY / 100) + 30;
+        let woodX = (dragX / 100) + 48;
+        let woodY = (dragY / 100) + 30;
+        fireCanvas.style.left = fireCanvasX + '%';
+        fireCanvas.style.top = fireCanvasY + '%';
+        wood.style.left = woodX + '%';
+        wood.style.top = woodY + '%';
+        console.log(fireCanvasX);
+        console.log(fireCanvasY);
+    }
+
     // screen move//////////////////////////////////////////////////
 	function isMobile() {
 		let user = navigator.userAgent;
@@ -156,6 +268,8 @@ window.addEventListener('DOMContentLoaded', function(){
         mainShadow.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
         booklistShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
         reviewShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+        muralShadow.style.background = "radial-gradient(circle at " + dragX + "px " + dragY + "px, rgba(66, 33, 11, 0) 30%, rgba(66, 33, 11, 1))";
+        woodMotion();
     }
 
     function mouseControl1() {
@@ -294,7 +408,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		$(".TEXT").css("color", "black");
 	});
 
-    $(".ract").draggable();
+    // $(".ract").draggable();
 
     // button transition//////////////////////////////////////////////////
 
@@ -1008,6 +1122,9 @@ window.onload = function() {
 	$(".START").delay(2000).fadeOut(1000);
 }
 
+var radius;
+var paintColor;
+
 let plusCount1 = 0;
 let plusCount2 = 0;
 let plusCount3 = 0;
@@ -1020,21 +1137,23 @@ function preload() {
 
 function setup() {
     let canvas = createCanvas(windowWidth, windowHeight);
-    canvas.parent("fractalCanvas1"); 
+    canvas.parent("muralCanvas"); 
+    createP();
+    colorMode(RGB)
+    paintColor = color(30, 10, 5);
+    createColorPicker();
+    // background(120, 40, 30);
 }
 
 function draw() {
-    // background(0);
 }
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
 
-function mouseClicked() {
-    if (value === 0) {
-      value = 255;
-    } else {
-      value = 0;
-    }
-  }
+function mouseDragged() {
+    stroke(paintColor);
+    strokeWeight(10);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+}
