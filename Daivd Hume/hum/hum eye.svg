@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="humEye2_layer1" data-name="humEye2_layer1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 412.22 164.67">
+<svg id="humEye2_layer1" data-name="humEye2_layer1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 432.22 164.67">
   <defs>
     <style>
       .humEye2-1, .humEye2-2 {
@@ -98,6 +98,26 @@
       .humEye2-19 {
         stroke: #231815;
       }
+
+      .humBox1{
+        transform-origin: 85% 50%;
+        animation: rotate1 10s ease-in-out 0s infinite;
+      }
+
+      .humBox2{
+        transform-origin: 10% 50%;
+        animation: rotate1 10s ease-in-out 0s infinite;
+      }
+
+      .humEyeAll{
+        transform: translateX(10px);
+      }
+
+      @keyframes rotate1{
+        0% { transform: rotate(0); }
+        50% { transform: rotate(360deg); }
+        100% { transform: rotate(0); }
+      }
     </style>
     <radialGradient id="_humEye2_441" data-name="humEye2 441" cx="167.57" cy="139.16" fx="167.57" fy="139.16" r="66.06" gradientTransform="translate(49.71 -47.54) scale(.93)" gradientUnits="userSpaceOnUse">
       <stop offset=".54" stop-color="#fff"/>
@@ -139,8 +159,8 @@
     <linearGradient id="_humEye2_541-6" data-name="humEye2 541" x1="41.7" y1="56.79" x2="41.7" y2="46.23" xlink:href="#_humEye2_541"/>
   </defs>
   <g id="humEye2_layer2" data-name="humEye2_layer2">
-    <g>
-      <g>
+    <g class="humEyeAll">
+      <g class="humEyes">
         <circle class="humEye2-20" cx="206.11" cy="82.33" r="61.65"/>
         <circle class="humEye2-3" cx="206.11" cy="82.33" r="61.65"/>
         <path class="humEye2-19" d="M206.11,82.33l-56.68-24.29c-3.2,7.45-4.98,15.66-4.98,24.29s1.78,16.84,4.98,24.29l56.68-24.29h0Z"/>
@@ -151,7 +171,7 @@
         </g>
         <polyline class="humEye2-16" points="137.61 111.69 206.11 82.34 206.11 82.33 137.61 52.98"/>
       </g>
-      <g>
+      <g class="humBox1">
         <g>
           <rect class="humEye2-12" x="329.42" y="56.65" width="61.65" height="61.65"/>
           <rect class="humEye2-9" x="329.42" y="56.65" width="61.65" height="61.65"/>
@@ -162,7 +182,7 @@
         </g>
         <text class="humEye2-2" transform="translate(348.5 90.82)"><tspan x="0" y="0">知覚</tspan></text>
       </g>
-      <g>
+      <g class="humBox2">
         <g>
           <rect class="humEye2-17" x=".6" y="56.65" width="61.65" height="61.65"/>
           <rect class="humEye2-5" x=".6" y="56.65" width="61.65" height="61.65"/>

@@ -1024,6 +1024,7 @@ main{
 .portrait{
     width: 2.5vw;
     margin-right: -0.075vw;
+    transform: translateY(100vh);
 }
 
 #humPortrait1{
@@ -1109,41 +1110,51 @@ main{
 #humPortrait{
     display: flex;
     flex-direction: row;
-    /* justify-content: end; */
     top: 0;
     left: 0;
     width: 50vw;
-}
-
-#humMap{
-    top: 0;
-    right: 0;
-    height: 100vh;
-    /* width: 35vw; */
     visibility: hidden;
 }
 
-#humEye1{
-    bottom: 0;
-    left: 0;
-    width: 35vw;
-    visibility: hidden;
+#hummap{
+    top: 2vh;
+    right: 2vw;
+    width: 65vh;
+    height: 96vh;
 }
 
-#humEye2{
-    bottom: 0;
-    left: 50%;
-    width: 30vw;
-    transform: translateX(-50%);
-    visibility: hidden;
+.humMap{
+    position: absolute;
+}
+
+#humMap1{
+    right: 0vw;
+    height: 96vh;
+}
+
+#humMap2{
+    right: 0vw;
+    height: 96vh;
+}
+
+#humMap3{
+    top: 1.8vh;
+    right: 2vh;
+    height: 91.75vh;
+}
+
+#humEye{
+    top: 2vh;
+    left: 2vw;
+    width: 50vw;
+    transform-origin: 50% 50%;
+    animation: rotate1 10s ease-in-out 0s infinite;
 }
 
 #humHeart{
-    top: 0;
-    left: 50%;
-    width: 30vw;
-    transform: translateX(-50%);
-    visibility: hidden;
+    top: 2vh;
+    left: 2vw;
+    width: 60vw;
 }
 
 .humText{
@@ -1151,6 +1162,7 @@ main{
     color: rgba(0, 0, 0);
     font-family: 'VT323', monospace;
     white-space: nowrap;
+    transition: color 0.5s ease;
 }
 
 #humtext1{
@@ -1164,41 +1176,136 @@ main{
 #humText1{
     top: -3.75vw;
     right: -0.6vw;
+    animation: space1 10s ease-in-out 0s infinite;
+}
+
+#humText1:hover{
+    color: rgba(248, 248, 255);
 }
 
 #humText2{
     top: 8.25vw;
     right: -0.8vw;
+    animation: space1 10s ease-in-out 0s infinite;
+}
+
+#humText2:hover{
+    color: rgba(248, 248, 255);
 }
 
 #humText3{
     top: 20.25vw;
     right: -0.6vw;
+    animation: space1 10s ease-in-out 0s infinite;
+}
+
+#humText3:hover{
+    color: rgba(248, 248, 255);
 }
 
 #humText4{
     bottom: 13vw;
     left: -0.6vw;
+    animation: slide2 30s linear 0s infinite;
+    transform: translateX(100%);
+}
+
+#humText4:hover{
+    color: rgba(248, 248, 255);
 }
 
 #humText5{
     bottom: 5.5vw;
     left: -0.6vw;
+    animation: slide2 30s linear 0s infinite;
+    transform: translateX(100%);
+}
+
+#humText5:hover{
+    color: rgba(248, 248, 255);
 }
 
 #humText6{
     bottom: -2vw;
     left: -0.6vw;
+    animation: slide2 30s linear 0s infinite;
+    transform: translateX(100%);
+}
+
+#humText6:hover{
+    color: rgba(248, 248, 255);
+}
+
+#humText7{
+    bottom: 13vw;
+    left: -0.6vw;
+    animation: slide2 30s linear 15s infinite;
+    transform: translateX(100%);
+}
+
+#humText7:hover{
+    color: rgba(248, 248, 255);
+}
+
+#humText8{
+    bottom: 5.5vw;
+    left: -0.6vw;
+    animation: slide2 30s linear 15s infinite;
+    transform: translateX(100%);
+}
+
+#humText8:hover{
+    color: rgba(248, 248, 255);
+}
+
+#humText9{
+    bottom: -2vw;
+    left: -0.6vw;
+    animation: slide2 30s linear 15s infinite;
+    transform: translateX(100%);
+}
+
+#humText9:hover{
+    color: rgba(248, 248, 255);
 }
 
 @keyframes slide1{
 	0% { transform: translateY(100vh); }
-	20% { 
-        transform: translateY(0); }
-    80% { 
-        transform: translateY(0); }
-	100% { 
-        transform: translateY(-100vh); }
+	20% { transform: translateY(0); }
+    80% { transform: translateY(0); }
+	100% { transform: translateY(-100vh); }
+}
+
+@keyframes slide2{
+	0% { transform: translateX(100%); 
+        opacity: 1; }
+	98% { transform: translateX(-100%);
+        opacity: 1; }
+    99% { transform: translateX(-100%);
+        opacity: 0; }
+	100% { transform: translateX(100%);
+        opacity: 0; }
+}
+
+@keyframes space1{
+	0% { letter-spacing: auto;
+        transform: skew(0); }
+    50% { letter-spacing: 5vw;
+        transform: skew(25deg); }
+	100% { letter-spacing: auto;
+        transform: skew(0); }
+}
+
+@keyframes rotate1{
+    0% { transform: rotate(0); }
+    50% { transform: rotate(360deg); }
+    100% { transform: rotate(0); }
+}
+
+@keyframes rotate2{
+    0% { transform: rotate(90deg); }
+    50% { transform: rotate(450deg); }
+    100% { transform: rotate(90deg); }
 }
 
 
@@ -1404,6 +1511,27 @@ main{
         top: 37.5vw;
         left: 50vw;
         width: 50vw;
+    }
+
+    #hummap{
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    #humEye{
+        top: 40vh;
+        left: 50vw;
+        width: 70vw;
+        transform-origin: 50% 50%;
+        animation: rotate2 10s ease-in-out 0s infinite;
+    }
+
+    #humHeart{
+        top: 41vh;
+        left: 60vw;
+        width: 50vw;
+        transform: rotate(-90deg);
     }
 }
 

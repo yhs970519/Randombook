@@ -103,6 +103,30 @@ window.addEventListener('DOMContentLoaded', function(){
     let red3 = Math.floor(Math.random() * 256);
     let green3 = Math.floor(Math.random() * 256);
     let blue3 = Math.floor(Math.random() * 256);
+
+    let humMap1 = document.querySelector("#humMap1");
+    let humMap2 = document.querySelector("#humMap2");
+    let humMap3 = document.querySelector("#humMap3");
+
+    let humPortrait = document.querySelector("#humPortrait");
+    let humEye = document.querySelector("#humEye");
+    let humHeart = document.querySelector("#humHeart");
+
+    let humRandom = Math.floor(Math.random() * 3);
+
+    if(humRandom == '0') {
+        humPortrait.style.visibility = 'visible';
+        humEye.style.visibility = 'hidden';
+        humHeart.style.visibility = 'hidden';
+    }else if(humRandom == '1') {
+        humPortrait.style.visibility = 'hidden';
+        humEye.style.visibility = 'visible';
+        humHeart.style.visibility = 'hidden';
+    }else if(humRandom == '2') {
+        humPortrait.style.visibility = 'hidden';
+        humEye.style.visibility = 'hidden';
+        humHeart.style.visibility = 'visible';
+    }
     
     // screen move//////////////////////////////////////////////////
 	function isMobile() {
@@ -121,9 +145,13 @@ window.addEventListener('DOMContentLoaded', function(){
 	var is_mobile = isMobile();
 
     function moveObject() {
+        let miniDragX = (dragX / 500) - ((window.innerWidth / 500) / 2);
+        let miniDragY = (dragY / 500) - ((window.innerHeight / 500) / 2);
         mainShadow.style.transform = 'translate(' + -dragX * 50 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
         booklistShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
         reviewShadow.style.transform = 'translate(' + -dragX * 100 / window.innerWidth + '%, ' + -dragY * 100 / window.innerHeight + '%)';
+        humMap1.style.transform = 'translate(' + miniDragX + '%, ' + miniDragY + '%)';
+        humMap3.style.transform = 'translate(' + -miniDragX + '%, ' + -miniDragY + '%)';
     }
 
     function mouseControl1() {
