@@ -9,14 +9,10 @@ window.addEventListener('DOMContentLoaded', function(){
 		let linkArray = [];
 		linkArray[0] = 'Full random/Full random.html';
 		linkArray[1] = 'Bestseller/Bestseller.html';
-		linkArray[2] = 'by BTS/by BTS.html';
-		linkArray[3] = 'Novel & Essay/Novel & Essay.html';
-		linkArray[4] = 'Fairy tale/Fairy tale.html';
-		linkArray[5] = 'Humanities/Humanities.html';
-		linkArray[6] = 'Contemporary/Contemporary.html';
-		linkArray[7] = 'Renaissance/Renaissance.html';
-		linkArray[8] = 'William Shakespeare/William Shakespeare.html';
-		linkArray[9] = 'Murakami Haruki/Murakami Haruki.html';
+		linkArray[2] = 'Novel & Essay/Novel & Essay.html';
+		linkArray[3] = 'Science/Science.html';
+		linkArray[4] = 'Joseph Campbell/Joseph Campbell.html';
+		linkArray[5] = 'Daivd Hume/Daivd Hume.html';
 
 		let randomnumber = Math.floor(Math.random() * linkArray.length);
 

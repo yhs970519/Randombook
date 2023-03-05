@@ -1007,15 +1007,21 @@ main{
         opacity: 1; }
 }
 
-/* #backGround{
-    z-index: 0;
+#backGround{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 200%;
     height: 100%;
-    background-color: ghostwhite;
-} */
+    color: black;
+    opacity: 0.2;
+    font-family: 'M PLUS 1',Trebuchet MS,Arial,sans-serif; 
+    font-size: 2px;
+    font-weight: 100;
+    line-height: 30px;
+    letter-spacing: 4px;
+    writing-mode: vertical-rl;
+}
 
 #textSVG1, #textSVG2{
 	position: fixed;
